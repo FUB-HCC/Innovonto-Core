@@ -1,0 +1,24 @@
+version: "3"
+services:
+  entity-server:
+    hostname: entity-server
+    container_name: entity-server
+    image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core/entity-server:latest
+    build: ./services/entity-server
+    ports:
+      - 8080:80
+    restart: always
+  core-server:
+    container_name: core-fuseki
+    image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core:latest
+    build: ./services/fuseki
+    env_file: .env
+    volumes:
+      - ${DATA_PATH}:/fuseki
+    environment:
+      ADMIN_PASSWORD: ${PASSWORD}
+    logging:
+      options:
+        max-size: "1G"
+        max-file: "2"
+    restart: on-failure

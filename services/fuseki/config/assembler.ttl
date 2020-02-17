@@ -1,0 +1,81 @@
+@prefix :      <http://base/#> .
+@prefix tdb:   <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ja:    <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+@prefix text:    <http://jena.apache.org/text#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix gi2mo: <http://purl.org/gi2mo/ns#> .
+@prefix jtdb: <http://jena.apache.org/2016/tdb#> .
+
+jtdb:DatasetTDB rdfs:subClassOf  ja:RDFDataset .
+
+ja:DatasetTxnMem  rdfs:subClassOf  ja:RDFDataset .
+tdb:DatasetTDB  rdfs:subClassOf  ja:RDFDataset .
+tdb:GraphTDB  rdfs:subClassOf  ja:Model .
+
+jtdb:GraphTDB2  rdfs:subClassOf  ja:Model .
+ja:MemoryDataset  rdfs:subClassOf  ja:RDFDataset .
+ja:RDFDatasetZero  rdfs:subClassOf  ja:RDFDataset .
+text:TextDataset rdfs:subClassOf  ja:RDFDataset .
+
+:service_tdb_all  a                   fuseki:Service ;
+        rdfs:label                    "TDB core" ;
+        fuseki:dataset                :text_dataset ;
+        fuseki:name                   "core" ;
+        fuseki:serviceQuery           "query" , "sparql" ;
+        fuseki:serviceReadGraphStore  "get" ;
+        fuseki:serviceReadWriteGraphStore
+                "data" ;
+        fuseki:serviceUpdate          "update" ;
+        fuseki:serviceUpload          "upload" .
+
+
+
+jtdb:GraphTDB        rdfs:subClassOf  ja:Model .
+
+<http://jena.apache.org/spatial#SpatialDataset>
+        rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetOne  rdfs:subClassOf  ja:RDFDataset .
+
+ja:RDFDatasetSink  rdfs:subClassOf  ja:RDFDataset .
+
+<jtdb:DatasetTDB2>
+        rdfs:subClassOf  ja:RDFDataset .
+
+# A TextDataset is a regular dataset with a text index.
+:text_dataset a     text:TextDataset ;
+    text:dataset   :core_dataset ; # <-- replace `:core_dataset` with the desired URI
+    text:index     <#indexLucene> ;
+.
+
+# A TDB dataset used for RDF storage
+:core_dataset   a   tdb:DatasetTDB ;
+        tdb:location  "/fuseki/databases/core" ;
+        #tdb:unionDefaultGraph true ;
+.
+
+# Text index description
+<#indexLucene> a text:TextIndexLucene ;
+    text:directory <file:/fuseki/databases/lucene> ;  # <-- replace `<file:path>` with your path (e.g., `<file:/.../fuseki/run/databases/MY_INDEX>`)
+    text:entityMap <#entMap> ;
+    text:storeValues true ;
+    #text:analyzer [ a text:GenericAnalyzer];
+    #text:queryAnalyzer [ a text:KeywordAnalyzer ] ;
+    #text:queryParser text:AnalyzingQueryParser ;
+#    text:propLists ( [ . . . ] . . . ) ;
+#    text:defineAnalyzers ( [ . . . ] . . . ) ;
+#    text:multilingualSupport true ; # optional
+.
+# Entity map (see documentation for other options)
+<#entMap> a text:EntityMap ;
+    text:defaultField     "content" ;
+    text:entityField      "uri" ;
+    text:uidField         "uid" ;
+    text:langField        "lang" ;
+    text:graphField       "graph" ;
+    text:map (
+        [ text:field "content" ; text:predicate gi2mo:content ]
+    ) .
