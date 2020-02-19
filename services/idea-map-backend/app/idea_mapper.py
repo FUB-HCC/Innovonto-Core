@@ -14,7 +14,6 @@ import hashlib
 from pathlib import Path
 import pandas as pd
 import numpy as np
-from fastapi.encoders import jsonable_encoder
 
 from dimension_reducer import Dimension_reducer
 from idea_embedder import Idea_embedder
