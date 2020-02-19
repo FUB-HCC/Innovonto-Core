@@ -19,3 +19,15 @@ The production build uses: https://github.com/tiangolo/uvicorn-gunicorn-fastapi-
     docker run -d --name idea-map-backend-container -p 8000:80 idea-map-backend-container
     
     http://localhost:8000/
+    
+## Query Examples
+To get some ideas that you can cluster, you can use:
+
+    PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
+
+    SELECT ?idea ?content WHERE {
+      ?idea a gi2mo:Idea;
+            gi2mo:content ?content;
+    }
+    ORDER BY ?idea
+    LIMIT 15
