@@ -43,7 +43,16 @@ class Dimension_reducer():
         print('Reducing dimensions with T-SNE')
 
         # https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
-        tsne = TSNE(n_components=2, verbose=1, perplexity=70, n_iter=2000, angle=0.1, random_state=self.random_seed)
+
+        perplexity = 70
+        n_iter = 2_000
+        size = similarity_matrix.shape[0]
+        if size < 100:
+            perplexity = (size - 1) / 3.0
+            n_iter = 10_000
+
+        tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=n_iter, angle=0.1,
+                    random_state=self.random_seed)
         tsne_result = tsne.fit_transform(similarity_matrix)
 
         # TODO: Throw this out, this is only done, because frontend is not ready
