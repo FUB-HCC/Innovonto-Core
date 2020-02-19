@@ -1,6 +1,6 @@
 from fastapi.encoders import jsonable_encoder
 
-from app.sparql_handler import Sparql_handler
+from sparql_handler import Sparql_handler
 
 class Concept_finder():
     sh = Sparql_handler()

@@ -8,8 +8,8 @@ The results of the queries go to the Idea_mapper, where the mapping happens.
 
 author: Michael Tebbe (michael.tebbe@fu-berlin.de)
 """
-from app.sparql_handler import Sparql_handler
-from app.idea_mapper import Idea_mapper
+from sparql_handler import Sparql_handler
+from idea_mapper import Idea_mapper
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder

@@ -13,10 +13,10 @@ author: Michael Tebbe (michael.tebbe@fu-berlin.de)
 from pathlib import Path
 import pandas as pd
 import numpy as np
-from app.dimension_reducer import Dimension_reducer
-from app.idea_embedder import Idea_embedder
-from app.idea_clusterer import Idea_clusterer
-from app.concept_finder import Concept_finder
+from dimension_reducer import Dimension_reducer
+from idea_embedder import Idea_embedder
+from idea_clusterer import Idea_clusterer
+from concept_finder import Concept_finder
 
 
 class Idea_mapper():
@@ -134,6 +134,7 @@ class Idea_mapper():
         return similarity_matrix, similarity_matrix_np
 
     # TODO move to cache module
+    # TODO make paths configurable
     def _write_embeddings_to_file(self, similarity_matrix, similarity_matrix_np):
         Path("./cache/embeddings/").mkdir(parents=True, exist_ok=True)
         pd.DataFrame(similarity_matrix_np).to_json("./cache/embeddings/similarity_matrix_np.json")

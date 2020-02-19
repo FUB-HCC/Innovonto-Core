@@ -138,4 +138,4 @@ dmypy.json
 .idea
 
 # App creates a "cache" folder where it stores similarity matrix values
-/cache
+cache/
