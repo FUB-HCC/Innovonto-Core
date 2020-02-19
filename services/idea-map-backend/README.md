@@ -39,6 +39,8 @@ However, running pip install grpc fails on alpine with:
         raise child_exception_type(errno_num, err_msg, err_filename)
     FileNotFoundError: [Errno 2] No such file or directory: 'cc': 'cc'
 
+Furthermore, numpy, scipy, pandas and tensorflow make various kinds of problems on alpine.
+
 ## Query Examples
 To get some ideas that you can cluster, you can use:
 
@@ -50,3 +52,17 @@ To get some ideas that you can cluster, you can use:
     }
     ORDER BY ?idea
     LIMIT 15
+
+IdeaContests:
+
+    1. TCO
+    http://purl.org/innovonto/ideaContests/TCO
+    
+    2. Bionic Radar
+    http://purl.org/innovonto/ideaContests/bionic-radar
+     
+    3. Improve the Environment
+    http://purl.org/innovonto/ideaContests/envrionment
+    
+    4. Mturk Mobile Features
+    //TODO

@@ -7,7 +7,6 @@ The Idea_embedder has different algoritms that can be used for generating a simi
 author: Michael Tebbe (michael.tebbe@fu-berlin.de)
 """
 
-import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 
@@ -20,18 +19,9 @@ class Idea_embedder():
         print('Embedding with USE')
         idea_list = ideas
 
-        # update code to do this only once at the beginning and once at the end!
+        embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-large/5")
 
-        # currently uses DAN, switch @param to use transformer
-        module_url = "https://tfhub.dev/google/universal-sentence-encoder/2"  # @param ["https://tfhub.dev/google/universal-sentence-encoder/2", "https://tfhub.dev/google/universal-sentence-encoder-large/3"]
-
-        # Import the Universal Sentence Encoder's TF Hub module
-        embed = hub.Module(module_url)
-
-        with tf.Session() as session:
-            print('running session')
-            session.run([tf.global_variables_initializer(), tf.tables_initializer()])
-            message_embeddings = session.run(embed(idea_list))
+        message_embeddings = embed(idea_list)
 
         similarity_matrix = self._calculate_similarity_matrix(message_embeddings, 'multi_inner')
         return similarity_matrix

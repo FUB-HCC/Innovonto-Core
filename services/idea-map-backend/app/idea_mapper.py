@@ -10,9 +10,12 @@ The workflow is:
 author: Michael Tebbe (michael.tebbe@fu-berlin.de)
 """
 
+import hashlib
 from pathlib import Path
 import pandas as pd
 import numpy as np
+from fastapi.encoders import jsonable_encoder
+
 from dimension_reducer import Dimension_reducer
 from idea_embedder import Idea_embedder
 from idea_clusterer import Idea_clusterer
@@ -24,6 +27,7 @@ class Idea_mapper():
     idea_clusterer = Idea_clusterer()
     idea_embedder = Idea_embedder()
     concept_finder = Concept_finder()
+    cache_base_path = "./cache/embeddings/"
 
     def map_ideas(self, query_response, similarity_algorithm='USE', dim_reduction_algorithm='PCA',
                   cluster_method='kmeans'):
@@ -32,13 +36,15 @@ class Idea_mapper():
         # print(ideas['results']['bindings'][0])
 
         # generate embedding matrix with specified algorithm
-        retreat = False
-        if (retreat):
+        Path(self.cache_base_path).mkdir(parents=True, exist_ok=True)
+        hash_id = str(self.hash_for(query_response))
+        print(hash_id)
+        if self._embeddings_existing_for(hash_id):
             print('Reading embeddings from file.')
-            similarity_matrix, similarity_matrix_np = self._read_embeddings_from_file()
+            similarity_matrix, similarity_matrix_np = self._read_embeddings_from_file(hash_id)
         else:
             similarity_matrix, similarity_matrix_np = self._create_embeddings(ideas, similarity_algorithm)
-            self._write_embeddings_to_file(similarity_matrix, similarity_matrix_np)
+            self._write_embeddings_to_file(similarity_matrix, similarity_matrix_np, hash_id)
 
         # perform clustering on the embeddings
         labels, distances = self.create_cluster_labels(similarity_matrix_np, cluster_method)
@@ -55,6 +61,14 @@ class Idea_mapper():
 
         return ideas_with_coordinates
 
+    def hash_for(self, data):
+        # Prepare the project id hash
+        hashId = hashlib.md5()
+
+        hashId.update(repr(data).encode('utf-8'))
+
+        return hashId.hexdigest()
+
     def _create_embeddings(self, ideas, similarity_algorithm):
         # matrix dimensions are alway equal to the number of ideas
         matrix_dimension = len(ideas['results']['bindings'])
@@ -68,10 +82,10 @@ class Idea_mapper():
         similarity_matrix_np = np.random.rand(matrix_dimension, matrix_dimension)
 
         similarity_matrix = pd.DataFrame()
-        if similarity_algorithm is 'random':
+        if similarity_algorithm == 'random':
             # pass randomly initialized similarity matrix
             pass
-        elif similarity_algorithm is 'USE':
+        elif similarity_algorithm == 'USE':
             # create similarity matrix from USE embeddings
             similarity_matrix_np = self.idea_embedder.USE(idea_list)
         columns_names = ['dim_' + str(i) for i in range(similarity_matrix_np.shape[1])]
@@ -125,20 +139,18 @@ class Idea_mapper():
 
         return ideas
 
-    def _read_embeddings_from_file(self):
-        # similarity_matrix_np_file = open("./src/embeddings/similarity_matrix_np.json","r")
-        # with similarity_matrix_np_file as infile:
-        #    json.dump(similarity_matrix, outfile)
-        similarity_matrix = pd.read_json("./cache/embeddings/similarity_matrix.json")
-        similarity_matrix_np = pd.read_json("./cache/embeddings/similarity_matrix_np.json").to_numpy()
+    def _embeddings_existing_for(self, hashvalue):
+        testfile = Path(self.cache_base_path + hashvalue + "_matrix.json")
+        return testfile.is_file()
+
+    def _read_embeddings_from_file(self, hashvalue):
+        similarity_matrix = pd.read_json(self.cache_base_path + hashvalue + "_matrix.json")
+        similarity_matrix_np = pd.read_json(self.cache_base_path + hashvalue + "_matrix_np.json").to_numpy()
         return similarity_matrix, similarity_matrix_np
 
-    # TODO move to cache module
-    # TODO make paths configurable
-    def _write_embeddings_to_file(self, similarity_matrix, similarity_matrix_np):
-        Path("./cache/embeddings/").mkdir(parents=True, exist_ok=True)
-        pd.DataFrame(similarity_matrix_np).to_json("./cache/embeddings/similarity_matrix_np.json")
-        similarity_matrix.to_json("./cache/embeddings/similarity_matrix.json")
+    def _write_embeddings_to_file(self, similarity_matrix, similarity_matrix_np, hashvalue):
+        pd.DataFrame(similarity_matrix_np).to_json(self.cache_base_path + hashvalue + "_matrix_np.json")
+        similarity_matrix.to_json(self.cache_base_path + hashvalue + "_matrix.json")
 
     def _attach_topwords(self, ideas, labels):
         cluster_list = []
