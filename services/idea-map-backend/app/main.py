@@ -49,11 +49,9 @@ def get_default_map(idea_contest: str):
     # Step 1: Get Ideas
     ideas_for_contest = jsonable_encoder(ich.get_ideas_for_idea_contest(idea_contest))
 
-    # Step 2: Generate Similarities
+    # Step 2: Generate Similarities and Reduce
     mapping_result = im.map_ideas(query_response=ideas_for_contest, similarity_algorithm='USE',
                                   dim_reduction_algorithm='PCA', cluster_method='kmeans')
-    # Step 3: Embed in 2d using Tsne
-    # TODO
     return mapping_result
 
 
