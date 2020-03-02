@@ -1,0 +1,154 @@
+{
+  "search": {
+    "totalResults": 6,
+    "limit": 10,
+    "offset": 0
+  },
+  "results": [
+    {
+      "@id": "http://purl.org/innovonto/ideas/019cb2eb-d6ee-4fba-abfc-181ce89fa213",
+      "@type": "gi2mo:Idea",
+      "created": "2019-04-30T16:40:35.557Z",
+      "content": "The technology can be used to monitor air craft.",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/bionic-radar",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submissionMethods/innovonto-mturk-icv-demo",
+      "status": "approved",
+      "hitId": "mturk:hit/3UQVX1UPFSOQBWS8XKFR7M38Z8I20M",
+      "workerId": "mturk:worker/A23EEEX9LR9X6Z",
+      "challenge": "http://purl.org/innovonto/legacy/ac2-abstract",
+      "numberInSession": "0"
+    },
+    {
+      "@id": "http://purl.org/innovonto/ideas/033ae853-c609-4594-a4b1-699ce2d4b248",
+      "@type": "gi2mo:Idea",
+      "created": "2019-05-02T17:05:10.584Z",
+      "content": "the device could be used in a detective manner that is to say that it could be useful to predicting behavioral patterns of say criminal offenders, students, to perform research perhaps by tracking the physical lives of athletes or top achieving businessman or for companies to isolate expected behaviors of their employees and how they anticipate employees to move during a work day to establish fair and true standards",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/bionic-radar",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submissionMethods/innovonto-mturk-icv-demo",
+      "status": "approved",
+      "hitId": "mturk:hit/3Y3N5A7N4GGDFVSMFA9KENBQHREMY0",
+      "workerId": "mturk:worker/A1OPGPTQJ48XOY",
+      "challenge": "http://purl.org/innovonto/legacy/ac2-abstract",
+      "formattedTimeSinceLastIdea": "04:29",
+      "numberInSession": "4",
+      "timeSinceLastIdea": "PT4M29.067S"
+    },
+    {
+      "@id": "http://purl.org/innovonto/ideas/20deb576-d10c-46d5-8831-737c72e0f45e",
+      "@type": "gi2mo:Idea",
+      "created": "2019-05-02T16:02:35.288Z",
+      "content": "It can be used as a home security device.  It can recognize the people and animal movements that are usually inside the home and alert when there is an unfamiliar movement.",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/bionic-radar",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submissionMethods/innovonto-mturk-icv-demo",
+      "status": "approved",
+      "hitId": "mturk:hit/3Y3N5A7N4GGDFVSMFA9KENBQHREMY0",
+      "workerId": "mturk:worker/A248LF7KKHXZ14",
+      "challenge": "http://purl.org/innovonto/legacy/ac2-abstract",
+      "formattedTimeSinceLastIdea": "05:20",
+      "numberInSession": "2",
+      "timeSinceLastIdea": "PT5M20.363S"
+    },
+    {
+      "@id": "http://purl.org/innovonto/ideas/7b869eea-aeb0-4153-bfa8-78097025409c",
+      "@type": "gi2mo:Idea",
+      "hasCreator": "http://purl.org/innovonto/i2m/entities/cerri",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/bionic-radar",
+      "hasStatus": "http://purl.org/innovonto/ideastatus/idea/icv-needed",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submission-methods/orchard",
+      "isCurrentVersion": true,
+      "created": "2019-06-03T09:27:32.192+0000",
+      "title": "Threat Scan",
+      "content": "The Threat Scan can monitor public places such as train stations or airports for potential incidents. It compares current movement data of the site with typical movement profiles. Thereby, the Threat Scan could predict unusual activities, such as mass panics.",
+      "icon": "https://ideas-to-market.imp.fu-berlin.de/api/v2/icons/resource/tmp/Gefahrenradar.png",
+      "hasYouGovId": "fh24",
+      "MinMaxRating": [
+        {
+          "@id": "_:b0",
+          "title": "Value",
+          "hasCreator": "http://purl.org/innovonto/i2m/entities/yougov",
+          "minRatingValue": "0.0",
+          "maxRatingValue": "100.0",
+          "ratingValue": "60.0"
+        },
+        {
+          "@id": "_:b1",
+          "title": "Mobilization",
+          "hasCreator": "http://purl.org/innovonto/i2m/entities/yougov",
+          "minRatingValue": "0.0",
+          "maxRatingValue": "100.0",
+          "ratingValue": "42.0"
+        },
+        {
+          "@id": "_:b2",
+          "title": "Ethical Concern",
+          "hasCreator": "http://purl.org/innovonto/i2m/entities/yougov",
+          "minRatingValue": "0.0",
+          "maxRatingValue": "100.0",
+          "ratingValue": "46.0"
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/innovonto/ideas/2a1d6436-27a5-4d98-916b-5425540b88e9",
+      "@type": "gi2mo:Idea",
+      "title": "Health Alert",
+      "content": "- by analysing the movement patterns and micro-movements by radar, the above-mentioned problems are recognised and dealt with at an early stage\n            - certain patients can be returned more quickly when leaving an assigned area\n            - Patient rooms can thus always be kept locked, as only they themselves and staff can open the doors (without locking devices) > less theft\n            - Patient search and evacuation organization are simplified.",
+      "hasCreator": "http://purl.org/innovonto/users/ad30a7fe-55a0-452e-bbae-691048e88c53",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/Bionic-Radar",
+      "hasStatus": "http://purl.org/innovonto/ideastatus/idea/utilisation-option",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submissionMethods/group-phase-ipad/2",
+      "MinMaxRating": [{
+        "@id": "_:b27",
+        "title": "Group Phase Rating",
+        "maxRatingValue": 5.0,
+        "minRatingValue": 1.0,
+        "ratingValue": 4.023935733873803
+      }],
+      "icon": "https://ideas-to-market.imp.fu-berlin.de/api/v2/icons/resource/tmp/Gesundheits Alarm.png",
+      "inspiredBy": "http://purl.org/innovonto/ideas/910fa858-af9b-4d94-843a-bd92ce9fbe21",
+      "textualRefinement": [
+        {
+          "@id": "_:b22",
+          "description": "How do you plan to implement this idea?",
+          "content": "- since health care facilities are mostly underfunded, we can take care of this.\n                - Impairment of medical equipment by radar must be checked but is usually not problematic\n                - Installation during operation of the facilities is not easy but can be implemented\n                - Customers minimize liability risks and thus costs"
+        },
+        {
+          "@id": "_:b28",
+          "description": "What problem does the idea solve?",
+          "content": "-hospitals, nursing homes and correctional facilities have low personnel keys or a shortage of skilled workers\n                > Undercare of patients\n                - Liability risks in the event of poor performance\n                - by monitoring individual movement patterns, patients and staff can be better monitored and cared for, possible health deteriorations (loss or flatter breathing) can be detected early and help can be called in."
+        }
+      ]
+    },
+    {
+      "@id": "http://purl.org/innovonto/ideas/5442c75c-e0bc-4905-9e9e-bb345900750e",
+      "@type": "gi2mo:Idea",
+      "title": "Private Bouncer",
+      "content": "- individual movement patterns can be detected to identify individuals or gesture control can be activated\n            - in addition, current systems such as keys, access cards, transponders or pinpads can be omitted > no more loss of access hardware possible, no replacement required\n            - Permissions can still be granted, extended, or restricted without any problems.\n            - in the case of individual workplaces, the employee can be monitored for his/her safety and medical assistance can be obtained if necessary\n            - People can be counted in areas/buildings to check completeness during evacuations.",
+      "hasCreator": "http://purl.org/innovonto/users/ad30a7fe-55a0-452e-bbae-691048e88c53",
+      "hasIdeaContest": "http://purl.org/innovonto/ideaContests/Bionic-Radar",
+      "hasStatus": "http://purl.org/innovonto/ideastatus/idea/utilisation-option",
+      "hasSubmissionMethod": "http://purl.org/innovonto/submissionMethods/group-phase-ipad/2",
+      "MinMaxRating": [{
+        "@id": "_:b7",
+        "title": "Group Phase Rating",
+        "maxRatingValue": 5.0,
+        "minRatingValue": 1.0,
+        "ratingValue": 3.902870413817942
+      }],
+      "icon": "https://ideas-to-market.imp.fu-berlin.de/api/v2/icons/resource/tmp/Privater Türsteher.png",
+      "inspiredBy": "http://purl.org/innovonto/ideas/4f69087d-d071-4769-b4ca-b6faf17eac4f",
+      "textualRefinement": [
+        {
+          "@id": "_:b29",
+          "description": "How do you plan to implement this idea?",
+          "content": "Installation of radar transmitters/receivers in the surveillance areas, connection with central computers and doors (IT infrastructure is usually available or can be set up), training of the system with motion profiles / gestures and assignment of authorisations in the system, evaluation and data maintenance."
+        },
+        {
+          "@id": "_:b35",
+          "description": "What problem does the idea solve?",
+          "content": "Access control, approval processes, machine control, time recording, individual workplace monitoring (occupational health and safety), counting/detection in the event of fire/disaster"
+        }
+      ]
+    }
+  ]
+}

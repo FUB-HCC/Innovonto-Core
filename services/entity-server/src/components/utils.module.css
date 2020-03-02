@@ -1,0 +1,14 @@
+.altTextComponent{
+    position: absolute;
+    background-color: grey;
+    align-self: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.altText{
+    width: 100%;
+}

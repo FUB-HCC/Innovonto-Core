@@ -1,0 +1,92 @@
+.sessionGraphWrapper{
+    position: absolute;
+    background-color: lightgrey;
+    align-self: center;
+}
+
+.timeLine{
+    position: absolute;
+    background-color: #222222;
+    transform: translate(0%, -50%);
+}
+
+.eventMarker{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.eventBucket{
+    position: absolute;
+}
+
+.tickMarksWrap{
+    position: absolute;
+}
+
+.bucketTickMark{
+    position: absolute;
+    background-color: #222222;
+    transform: translate(-50%, -100%);
+    width: 1px;
+    height: 3px;
+}
+
+.minTickMark{
+    position: absolute;
+    background-color: #222222;
+    transform: translate(-50%, 0%);
+    width: 1px;
+    height: 6px;
+}
+
+.startEndTick{
+    position: absolute;
+    background-color: #222222;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 16px;
+}
+
+.labelsWrap{
+    position: absolute;
+}
+
+.minLabels{
+    position: absolute;
+    transform: translate(-50%, 100%);
+    text-align: center;
+    font-size: 9px;
+    width: 30px;
+}
+
+.basicDiamond{
+    width:12px;
+    height:12px;
+    background-color: mediumseagreen;
+    transform: rotate(45deg);
+}
+
+.basicCircle{
+    width:12px;
+    height:12px;
+    background-color: orangered;
+    border-radius: 100%;
+}
+
+.noContent{
+    padding:5px;
+    color: orangered;
+}
+
+.stringContent{
+    padding:5px;
+}
+
+.imageContent{
+    padding: 5px;
+}
+
+.imageFrame{
+    overflow: hidden;
+    margin-bottom: -4px;
+}
