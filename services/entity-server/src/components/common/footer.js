@@ -1,6 +1,13 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Navbar, NavbarGroup, Alignment, NavbarDivider, Button, NavbarHeading} from "@blueprintjs/core";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Navbar,
+  NavbarGroup,
+  Alignment,
+  NavbarDivider,
+  Button,
+  NavbarHeading
+} from "@blueprintjs/core";
 
 function Copyright() {
   return (
@@ -25,15 +32,18 @@ export const Footer = function() {
       <NavbarGroup align={Alignment.LEFT}>
         <NavbarHeading>Innovonto Core Entity Server</NavbarHeading>
       </NavbarGroup>
-      <NavbarDivider/>
+      <NavbarDivider />
       <NavbarGroup align={Alignment.CENTER}>
         <Copyright />
       </NavbarGroup>
       <NavbarGroup align={Alignment.RIGHT}>
-        <Button minimal={true} active={location.pathname.includes('imprint')}>
+        <Button minimal={true} active={location.pathname.includes("imprint")}>
           <Link to="/imprint">Imprint</Link>
         </Button>
-        <Button minimal={true} active={location.pathname.includes('privacy-policy')}>
+        <Button
+          minimal={true}
+          active={location.pathname.includes("privacy-policy")}
+        >
           <Link to="/privacy-policy"> Privacy Policy</Link>
         </Button>
       </NavbarGroup>
