@@ -11,10 +11,11 @@ import {
 
 const logo = require("../../assets/img/logo-placeholder.png");
 
-export const Header = () => {
+export const Header = props => {
   const location = useLocation();
+  const { height } = props;
   return (
-    <Navbar>
+    <Navbar style={{ height: height }}>
       <NavbarGroup>
         <NavbarHeading>
           <div>
