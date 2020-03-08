@@ -5,6 +5,7 @@ import SessionView from "./views/session/session-view";
 import SearchView from "./views/search/search-view";
 import { Header } from "./components/common/header";
 import { Footer } from "./components/common/footer";
+import { HomeView } from "./views/home/home-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -14,7 +15,7 @@ const Root = props => (
     <Router>
       <Header height={headerHeight} />
       <Route path="/session" component={SessionView} />
-      <Route exact path="/" component={SearchView} />
+      <Route exact path="/" component={HomeView} />
       <Footer height={footerHeight} />
     </Router>
   </Provider>

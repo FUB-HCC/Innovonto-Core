@@ -1,0 +1,13 @@
+.homeBackground{
+    position: absolute;
+    z-index: -5;
+}
+
+.homeViewWrapper{
+    min-height: 100vh;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    margin-top: 20vh;
+}
