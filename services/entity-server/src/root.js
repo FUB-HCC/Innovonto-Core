@@ -16,6 +16,7 @@ import {
   NonIdealView,
   NonIdealViewIntent
 } from "./views/non-ideal/non-ideal-view";
+import { SoftwareView } from "./views/software-view/software-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -41,6 +42,8 @@ const Root = props => (
           <Route exact path="/" component={HomeView} />
           <Route path="/search" component={SearchView} />
           <Route path="/session" component={SessionView} />
+          <Route path="/software" component={SoftwareView} />
+
           <Route
             path={"/error"}
             render={props => (

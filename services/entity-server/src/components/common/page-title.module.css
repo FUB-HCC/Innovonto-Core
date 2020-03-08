@@ -1,0 +1,17 @@
+
+.pageTitle{
+    width: 100%;
+    background-color: lightgrey;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 95px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 30px;
+}
+
+.titleText{
+    margin-top: auto;
+    margin-bottom: auto;
+}

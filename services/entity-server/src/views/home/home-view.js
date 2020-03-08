@@ -15,7 +15,7 @@ const infoCardWidth = windowWidth =>
 const backgroundImgHeight = (windowWidth, windowHeight) =>
   windowWidth > 1260 ? (windowWidth / windowHeight) * 1100 : "100%";
 
-export const HomeView = props => {
+export const HomeView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
   return (
     <>
