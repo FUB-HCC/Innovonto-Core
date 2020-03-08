@@ -14,6 +14,7 @@ const Root = props => (
   <Provider store={props.store}>
     <Router>
       <Header height={headerHeight} />
+      <Route path="/search" component={SearchView} />
       <Route path="/session" component={SessionView} />
       <Route exact path="/" component={HomeView} />
       <Footer height={footerHeight} />
