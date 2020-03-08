@@ -1,7 +1,7 @@
 .homeBackground{
     position: absolute;
     z-index: -5;
-    height: 70%;
+    height: 800px;
     overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
     margin-left: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20vh;
+    margin-top: 300px;
     flex-direction: column;
 }
 

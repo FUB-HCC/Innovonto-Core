@@ -11,7 +11,8 @@ import InfoCard from "../../components/home/info-card";
 const infoCardWidth = windowWidth =>
   Math.max((Math.min(windowWidth, 1000) - 12) / 3, 300);
 
-const backgroundImgWidth = windowWidth => (windowWidth < 1100 ? 1100 : "100%");
+const backgroundImgHeight = (windowWidth, windowHeight) =>
+  windowWidth > 1260 ? (windowWidth / windowHeight) * 1100 : "100%";
 
 export const HomeView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
@@ -20,7 +21,7 @@ export const HomeView = () => {
       <div className={style.homeBackground}>
         <img
           src={background}
-          width={backgroundImgWidth(windowWidth)}
+          height={backgroundImgHeight(windowWidth, windowHeight)}
           alt={"home-background"}
         />
       </div>
@@ -33,7 +34,7 @@ export const HomeView = () => {
             <div className={style.jumboSubtitle}>An open Tool suite</div>
             <div className={style.jumboSubtitle}>for Innovation</div>
           </div>
-          <div className={style.jumbotronSpace}></div>
+          <div className={style.jumbotronSpace} />
         </div>
         <div className={style.contentWrapper}>
           <div className={style.headLineCards}>
