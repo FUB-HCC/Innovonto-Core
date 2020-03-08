@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./home-view.module.css";
 import background from "../../assets/img/home-background-banner.jpg";
+import { Link } from "react-router-dom";
 import { Button, Intent } from "@blueprintjs/core";
 import { ReactComponent as AnalyzingIdeationIcon } from "../../assets/img/Analyzing-Ideation.svg";
 import { ReactComponent as UnderstandingIdeationIcon } from "../../assets/img/Understanding-ideation.svg";
@@ -14,7 +15,7 @@ const infoCardWidth = windowWidth =>
 const backgroundImgHeight = (windowWidth, windowHeight) =>
   windowWidth > 1260 ? (windowWidth / windowHeight) * 1100 : "100%";
 
-export const HomeView = () => {
+export const HomeView = props => {
   const [windowWidth, windowHeight] = useWindowSize();
   return (
     <>
@@ -42,7 +43,11 @@ export const HomeView = () => {
               title={"Analyzing Ideation"}
               width={infoCardWidth(windowWidth)}
               icon={<AnalyzingIdeationIcon height={60} />}
-              takeAction={<Button intent={Intent.SUCCESS}>Learn More</Button>}
+              takeAction={
+                <Link to={"/research"}>
+                  <Button intent={Intent.SUCCESS}>Learn More</Button>
+                </Link>
+              }
             >
               <p>
                 By building computational models for the entities involved in
@@ -54,7 +59,11 @@ export const HomeView = () => {
               title={"Understanding Ideation"}
               width={infoCardWidth(windowWidth)}
               icon={<UnderstandingIdeationIcon height={60} />}
-              takeAction={<Button intent={Intent.SUCCESS}>Learn More</Button>}
+              takeAction={
+                <Link to={"/research"}>
+                  <Button intent={Intent.SUCCESS}>Learn More</Button>
+                </Link>
+              }
             >
               <p>
                 By visualizating the data obtained in large scale ideation, we
@@ -66,7 +75,11 @@ export const HomeView = () => {
               title={"Augmenting Ideation"}
               width={infoCardWidth(windowWidth)}
               icon={<AugmentingIdeationIcon height={60} />}
-              takeAction={<Button intent={Intent.SUCCESS}>Learn More</Button>}
+              takeAction={
+                <Link to={"/research"}>
+                  <Button intent={Intent.SUCCESS}>Learn More</Button>
+                </Link>
+              }
             >
               <p>
                 Combining our computational models of ideation with dynamic

@@ -26,25 +26,43 @@ export const Header = props => {
         </NavbarHeading>
       </NavbarGroup>
       <NavbarGroup align={Alignment.RIGHT}>
-        <Button minimal={true} active={location.pathname.includes("research")}>
-          <Link to="/research">Research</Link>
-        </Button>
-        <Button minimal={true} active={location.pathname.includes("model")}>
-          <Link to="/model">Model</Link>
-        </Button>
-        <Button minimal={true} active={location.pathname.includes("data")}>
-          <Link to="/data">Data</Link>
-        </Button>
-        <Button minimal={true} active={location.pathname.includes("software")}>
-          <Link to="/software">Software</Link>
-        </Button>
+        <Link to="/research">
+          <Button
+            minimal={true}
+            active={location.pathname.includes("research")}
+          >
+            Research
+          </Button>
+        </Link>
+        <Link to="/model">
+          <Button minimal={true} active={location.pathname.includes("model")}>
+            Model
+          </Button>
+        </Link>
+        <Link to="/data">
+          <Button minimal={true} active={location.pathname.includes("data")}>
+            Data
+          </Button>
+        </Link>
+        <Link to="/software">
+          <Button
+            minimal={true}
+            active={location.pathname.includes("software")}
+          >
+            Software
+          </Button>
+        </Link>
         <NavbarDivider />
-        <Button minimal={true} active={location.pathname.includes("about")}>
-          <Link to="/about">About</Link>
-        </Button>
-        <Button minimal={true} active={location.pathname.includes("login")}>
-          <Link to="/login">Login</Link>
-        </Button>
+        <Link to="/about">
+          <Button minimal={true} active={location.pathname.includes("about")}>
+            About
+          </Button>
+        </Link>
+        <Link to="/login">
+          <Button minimal={true} active={location.pathname.includes("login")}>
+            Login
+          </Button>
+        </Link>
       </NavbarGroup>
     </Navbar>
   );
