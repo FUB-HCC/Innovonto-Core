@@ -11,7 +11,7 @@ export const pageAction = Object.freeze({
   END: "END"
 });
 
-export const requestState = Object.freeze({
+export const RequestState = Object.freeze({
   IDLE: "IDLE",
   BUSY: "BUSY",
   FAILED: "FAILED",

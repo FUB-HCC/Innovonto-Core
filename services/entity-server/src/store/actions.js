@@ -1,5 +1,5 @@
 import axios from "axios";
-import { requestState } from "../components/utils";
+import { RequestState } from "../components/utils";
 import { batch } from "react-redux";
 
 export const actionTypes = Object.freeze({
@@ -13,13 +13,13 @@ export const actionTypes = Object.freeze({
 
 const prepareForRequest = dispatch =>
   batch(() => {
-    dispatch(setRequestState(requestState.BUSY));
+    dispatch(setRequestState(RequestState.BUSY));
     dispatch(setRequestError(null));
   });
 
 const handleFailedRequest = (dispatch, error) =>
   batch(() => {
-    dispatch(setRequestState(requestState.FAILED));
+    dispatch(setRequestState(RequestState.FAILED));
     dispatch(setRequestError(error));
   });
 
@@ -43,7 +43,7 @@ export const fetchSearchData = () => {
       .then(result => {
         batch(() => {
           dispatch(updateSearchData(result.data));
-          dispatch(setRequestState(requestState.COMPLETED));
+          dispatch(setRequestState(RequestState.COMPLETED));
         });
       })
       .catch(error => {
@@ -65,7 +65,7 @@ export const fetchSessionData = () => {
       .then(result => {
         batch(() => {
           dispatch(updateSessionData(result.data));
-          dispatch(setRequestState(requestState.COMPLETED));
+          dispatch(setRequestState(RequestState.COMPLETED));
         });
       })
       .catch(error => {

@@ -7,7 +7,7 @@ import {
   extractInspirations,
   extractSearchResults
 } from "./data-transforms";
-import { requestState } from "../components/utils";
+import { RequestState } from "../components/utils";
 
 const initialState = {
   sEvents: [],
@@ -17,7 +17,7 @@ const initialState = {
 
   searchResults: [],
 
-  requestState: requestState.IDLE,
+  requestState: RequestState.IDLE,
   requestError: null
 };
 
