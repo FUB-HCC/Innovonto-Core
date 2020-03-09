@@ -33,3 +33,15 @@
 .twoColumnRight>img{
     max-width: 100%;
 }
+
+.publicationListWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20px;
+    background-color: #59B934;
+}
+
+.publicationWrapper{
+    width: 300px;
+}
