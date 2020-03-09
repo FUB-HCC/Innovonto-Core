@@ -1,60 +1,50 @@
-import * as React from "react";
-import * as Router from "react-router-dom";
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
+import {
+  Navbar,
+  Alignment,
+  Button,
+  NavbarDivider,
+  NavbarGroup,
+  NavbarHeading
+} from "@blueprintjs/core";
 
 const logo = require("../../assets/img/logo-placeholder.png");
 
-export const Header = function() {
+export const Header = () => {
+  const location = useLocation();
   return (
-    <nav
-      className="navbar has-shadow"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div className="navbar-brand">
-        <Router.Link className="navbar-item" to="/">
-          <img src={logo} alt="Logo" height="60" />
-        </Router.Link>
-
-        <label
-          role="button"
-          className="navbar-burger burger"
-          aria-label="menu"
-          aria-expanded="false"
-          htmlFor="nav-toggle-state"
-        >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-        </label>
-      </div>
-      <input type="checkbox" id="nav-toggle-state" />
-
-      <div className="navbar-menu">
-        <div className="navbar-start">
-          <Router.NavLink
-            to="/model"
-            className="navbar-item"
-            activeClassName="selected"
-          >
-            Model
-          </Router.NavLink>
-
-          <Router.NavLink to="/projects" className="navbar-item">
-            Data
-          </Router.NavLink>
-
-          <Router.NavLink to="/entities" className="navbar-item">
-            Search
-          </Router.NavLink>
-
-          <a
-            className="navbar-item"
-            href={process.env.REACT_APP_FUSEKI_BASE + "/index.html"}
-          >
-            Management
-          </a>
-        </div>
-      </div>
-    </nav>
+    <Navbar>
+      <NavbarGroup>
+        <NavbarHeading>
+          <div>
+            <Link to="/">
+              <img src={logo} alt="Logo" height="55" />
+            </Link>
+          </div>
+        </NavbarHeading>
+      </NavbarGroup>
+      <NavbarGroup align={Alignment.RIGHT}>
+        <Button minimal={true} active={location.pathname.includes("research")}>
+          <Link to="/research">Research</Link>
+        </Button>
+        <Button minimal={true} active={location.pathname.includes("model")}>
+          <Link to="/model">Model</Link>
+        </Button>
+        <Button minimal={true} active={location.pathname.includes("data")}>
+          <Link to="/data">Data</Link>
+        </Button>
+        <Button minimal={true} active={location.pathname.includes("software")}>
+          <Link to="/software">Software</Link>
+        </Button>
+        <NavbarDivider />
+        <Button minimal={true} active={location.pathname.includes("about")}>
+          <Link to="/about">About</Link>
+        </Button>
+        <Button minimal={true} active={location.pathname.includes("login")}>
+          <Link to="/login">Login</Link>
+        </Button>
+      </NavbarGroup>
+    </Navbar>
   );
 };

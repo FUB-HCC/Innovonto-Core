@@ -1,9 +1,17 @@
-import * as React from "react";
-import * as Router from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Navbar,
+  NavbarGroup,
+  Alignment,
+  NavbarDivider,
+  Button,
+  NavbarHeading
+} from "@blueprintjs/core";
 
 function Copyright() {
   return (
-    <p>
+    <NavbarHeading>
       {"Copyright © "}
       <a
         href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/index.html"
@@ -13,23 +21,32 @@ function Copyright() {
       </a>{" "}
       {new Date().getFullYear()}
       {"."}
-    </p>
+    </NavbarHeading>
   );
 }
 
 export const Footer = function() {
+  const location = useLocation();
   return (
-    <footer className="footer">
-      <div className="content has-text-centered">
-        <p>Innovonto Core Entity Server</p>
+    <Navbar>
+      <NavbarGroup align={Alignment.LEFT}>
+        <NavbarHeading>Innovonto Core Entity Server</NavbarHeading>
+      </NavbarGroup>
+      <NavbarDivider />
+      <NavbarGroup align={Alignment.CENTER}>
         <Copyright />
-        <p>
-          <Router.NavLink to="/imprint">Imprint</Router.NavLink>
-        </p>
-        <p>
-          <Router.NavLink to="/privacy-policy">Privacy Policy</Router.NavLink>
-        </p>
-      </div>
-    </footer>
+      </NavbarGroup>
+      <NavbarGroup align={Alignment.RIGHT}>
+        <Button minimal={true} active={location.pathname.includes("imprint")}>
+          <Link to="/imprint">Imprint</Link>
+        </Button>
+        <Button
+          minimal={true}
+          active={location.pathname.includes("privacy-policy")}
+        >
+          <Link to="/privacy-policy"> Privacy Policy</Link>
+        </Button>
+      </NavbarGroup>
+    </Navbar>
   );
 };
