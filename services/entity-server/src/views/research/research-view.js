@@ -39,6 +39,7 @@ export const ResearchView = () => {
         break;
     }
   }, [paragraph]);
+
   return (
     <div className={style.researchViewWrapper}>
       <PageTitle title={"Research"} />
