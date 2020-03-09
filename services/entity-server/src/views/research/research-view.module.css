@@ -18,3 +18,16 @@
     font-size: 30px;
     padding-left: 15px;
 }
+
+.publicationListWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+.publicationWrapper{
+    width: 500px;
+}

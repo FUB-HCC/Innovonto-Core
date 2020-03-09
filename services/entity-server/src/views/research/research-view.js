@@ -155,7 +155,7 @@ export const ResearchView = () => {
 
 const PublicationList = props => (
   <div className={style.publicationListWrapper}>
-    {props.publications.forEach(publication => (
+    {props.publications.map(publication => (
       <Publication
         title={publication.title}
         authors={publication.authors}
