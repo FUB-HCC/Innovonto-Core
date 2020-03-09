@@ -41,7 +41,7 @@ const Root = props => (
       >
         <Switch>
           <Route exact path="/" component={HomeView} />
-          <Route path="/research" component={ResearchView} />
+          <Route path="/research/:paragraph" component={ResearchView} />
           <Route path="/software" component={SoftwareView} />
           <Route path="/search" component={SearchView} />
           <Route path="/session" component={SessionView} />

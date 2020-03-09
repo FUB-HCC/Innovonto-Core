@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import propTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import style from "./research-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
 import PageTitle from "../../components/common/page-title";
@@ -16,11 +17,33 @@ import adaptiveIdeationSystemsImg from "../../assets/img/adaptive-ideation-syste
 import interactiveConceptValImg from "../../assets/img/interactive-concept-validation.png";
 import inspirationRecommenderImg from "../../assets/img/idea-recommender.png";
 
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
+
 export const ResearchView = () => {
+  let { paragraph } = useParams();
+  const analyzingIdeationRef = useRef();
+  const understandingIdeationRef = useRef();
+  const augmentingIdeationRef = useRef();
+  useEffect(() => {
+    switch (paragraph) {
+      case "analysing-ideation":
+        scrollToRef(analyzingIdeationRef);
+        break;
+      case "understanding-ideation":
+        scrollToRef(understandingIdeationRef);
+        break;
+      case "augmenting-ideation":
+        scrollToRef(augmentingIdeationRef);
+        break;
+      default:
+        break;
+    }
+  }, [paragraph]);
   return (
     <div className={style.researchViewWrapper}>
       <PageTitle title={"Research"} />
       <div className={style.researchViewContent}>
+        <div ref={analyzingIdeationRef} />
         <TwoColumnContent
           titleSize={30}
           right={<div />}
@@ -51,7 +74,9 @@ export const ResearchView = () => {
           right={<IdeaLifecycleText />}
           title={"Idea Lifecycle"}
         />
-        <h1 className={style.largeTitle}>Understanding Ideation</h1>
+        <h1 ref={understandingIdeationRef} className={style.largeTitle}>
+          Understanding Ideation
+        </h1>
         <TwoColumnContent
           left={<IdeaSpaceVisualizationText />}
           right={
@@ -84,6 +109,7 @@ export const ResearchView = () => {
           }
           title={"SessionVisualization"}
         />
+        <div ref={augmentingIdeationRef} />
         <TwoColumnContent
           titleSize={30}
           left={
@@ -160,6 +186,7 @@ const PublicationList = props => (
         title={publication.title}
         authors={publication.authors}
         place={publication.link}
+        key={publication.title}
       />
     ))}
   </div>
@@ -177,7 +204,7 @@ PublicationList.propTypes = {
 const Publication = props => {
   const { title, authors, place } = props;
   return (
-    <div key={title} className={style.publicationWrapper}>
+    <div className={style.publicationWrapper}>
       <b>{authors}</b> <i>{title}</i>
       {place && (
         <>

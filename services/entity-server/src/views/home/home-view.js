@@ -44,7 +44,7 @@ export const HomeView = () => {
               width={infoCardWidth(windowWidth)}
               icon={<AnalyzingIdeationIcon height={60} />}
               takeAction={
-                <Link to={"/research"}>
+                <Link to={"/research/analyzing-ideation"}>
                   <Button intent={Intent.SUCCESS}>Learn More</Button>
                 </Link>
               }
@@ -60,7 +60,7 @@ export const HomeView = () => {
               width={infoCardWidth(windowWidth)}
               icon={<UnderstandingIdeationIcon height={60} />}
               takeAction={
-                <Link to={"/research"}>
+                <Link to={"/research/understanding-ideation"}>
                   <Button intent={Intent.SUCCESS}>Learn More</Button>
                 </Link>
               }
@@ -76,7 +76,7 @@ export const HomeView = () => {
               width={infoCardWidth(windowWidth)}
               icon={<AugmentingIdeationIcon height={60} />}
               takeAction={
-                <Link to={"/research"}>
+                <Link to={"/research/augmenting-ideation"}>
                   <Button intent={Intent.SUCCESS}>Learn More</Button>
                 </Link>
               }
