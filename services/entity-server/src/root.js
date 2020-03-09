@@ -4,16 +4,20 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import SessionView from "./views/session/session-view";
 import SearchView from "./views/search/search-view";
 import { Header } from "./components/common/header";
+import { Footer } from "./components/common/footer";
+
+export const footerHeight = 50;
+export const headerHeight = 50;
 
 const Root = props => (
   <Provider store={props.store}>
     <Router>
-      <Header href={window.location.href} />
-      <Route path="/" component={SessionView} />
+      <Header height={headerHeight} />
+      <Route path="/session" component={SessionView} />
       <Route exact path="/" component={SearchView} />
+      <Footer height={footerHeight} />
     </Router>
   </Provider>
 );
 
 export default Root;
-//TODO: reverse Routing
