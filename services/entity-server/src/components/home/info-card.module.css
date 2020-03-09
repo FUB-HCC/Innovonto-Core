@@ -1,0 +1,27 @@
+.infoCardWrapper{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255, 0.85);
+    padding: 25px;
+    text-align: center;
+    margin: 2px;
+}
+.infoCardIcon{
+    align-content: center;
+    width: 100%;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+.infoCardTitle{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.infoCardContent{
+    width: 100%;
+}
+.infoCardAction{
+    margin-top: auto;
+    width: 100%;
+}
