@@ -16,6 +16,8 @@ import {
   NonIdealView,
   NonIdealViewIntent
 } from "./views/non-ideal/non-ideal-view";
+import { SoftwareView } from "./views/software-view/software-view";
+import { ResearchView } from "./views/research/research-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -39,6 +41,8 @@ const Root = props => (
       >
         <Switch>
           <Route exact path="/" component={HomeView} />
+          <Route path="/research/:paragraph" component={ResearchView} />
+          <Route path="/software" component={SoftwareView} />
           <Route path="/search" component={SearchView} />
           <Route path="/session" component={SessionView} />
           <Route

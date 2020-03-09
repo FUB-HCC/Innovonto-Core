@@ -1,0 +1,15 @@
+
+.softwareViewWrapper{
+    width: 100%;
+    background: white;
+}
+
+.softwareViewContent{
+    min-height: 94vh;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

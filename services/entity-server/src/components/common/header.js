@@ -26,7 +26,7 @@ export const Header = props => {
         </NavbarHeading>
       </NavbarGroup>
       <NavbarGroup align={Alignment.RIGHT}>
-        <Link to="/research">
+        <Link to="/research/analyzing-ideation">
           <Button
             minimal={true}
             active={location.pathname.includes("research")}

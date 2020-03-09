@@ -1,0 +1,33 @@
+
+.researchViewWrapper{
+    width: 100%;
+    background: white;
+}
+
+.researchViewContent{
+    min-height: 94vh;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.largeTitle{
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+.publicationListWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+.publicationWrapper{
+    width: 500px;
+}

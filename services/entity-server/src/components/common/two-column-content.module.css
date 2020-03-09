@@ -1,0 +1,36 @@
+.twoColumnContentWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
+
+.twoColumnTitle{
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.twoColumnLeft{
+    flex-basis: 350px;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.twoColumnLeft>img{
+    max-width: 100%;
+}
+
+.twoColumnRight{
+    flex-basis: 350px;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.twoColumnRight>img{
+    max-width: 100%;
+}
+
