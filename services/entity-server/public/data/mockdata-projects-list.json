@@ -1,0 +1,44 @@
+{
+  "ideaContests": [{
+    "@id": "https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/i2m-TCO",
+    "@type": "gi2mo:IdeaContest",
+    "created": "2017-09-21",
+    "description": "In the first test phase of the project, 'Transparent Conductive Oxides', (TCO) was selected\n as the technology, which was developed by the Leibniz Institute for New Materials (INM). TCO are conductive\n and flexible materials which are used in the form of thin coatings in various areas (e.g. foils or\n displays).\n ",
+    "title": "Transparent Conductive Oxides (TCO)",
+    "endDate": "2018-09-24",
+    "startDate": "2018-03-09",
+    "seeAlso": "https://i2m.imp.fu-berlin.de/ergebnisse/",
+    "numberIdeas": 1,
+    "numberUsers": 1
+  }, {
+    "@id": "https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/i2m-bionic-radar",
+    "@type": "gi2mo:IdeaContest",
+    "created": "2018-05-15",
+    "description": "The second idea contest within the Ideas-to-Market Project. The Fraunhofer FHR, which\n provided a new radar technology (called Bionic Radar) that uses machine learning to uniquely detect movement\n patterns via radar, working even in bad weather.\n ",
+    "title": "Bionic Radar",
+    "endDate": "2019-05-05",
+    "startDate": "2019-04-01",
+    "seeAlso": "https://intern.hcc.mi.fu-berlin.de/confluence/display/I2M/Project+Application+Case+No+2+-+Bionic+Radar",
+    "numberIdeas": 581,
+    "numberUsers": 87
+  }, {
+    "@id": "https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/inv18-mturk-mobile-app",
+    "@type": "gi2mo:IdeaContest",
+    "created": "2017-12-02",
+    "description": "This project was done in the context of research on the interactive concept validation. We asked\n Amazon Mechanical Turk workers to brainstorm ideas for features for a mobile app to Mechanical Turk. Within this contest,\n we tested three conditions: No micro-tasks for inspirations, A rating microtask for inspiration, and a concept validation\n micro-task on submission of ideas.",
+    "title": "Features for an mturk mobile app",
+    "endDate": "2018-01-03",
+    "startDate": "2017-12-14",
+    "seeAlso": "https://dl.acm.org/citation.cfm?id=3188485"
+  }, {
+    "@id": "https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/inv19p-c1-environment",
+    "@type": "gi2mo:IdeaContest",
+    "created": "2018-12-01",
+    "description": "This project was done in the context of research on fully-automatic idea similarity measures. Participants\n brainstormed on ideas on how to improve the environment, using our crowdsourced-brainstorming tool.",
+    "title": "How to improve the environment?",
+    "endDate": "2018-12-06",
+    "startDate": "2018-12-03",
+    "numberIdeas": 0,
+    "numberUsers": 0
+  }]
+}

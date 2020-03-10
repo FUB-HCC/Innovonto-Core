@@ -1,0 +1,59 @@
+
+
+.previewHeader{
+    display: flex;
+    flex-direction: row;
+    height: 63px;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+}
+
+.previewTitle{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.previewBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+.previewLeft{
+    flex-basis: 250px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.previewRight{
+    flex-basis: 500px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 1px;
+    padding-left: 5px;
+}
+
+.previewImgFrame img{
+    max-width: 100%;
+}
+
+.previewImgPlaceHolder{
+    width: 250px;
+    height: 250px;
+    background-color: dimgrey;
+    color: white;
+    display: flex;
+    margin: unset;
+}
+
+.previewImgPlaceHolder>div {
+    margin: auto;
+}

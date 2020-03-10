@@ -75,3 +75,10 @@ export const extractSearchResults = data =>
           : null
         : null
   }));
+
+export const extractProjectList = data =>
+  data.ideaContests.map(ideaContest => ({
+    id: ideaContest["@id"],
+    description: ideaContest.description,
+    title: ideaContest.title
+  }));

@@ -1,6 +1,10 @@
 import axios from "axios";
 import { SearchActionTypes } from "../components/search/search-component";
-import { extractEvents, extractSearchResults } from "./data-transforms";
+import {
+  extractEvents,
+  extractProjectList,
+  extractSearchResults
+} from "./data-transforms";
 
 export const requestSearchData = (requestValue, dispatch) => {
   dispatch({
@@ -28,6 +32,17 @@ export const requestSessionData = dispatch => {
     .get(process.env.PUBLIC_URL + "/data/mockdata-session.json")
     .then(result => {
       dispatch(extractEvents(result.data));
+    })
+    .catch(error => {
+      //TODO: make all components redirect to error page in a unified fashion <- input required
+    });
+};
+
+export const requestProjectListData = dispatch => {
+  axios
+    .get(process.env.PUBLIC_URL + "/data/mockdata-projects-list.json")
+    .then(result => {
+      dispatch(extractProjectList(result.data));
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
