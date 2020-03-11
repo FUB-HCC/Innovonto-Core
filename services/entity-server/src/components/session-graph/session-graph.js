@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import style from "./session-graph.module.css";
 import { Popover, PopoverInteractionKind } from "@blueprintjs/core";
 import { AltTextComponent, makeDimensionsChecker } from "../utils";
+import { requestSessionData } from "../../middleware/requests";
 
 const marginsSides = width => 0.1 * width;
 
@@ -91,7 +92,9 @@ const sortEventsIntoBuckets = (timeLineWidth, eventList) => {
 };
 
 const SessionGraph = props => {
-  const { width, height, eventList } = props;
+  const { width, height } = props;
+  const [eventList, setEventsList] = useState([]);
+  useEffect(() => requestSessionData(setEventsList), []);
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent name={"Session Graph"} width={width} height={height} />

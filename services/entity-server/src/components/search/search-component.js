@@ -8,7 +8,6 @@ import {
   Intent
 } from "@blueprintjs/core";
 import SearchPaging from "./search-paging";
-import { extractSearchResults } from "../../store/data-transforms";
 import {
   RequestState,
   AppToaster,
@@ -18,7 +17,7 @@ import {
 import SearchResultList from "./search-result-list";
 import SearchResultGrid from "./search-result-grid";
 import SearchResultIdea from "./search-result-idea";
-import axios from "axios";
+import { requestSearchData } from "../../middleware/requests";
 
 const headerHeight = 50;
 const footerHeight = 50;
@@ -72,7 +71,6 @@ const initialStateSearch = {
 };
 
 const searchReducer = (state, action) => {
-  console.log(state, action);
   const { maxPage, page, radioSelection } = state;
   switch (action.type) {
     case SearchActionTypes.PAGE_LEFT:
@@ -94,7 +92,7 @@ const searchReducer = (state, action) => {
       return {
         ...state,
         requestState: RequestState.COMPLETED,
-        searchResults: extractSearchResults(action.value),
+        searchResults: action.value,
         page: 0,
         maxPage: computeMaxPage(action.value.length, radioSelection)
       };
@@ -128,7 +126,6 @@ export const SearchComponent = props => {
     searchResults
   } = searchState;
 
-  console.log(searchResults, page, radioSelection);
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent name={"Session Graph"} width={width} height={height} />
@@ -143,24 +140,7 @@ export const SearchComponent = props => {
 
   const onSubmit = () => {
     if (inputValue.length >= 2) {
-      dispatchSearchAction({
-        type: SearchActionTypes.SEARCH_REQUEST_SUBMIT,
-        value: inputValue
-      });
-      axios
-        .get(process.env.PUBLIC_URL + "/data/mockdata-search.json")
-        .then(result => {
-          dispatchSearchAction({
-            type: SearchActionTypes.RESULTS_RECEIVED,
-            value: result.data
-          });
-        })
-        .catch(error => {
-          dispatchSearchAction({
-            type: SearchActionTypes.REQUEST_ERROR,
-            value: error
-          });
-        });
+      requestSearchData(inputValue, dispatchSearchAction);
     } else {
       AppToaster.show({
         message: "Search string must have at least 2 characters!",
