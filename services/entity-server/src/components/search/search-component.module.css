@@ -129,74 +129,15 @@
     margin: auto;
 }
 
-
-
-.resultIdeaHeader{
-    display: flex;
-    flex-direction: row;
-    height: 63px;
-    background-color: whitesmoke;
-    border-bottom: lightgrey 6px solid;
-}
-
-.resultIdeaTitle{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 20px;
-    font-size: 22px;
-}
-
-.resultIdeaBody{
-    display: flex;
-    flex-direction: row;
-    background-color: whitesmoke;
-}
-
-.resultIdeaLeft{
-    flex-grow: 1;
-    display: flex;
-    flex-basis: 200px;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.resultIdeaRight{
-    flex-grow: 2;
-    flex-basis: 200px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    padding-top: 1px;
-    padding-left: 5px;
-}
-
-.resultIdeaIconFrame{
-    align-self: start;
-}
-
-.resultIdeaIconFrame img{
-    max-width: 100%;
-}
-
 .resultIdeaRating h3{
     margin-bottom: 10px;
 }
-
-.resultIconPlaceHolder{
-    width:150px;
-    height:150px;
-    background-color: dimgrey;
-    color: white;
-    display: flex;
-}
-
-.resultIconPlaceHolder div {
-    margin: auto;
-}
-
 .RatingWrapper {
     min-width: 150px;
     display: flex;
     flex-direction: column;
 }
+
+
+
 
