@@ -1,7 +1,8 @@
 import { Position, Toaster } from "@blueprintjs/core";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import React from "react";
 import style from "./utils.module.css";
+import { useParams } from "react-router-dom";
 
 export const pageAction = Object.freeze({
   LEFT: "LEFT",
@@ -10,7 +11,7 @@ export const pageAction = Object.freeze({
   END: "END"
 });
 
-export const requestState = Object.freeze({
+export const RequestState = Object.freeze({
   IDLE: "IDLE",
   BUSY: "BUSY",
   FAILED: "FAILED",
@@ -44,6 +45,22 @@ export const useWindowSize = () => {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
   return size;
+};
+
+const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
+const scrollToTop = () => window.scrollTo(0, 0);
+
+export const useScrollToParagraph = listOfKeywordAndRefPairs => {
+  let { paragraph } = useParams();
+  let currentRef = listOfKeywordAndRefPairs.filter(keywordAndRefPair => {
+    const [keyword] = keywordAndRefPair;
+    return keyword === paragraph;
+  });
+  useEffect(
+    () =>
+      currentRef.length === 0 ? scrollToTop() : scrollToRef(currentRef[0][1]),
+    [paragraph, currentRef]
+  );
 };
 
 export const AltTextComponent = props => (

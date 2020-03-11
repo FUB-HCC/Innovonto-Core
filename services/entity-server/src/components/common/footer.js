@@ -38,17 +38,17 @@ export const Footer = props => {
         <Copyright />
       </NavbarGroup>
       <NavbarGroup align={Alignment.RIGHT}>
-        <Link to="/about">
+        <Link to="/about/-">
           <Button minimal={true} active={location.pathname.includes("about")}>
             About
           </Button>
         </Link>
-        <Link to="/imprint">
+        <Link to="/about/imprint">
           <Button minimal={true} active={location.pathname.includes("imprint")}>
             Imprint
           </Button>
         </Link>
-        <Link to="/privacy-policy">
+        <Link to="/about/privacy-policy">
           <Button
             minimal={true}
             active={location.pathname.includes("privacy-policy")}

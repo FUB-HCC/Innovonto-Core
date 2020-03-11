@@ -1,6 +1,4 @@
-import { fetchSearchData } from "../../store/actions";
-import { connect } from "react-redux";
-import React from "react";
+import React, { useReducer, useState } from "react";
 import style from "./search-component.module.css";
 import {
   Button,
@@ -10,9 +8,9 @@ import {
   Intent
 } from "@blueprintjs/core";
 import SearchPaging from "./search-paging";
+import { extractSearchResults } from "../../store/data-transforms";
 import {
-  pageAction,
-  requestState as requestStates,
+  RequestState,
   AppToaster,
   makeDimensionsChecker,
   AltTextComponent
@@ -20,6 +18,7 @@ import {
 import SearchResultList from "./search-result-list";
 import SearchResultGrid from "./search-result-grid";
 import SearchResultIdea from "./search-result-idea";
+import axios from "axios";
 
 const headerHeight = 50;
 const footerHeight = 50;
@@ -35,18 +34,6 @@ const areDimensionsReasonable = makeDimensionsChecker(
   maxAspectRatio
 );
 
-const resultsPerPageTypes = Object.freeze({
-  LIST: 10,
-  GRID: 6,
-  IDEA: 1
-});
-
-const radio = Object.freeze({
-  LIST: "LIST",
-  GRID: "GRID",
-  IDEA: "IDEA"
-});
-
 const computeMaxPage = (nResults, resultsPerPage) =>
   Math.floor((nResults - 1) / resultsPerPage);
 
@@ -57,57 +44,123 @@ const SearchResultMessage = props => (
   <div className={style.resultMessageWrapper}>{props.children}</div>
 );
 
-class SearchComponent extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      radioSelection: radio.LIST,
-      inputValue: "",
-      requestInputValue: "",
-      page: 0,
-      maxPage: 0,
-      nResults: 0,
-      resultsPerPage: resultsPerPageTypes.LIST
-    };
-    this.handleRadio = this.handleRadio.bind(this);
-    this.handleInput = this.handleInput.bind(this);
-    this.handlePageAction = this.handlePageAction.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const Radio = Object.freeze({
+  LIST: 10,
+  GRID: 6,
+  IDEA: 1
+});
 
-  static getDerivedStateFromProps(props, state) {
-    if (props.searchResults && props.searchResults.length !== state.nResults) {
+export const SearchActionTypes = Object.freeze({
+  PAGE_LEFT: "LEFT",
+  PAGE_RIGHT: "RIGHT",
+  PAGE_START: "START",
+  PAGE_END: "END",
+  SEARCH_REQUEST_SUBMIT: "SEARCH_REQUEST_SUBMIT",
+  RESULTS_RECEIVED: "RESULTS_RECEIVED",
+  REQUEST_ERROR: "REQUEST_ERROR",
+  RADIO_BUTTON_PRESSED: "RADIO_BUTTON_PRESSED"
+});
+
+const initialStateSearch = {
+  searchResults: [],
+  requestState: RequestState.IDLE,
+  requestError: null,
+  radioSelection: Radio.LIST,
+  requestInputValue: "",
+  page: 0,
+  maxPage: 0
+};
+
+const searchReducer = (state, action) => {
+  console.log(state, action);
+  const { maxPage, page, radioSelection } = state;
+  switch (action.type) {
+    case SearchActionTypes.PAGE_LEFT:
+      return { ...state, page: 0 < page ? page - 1 : page };
+    case SearchActionTypes.PAGE_RIGHT:
+      return { ...state, page: maxPage > page ? page + 1 : page };
+    case SearchActionTypes.PAGE_START:
+      return { ...state, page: 0 };
+    case SearchActionTypes.PAGE_END:
+      return { ...state, page: maxPage };
+    case SearchActionTypes.SEARCH_REQUEST_SUBMIT:
       return {
-        maxPage: computeMaxPage(
-          props.searchResults.length,
-          state.resultsPerPage
-        ),
-        nResults: props.searchResults.length
+        ...state,
+        requestState: RequestState.BUSY,
+        requestInputValue: action.value,
+        requestError: null
       };
-    }
-    return null;
+    case SearchActionTypes.RESULTS_RECEIVED:
+      return {
+        ...state,
+        requestState: RequestState.COMPLETED,
+        searchResults: extractSearchResults(action.value),
+        page: 0,
+        maxPage: computeMaxPage(action.value.length, radioSelection)
+      };
+    case SearchActionTypes.REQUEST_ERROR:
+      return { ...state, requestState: RequestState.FAILED };
+    case SearchActionTypes.RADIO_BUTTON_PRESSED:
+      return {
+        ...state,
+        radioSelection: action.value,
+        page: 0,
+        maxPage: computeMaxPage(state.searchResults.length, action.value)
+      };
+    default:
+      return state;
   }
+};
 
-  handleRadio(key) {
-    this.setState({
-      radioSelection: key,
-      resultsPerPage: resultsPerPageTypes[key],
-      maxPage: computeMaxPage(
-        this.props.searchResults.length,
-        resultsPerPageTypes[key]
-      ),
-      page: 0
-    });
+export const SearchComponent = props => {
+  const { width, height } = props;
+  const [inputValue, setInputValue] = useState("");
+  const [searchState, dispatchSearchAction] = useReducer(
+    searchReducer,
+    initialStateSearch
+  );
+  const {
+    requestState,
+    requestError,
+    radioSelection,
+    requestInputValue,
+    page,
+    searchResults
+  } = searchState;
+
+  console.log(searchResults, page, radioSelection);
+  if (!areDimensionsReasonable(width, height)) {
+    return (
+      <AltTextComponent name={"Session Graph"} width={width} height={height} />
+    );
   }
+  const innerHeight = height - headerHeight - footerHeight;
+  const resultsCurrentPage = filterResultsOfPage(
+    searchResults,
+    page,
+    radioSelection
+  );
 
-  handleInput(event) {
-    this.setState({ inputValue: event.target.value });
-  }
-
-  handleSubmit() {
-    if (this.state.inputValue.length >= 2) {
-      this.setState({ requestInputValue: this.state.inputValue });
-      this.props.fetchData();
+  const onSubmit = () => {
+    if (inputValue.length >= 2) {
+      dispatchSearchAction({
+        type: SearchActionTypes.SEARCH_REQUEST_SUBMIT,
+        value: inputValue
+      });
+      axios
+        .get(process.env.PUBLIC_URL + "/data/mockdata-search.json")
+        .then(result => {
+          dispatchSearchAction({
+            type: SearchActionTypes.RESULTS_RECEIVED,
+            value: result.data
+          });
+        })
+        .catch(error => {
+          dispatchSearchAction({
+            type: SearchActionTypes.REQUEST_ERROR,
+            value: error
+          });
+        });
     } else {
       AppToaster.show({
         message: "Search string must have at least 2 characters!",
@@ -115,187 +168,123 @@ class SearchComponent extends React.Component {
         timeout: 3000
       });
     }
-  }
+  };
 
-  handlePageAction(action) {
-    const { maxPage, page } = this.state;
-    switch (action) {
-      case pageAction.LEFT:
-        this.setState({ page: 0 < page ? page - 1 : page });
-        break;
-      case pageAction.RIGHT:
-        this.setState({ page: maxPage > page ? page + 1 : page });
-        break;
-      case pageAction.START:
-        this.setState({ page: 0 });
-        break;
-      case pageAction.END:
-        this.setState({ page: maxPage });
-        break;
-      default:
-        break;
-    }
-  }
+  const onRadioClick = radio => {
+    dispatchSearchAction({
+      type: SearchActionTypes.RADIO_BUTTON_PRESSED,
+      value: radio
+    });
+  };
 
-  render() {
-    const {
-      width,
-      height,
-      searchResults,
-      requestState,
-      requestError
-    } = this.props;
-    const {
-      radioSelection,
-      inputValue,
-      requestInputValue,
-      page,
-      resultsPerPage,
-      nResults
-    } = this.state;
-    if (!areDimensionsReasonable(width, height)) {
-      return (
-        <AltTextComponent
-          name={"Session Graph"}
-          width={width}
-          height={height}
+  const searchHeader = (
+    <div className={style.searchHeaderWrapper} style={{ height: headerHeight }}>
+      <input
+        className={style.searchInput}
+        value={inputValue}
+        onChange={event => setInputValue(event.target.value)}
+      />
+      <Button minimal={true} text={"search"} onClick={onSubmit} />
+      <Divider />
+      <ButtonGroup>
+        <Button
+          minimal={true}
+          text={"list"}
+          active={radioSelection === Radio.LIST}
+          onClick={() => onRadioClick(Radio.LIST)}
         />
-      );
-    }
-    const resultsCurrentPage = filterResultsOfPage(
-      searchResults,
-      page,
-      resultsPerPage
-    );
-
-    const innerHeight = height - headerHeight - footerHeight;
-
-    const searchHeader = (
-      <div
-        className={style.searchHeaderWrapper}
-        style={{ height: headerHeight }}
-      >
-        <input
-          className={style.searchInput}
-          value={inputValue}
-          onChange={this.handleInput}
+        <Button
+          minimal={true}
+          text={"grid"}
+          active={radioSelection === Radio.GRID}
+          onClick={() => onRadioClick(Radio.GRID)}
         />
-        <Button minimal={true} text={"search"} onClick={this.handleSubmit} />
-        <Divider />
-        <ButtonGroup>
-          <Button
-            minimal={true}
-            text={"list"}
-            active={radioSelection === radio.LIST}
-            onClick={() => this.handleRadio(radio.LIST)}
-          />
-          <Button
-            minimal={true}
-            text={"grid"}
-            active={radioSelection === radio.GRID}
-            onClick={() => this.handleRadio(radio.GRID)}
-          />
-          <Button
-            minimal={true}
-            text={"idea"}
-            active={radioSelection === radio.IDEA}
-            onClick={() => this.handleRadio(radio.IDEA)}
-          />
-        </ButtonGroup>
-        <Divider />
-        <Button minimal={true} text={"export"} />
-      </div>
-    );
-
-    const searchBody = (
-      <div className={style.searchBodyWrapper} style={{ height: innerHeight }}>
-        <>
-          {requestState === requestStates.COMPLETED && (
-            <>
-              {searchResults.length === 0 && (
-                <SearchResultMessage>
-                  <span>
-                    We couldn’t find any ideas containing the text "
-                    {requestInputValue}".
-                    <br />
-                    Please try again with another search term.
-                  </span>
-                </SearchResultMessage>
-              )}
-              {radioSelection === radio.LIST && (
-                <SearchResultList results={resultsCurrentPage} width={width} />
-              )}
-              {radioSelection === radio.GRID && (
-                <SearchResultGrid
-                  results={resultsCurrentPage}
-                  height={height - headerHeight - footerHeight}
-                  width={width}
-                />
-              )}
-              {radioSelection === radio.IDEA && (
-                <SearchResultIdea
-                  results={resultsCurrentPage}
-                  nResults={nResults}
-                />
-              )}
-            </>
-          )}
-          {requestState === requestStates.IDLE && (
-            <SearchResultMessage>
-              <span>
-                Search for Ideas in the Full Dataset.
-                <br /> For example, search for all Ideas containing “animal”.
-              </span>
-            </SearchResultMessage>
-          )}
-          {requestState === requestStates.FAILED && (
-            <SearchResultMessage>
-              <span>
-                {" "}
-                We encountered the following error during your search: <br />{" "}
-                <b>{requestError.toString()}</b> <br />
-                Please try again.
-              </span>
-            </SearchResultMessage>
-          )}
-          {requestState === requestStates.BUSY && (
-            <SearchResultMessage>
-              <Spinner size={70} />
-            </SearchResultMessage>
-          )}
-        </>
-      </div>
-    );
-
-    return (
-      <div
-        className={style.searchComponentWrapper}
-        style={{ width: width, height: height }}
-      >
-        {searchHeader}
-        {searchBody}
-        <SearchPaging
-          onPageAction={key => this.handlePageAction(key)}
-          page={page}
-          footerHeight={footerHeight}
+        <Button
+          minimal={true}
+          text={"idea"}
+          active={radioSelection === Radio.IDEA}
+          onClick={() => onRadioClick(Radio.IDEA)}
         />
-      </div>
-    );
-  }
-}
+      </ButtonGroup>
+      <Divider />
+      <Button minimal={true} text={"export"} />
+    </div>
+  );
 
-const mapStateToProps = (state, ownProps) => ({
-  searchResults: state.data.searchResults,
-  requestState: state.data.requestState,
-  requestError: state.data.requestError,
-  height: ownProps.height,
-  width: ownProps.width
-});
+  const searchBody = (
+    <div className={style.searchBodyWrapper} style={{ height: innerHeight }}>
+      <>
+        {requestState === RequestState.COMPLETED && (
+          <>
+            {searchResults.length === 0 && (
+              <SearchResultMessage>
+                <span>
+                  We couldn’t find any ideas containing the text "
+                  {requestInputValue}".
+                  <br />
+                  Please try again with another search term.
+                </span>
+              </SearchResultMessage>
+            )}
+            {radioSelection === Radio.LIST && (
+              <SearchResultList results={resultsCurrentPage} width={width} />
+            )}
+            {radioSelection === Radio.GRID && (
+              <SearchResultGrid
+                results={resultsCurrentPage}
+                height={height - headerHeight - footerHeight}
+                width={width}
+              />
+            )}
+            {radioSelection === Radio.IDEA && (
+              <SearchResultIdea
+                results={resultsCurrentPage}
+                nResults={searchResults.length}
+              />
+            )}
+          </>
+        )}
+        {requestState === RequestState.IDLE && (
+          <SearchResultMessage>
+            <span>
+              Search for Ideas in the Full Dataset.
+              <br /> For example, search for all Ideas containing “animal”.
+            </span>
+          </SearchResultMessage>
+        )}
+        {requestState === RequestState.FAILED && (
+          <SearchResultMessage>
+            <span>
+              {" "}
+              We encountered the following error during your search: <br />{" "}
+              <b>{requestError.toString()}</b> <br />
+              Please try again.
+            </span>
+          </SearchResultMessage>
+        )}
+        {requestState === RequestState.BUSY && (
+          <SearchResultMessage>
+            <Spinner size={70} />
+          </SearchResultMessage>
+        )}
+      </>
+    </div>
+  );
 
-const mapDispatchToProps = dispatch => ({
-  fetchData: () => {
-    dispatch(fetchSearchData());
-  }
-});
+  return (
+    <div
+      className={style.searchComponentWrapper}
+      style={{ width: width, height: height }}
+    >
+      {searchHeader}
+      {searchBody}
+      <SearchPaging
+        actionDispatch={dispatchSearchAction}
+        page={page}
+        footerHeight={footerHeight}
+      />
+    </div>
+  );
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
+export default SearchComponent;

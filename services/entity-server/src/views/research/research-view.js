@@ -1,15 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import propTypes from "prop-types";
-import { useParams } from "react-router-dom";
 import style from "./research-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
 import PageTitle from "../../components/common/page-title";
+import { useScrollToParagraph } from "../../components/utils";
+import ImgWithCaption from "../../components/common/img-with-caption";
 import ideaModelingImg from "../../assets/img/idea-vision-visualization.png";
 import ideaLifecycleImg from "../../assets/img/idea-lifecycle.png";
 import ideaSpaceVisualizationImg from "../../assets/img/vision-idea-map.png";
 import ideaVisualizationImg from "../../assets/img/spark-viz.png";
-
-import ImgWithCaption from "../../components/common/img-with-caption";
 import sessionVizImg1 from "../../assets/img/session-view.png";
 import sessionVizImg2 from "../../assets/img/session-tree.png";
 import augmentingIdeationImg from "../../assets/img/augmenting-ideation.png";
@@ -17,29 +16,15 @@ import adaptiveIdeationSystemsImg from "../../assets/img/adaptive-ideation-syste
 import interactiveConceptValImg from "../../assets/img/interactive-concept-validation.png";
 import inspirationRecommenderImg from "../../assets/img/idea-recommender.png";
 
-const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop);
-
 export const ResearchView = () => {
-  let { paragraph } = useParams();
   const analyzingIdeationRef = useRef();
   const understandingIdeationRef = useRef();
   const augmentingIdeationRef = useRef();
-  useEffect(() => {
-    switch (paragraph) {
-      case "analysing-ideation":
-        scrollToRef(analyzingIdeationRef);
-        break;
-      case "understanding-ideation":
-        scrollToRef(understandingIdeationRef);
-        break;
-      case "augmenting-ideation":
-        scrollToRef(augmentingIdeationRef);
-        break;
-      default:
-        break;
-    }
-  }, [paragraph]);
-
+  useScrollToParagraph([
+    ["analyzing-ideation", analyzingIdeationRef],
+    ["understanding-ideation", understandingIdeationRef],
+    ["augmenting-ideation", augmentingIdeationRef]
+  ]);
   return (
     <div className={style.researchViewWrapper}>
       <PageTitle title={"Research"} />

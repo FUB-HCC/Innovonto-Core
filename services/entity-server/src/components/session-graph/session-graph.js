@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import style from "./session-graph.module.css";
 import { Popover, PopoverInteractionKind } from "@blueprintjs/core";
@@ -207,54 +207,43 @@ const Labels = props => (
   </div>
 );
 
-class EventMarker extends React.Component {
-  constructor() {
-    super();
-    this.state = { isHovered: false, isClicked: false, isOpen: false };
+const EventMarker = props => {
+  const [isHovered, setHovered] = useState(false);
+  const [isClicked, setClicked] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
-    this.handleHover = this.handleHover.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleInteraction = this.handleInteraction.bind(this);
-  }
-
-  handleHover(isOver) {
-    const { isClicked } = this.state;
-    this.setState({ isHovered: isOver, isOpen: isOver || isClicked });
-  }
-
-  handleClick() {
-    this.setState({ isClicked: !this.state.isClicked });
-  }
-
-  handleInteraction(wouldOpen) {
-    const { isHovered, isOpen } = this.state;
+  const onMouseEvent = isEnter => {
+    setHovered(isEnter);
+    setOpen(isEnter || isClicked);
+  };
+  const onClick = () => {
+    setClicked(!isClicked);
+  };
+  const onInteraction = wouldOpen => {
     if (!isHovered && isOpen && !wouldOpen) {
-      this.setState({ isClicked: false, isOpen: false });
+      setClicked(false);
+      setOpen(false);
     }
-  }
-
-  render() {
-    const { cx, cy, marker, content } = this.props;
-    const { isOpen } = this.state;
-    return (
-      <div
-        className={style.eventMarker}
-        style={{ left: cx, top: cy }}
-        onMouseEnter={() => this.handleHover(true)}
-        onMouseLeave={() => this.handleHover(false)}
-        onMouseDown={this.handleClick}
-      >
-        <Popover
-          isOpen={isOpen}
-          onInteraction={this.handleInteraction}
-          interactionKind={PopoverInteractionKind.CLICK}
-          content={mapComponentToContent(content)}
-          target={marker}
-        />
-      </div>
-    );
-  }
-}
+  };
+  const { cx, cy, marker, content } = props;
+  return (
+    <div
+      className={style.eventMarker}
+      style={{ left: cx, top: cy }}
+      onMouseEnter={() => onMouseEvent(true)}
+      onMouseLeave={() => onMouseEvent(false)}
+      onMouseDown={onClick}
+    >
+      <Popover
+        isOpen={isOpen}
+        onInteraction={onInteraction}
+        interactionKind={PopoverInteractionKind.CLICK}
+        content={mapComponentToContent(content)}
+        target={marker}
+      />
+    </div>
+  );
+};
 
 const ImageContent = props => {
   //const imgSrc = props.img.split('"').find(str => str.includes(".jpg"));
