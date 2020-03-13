@@ -19,8 +19,8 @@ const sparqlProjectList = () => (`
 
     CONSTRUCT  {
         ?project a gi2mo:IdeaContest ;
-                dcterms:numberIdeas ?ideaCount;
-                dcterms:numberUsers ?userCount;
+                inov:numberIdeas ?ideaCount;
+                inov:numberUsers ?userCount;
                 dcterms:title ?titel;
                 dcterms:description ?description;
                 rdfs:seeAlso ?seeAlso;

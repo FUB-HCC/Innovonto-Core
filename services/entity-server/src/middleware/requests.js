@@ -47,9 +47,7 @@ export const requestProjectListData = dispatch => {
     .get(backendServiceBaseUrl, sparqlProjectListParams())
     .then(result => {
       frameData(result.data, "gi2mo:IdeaContest")
-      
       .then(data => {
-        console.log(data)
         dispatch(extractProjectList(data))
       })
     })
