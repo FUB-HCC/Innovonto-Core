@@ -17,7 +17,7 @@ function Copyright() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        HCC FU Berlins
+        HCC FU Berlin
       </a>{" "}
       {new Date().getFullYear()}
       {"."}
