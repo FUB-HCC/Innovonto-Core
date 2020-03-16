@@ -1,6 +1,7 @@
 # TODO include yarn build
 # TODO include path for docs/model
-# !!!   before docker build run yarn build    !!!
+# !!! before docker build run yarn build    !!!
+# !!! before docker build run Innovonto-Ontology make and copy the result to /docs
 # Stage 2 - the production environment
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf

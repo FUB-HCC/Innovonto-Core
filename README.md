@@ -19,9 +19,13 @@ If you want to get build a deployment artifact, check out the project using:
 
 ## Deployment
 
-	TODO add build commands here
-	
-	TODO add system overview here
+	Step 1: Build the different artifacts (TODO move into docker-build)
+	    1) Entity Server: yarn build
+	    2) Ontology: make
+	    3) idea-map-backend
+
+    Step 2: run docker-compose build
+    Step 3: push
 
 
 ## Services within this project
