@@ -77,7 +77,7 @@ export const extractSearchResults = data =>
   }));
 
 export const extractProjectList = data =>
-  data.ideaContests.map(ideaContest => ({
+  data["@graph"].map(ideaContest => ({
     id: ideaContest["@id"],
     description: ideaContest.description,
     title: ideaContest.title
