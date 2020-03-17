@@ -12,6 +12,7 @@ import { Header } from "./components/common/header";
 import { Footer } from "./components/common/footer";
 import { HomeView } from "./views/home/home-view";
 import { DataView } from "./views/data/data-view";
+import { ModelView } from "./views/model/model-view";
 import {
   NonIdealView,
   NonIdealViewIntent
@@ -42,9 +43,10 @@ const Root = () => (
       <Switch>
         <Route exact path="/" component={HomeView} />
         <Route path="/research/:paragraph" component={ResearchView} />
+        <Route path="/data" component={DataView} />
+        <Route path="/model" component={ModelView} />
         <Route path="/software" component={SoftwareView} />
         <Route path="/about/:paragraph" component={AboutView} />
-        <Route path="/data" component={DataView} />
         <Route path="/search" component={SearchView} />
         <Route path="/session" component={SessionView} />
         <Route

@@ -5,10 +5,11 @@ import {
   extractProjectList,
   extractSearchResults
 } from "./data-transforms";
-import {sparqlProjectListParams} from "./sparql-queries"
-import {frameData} from "./data-framing"
+import { sparqlProjectListParams } from "./sparql-queries";
+import { frameData } from "./data-framing";
 
-const backendServiceBaseUrl = "https://innovonto-core.imp.fu-berlin.de/management/core/query";
+const backendServiceBaseUrl =
+  "https://innovonto-core.imp.fu-berlin.de/management/core/query";
 
 export const requestSearchData = (requestValue, dispatch) => {
   dispatch({
@@ -46,10 +47,9 @@ export const requestProjectListData = dispatch => {
   axios
     .get(backendServiceBaseUrl, sparqlProjectListParams())
     .then(result => {
-      frameData(result.data, "gi2mo:IdeaContest")
-      .then(data => {
-        dispatch(extractProjectList(data))
-      })
+      frameData(result.data, "gi2mo:IdeaContest").then(data => {
+        dispatch(extractProjectList(data));
+      });
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required

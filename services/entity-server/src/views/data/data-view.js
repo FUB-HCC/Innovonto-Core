@@ -8,11 +8,14 @@ export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
   useEffect(() => requestProjectListData(setProjectList), []);
-  const filteredProjects = projectList.filter(
-    project =>
-      project.title.includes(searchValue) ||
-      project.description.includes(searchValue)
-  );
+  console.log(projectList);
+  const filteredProjects = projectList
+    .filter(project => project.title)
+    .filter(
+      project =>
+        project.title.includes(searchValue) ||
+        project.description.includes(searchValue)
+    );
   return (
     <div className={style.dataViewWrapper}>
       <PageTitle title={"Data"} />

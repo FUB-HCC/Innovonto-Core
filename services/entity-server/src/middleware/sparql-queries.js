@@ -1,16 +1,16 @@
-
-export const sparqlProjectListParams = () => coreServerRequest(sparqlProjectList())
+export const sparqlProjectListParams = () =>
+  coreServerRequest(sparqlProjectList());
 
 const coreServerRequest = sparqlQuery => {
-    return ( {
-        params: {
-            query: sparqlQuery,
-            format: "json"
-        }
-    })
-}
+  return {
+    params: {
+      query: sparqlQuery,
+      format: "json"
+    }
+  };
+};
 
-const sparqlProjectList = () => (`
+const sparqlProjectList = () => `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX inov:<http://purl.org/innovonto/types/#>
@@ -61,4 +61,4 @@ const sparqlProjectList = () => (`
     }
     GROUP BY ?project
     }
-}`)
+}`;
