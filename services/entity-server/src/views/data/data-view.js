@@ -1,21 +1,25 @@
 import style from "./data-view.module.css";
-import React, { useEffect, useState } from "react";
-import { InputGroup } from "@blueprintjs/core";
+import React, {useEffect, useState} from "react";
+import {InputGroup} from "@blueprintjs/core";
 import PageTitle from "../../components/common/page-title";
-import { requestProjectListData } from "../../middleware/requests";
+import {requestProjectListData} from "../../middleware/requests";
 import LargeEntitiyPreview from "../../components/common/large-entity-preview";
+
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
   useEffect(() => requestProjectListData(setProjectList), []);
-  const filteredProjects = projectList.filter(
-    project =>
-      project.title.includes(searchValue) ||
-      project.description.includes(searchValue)
-  );
+  var filteredProjects = projectList;
+  if (searchValue) {
+    filteredProjects = projectList.filter(
+      project =>
+        project.title.includes(searchValue) ||
+        project.description.includes(searchValue)
+    );
+  }
   return (
     <div className={style.dataViewWrapper}>
-      <PageTitle title={"Data"} />
+      <PageTitle title={"Data"}/>
       <div className={style.dataViewContent}>
         <h1 className={style.largeTitle}>Search</h1>
         <InputGroup
@@ -32,7 +36,7 @@ export const DataView = () => {
             key={project.id}
             description={project.description}
             title={project.title}
-            rightContent={<ProjectOptions />}
+            rightContent={<ProjectOptions/>}
           />
         ))}
       </div>
@@ -44,9 +48,9 @@ const ProjectOptions = () => {
   return (
     <div className={style.projectOptionsWrapper}>
       <p className={style.projectOption}>More About the project</p>
-      <br />
+      <br/>
       <p className={style.projectOption}>View All Ideas</p>
-      <br />
+      <br/>
       <p className={style.projectOption}>View result/selected ideas</p>
     </div>
   );
