@@ -21,6 +21,10 @@ The production build uses: https://github.com/tiangolo/uvicorn-gunicorn-fastapi-
     
     http://localhost:8000/
     
+    if you want to use the interactive app use:
+    
+    127.0.0.1:8000/docs
+    
 Right now, the idea-map docker container produces an astonishing 3.14 GB image. This could be made better with using alpine.
 However, running pip install grpc fails on alpine with: 
 
@@ -56,7 +60,7 @@ To get some ideas that you can cluster, you can use:
 IdeaContests:
 
     1. TCO
-    http://purl.org/innovonto/ideaContests/TCO
+    https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/i2m-TCO
     
     2. Bionic Radar
     http://purl.org/innovonto/ideaContests/bionic-radar
