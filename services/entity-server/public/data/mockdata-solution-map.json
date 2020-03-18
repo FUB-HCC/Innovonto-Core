@@ -1,1562 +1,2297 @@
 {
-"head": {
-"vars": [
-"idea",
-"content"
-]
-},
-"results": {
-"bindings": [
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0926d8f9-b77c-4c69-b4a9-0a8ece152e0d"
-},
-"content": {
-"type": "literal",
-"value": "as a Whiteboard-Screen on a Meeting room wall, so that within open working places glass walls can be used and collaboration on touch-screens-glass-walls"
-},
-"coordinates": {
-"x": "-4.2370067",
-"y": "-23.182749"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.09290829"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0acdd7fb-57dd-4ecd-bc8f-49912ee716ec"
-},
-"content": {
-"type": "literal",
-"value": "It might be interesting for intelligent Packaging to Control the Transportation, the storage and the condition of the packed products"
-},
-"coordinates": {
-"x": "20.980816",
-"y": "-22.963423"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.097153455"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0b19157e-d37c-4a45-ac82-4ce98d663d2d"
-},
-"content": {
-"type": "literal",
-"value": "Could receive or send data via any surface of your car if you need a stronger signal.\r\n you could use the car-window to receive GPS for example."
-},
-"coordinates": {
-"x": "-4.9181886",
-"y": "3.7920053"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08372665"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0c6a89dd-d035-4af7-b48b-11453cac37d5"
-},
-"content": {
-"type": "literal",
-"value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
-},
-"coordinates": {
-"x": "-54.198925",
-"y": "40.825962"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.14966275"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0e462279-5ff8-43b8-9589-16b84a67294e"
-},
-"content": {
-"type": "literal",
-"value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table"
-},
-"coordinates": {
-"x": "21.505001",
-"y": "1.2932996"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.10013546"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/13280e58-0c66-41d7-9112-bd98419fadf2"
-},
-"content": {
-"type": "literal",
-"value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
-},
-"coordinates": {
-"x": "3.7741175",
-"y": "36.167988"
-},
-"cluster_label": "12",
-"distance_from_centroid": "0.11759229"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/13df40f2-ef4b-498c-a9c5-c4a9942cdda4"
-},
-"content": {
-"type": "literal",
-"value": "coating the back of cell phone with TCO - and whereever you are and what card you need it appears on the back of the cell phone. Like membership cards, transportation ticket, without looking for the right one."
-},
-"coordinates": {
-"x": "2.7038622",
-"y": "5.663362"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08219034"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1a57877d-861d-4ac9-a347-80b3f4672d41"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
-},
-"coordinates": {
-"x": "-22.118095",
-"y": "57.455048"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.13309899"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1cd47321-20e3-439e-b765-ad5ff8d5ac45"
-},
-"content": {
-"type": "literal",
-"value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by connecting TCO treated windows to the alarm system."
-},
-"coordinates": {
-"x": "-8.426619",
-"y": "-43.18786"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.10882567"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1d3fbb24-07e1-41c5-b112-c59502917e93"
-},
-"content": {
-"type": "literal",
-"value": "'Best before' is history. The TCO-material can indicate whether a food is still good or should not be eaten anymore. The material changes its color or indicated a fouled food by a caution sign."
-},
-"coordinates": {
-"x": "17.953236",
-"y": "-39.678993"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.12595452"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1e98c40b-d3f7-42fc-abe8-ebbaa49e7e41"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "3.7579777",
-"y": "69.65746"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642454"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1ea205f9-85e0-4cfb-8efb-beee47acc7f7"
-},
-"content": {
-"type": "literal",
-"value": "wdfafd"
-},
-"coordinates": {
-"x": "29.629683",
-"y": "-47.383102"
-},
-"cluster_label": "14",
-"distance_from_centroid": "0.22901239"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/20696367-ac5d-4ce5-b669-4f4d8cd181bb"
-},
-"content": {
-"type": "literal",
-"value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
-},
-"coordinates": {
-"x": "9.885334",
-"y": "34.30258"
-},
-"cluster_label": "12",
-"distance_from_centroid": "0.11759229"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2100eae2-1372-4b52-8cbe-bfcf816217ff"
-},
-"content": {
-"type": "literal",
-"value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant.\n\n Plantform – Plattform für alles Stakeholder (Agrarimdustrie, Community, Stadtversorgung)"
-},
-"coordinates": {
-"x": "-37.075092",
-"y": "11.569927"
-},
-"cluster_label": "11",
-"distance_from_centroid": "0.11313249"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/24f6fd2e-c7e1-47f1-ae98-2f97a3157d0b"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
-},
-"coordinates": {
-"x": "29.147242",
-"y": "42.246765"
-},
-"cluster_label": "1",
-"distance_from_centroid": "0.1262517"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/26758245-e91a-4557-8397-57cb48b8e34d"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
-},
-"coordinates": {
-"x": "-31.577744",
-"y": "56.116795"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.13309899"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2983d0d1-713d-4ffc-97eb-a0e7335458d8"
-},
-"content": {
-"type": "literal",
-"value": "using it for the generation of solar energy, i.e. by covering house walls and roofs"
-},
-"coordinates": {
-"x": "-14.499359",
-"y": "-28.11313"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.1141368"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2abf6994-045d-4630-87b5-33420a7fe844"
-},
-"content": {
-"type": "literal",
-"value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
-},
-"coordinates": {
-"x": "54.310867",
-"y": "21.636541"
-},
-"cluster_label": "4",
-"distance_from_centroid": "0.13378407"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2be4e523-b905-435e-ac0a-3e7c88cde5cd"
-},
-"content": {
-"type": "literal",
-"value": "TCO in combination with a Electro-wetting display (EWD)"
-},
-"coordinates": {
-"x": "36.20737",
-"y": "-28.957514"
-},
-"cluster_label": "0",
-"distance_from_centroid": "0.14682734"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2c34bff0-aa29-4909-9af1-faac59c60762"
-},
-"content": {
-"type": "literal",
-"value": "A solar panel connected to a device (Laptop, iPad etc) is covered with a touch sensitive TCO foil. While generating energy the transparent foil gives the product the keyboard functionality."
-},
-"coordinates": {
-"x": "-25.603065",
-"y": "25.2843"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.093721844"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/33bd13d1-6367-4065-b017-5587ca80b749"
-},
-"content": {
-"type": "literal",
-"value": "Tables at a restaurant can be TCO-applied to make a smart ordering board out of it."
-},
-"coordinates": {
-"x": "19.84189",
-"y": "-6.737926"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.098383315"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/347a7a4e-54b0-45b7-8479-ae7701b0434b"
-},
-"content": {
-"type": "literal",
-"value": "With the help of TCO, simple measurements can be carried out in urban areas that would otherwise require more complex installations. The frequency of use can be measured by contact on roads, park benches, bicycle stations, bus stops, so that one knows more about the requirements and necessities in urban space."
-},
-"coordinates": {
-"x": "-8.120389",
-"y": "14.741865"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.091706865"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/3573b82b-6093-4aff-a3ac-bcc2cb072794"
-},
-"content": {
-"type": "literal",
-"value": "TCO is covering the fridge door, giving information about expiry dates, contents, use of energy, temperature and other useful things."
-},
-"coordinates": {
-"x": "-22.348106",
-"y": "38.073154"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.10499611"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/37ee6da5-2a8b-4123-bc05-12c17b687a8f"
-},
-"content": {
-"type": "literal",
-"value": "TCO can take advertising to the next level. Surfaces can be covered with TCO and any time be used as a screen/display to show content in the right moment for the right people (e.g. if connected to persona data). without having to build big inflexible displays or billboards existing buildings / older constructions can be 'renewed' with TCO and used."
-},
-"coordinates": {
-"x": "-6.4004602",
-"y": "26.373032"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.09771752"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/42ee90a8-fa60-4ed2-9cff-06f5ee1fa004"
-},
-"content": {
-"type": "literal",
-"value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
-},
-"coordinates": {
-"x": "-43.24032",
-"y": "-7.475113"
-},
-"cluster_label": "7",
-"distance_from_centroid": "0.12810516"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/43ed15f7-94ca-480b-94d7-66623adb43a9"
-},
-"content": {
-"type": "literal",
-"value": "Tables at restaurants could be upgraded with a TCO interface foil. Menu cards and other prints could easily be placed and swapped under the foil layer."
-},
-"coordinates": {
-"x": "11.812051",
-"y": "11.913459"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.092099585"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/452b7d50-a3bd-4df3-ac09-6521d7c316cf"
-},
-"content": {
-"type": "literal",
-"value": "Window with a heat-sensitive material, that lights-up if a person is in the room during a fire"
-},
-"coordinates": {
-"x": "-1.463666",
-"y": "-31.064507"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.10714881"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/49368635-20d9-4e03-98ca-f6a37c43a71e"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
-},
-"coordinates": {
-"x": "-27.487907",
-"y": "61.454823"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.13309899"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/4eef5cd4-4e8d-499e-8830-2bf453960961"
-},
-"content": {
-"type": "literal",
-"value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
-},
-"coordinates": {
-"x": "48.199448",
-"y": "23.62368"
-},
-"cluster_label": "4",
-"distance_from_centroid": "0.13378407"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5374100c-e1c4-4db2-95a5-186d548e127c"
-},
-"content": {
-"type": "literal",
-"value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
-},
-"coordinates": {
-"x": "-9.452761",
-"y": "42.04696"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.1053783"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/55ea193b-16f8-408d-b4c9-f820679c2aab"
-},
-"content": {
-"type": "literal",
-"value": "make fashion individual: you could change the color of your clothes by touch."
-},
-"coordinates": {
-"x": "10.345177",
-"y": "-11.7932625"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.09457133"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/573ab11a-d2b4-4fea-8ecb-883374ab46e5"
-},
-"content": {
-"type": "literal",
-"value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
-},
-"coordinates": {
-"x": "-49.67181",
-"y": "-9.162879"
-},
-"cluster_label": "7",
-"distance_from_centroid": "0.12810516"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5ad7a2d0-7fe1-4b8a-af83-d37d6e9cca92"
-},
-"content": {
-"type": "literal",
-"value": "Use it for the car traffic. Put it on traffic lights to avoid problems when the electricity breaks down, as the lights can be controlled remotely. also put it on the asphalt esp at crossings etc to steer the traffic if necessary with visual signs e.g. this lane goes left, this goes right et.c.."
-},
-"coordinates": {
-"x": "-16.423779",
-"y": "8.744965"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08941854"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/61f22dbc-93c3-48f8-8b78-bd929e70f24d"
-},
-"content": {
-"type": "literal",
-"value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by putting electricity on the glass wall, as soon as the owner is no longer at home, or the shop is closed, or best when the alarm is set up. This way, if a burgler tries to break the glass-window, he/she gets shocked by electricity."
-},
-"coordinates": {
-"x": "-9.065054",
-"y": "-37.948856"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.10914495"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/66c4479f-b673-4626-81ca-6be68999a2dc"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
-},
-"coordinates": {
-"x": "23.446335",
-"y": "38.677128"
-},
-"cluster_label": "1",
-"distance_from_centroid": "0.1262517"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/68de8d44-d494-40b6-b1c4-4545ff0bc2f7"
-},
-"content": {
-"type": "literal",
-"value": "glass-walls on stores could have advertisment on them. this would have the benefit that it would Need to be printed and put on the glass or no TV would be required, which usually does not look that nice on a storefront."
-},
-"coordinates": {
-"x": "-20.451221",
-"y": "-4.6502914"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08572669"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/6bd3b271-7f99-4cb5-a152-d089772c7bbd"
-},
-"content": {
-"type": "literal",
-"value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n could be attached to existing facilities…"
-},
-"coordinates": {
-"x": "39.402405",
-"y": "-3.0853107"
-},
-"cluster_label": "10",
-"distance_from_centroid": "0.118650004"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/77e4b892-e454-4502-99e7-aa5be55ea427"
-},
-"content": {
-"type": "literal",
-"value": "Well-known board games such as chess, Monopoly or Settlers are covered with a TCO surface and thus offer new playing possibilities. Game scores can be saved and additional functions such as a digital avatar can be loaded i.e. onto the smartphone."
-},
-"coordinates": {
-"x": "10.868032",
-"y": "4.049036"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08589819"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7b0cc4df-5554-43b4-9270-4d34c27c7007"
-},
-"content": {
-"type": "literal",
-"value": "A TCO foil covering a traffic light can be activated and show simple information in the off state off the traffic light."
-},
-"coordinates": {
-"x": "-15.7196245",
-"y": "23.456549"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.091955885"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7e3f2b91-66bc-4377-b002-97d79ca10bb0"
-},
-"content": {
-"type": "literal",
-"value": "TCO covered chair and desk in the office. It could remind you via vibration or sound to stand up and go for a walk, get something to drink, correct your seating position etc."
-},
-"coordinates": {
-"x": "-3.5758104",
-"y": "-5.293645"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08595845"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7e54fe9c-8de8-406c-ac2b-1f75b47d5d7e"
-},
-"content": {
-"type": "literal",
-"value": "TCO-tattoos are THE perfect solution for indecisive people, that cannot commit to have a tattoo all days for every day. TCO-tattoos can be 'switched off' and the tattoo will not be seen for as long as the carrier wants to. Same applies to 'switched on'"
-},
-"coordinates": {
-"x": "9.184715",
-"y": "-27.849358"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.10408834"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/80257178-6d76-430e-8f3b-133137768d0f"
-},
-"content": {
-"type": "literal",
-"value": "helps you to mark, rate and finde important documents in you analog folder.\r\n this technology combines documents and certificates made of paper with digital advantages."
-},
-"coordinates": {
-"x": "27.05097",
-"y": "-32.59615"
-},
-"cluster_label": "0",
-"distance_from_centroid": "0.12268056"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/810bda91-8068-48ee-83e3-ef2b6a54a01e"
-},
-"content": {
-"type": "literal",
-"value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\r\n \r\n could be attached to existing facilities…"
-},
-"coordinates": {
-"x": "42.19732",
-"y": "-8.9853945"
-},
-"cluster_label": "10",
-"distance_from_centroid": "0.11871675"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/81b1b59e-6591-478b-8165-13fcea6ed77c"
-},
-"content": {
-"type": "literal",
-"value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
-},
-"coordinates": {
-"x": "-52.888092",
-"y": "47.427643"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.14966275"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/81d67bd3-9710-4254-9a32-c1b6b83c97b1"
-},
-"content": {
-"type": "literal",
-"value": "Responsive Surface - Temperature responsive surface in construction / building / real estate\r\n Oberflächen Anpassung in Abhängigkeit zum Klima (Sonne / Verdunklung oder Reflektiv; Temperaturabhängige Farbgestaltung), sonstigen Witterungs- oder Tageszeitabhängigkeit Ambiente-Gestaltungsoptionen"
-},
-"coordinates": {
-"x": "-12.403876",
-"y": "-18.286102"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.10318094"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8397751b-7a3f-4f76-bd42-1f1b488b8afe"
-},
-"content": {
-"type": "literal",
-"value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
-},
-"coordinates": {
-"x": "-47.943146",
-"y": "12.082215"
-},
-"cluster_label": "11",
-"distance_from_centroid": "0.12301844"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8937c092-4bbb-4f3e-b4e2-ba772f6d3398"
-},
-"content": {
-"type": "literal",
-"value": "put it on the wall inside the house/Building, so that I can Change the Color of the wall whenever I want. Like this week I want to have my bedroom in yellow, and next week in blue."
-},
-"coordinates": {
-"x": "4.996874",
-"y": "-20.040903"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.09944603"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/894f972b-0b86-4b78-a41c-40810e0ab0e5"
-},
-"content": {
-"type": "literal",
-"value": "Bikes and other vehicles can light up in the dark for better sefety and visibility."
-},
-"coordinates": {
-"x": "7.0645676",
-"y": "-41.607975"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.11013349"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8a1eb223-4c95-4cda-9b01-0980f088303a"
-},
-"content": {
-"type": "literal",
-"value": "A small thin super transparent RFID tag (Radio-frequency identification) build with TCO technology."
-},
-"coordinates": {
-"x": "1.5954927",
-"y": "12.409005"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.09388273"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8f80869a-7145-4f0e-b9cf-62cf623c92a2"
-},
-"content": {
-"type": "literal",
-"value": "instead of wearing watches or using other devices TCO can be used as a second skin. I.e. all functions of the apple watch could be used directly on the skin, by that individuals can decide where to locate the TCO. Biodata may also be recorded and analyzed. If combined with other technologies one could put TCO foil on a certain part of the body to get information about one's health in that area"
-},
-"coordinates": {
-"x": "5.700314",
-"y": "21.591282"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.089710586"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/90c4550e-97c9-4b0a-a5f1-8ff0a244f5ea"
-},
-"content": {
-"type": "literal",
-"value": "Every piece of cloth that has the TCO technology in it is changing its color when it needs to be washed. Therefore the person knows by one look which clothes need to be washed and which can be used again."
-},
-"coordinates": {
-"x": "7.4832206",
-"y": "-5.117883"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.088048756"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/92d6d97d-1134-46e8-9cb0-7b17b3d1d3d6"
-},
-"content": {
-"type": "literal",
-"value": "TCO is covering a transparent fridge door, giving an indication (LEDs) about expired food, contents, use of energy, temperature, and other useful information. In the same time, it has touch sensitive capabilities."
-},
-"coordinates": {
-"x": "-18.624647",
-"y": "33.610798"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.10151422"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/94f546a8-abb1-4f0c-97ec-d68c12c152b5"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
-},
-"coordinates": {
-"x": "31.412575",
-"y": "35.822372"
-},
-"cluster_label": "1",
-"distance_from_centroid": "0.1262517"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/951432ae-bb35-473e-8f26-0db2e6c0bdba"
-},
-"content": {
-"type": "literal",
-"value": "Make stools and office-chairs better for your health and apply TCO!\r\n Transparent patches measure the pressure you apply to the surface of your chair and corrects your sitting posture."
-},
-"coordinates": {
-"x": "-6.98966",
-"y": "-11.410334"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.0891722"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/95d84528-3b37-409e-9f7b-68b543dea187"
-},
-"content": {
-"type": "literal",
-"value": "Automatically counting traffic in cities to help plan routes during rush hour and be able to prevent traffic jams. The data sent from the street can be sent to cars to alert the driver to maybe take a different route."
-},
-"coordinates": {
-"x": "-10.543844",
-"y": "7.248783"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.08819035"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/967a7150-ffa3-4cf1-914f-07ded6351f4b"
-},
-"content": {
-"type": "literal",
-"value": "Foil that is wrapped around a pipe, to measure the flow velocity of the fluid inside. Foil is acting as sender as well as receiver for signals sent through pipe wall and fluid. The flow value is displayed by the foil as well."
-},
-"coordinates": {
-"x": "18.781881",
-"y": "-31.260933"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.105492204"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9d1544c7-2051-4c50-8a14-de2af538b885"
-},
-"content": {
-"type": "literal",
-"value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
-},
-"coordinates": {
-"x": "-41.26458",
-"y": "32.46974"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.11426788"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9eee943f-b704-43e7-abc7-95aa189262a3"
-},
-"content": {
-"type": "literal",
-"value": "The Technology could be intersting for pill boxes if you want to know if the Person already took the drugs"
-},
-"coordinates": {
-"x": "15.889995",
-"y": "-20.65565"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.10668155"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9f1394cb-df11-4be1-9233-a64b6f82ffde"
-},
-"content": {
-"type": "literal",
-"value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
-},
-"coordinates": {
-"x": "-42.39749",
-"y": "15.859416"
-},
-"cluster_label": "11",
-"distance_from_centroid": "0.12301844"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9f568478-9c93-418a-8e42-9b3833015ccb"
-},
-"content": {
-"type": "literal",
-"value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
-},
-"coordinates": {
-"x": "-62.68544",
-"y": "40.911934"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.14966275"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a1d66853-ff0e-4083-835e-c3835a574bf6"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "17.032223",
-"y": "72.56647"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642454"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a3994718-10c5-49ec-9e11-1a848dc7b506"
-},
-"content": {
-"type": "literal",
-"value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
-},
-"coordinates": {
-"x": "-29.283524",
-"y": "-32.37643"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.12341609"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a4dc741a-ad3d-4c2e-8178-680fc73ca008"
-},
-"content": {
-"type": "literal",
-"value": "TCO could be combined with printed Paper and become touch sensitive. billboards and newspaper flyers etc. could interact and read data."
-},
-"coordinates": {
-"x": "-2.1190755",
-"y": "21.398039"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.086560726"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a800b492-b8f1-44f5-8bf0-e2084da8c2d5"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "10.879289",
-"y": "69.00336"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642454"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a9881362-fad6-4882-b234-83567e2192c7"
-},
-"content": {
-"type": "literal",
-"value": "Info Screen on a nice wall like out of Wood. I would see pop-ups of things like weather, notification of new e-mails/Messages/calls."
-},
-"coordinates": {
-"x": "-13.544988",
-"y": "-3.4172304"
-},
-"cluster_label": "12",
-"distance_from_centroid": "0.0874283"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/acc89470-bce7-4c4a-8501-f1b272eec103"
-},
-"content": {
-"type": "literal",
-"value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
-},
-"coordinates": {
-"x": "-46.299088",
-"y": "-14.952583"
-},
-"cluster_label": "7",
-"distance_from_centroid": "0.12810516"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/afcf4966-10e9-4f0b-af71-20e88717ff3a"
-},
-"content": {
-"type": "literal",
-"value": "Stickers that can monitor a persons heartbeat, body temperature and other health factors."
-},
-"coordinates": {
-"x": "42.603333",
-"y": "18.301418"
-},
-"cluster_label": "4",
-"distance_from_centroid": "0.10798345"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b28b7c13-72c8-4775-9b17-6decf76cd4b4"
-},
-"content": {
-"type": "literal",
-"value": "The office lamp in the office could respond to the lighting environment at that exact moment, so there's always the same lighting situation throughout the day."
-},
-"coordinates": {
-"x": "5.791503",
-"y": "-35.02966"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.11887185"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b6ec6bdf-1d0e-4338-b5d7-394398332521"
-},
-"content": {
-"type": "literal",
-"value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
-},
-"coordinates": {
-"x": "50.15158",
-"y": "16.733704"
-},
-"cluster_label": "4",
-"distance_from_centroid": "0.13378407"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b841a6e2-8294-491e-a7c3-1201e308b5ea"
-},
-"content": {
-"type": "literal",
-"value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
-},
-"coordinates": {
-"x": "-32.24728",
-"y": "-26.938711"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.12341609"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bb7b44d4-fd1b-4a65-adc7-997b09e5f68a"
-},
-"content": {
-"type": "literal",
-"value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
-},
-"coordinates": {
-"x": "-10.607401",
-"y": "47.05914"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.1053783"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bbcff208-14c8-450c-a161-0d9cb9dfa28f"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "8.075534",
-"y": "62.528767"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642454"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bfdc4620-d860-4ab8-86ac-be1c35c88d68"
-},
-"content": {
-"type": "literal",
-"value": "test"
-},
-"coordinates": {
-"x": "33.054417",
-"y": "-41.765594"
-},
-"cluster_label": "14",
-"distance_from_centroid": "0.18402143"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/c4649d02-05e8-4fc3-a350-69fff0aaa3c2"
-},
-"content": {
-"type": "literal",
-"value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
-},
-"coordinates": {
-"x": "-42.791004",
-"y": "7.8724937"
-},
-"cluster_label": "11",
-"distance_from_centroid": "0.12301844"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/c4c3deef-509b-4343-ac87-74faf1b8816d"
-},
-"content": {
-"type": "literal",
-"value": "Change window-color depending on the UV, so that if the sun is shining the color changes to something darker (like the windows within some cars) and if there is no sun or less sun, let the window remain as it is. Similar technology is already in use for glasses."
-},
-"coordinates": {
-"x": "-33.16931",
-"y": "-8.590484"
-},
-"cluster_label": "7",
-"distance_from_centroid": "0.101236954"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d40324a8-44a6-428e-b1de-74b7503f0bac"
-},
-"content": {
-"type": "literal",
-"value": "Playground equipment may have interactive buttons that allow you to play together."
-},
-"coordinates": {
-"x": "28.13818",
-"y": "-16.550999"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.12633608"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d4b52a43-e724-482a-b322-fceb759161dc"
-},
-"content": {
-"type": "literal",
-"value": "TCO on the dining table, so that you could play simple games (children at the restaurant) or you could place your meal on the table and the table would show the ingredients of your meal (e.g. through Special tags like RFID on the plate)."
-},
-"coordinates": {
-"x": "14.421864",
-"y": "19.552526"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.09555655"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d52d5c19-f9e3-43ff-9417-9756d9b4d530"
-},
-"content": {
-"type": "literal",
-"value": "not sure if that is possible but maybe it can be used for contact lenses (or glasses - already existing) so that the surfaces darken automatically when exposed to sunlight."
-},
-"coordinates": {
-"x": "-39.258965",
-"y": "-13.4977255"
-},
-"cluster_label": "7",
-"distance_from_centroid": "0.1146691"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d5f0c657-384c-4b58-aa03-e1055e12a243"
-},
-"content": {
-"type": "literal",
-"value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
-},
-"coordinates": {
-"x": "-39.186726",
-"y": "37.144703"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.11426788"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d7395f48-d0c3-4c60-aa3f-91c0777f2c30"
-},
-"content": {
-"type": "literal",
-"value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n could be attached to existing facilities…"
-},
-"coordinates": {
-"x": "45.841557",
-"y": "-3.7000682"
-},
-"cluster_label": "10",
-"distance_from_centroid": "0.118650004"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d968f7ee-2a03-467d-84dd-d466e9eb9e36"
-},
-"content": {
-"type": "literal",
-"value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
-},
-"coordinates": {
-"x": "8.33717",
-"y": "40.777756"
-},
-"cluster_label": "12",
-"distance_from_centroid": "0.11759229"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/db63d722-47b8-4683-af74-efc7cefb4ee4"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
-},
-"coordinates": {
-"x": "25.652088",
-"y": "32.230717"
-},
-"cluster_label": "1",
-"distance_from_centroid": "0.1262517"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/dbb4089a-66c0-45a2-a269-50a3db55ed1e"
-},
-"content": {
-"type": "literal",
-"value": "A tag could be attached to any bike and function as a light source, switch or as an energy harvesting device. Because it is almost invisible you don´t need to take it with you, when bike is locked in public space. Bike notices if contacted without authorization and reports the theft"
-},
-"coordinates": {
-"x": "-24.932528",
-"y": "9.397987"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.09572718"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/dcf54d53-cd3d-4ede-aaba-b8470bee7377"
-},
-"content": {
-"type": "literal",
-"value": "helps you to label and find a certain book in your library or shelf. the transparent tag doesn’t change the aberrance of the book.it could be combined with RFID-Tag and a little LED could light up to locate a certain genre etc."
-},
-"coordinates": {
-"x": "-27.2325",
-"y": "3.1565084"
-},
-"cluster_label": "11",
-"distance_from_centroid": "0.087182656"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e26f54b9-d5dd-4c66-93fd-fbaf263b2440"
-},
-"content": {
-"type": "literal",
-"value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table. you could upgrade your existing table tennis set by applying it on the markings for example to show if your ball was in or out.\r\n Modification: interactive play areas, interactive Minigolf"
-},
-"coordinates": {
-"x": "22.121645",
-"y": "6.715801"
-},
-"cluster_label": "13",
-"distance_from_centroid": "0.10083234"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e437dbed-abb7-48aa-bc87-55d2841b10fa"
-},
-"content": {
-"type": "literal",
-"value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
-},
-"coordinates": {
-"x": "-59.922142",
-"y": "47.109417"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.14966275"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e6dd84e2-3106-465d-8ba2-0f79c7997f12"
-},
-"content": {
-"type": "literal",
-"value": "intelligent walls in offices to put notes on or visualise project processes and tasks, instead of flip charts, magnetic or pinboards"
-},
-"coordinates": {
-"x": "0.44596028",
-"y": "-12.310108"
-},
-"cluster_label": "2",
-"distance_from_centroid": "0.08917605"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e9077173-567f-49cf-979a-0a361aa08cd8"
-},
-"content": {
-"type": "literal",
-"value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
-},
-"coordinates": {
-"x": "-26.225195",
-"y": "52.144726"
-},
-"cluster_label": "8",
-"distance_from_centroid": "0.13309899"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/f0f0ba3c-b5e8-46d6-806f-88ec74535662"
-},
-"content": {
-"type": "literal",
-"value": "The TCO film concept can be used in situations in which a rudimentary glowing indication is needed at night, but at daytime should be transparent and not noticeable."
-},
-"coordinates": {
-"x": "-18.441177",
-"y": "17.80617"
-},
-"cluster_label": "9",
-"distance_from_centroid": "0.09266005"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/f65ca10d-bcac-46b4-b505-5fc21dff7f5d"
-},
-"content": {
-"type": "literal",
-"value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
-},
-"coordinates": {
-"x": "-58.248917",
-"y": "35.443436"
-},
-"cluster_label": "5",
-"distance_from_centroid": "0.14966276"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fa48b051-a6b7-4a1a-8657-1519e50e96c9"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "16.244799",
-"y": "64.295746"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642455"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fafa08d3-37e2-4288-b0b1-a81c40640cb1"
-},
-"content": {
-"type": "literal",
-"value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n example:if a window is opened at a certain temperature the air-condition reacts and stops heating - cause not every part of a system has to be able to react."
-},
-"coordinates": {
-"x": "9.276547",
-"y": "75.90874"
-},
-"cluster_label": "3",
-"distance_from_centroid": "0.15642455"
-},
-{
-"idea": {
-"type": "uri",
-"value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fdc0c0b3-4d4c-476c-81ff-1d650e60fc32"
-},
-"content": {
-"type": "literal",
-"value": "Using TCO technology for solar industry: With TCO technology the surface of solar panels could be reduced in general (semi-spheres or other shapes) as TCO is flexible."
-},
-"coordinates": {
-"x": "-25.088167",
-"y": "-26.283678"
-},
-"cluster_label": "6",
-"distance_from_centroid": "0.11323498"
-}
-],
-"clusters": [
-{
-"cluster_label": "0",
-"top_concepts": []
-},
-{
-"cluster_label": "1",
-"top_concepts": []
-},
-{
-"cluster_label": "2",
-"top_concepts": []
-},
-{
-"cluster_label": "3",
-"top_concepts": []
-},
-{
-"cluster_label": "4",
-"top_concepts": []
-},
-{
-"cluster_label": "5",
-"top_concepts": []
-},
-{
-"cluster_label": "6",
-"top_concepts": []
-},
-{
-"cluster_label": "7",
-"top_concepts": []
-},
-{
-"cluster_label": "8",
-"top_concepts": []
-},
-{
-"cluster_label": "9",
-"top_concepts": []
-},
-{
-"cluster_label": "10",
-"top_concepts": []
-},
-{
-"cluster_label": "11",
-"top_concepts": []
-},
-{
-"cluster_label": "12",
-"top_concepts": []
-},
-{
-"cluster_label": "13",
-"top_concepts": []
-},
-{
-"cluster_label": "14",
-"top_concepts": []
-}
-]
-}
+  "head": {
+    "vars": [
+      "idea",
+      "content"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0926d8f9-b77c-4c69-b4a9-0a8ece152e0d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "as a Whiteboard-Screen on a Meeting room wall, so that within open working places glass walls can be used and collaboration on touch-screens-glass-walls"
+        },
+        "coordinates": {
+          "x": "-0.74713844",
+          "y": "-9.446201"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09102752651819103"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0acdd7fb-57dd-4ecd-bc8f-49912ee716ec"
+        },
+        "content": {
+          "type": "literal",
+          "value": "It might be interesting for intelligent Packaging to Control the Transportation, the storage and the condition of the packed products"
+        },
+        "coordinates": {
+          "x": "-2.6548061",
+          "y": "-7.529914"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09771120369387767"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0b19157e-d37c-4a45-ac82-4ce98d663d2d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Could receive or send data via any surface of your car if you need a stronger signal.\r\n            you could use the car-window to receive GPS for example."
+        },
+        "coordinates": {
+          "x": "3.0311115",
+          "y": "-6.336158"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08101280687597295"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0c6a89dd-d035-4af7-b48b-11453cac37d5"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
+        },
+        "coordinates": {
+          "x": "4.1012654",
+          "y": "-14.989479"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.13750347639056434"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/0e462279-5ff8-43b8-9589-16b84a67294e"
+        },
+        "content": {
+          "type": "literal",
+          "value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table"
+        },
+        "coordinates": {
+          "x": "0.82747537",
+          "y": "-4.52069"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09873426416534853"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/13280e58-0c66-41d7-9112-bd98419fadf2"
+        },
+        "content": {
+          "type": "literal",
+          "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
+        },
+        "coordinates": {
+          "x": "3.0098462",
+          "y": "-2.7591524"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.11286798291027914"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/13df40f2-ef4b-498c-a9c5-c4a9942cdda4"
+        },
+        "content": {
+          "type": "literal",
+          "value": "coating the back of cell phone with TCO - and whereever you are and what card you need it appears on the back of the cell phone. Like membership cards, transportation ticket, without looking for the right one."
+        },
+        "coordinates": {
+          "x": "1.7457714",
+          "y": "-7.3429575"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.07951314709230588"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1a57877d-861d-4ac9-a347-80b3f4672d41"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
+        },
+        "coordinates": {
+          "x": "6.210579",
+          "y": "-11.805558"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.12863081468786736"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1cd47321-20e3-439e-b765-ad5ff8d5ac45"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by connecting TCO treated windows to the alarm system."
+        },
+        "coordinates": {
+          "x": "-1.555179",
+          "y": "-11.038899"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10807842357160588"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1d3fbb24-07e1-41c5-b112-c59502917e93"
+        },
+        "content": {
+          "type": "literal",
+          "value": "\"Best before\" is history. The TCO-material can indicate whether a food is still good or should not be eaten anymore. The material changes its color or indicated a fouled food by a caution sign."
+        },
+        "coordinates": {
+          "x": "-3.6748168",
+          "y": "-8.118739"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.12759962196042798"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1e98c40b-d3f7-42fc-abe8-ebbaa49e7e41"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "2.0081186",
+          "y": "1.0803876"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.1469695356050814"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1ea205f9-85e0-4cfb-8efb-beee47acc7f7"
+        },
+        "content": {
+          "type": "literal",
+          "value": "wdfafd"
+        },
+        "coordinates": {
+          "x": "-5.4024687",
+          "y": "-7.4358053"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.2383347956095889"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/20696367-ac5d-4ce5-b669-4f4d8cd181bb"
+        },
+        "content": {
+          "type": "literal",
+          "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
+        },
+        "coordinates": {
+          "x": "3.0098493",
+          "y": "-2.7591472"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.11286798291027914"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2100eae2-1372-4b52-8cbe-bfcf816217ff"
+        },
+        "content": {
+          "type": "literal",
+          "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant.\n\n                    Plantform – Plattform für alles Stakeholder (Agrarimdustrie, Community, Stadtversorgung)"
+        },
+        "coordinates": {
+          "x": "6.520588",
+          "y": "-4.517997"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.1108675490387673"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/24f6fd2e-c7e1-47f1-ae98-2f97a3157d0b"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
+        },
+        "coordinates": {
+          "x": "6.0361958",
+          "y": "-1.7997007"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.12366091595494498"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/26758245-e91a-4557-8397-57cb48b8e34d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
+        },
+        "coordinates": {
+          "x": "6.148058",
+          "y": "-11.583648"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.12863081468786736"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2983d0d1-713d-4ffc-97eb-a0e7335458d8"
+        },
+        "content": {
+          "type": "literal",
+          "value": "using it for the generation of solar energy, i.e. by covering house walls and roofs"
+        },
+        "coordinates": {
+          "x": "-0.08664331",
+          "y": "-10.218363"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.11412924200844153"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2abf6994-045d-4630-87b5-33420a7fe844"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
+        },
+        "coordinates": {
+          "x": "9.45816",
+          "y": "-10.685871"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.13235076085100403"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2be4e523-b905-435e-ac0a-3e7c88cde5cd"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO in combination with a Electro-wetting display (EWD)"
+        },
+        "coordinates": {
+          "x": "-4.452443",
+          "y": "-5.8479877"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.15225824564195614"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/2c34bff0-aa29-4909-9af1-faac59c60762"
+        },
+        "content": {
+          "type": "literal",
+          "value": "A solar panel connected to a device (Laptop, iPad etc) is covered with a touch sensitive TCO foil. While generating energy the transparent foil gives the product the keyboard functionality."
+        },
+        "coordinates": {
+          "x": "2.8769016",
+          "y": "-9.745242"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.08809007490770211"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/33bd13d1-6367-4065-b017-5587ca80b749"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Tables at a restaurant can be TCO-applied to make a smart ordering board out of it."
+        },
+        "coordinates": {
+          "x": "0.39755073",
+          "y": "-5.375993"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.0977664192311112"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/347a7a4e-54b0-45b7-8479-ae7701b0434b"
+        },
+        "content": {
+          "type": "literal",
+          "value": "With the help of TCO, simple measurements can be carried out in urban areas that would otherwise require more complex installations. The frequency of use can be measured by contact on roads, park benches, bicycle stations, bus stops, so that one knows more about the requirements and necessities in urban space."
+        },
+        "coordinates": {
+          "x": "3.437917",
+          "y": "-7.3849607"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.0908503432711956"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/3573b82b-6093-4aff-a3ac-bcc2cb072794"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO is covering the fridge door, giving information about expiry dates, contents, use of energy, temperature and other useful things."
+        },
+        "coordinates": {
+          "x": "-1.076579",
+          "y": "-5.6369762"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.10404544831272608"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/37ee6da5-2a8b-4123-bc05-12c17b687a8f"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO can take advertising to the next level. Surfaces can be covered with TCO and any time be used as a screen/display to show content in the right moment for the right people (e.g. if connected to persona data). without having to build big inflexible displays or billboards existing buildings / older constructions can be \"renewed\" with TCO and used."
+        },
+        "coordinates": {
+          "x": "3.0223916",
+          "y": "-8.157592"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.09420570334706095"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/42ee90a8-fa60-4ed2-9cff-06f5ee1fa004"
+        },
+        "content": {
+          "type": "literal",
+          "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
+        },
+        "coordinates": {
+          "x": "7.3978705",
+          "y": "-7.33639"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.12087496161358738"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/43ed15f7-94ca-480b-94d7-66623adb43a9"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Tables at restaurants could be upgraded with a TCO interface foil. Menu cards and other prints could easily be placed and swapped under the foil layer."
+        },
+        "coordinates": {
+          "x": "1.648183",
+          "y": "-5.74688"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08853740102511722"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/452b7d50-a3bd-4df3-ac09-6521d7c316cf"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Window with a heat-sensitive material, that lights-up if a person is in the room during a fire"
+        },
+        "coordinates": {
+          "x": "-1.7993847",
+          "y": "-9.587416"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10611199116839774"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/49368635-20d9-4e03-98ca-f6a37c43a71e"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
+        },
+        "coordinates": {
+          "x": "6.121027",
+          "y": "-11.810886"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.12863081468786736"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/4eef5cd4-4e8d-499e-8830-2bf453960961"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
+        },
+        "coordinates": {
+          "x": "9.457716",
+          "y": "-10.68549"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.13235076085100403"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5374100c-e1c4-4db2-95a5-186d548e127c"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
+        },
+        "coordinates": {
+          "x": "3.4564185",
+          "y": "-11.4867735"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.09983394230334881"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/55ea193b-16f8-408d-b4c9-f820679c2aab"
+        },
+        "content": {
+          "type": "literal",
+          "value": "make fashion individual: you could change the color of your clothes by touch."
+        },
+        "coordinates": {
+          "x": "-0.116095856",
+          "y": "-8.162474"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09319741833791076"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/573ab11a-d2b4-4fea-8ecb-883374ab46e5"
+        },
+        "content": {
+          "type": "literal",
+          "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
+        },
+        "coordinates": {
+          "x": "7.3978705",
+          "y": "-7.33639"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.12087496161358738"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5ad7a2d0-7fe1-4b8a-af83-d37d6e9cca92"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use it for the car traffic. Put it on traffic lights to avoid problems when the electricity breaks down, as the lights can be controlled remotely. also put it on the asphalt esp at crossings etc to steer the traffic if necessary with visual signs e.g. this lane goes left, this goes right et.c.."
+        },
+        "coordinates": {
+          "x": "4.1844487",
+          "y": "-6.5964203"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08487157353810779"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/61f22dbc-93c3-48f8-8b78-bd929e70f24d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by putting electricity on the glass wall, as soon as the owner is no longer at home, or the shop is closed, or best when the alarm is set up. This way, if a burgler tries to break the glass-window, he/she gets shocked by electricity."
+        },
+        "coordinates": {
+          "x": "-1.5553856",
+          "y": "-11.007135"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10734851143180543"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/66c4479f-b673-4626-81ca-6be68999a2dc"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
+        },
+        "coordinates": {
+          "x": "6.310419",
+          "y": "-1.7338442"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.12366091595494498"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/68de8d44-d494-40b6-b1c4-4545ff0bc2f7"
+        },
+        "content": {
+          "type": "literal",
+          "value": "glass-walls on stores could have advertisment on them. this would have the benefit that it would Need to be printed and put on the glass or no TV would be required, which usually does not look that nice on a storefront."
+        },
+        "coordinates": {
+          "x": "3.4359822",
+          "y": "-5.0036097"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08296035527314592"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/6bd3b271-7f99-4cb5-a152-d089772c7bbd"
+        },
+        "content": {
+          "type": "literal",
+          "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n                    could be attached to existing facilities…"
+        },
+        "coordinates": {
+          "x": "-1.511417",
+          "y": "-2.6813016"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.1178283010091279"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/77e4b892-e454-4502-99e7-aa5be55ea427"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Well-known board games such as chess, Monopoly or Settlers are covered with a TCO surface and thus offer new playing possibilities. Game scores can be saved and additional functions such as a digital avatar can be loaded i.e. onto the smartphone."
+        },
+        "coordinates": {
+          "x": "1.6000502",
+          "y": "-6.240698"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08447339003372234"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7b0cc4df-5554-43b4-9270-4d34c27c7007"
+        },
+        "content": {
+          "type": "literal",
+          "value": "A TCO foil covering a traffic light can be activated and show simple information in the off state off the traffic light."
+        },
+        "coordinates": {
+          "x": "4.073247",
+          "y": "-8.37657"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08770076696366592"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7e3f2b91-66bc-4377-b002-97d79ca10bb0"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO covered chair and desk in the office. It could remind you via vibration or sound to stand up and go for a walk, get something to drink, correct your seating position etc."
+        },
+        "coordinates": {
+          "x": "0.72576296",
+          "y": "-6.7952237"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08398760545792312"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/7e54fe9c-8de8-406c-ac2b-1f75b47d5d7e"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO-tattoos are THE perfect solution for indecisive people, that cannot commit to have a tattoo all days for every day. TCO-tattoos can be \"switched off\" and the tattoo will not be seen for as long as the carrier wants to. Same applies to \"switched on\""
+        },
+        "coordinates": {
+          "x": "-2.2811253",
+          "y": "-8.675203"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10496703523984667"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/80257178-6d76-430e-8f3b-133137768d0f"
+        },
+        "content": {
+          "type": "literal",
+          "value": "helps you to mark, rate and finde important documents in you analog folder.\r\n            this technology combines documents and certificates made of paper with digital advantages."
+        },
+        "coordinates": {
+          "x": "-3.067862",
+          "y": "-6.109373"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.12634304570134983"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/810bda91-8068-48ee-83e3-ef2b6a54a01e"
+        },
+        "content": {
+          "type": "literal",
+          "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\r\n            \r\n            could be attached to existing facilities…"
+        },
+        "coordinates": {
+          "x": "-1.5192682",
+          "y": "-2.6824427"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.11803192928565934"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/81b1b59e-6591-478b-8165-13fcea6ed77c"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
+        },
+        "coordinates": {
+          "x": "3.5242693",
+          "y": "-15.054652"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.13750347639056434"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/81d67bd3-9710-4254-9a32-c1b6b83c97b1"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Responsive Surface - Temperature responsive surface in construction / building / real estate\r\n            Oberflächen Anpassung in Abhängigkeit zum Klima (Sonne / Verdunklung oder Reflektiv; Temperaturabhängige Farbgestaltung), sonstigen Witterungs- oder Tageszeitabhängigkeit Ambiente-Gestaltungsoptionen"
+        },
+        "coordinates": {
+          "x": "-1.3764342",
+          "y": "-7.006755"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.10065751181449706"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8397751b-7a3f-4f76-bd42-1f1b488b8afe"
+        },
+        "content": {
+          "type": "literal",
+          "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
+        },
+        "coordinates": {
+          "x": "6.9078107",
+          "y": "-4.4619617"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.1198755826128215"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8937c092-4bbb-4f3e-b4e2-ba772f6d3398"
+        },
+        "content": {
+          "type": "literal",
+          "value": "put it on the wall inside the house/Building, so that I can Change the Color of the wall whenever I want. Like this week I want to have my bedroom in yellow, and next week in blue."
+        },
+        "coordinates": {
+          "x": "-1.034405",
+          "y": "-8.395895"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09914740086149806"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/894f972b-0b86-4b78-a41c-40810e0ab0e5"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Bikes and other vehicles can light up in the dark for better sefety and visibility."
+        },
+        "coordinates": {
+          "x": "-3.1622257",
+          "y": "-9.503498"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10923564218234626"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8a1eb223-4c95-4cda-9b01-0980f088303a"
+        },
+        "content": {
+          "type": "literal",
+          "value": "A small thin super transparent RFID tag (Radio-frequency identification) build with TCO technology."
+        },
+        "coordinates": {
+          "x": "1.8178997",
+          "y": "-8.516749"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.09296404253556534"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8f80869a-7145-4f0e-b9cf-62cf623c92a2"
+        },
+        "content": {
+          "type": "literal",
+          "value": "instead of wearing watches or using other devices TCO can be used as a second skin. I.e. all functions of the apple watch could be used directly on the skin, by that individuals can decide where to locate the TCO. Biodata may also be recorded and analyzed. If combined with other technologies one could put TCO foil on a certain part of the body to get information about one's health in that area"
+        },
+        "coordinates": {
+          "x": "2.398287",
+          "y": "-6.949"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.085438680695828"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/90c4550e-97c9-4b0a-a5f1-8ff0a244f5ea"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Every piece of cloth that has the TCO technology in it is changing its color when it needs to be washed. Therefore the person knows by one look which clothes need to be washed and which can be used again."
+        },
+        "coordinates": {
+          "x": "0.6560572",
+          "y": "-8.185027"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08376852512382632"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/92d6d97d-1134-46e8-9cb0-7b17b3d1d3d6"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO is covering a transparent fridge door, giving an indication (LEDs) about expired food, contents, use of energy, temperature, and other useful information. In the same time, it has touch sensitive capabilities."
+        },
+        "coordinates": {
+          "x": "4.214126",
+          "y": "-9.514937"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.09613379097305022"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/94f546a8-abb1-4f0c-97ec-d68c12c152b5"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
+        },
+        "coordinates": {
+          "x": "6.0046325",
+          "y": "-1.6563559"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.12366091595494498"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/951432ae-bb35-473e-8f26-0db2e6c0bdba"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Make stools and office-chairs better for your health and apply TCO!\r\n            Transparent patches measure the pressure you apply to the surface of your chair and corrects your sitting posture."
+        },
+        "coordinates": {
+          "x": "-0.3357038",
+          "y": "-6.9954486"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.08793332922179616"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/95d84528-3b37-409e-9f7b-68b543dea187"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Automatically counting traffic in cities to help plan routes during rush hour and be able to prevent traffic jams. The data sent from the street can be sent to cars to alert the driver to maybe take a different route."
+        },
+        "coordinates": {
+          "x": "3.7405555",
+          "y": "-6.513382"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.084764513522404"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/967a7150-ffa3-4cf1-914f-07ded6351f4b"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Foil that is wrapped around a pipe, to measure the flow velocity of the fluid inside. Foil is acting as sender as well as receiver for signals sent through pipe wall and fluid. The flow value is displayed by the foil as well."
+        },
+        "coordinates": {
+          "x": "-2.4058197",
+          "y": "-6.773554"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.10454738855384159"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9d1544c7-2051-4c50-8a14-de2af538b885"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
+        },
+        "coordinates": {
+          "x": "1.9693404",
+          "y": "-13.311736"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.10681841406286074"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9eee943f-b704-43e7-abc7-95aa189262a3"
+        },
+        "content": {
+          "type": "literal",
+          "value": "The Technology could be intersting for pill boxes if you want to know if the Person already took the drugs"
+        },
+        "coordinates": {
+          "x": "-2.6833587",
+          "y": "-7.713906"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.10763770191432254"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9f1394cb-df11-4be1-9233-a64b6f82ffde"
+        },
+        "content": {
+          "type": "literal",
+          "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
+        },
+        "coordinates": {
+          "x": "6.9078107",
+          "y": "-4.4619613"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.1198755826128215"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9f568478-9c93-418a-8e42-9b3833015ccb"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
+        },
+        "coordinates": {
+          "x": "3.644839",
+          "y": "-15.342445"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.13750347639056434"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a1d66853-ff0e-4083-835e-c3835a574bf6"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "2.2938445",
+          "y": "0.43096948"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.1469695356050814"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a3994718-10c5-49ec-9e11-1a848dc7b506"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
+        },
+        "coordinates": {
+          "x": "1.9783763",
+          "y": "-10.7697525"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.11972956492989063"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a4dc741a-ad3d-4c2e-8178-680fc73ca008"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO could be combined with printed Paper and become touch sensitive. billboards and newspaper flyers etc. could interact and read data."
+        },
+        "coordinates": {
+          "x": "2.7963252",
+          "y": "-7.398268"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08294688907994058"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a800b492-b8f1-44f5-8bf0-e2084da8c2d5"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "1.9568386",
+          "y": "0.65978026"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.1469695356050814"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a9881362-fad6-4882-b234-83567e2192c7"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Info Screen on a nice wall like out of Wood. I would see pop-ups of things like weather, notification of new e-mails/Messages/calls."
+        },
+        "coordinates": {
+          "x": "3.060602",
+          "y": "-4.454813"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.08510146336394579"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/acc89470-bce7-4c4a-8501-f1b272eec103"
+        },
+        "content": {
+          "type": "literal",
+          "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
+        },
+        "coordinates": {
+          "x": "7.3978715",
+          "y": "-7.336391"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.12087496161358738"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/afcf4966-10e9-4f0b-af71-20e88717ff3a"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Stickers that can monitor a persons heartbeat, body temperature and other health factors."
+        },
+        "coordinates": {
+          "x": "9.184165",
+          "y": "-10.103383"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.10450241822865394"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b28b7c13-72c8-4775-9b17-6decf76cd4b4"
+        },
+        "content": {
+          "type": "literal",
+          "value": "The office lamp in the office could respond to the lighting environment at that exact moment, so there's always the same lighting situation throughout the day."
+        },
+        "coordinates": {
+          "x": "-2.754579",
+          "y": "-9.420937"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.11861623534365122"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b6ec6bdf-1d0e-4338-b5d7-394398332521"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
+        },
+        "coordinates": {
+          "x": "9.45816",
+          "y": "-10.685872"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.13235076085100403"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/b841a6e2-8294-491e-a7c3-1201e308b5ea"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
+        },
+        "coordinates": {
+          "x": "1.9791206",
+          "y": "-10.768572"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.11972956492989063"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bb7b44d4-fd1b-4a65-adc7-997b09e5f68a"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
+        },
+        "coordinates": {
+          "x": "3.4589965",
+          "y": "-11.487655"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.09983394230334881"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bbcff208-14c8-450c-a161-0d9cb9dfa28f"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "2.4007852",
+          "y": "1.258659"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.1469695356050814"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bfdc4620-d860-4ab8-86ac-be1c35c88d68"
+        },
+        "content": {
+          "type": "literal",
+          "value": "test"
+        },
+        "coordinates": {
+          "x": "-5.2039266",
+          "y": "-7.4308414"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.19124904636784207"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/c4649d02-05e8-4fc3-a350-69fff0aaa3c2"
+        },
+        "content": {
+          "type": "literal",
+          "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
+        },
+        "coordinates": {
+          "x": "6.911307",
+          "y": "-4.4627285"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.1198755826128215"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/c4c3deef-509b-4343-ac87-74faf1b8816d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Change window-color depending on the UV, so that if the sun is shining the color changes to something darker (like the windows within some cars) and if there is no sun or less sun, let the window remain as it is. Similar technology is already in use for glasses."
+        },
+        "coordinates": {
+          "x": "6.288477",
+          "y": "-7.369626"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.0954080341687956"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d40324a8-44a6-428e-b1de-74b7503f0bac"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Playground equipment may have interactive buttons that allow you to play together."
+        },
+        "coordinates": {
+          "x": "-3.9632986",
+          "y": "-6.6880383"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.12911546436612867"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d4b52a43-e724-482a-b322-fceb759161dc"
+        },
+        "content": {
+          "type": "literal",
+          "value": "TCO on the dining table, so that you could play simple games (children at the restaurant) or you could place your meal on the table and the table would show the ingredients of your meal (e.g. through Special tags like RFID on the plate)."
+        },
+        "coordinates": {
+          "x": "2.2433596",
+          "y": "-5.2402616"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.09270653974160958"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d52d5c19-f9e3-43ff-9417-9756d9b4d530"
+        },
+        "content": {
+          "type": "literal",
+          "value": "not sure if that is possible but maybe it can be used for contact lenses (or glasses - already existing) so that the surfaces darken automatically when exposed to sunlight."
+        },
+        "coordinates": {
+          "x": "6.906547",
+          "y": "-7.6728854"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.10698665403639214"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d5f0c657-384c-4b58-aa03-e1055e12a243"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
+        },
+        "coordinates": {
+          "x": "1.967017",
+          "y": "-13.314398"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.10681841406286074"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d7395f48-d0c3-4c60-aa3f-91c0777f2c30"
+        },
+        "content": {
+          "type": "literal",
+          "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n                    could be attached to existing facilities…"
+        },
+        "coordinates": {
+          "x": "-1.5114172",
+          "y": "-2.6813016"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.1178283010091279"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d968f7ee-2a03-467d-84dd-d466e9eb9e36"
+        },
+        "content": {
+          "type": "literal",
+          "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
+        },
+        "coordinates": {
+          "x": "3.010011",
+          "y": "-2.7591634"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.11286798291027914"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/db63d722-47b8-4683-af74-efc7cefb4ee4"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
+        },
+        "coordinates": {
+          "x": "6.2694397",
+          "y": "-1.5775462"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.12366091595494498"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/dbb4089a-66c0-45a2-a269-50a3db55ed1e"
+        },
+        "content": {
+          "type": "literal",
+          "value": "A tag could be attached to any bike and function as a light source, switch or as an energy harvesting device. Because it is almost invisible you don´t need to take it with you, when bike is locked in public space. Bike notices if contacted without authorization and reports the theft"
+        },
+        "coordinates": {
+          "x": "4.8414454",
+          "y": "-5.6722784"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.09255697268518855"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/dcf54d53-cd3d-4ede-aaba-b8470bee7377"
+        },
+        "content": {
+          "type": "literal",
+          "value": "helps you to label and find a certain book in your library or shelf. the transparent tag doesn’t change the aberrance of the book.it could be combined with RFID-Tag and a little LED could light up to locate a certain genre etc."
+        },
+        "coordinates": {
+          "x": "4.8703847",
+          "y": "-5.2057676"
+        },
+        "cluster_label": "0",
+        "distance_from_centroid": "0.08502386768116453"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e26f54b9-d5dd-4c66-93fd-fbaf263b2440"
+        },
+        "content": {
+          "type": "literal",
+          "value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table. you could upgrade your existing table tennis set by applying it on the markings for example to show if your ball was in or out.\r\n            Modification: interactive play areas,  interactive Minigolf"
+        },
+        "coordinates": {
+          "x": "0.92997915",
+          "y": "-4.4766726"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.09930398031989507"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e437dbed-abb7-48aa-bc87-55d2841b10fa"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
+        },
+        "coordinates": {
+          "x": "3.8219426",
+          "y": "-14.824657"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.13750347639056434"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e6dd84e2-3106-465d-8ba2-0f79c7997f12"
+        },
+        "content": {
+          "type": "literal",
+          "value": "intelligent walls in offices to put notes on or visualise project processes and tasks, instead of flip charts, magnetic or pinboards"
+        },
+        "coordinates": {
+          "x": "0.27381143",
+          "y": "-6.6044726"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.08757061106023341"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/e9077173-567f-49cf-979a-0a361aa08cd8"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
+        },
+        "coordinates": {
+          "x": "6.087691",
+          "y": "-11.583074"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.12863081468786736"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/f0f0ba3c-b5e8-46d6-806f-88ec74535662"
+        },
+        "content": {
+          "type": "literal",
+          "value": "The TCO film concept can be used in situations in which a rudimentary glowing indication is needed at night, but at daytime should be transparent and not noticeable."
+        },
+        "coordinates": {
+          "x": "4.316508",
+          "y": "-8.099695"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.08909804317916167"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/f65ca10d-bcac-46b4-b505-5fc21dff7f5d"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
+        },
+        "coordinates": {
+          "x": "4.0201783",
+          "y": "-15.325042"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.13750350635276956"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fa48b051-a6b7-4a1a-8657-1519e50e96c9"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n            example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "2.6880164",
+          "y": "0.59717643"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.14696955696279312"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fafa08d3-37e2-4288-b0b1-a81c40640cb1"
+        },
+        "content": {
+          "type": "literal",
+          "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
+        },
+        "coordinates": {
+          "x": "2.745244",
+          "y": "1.0047338"
+        },
+        "cluster_label": "5",
+        "distance_from_centroid": "0.14696955696279312"
+      },
+      {
+        "idea": {
+          "type": "uri",
+          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/fdc0c0b3-4d4c-476c-81ff-1d650e60fc32"
+        },
+        "content": {
+          "type": "literal",
+          "value": "Using TCO technology for solar industry: With TCO technology the surface of solar panels could be reduced in general (semi-spheres or other shapes) as TCO is flexible."
+        },
+        "coordinates": {
+          "x": "1.6517183",
+          "y": "-10.519798"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.11091843411232569"
+      }
+    ],
+    "clusters": [
+      {
+        "cluster_label": "0",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ear_tag",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Plant",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bicycle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Book",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/City",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Et_cetera",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Genre",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Library",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Photosynthesis",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Radio-frequency_identification",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Tree",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "1",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Window",
+            "count": "5"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Burglary",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Day",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Office",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Retail",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Alarm_device",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/House",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Academic_certificate",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Balanced-arm_lamp",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bar_stool",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bicycle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Chair",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Color",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Contraceptive_patch",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Document",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electric_shock",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/File_folder",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Find",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Fire",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "2",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bottle",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Door",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Grammatical_case",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Information",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Label",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Refrigerator",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wine",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Calendar_date",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Consumer_(food_chain)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Energy",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Food",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Light-emitting_diode",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Mind",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Pricing",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sensitivity_(control_systems)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Shelf_life",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/User_story",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "3",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Traffic",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Advertising",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Aluminium_foil",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Billboard",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Car",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Information",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Light",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Meal",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Technology",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Watch",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Waypoint",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Asphalt",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bench_(furniture)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bending_moment",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bicycle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Body_identification",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Building",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bus",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "4",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sunlight",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Window",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Car",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Color",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Contact_lens",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Glasses",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Idea",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Lens_(optics)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sun",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sunglasses",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Technology",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "5",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Air_conditioning",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Behavior",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/HVAC",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sticker",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Switch",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/System",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Window",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "6",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electrical_conductor",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Material",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Construction",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Estate_(land)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_wave",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/They",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "7",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Airplane",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Area",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bridge",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Chemical_substance",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Layer_(electronics)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Mat",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Vibration",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wing",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "8",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Et_cetera",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Flip_chart",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "9",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Health",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sticker",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Factors_of_production",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Person",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Skin",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "10",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Aerosol_paint",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Distribution_board",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Energy",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Technology",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Computer_keyboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Flexible_electronics",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Future",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/House",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/IPad",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Industry",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Laptop",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Roof",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Shape",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Solar_panel",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_area",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_finishing",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Transparency_(projection)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wall",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "11",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wall",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Color",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Table_(furniture)",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ball",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bedroom",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bulletin_board",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Circle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Collaboration",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Drug",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Fashion",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Food_storage",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Glass",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/House_construction_phases",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/I",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Individual",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Interactive_whiteboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Knowledge",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Location_(geography)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Miniature_golf",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "12",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electrowetting",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Software_testing",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "13",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Carpet_cleaning",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Door_handle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ear_tag",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Seat",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Tap_(valve)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Toilet",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Water",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "14",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Light",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wall",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Email",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Gesture",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Graphical_user_interface",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Home",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/I",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wallpaper",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Weather",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wood",
+            "count": "1"
+          }
+        ]
+      }
+    ]
+  }
 }
