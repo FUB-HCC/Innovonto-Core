@@ -20,6 +20,7 @@ import {
 import { SoftwareView } from "./views/software-view/software-view";
 import { ResearchView } from "./views/research/research-view";
 import { AboutView } from "./views/about/about-view";
+import { SolutionView } from "./views/solution/solution-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -49,6 +50,7 @@ const Root = () => (
         <Route path="/about/:paragraph" component={AboutView} />
         <Route path="/search" component={SearchView} />
         <Route path="/session" component={SessionView} />
+        <Route path="/solution/:id" component={SolutionView} />
         <Route
           path={"/error"}
           render={props => (

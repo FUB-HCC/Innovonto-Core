@@ -1,0 +1,27 @@
+.eventMarker{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.eventMarkerSvg{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.noContent{
+    fill: orangered;
+    width: 12px;
+    height: 12px;
+}
+
+.stringContent{
+    padding:5px;
+}
+
+.imageContent{
+    padding: 5px;
+}
+
+.popover{
+    max-width: 300px;
+}

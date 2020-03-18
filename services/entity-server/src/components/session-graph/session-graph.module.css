@@ -10,10 +10,6 @@
     transform: translate(0%, -50%);
 }
 
-.eventMarker{
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
 
 .eventBucket{
     position: absolute;
@@ -72,21 +68,8 @@
     background-color: orangered;
     border-radius: 100%;
 }
-
-.noContent{
-    padding:5px;
-    color: orangered;
-}
-
-.stringContent{
-    padding:5px;
-}
-
-.imageContent{
-    padding: 5px;
-}
-
 .imageFrame{
     overflow: hidden;
     margin-bottom: -4px;
 }
+

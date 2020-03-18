@@ -3,7 +3,8 @@ import { SearchActionTypes } from "../components/search/search-component";
 import {
   extractEvents,
   extractProjectList,
-  extractSearchResults
+  extractSearchResults,
+  extractSolutionData
 } from "./data-transforms";
 import { sparqlProjectListParams } from "./sparql-queries";
 import { frameData } from "./data-framing";
@@ -50,6 +51,24 @@ export const requestProjectListData = dispatch => {
       frameData(result.data, "gi2mo:IdeaContest").then(data => {
         dispatch(extractProjectList(data));
       });
+    })
+    .catch(error => {
+      //TODO: make all components redirect to error page in a unified fashion <- input required
+    });
+};
+
+export const requestSolutionData = (id, dispatch) => {
+  var requestUrl;
+  if (id === "mockdata") {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map.json";
+  } else {
+    requestUrl = "";
+    //TODO: build URL string from id here
+  }
+  axios
+    .get(requestUrl)
+    .then(result => {
+      dispatch(extractSolutionData(result.data));
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required

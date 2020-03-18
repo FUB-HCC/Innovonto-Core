@@ -1,0 +1,16 @@
+
+.solutionViewWrapper{
+    width: 100%;
+    background: white;
+}
+
+.solutionViewContent{
+    min-height: 89.5vh;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}

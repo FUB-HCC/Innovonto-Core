@@ -4,6 +4,7 @@ import { InputGroup } from "@blueprintjs/core";
 import PageTitle from "../../components/common/page-title";
 import { requestProjectListData } from "../../middleware/requests";
 import LargeEntitiyPreview from "../../components/common/large-entity-preview";
+import { Link } from "react-router-dom";
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
@@ -48,7 +49,9 @@ const ProjectOptions = () => {
     <div className={style.projectOptionsWrapper}>
       <p className={style.projectOption}>More About the project</p>
       <br />
-      <p className={style.projectOption}>View All Ideas</p>
+      <Link to={"/solution/mockdata"}>
+        <p className={style.projectOption}>View All Ideas</p>
+      </Link>
       <br />
       <p className={style.projectOption}>View result/selected ideas</p>
     </div>

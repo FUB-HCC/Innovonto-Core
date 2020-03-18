@@ -63,6 +63,18 @@ export const useScrollToParagraph = listOfKeywordAndRefPairs => {
   );
 };
 
+export const useMousePosition = () => {
+  const [position, setPosition] = useState([0, 0]);
+  useEffect(() => {
+    const setFromEvent = e => setPosition([e.clientX, e.clientY]);
+    window.addEventListener("mousemove", setFromEvent);
+    return () => {
+      window.removeEventListener("mousemove", setFromEvent);
+    };
+  }, []);
+  return position;
+};
+
 export const AltTextComponent = props => (
   <div
     className={style.altTextComponent}
