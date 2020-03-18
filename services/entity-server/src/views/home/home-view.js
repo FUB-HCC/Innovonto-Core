@@ -105,7 +105,7 @@ const HomeViewText = () => (
     <p>
       Within our research, we developed prototypes for various ideation support tools and furthermore conducted idea
       generation challenges for different topics. These tools and the collected data are published openly and to be used
-      by everybody. To get an example of the data we provide, have a look at <a href={"/entities/sessions/todo"}>this
+      by everybody. To get an example of the data we provide, have a look at <a href={"/entities/sessions/bcbd1835-70bd-4a24-bbc3-a9368ddb4a53"}>this
       ideation session</a>. The
       prototypes we developed so far can be found <a href={"/software"}>here</a>.
     </p>
