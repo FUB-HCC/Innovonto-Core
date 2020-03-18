@@ -115,7 +115,7 @@ const HomeViewText = () => (
     </p>
     <h3>What is Ideation?</h3>
     <p>Wikipedia defines Ideation as "the creative process of generating, developing, and communicating new ideas, where
-      an idea is understood as a basic element of thought that can be either visual, concrete, or abstract. "<a
+      an idea is understood as a basic element of thought that can be either visual, concrete, or abstract."<a
         href="https://en.wikipedia.org/wiki/Ideation_(creative_process)" target="_blank" rel="noopener noreferrer">[Source]</a>.</p>
     <p>
       So far this is a pretty broad topic, ranging from <a
@@ -137,23 +137,18 @@ const HomeViewText = () => (
       models, while ideas for a theme song of a tv-series could be in the form of audio files or sheet music. So our
       first compromise is to limit our scope to one very general mode of an idea: <strong>text</strong>.
     </p>
-    {/*<p>
-      Often embedded in larger innovation processes: Innovation describes Problem Formulation, Idea Generation, Idea
-      Iteration, Ranking, and finally idea selection and implementation.
-    </p>*/}
 
     <h3>What is Large-Scale Ideation?</h3>
     <p>Over the last decade <em>crowdsourcing</em> has been identified as a novel and promising approach for a variety
       of tasks. Crowdsourcing describes a way to execute tasks by handing them over to a large group
       of people (the crowd) via the internet. One specific application of crowdsourcing is
       the collection of large numbers ideas for a given problem, topic or challenge.</p>
-    {/*TODO insert links for innocentive, quirky and openIdeo*/}
     <p>
       This approach has great potential: By bringing hundreds of people from diverse backgrounds and context together,
       crowd-sourcing enables the collection of large numbers of ideas on complex problems, increasing the potential for
       creative and potentially groundbreaking out of the box contributions. Crowd-sourced ideation led to new
       developments both in industry and in research. In industry, it gave rise to large scale ideation platforms, for
-      example InnoCentive, Quirky or OpenIDEO. In research, it helped establish the fields of
+      example <a href="https://www.innocentive.com/" target="_blank" rel="noopener noreferrer">InnoCentive</a>,  <a href="https://quirky.com/" target="_blank" rel="noopener noreferrer">Quirky</a> or  <a href="https://www.openideo.com/" target="_blank" rel="noopener noreferrer">OpenIDEO</a>. In research, it helped establish the fields of
       <em>Open Innovation</em> in the context of economics as well as <em>large scale collaborative ideation</em> in
       HCI.
     </p>
@@ -161,17 +156,24 @@ const HomeViewText = () => (
     </p>
     <ul>
       <li>Analysis of large scale ideation showed that ideas submitted tend to be trivial, repetitive and of low
-        quality. How can we improve the outcome of each individual participant?
+        quality. <a href={"/research/analyzing-ideation"}>How can we improve the outcome of each individual participant?</a>
       </li>
       <li>When many people generate ideas, people will come up with the same idea multiple times. In group settings,
         people are aware of all others' ideas and can react accordingly. However, the scale of large-scale ideation
-        makes it impossible for each participant to read every idea of the others. How can we select ideas for
-        participants to read?
+        makes it impossible for each participant to read every idea of the others. <a href={"/research/analyzing-ideation"}>How can we select ideas for
+          participants to read?</a>
       </li>
       <li>Another challenge introduced by the scale is the efficient analysis and synthesis of the ideas generated. When
-        people contribute thousands of ideas for a topic, simply going through them one by one may not be an option. How
-        can we build systems that help organizers understand the outcome ideas of large-scale ideation?
+        people contribute thousands of ideas for a topic, simply going through them one by one may not be an option.  <a href={"/research/analyzing-ideation"}>How
+          can we build systems that help organizers understand the outcome ideas of large-scale ideation?</a>
       </li>
+    </ul>
+    <h3>What can I do on this website?</h3>
+    <ul>
+      <li>Read about our <a href={"/research/-"}>research vision and active projects</a>. If you are interested, contact us!</li>
+      <li>Explore the <a href={"/model"}>data model</a> that we developed so far, to understand how to use our SPARQL-Endpoint.</li>
+      <li>Interactively explore <a href={"/data"}>the ideas</a> we obtained over the last three year.</li>
+      <li>Learn about <a href={"/software"}>software</a> we developed, and how you can use it.</li>
     </ul>
   </>
 );
