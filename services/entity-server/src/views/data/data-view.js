@@ -10,8 +10,9 @@ export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
   useEffect(() => requestProjectListData(setProjectList), []);
+  var filteredProjects = projectList;
   if (searchValue) {
-    const filteredProjects = projectList
+    filteredProjects = projectList
       .filter(project => project.title)
       .filter(
         project =>
