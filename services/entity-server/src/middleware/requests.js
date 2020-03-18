@@ -63,8 +63,7 @@ export const requestSolutionData = (id, dispatch) => {
     requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map.json";
   } else if (id === "bionic-radar") {
     requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map-2.json";
-  }
-  else {
+  } else {
     requestUrl = "";
     //TODO: build URL string from id here
   }

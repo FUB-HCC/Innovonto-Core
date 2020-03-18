@@ -6,13 +6,15 @@ import { ButtonGroup, Button } from "@blueprintjs/core";
 import {
   AltTextComponent,
   makeDimensionsChecker,
-  useMousePosition,
-  useWindowSize
+  useMousePosition
 } from "../utils";
+import Sidebar from "./solution-map-sidebar";
+import StaticPopover from "./solution-map-static-popover";
 
-const sideBarWidth = 300;
+export const sideBarWidth = 330;
 const mainWindowWidth = totalWidth => totalWidth - sideBarWidth;
-const circleRadiusPx = 1.5;
+const circleRadiusPx = (xRange, yRange) => 0.01 * Math.max(xRange, yRange);
+const strokeWidth = (xRange, yRange) => 0.002 * Math.max(xRange, yRange);
 const marginsRatio = 0.2;
 const minHeight = 450;
 const minWidth = 600;
@@ -36,67 +38,38 @@ const getCoordinateRanges = coordList => {
   ];
 };
 
-const offset = [10, -10];
-const StaticPopover = props => {
-  const [windowX, windowY] = useWindowSize();
-  const { x, y, content } = props;
-  let [xOffset, yOffset] = offset;
-  let [translateX, translateY] = [0, 0];
-  if (windowX - x < 300) {
-    xOffset = -10;
-    translateX = -100;
-  }
-  if (windowY - y < 350) {
-    yOffset = 10;
-    translateY = -100;
-  }
-  return (
-    <div
-      className={style.infoHoverPopover}
-      style={{
-        top: y + yOffset,
-        left: x + xOffset,
-        transform: `translate(${translateX}%, ${translateY}%)`
-      }}
-    >
-      <p>{content}</p>
-      <p>Click for details.</p>
-    </div>
+const getSelectedCluster = (clusterData, selectedIdea) => {
+  if (!selectedIdea || !selectedIdea.clusterLabel) return null;
+  return clusterData.find(
+    cluster => cluster.clusterLabel === selectedIdea.clusterLabel
   );
-};
-
-StaticPopover.propTypes = {
-  x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired,
-  content: PropTypes.string.isRequired
 };
 
 export const SolutionMap = props => {
   const [hoveredIdea, setHoveredIdea] = useState(null);
+  const [clickedIdea, setClickedIdea] = useState(null);
   const [mouseX, mouseY] = useMousePosition();
-  const { ideas, width, height, solutionId } = props;
+  const { ideas, width, height, solutionId, clusterData } = props;
   if (!areDimensionsReasonable(width, height) || !ideas) {
     return (
       <AltTextComponent name={"Solution Map"} width={width} height={height} />
     );
   }
+  const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
   const coordinateList = ideas.map(idea => idea.coordinates);
-  const [minX, minY, maxX, maxY] = getCoordinateRanges(coordinateList);
-  const xRange = maxX - minX;
-  const yRange = maxY - minY;
+  let xRange = 1,
+    yRange = 1;
+  let minX = 0,
+    minY = 0,
+    maxX = 0,
+    maxY = 0;
+  if (coordinateList.length > 0) {
+    [minX, minY, maxX, maxY] = getCoordinateRanges(coordinateList);
+    xRange = maxX - minX;
+    yRange = maxY - minY;
+  }
   const marginX = xRange * marginsRatio;
   const marginY = yRange * marginsRatio;
-
-  const Sidebar = (
-    <div
-      className={style.sidebar}
-      style={{ width: sideBarWidth, height: height }}
-    >
-      <h1 className={style.largeTitle}>Solution Map</h1>
-      <p className={style.idText}>ID: {solutionId.toUpperCase()}</p>
-      <p>(INPUT NEEDED)</p>
-    </div>
-  );
 
   return (
     <div className={style.solutionMapWrapper}>
@@ -105,7 +78,13 @@ export const SolutionMap = props => {
           const { scale } = args;
           return (
             <div className={style.zoomWindowWrapper}>
-              {Sidebar}
+              <Sidebar
+                solutionId={solutionId}
+                selectedIdea={clickedIdea}
+                selectedCluster={selectedCluster}
+                width={sideBarWidth}
+                height={height}
+              />
               <div>
                 <ButtonGroup minimal={true} className={style.toolBar}>
                   <Button icon={"zoom-in"} onClick={zoomIn} />
@@ -141,10 +120,12 @@ export const SolutionMap = props => {
                           onMouseEnter={() => setHoveredIdea(idea)}
                           onMouseLeave={() => setHoveredIdea(null)}
                           className={style.basicCircle}
-                          r={circleRadiusPx / scale}
+                          r={circleRadiusPx(xRange, yRange) / scale}
+                          strokeWidth={strokeWidth(xRange, yRange) / scale}
                           key={idea.idea}
                           cx={x + marginX}
                           cy={y + marginY}
+                          onClick={() => setClickedIdea(idea)}
                         />
                       );
                     })}
@@ -162,6 +143,7 @@ export const SolutionMap = props => {
 SolutionMap.propTypes = {
   solutionId: PropTypes.string.isRequired,
   ideas: PropTypes.arrayOf(PropTypes.object),
+  clusterData: PropTypes.arrayOf(PropTypes.object),
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired
 };
