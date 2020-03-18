@@ -82,7 +82,7 @@ export const ResearchView = () => {
               altText="idea-visualization-img"
             />
           }
-          right={<div/>}
+          right={<IdeaVisualizationText/>}
           title={"IdeaVisualization"}
         />
         <TwoColumnContent
@@ -129,8 +129,8 @@ export const ResearchView = () => {
           right={
             <img src={ideaVisualizationImg} alt={"idea-visualization-img"}/>
           }
-          left={<IdeaVisualizationText/>}
-          title={"Idea Visualization"}
+          left={<SparkVisualizationText/>}
+          title={"Spark Visualization"}
         />
         <TwoColumnContent
           left={
@@ -234,7 +234,8 @@ const IdeaModelingText = () => (
       systems, the insights of Westerski et al. who defined a generalized model
       of ideas and lastly, on our own research in large-scale ideation, where
       ideas are commonly described as short English natural language text
-      snippets. <a href={"/entities/ideas/cf65b021-620f-43fe-9473-1712be788cde"}>Show me an example</a> Furthermore, by
+      snippets (<a href={"/entities/ideas/cf65b021-620f-43fe-9473-1712be788cde"} target="_blank" rel="noopener noreferrer">Show me an example</a>).
+      Furthermore, by
       defining ideas as
       RDF-Entities, we take into account the dynamic nature of them. RDF as a
       data model allows for the dynamic nature of ideas: Properties and links
@@ -270,9 +271,9 @@ const IdeaLifecycleText = () => (
     between
     ideas (both ideas with similar content, or ideas created in the same brainstorming session), and their state of
     development.
-    Our vision is to have a "github of ideas" system, that enables everybody to iterate, refine or be inspired by each
-    others ideas and
-    captures this process to better understand the process of ideation.
+    Our vision is to have a data model, that enables to track an idea, from its first conception, over its multiple
+    iterations towards a refined commercialization option. We envision a system that enables iteration, splitting and merging
+    ideas and captures this process in an analyzable data model.
   </p>
 );
 
@@ -280,8 +281,14 @@ const IdeaSpaceVisualizationText = () => (
   <p>
     To understand the opportunity areas of a technology or the topics handled within a challenge, we need to define an
     <em>Idea Space</em>: A conceptual space of all ideas captured for a challenge together with a spatial relation
-    between
-    them. This space helps to understand the output and the thought process within a challenge.
+    between them. This space helps to understand the output and the thought process within a challenge. An ideal software would enable
+    users to create different lenses to analyze and compare different aspects of an idea space.
+  </p>
+);
+
+const IdeaVisualizationText = () => (
+  <p>
+    Related to the problem of IdeaSpace visualization is the challenge of how to visualize a single idea.
   </p>
 );
 
@@ -353,7 +360,7 @@ const InteractiveConceptValidationText = () => (
   </p>
 );
 
-const IdeaVisualizationText = () => (
+const SparkVisualizationText = () => (
   <p>
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
     eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam

@@ -152,7 +152,7 @@ const HomeViewText = () => (
       <em>Open Innovation</em> in the context of economics as well as <em>large scale collaborative ideation</em> in
       HCI.
     </p>
-    <p>The large-scale ideation reserach in HCI especially focusses on the following challenges:
+    <p>The large-scale ideation research in HCI especially focusses on the following challenges:
     </p>
     <ul>
       <li>Analysis of large scale ideation showed that ideas submitted tend to be trivial, repetitive and of low
