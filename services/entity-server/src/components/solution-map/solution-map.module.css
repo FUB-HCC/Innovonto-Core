@@ -1,16 +1,15 @@
 .zoomWindowWrapper{
-    overflow: hidden;
     display: flex;
     flex-direction: row;
 }
 
 .solutionMapWrapper{
     background-color: whitesmoke;
+    overflow: hidden;
 }
 
 .sidebar{
     background-color: lightgrey;
-    height: 100%;
     padding-left: 25px;
     padding-right: 15px;
 }

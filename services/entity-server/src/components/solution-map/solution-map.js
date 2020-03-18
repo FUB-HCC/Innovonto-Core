@@ -3,12 +3,27 @@ import PropTypes from "prop-types";
 import style from "./solution-map.module.css";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { ButtonGroup, Button } from "@blueprintjs/core";
-import { useMousePosition, useWindowSize } from "../utils";
+import {
+  AltTextComponent,
+  makeDimensionsChecker,
+  useMousePosition,
+  useWindowSize
+} from "../utils";
 
-const sideBarWidth = totalWidth => totalWidth * 0.25;
-const mainWindowWidth = totalWidth => totalWidth * 0.75;
+const sideBarWidth = 300;
+const mainWindowWidth = totalWidth => totalWidth - sideBarWidth;
 const circleRadiusPx = 1.5;
 const marginsRatio = 0.2;
+const minHeight = 450;
+const minWidth = 600;
+const minAspectRatio = 0.1;
+const maxAspectRatio = 2.0;
+const areDimensionsReasonable = makeDimensionsChecker(
+  minHeight,
+  minWidth,
+  minAspectRatio,
+  maxAspectRatio
+);
 
 const getCoordinateRanges = coordList => {
   const xCoords = coordList.map(c => c[0]);
@@ -60,8 +75,10 @@ export const SolutionMap = props => {
   const [hoveredIdea, setHoveredIdea] = useState(null);
   const [mouseX, mouseY] = useMousePosition();
   const { ideas, width, height, solutionId } = props;
-  if (!ideas || ideas.length <= 0) {
-    return <div>no-data</div>;
+  if (!areDimensionsReasonable(width, height) || !ideas) {
+    return (
+      <AltTextComponent name={"Solution Map"} width={width} height={height} />
+    );
   }
   const coordinateList = ideas.map(idea => idea.coordinates);
   const [minX, minY, maxX, maxY] = getCoordinateRanges(coordinateList);
@@ -71,7 +88,10 @@ export const SolutionMap = props => {
   const marginY = yRange * marginsRatio;
 
   const Sidebar = (
-    <div className={style.sidebar} style={{ width: sideBarWidth(width) }}>
+    <div
+      className={style.sidebar}
+      style={{ width: sideBarWidth, height: height }}
+    >
       <h1 className={style.largeTitle}>Solution Map</h1>
       <p className={style.idText}>ID: {solutionId.toUpperCase()}</p>
       <p>(INPUT NEEDED)</p>
@@ -80,14 +100,11 @@ export const SolutionMap = props => {
 
   return (
     <div className={style.solutionMapWrapper}>
-      <TransformWrapper>
+      <TransformWrapper style={{ width: width, height: height }}>
         {({ zoomIn, zoomOut, resetTransform, ...args }) => {
           const { scale } = args;
           return (
-            <div
-              className={style.zoomWindowWrapper}
-              style={{ width: width, height: height }}
-            >
+            <div className={style.zoomWindowWrapper}>
               {Sidebar}
               <div>
                 <ButtonGroup minimal={true} className={style.toolBar}>
