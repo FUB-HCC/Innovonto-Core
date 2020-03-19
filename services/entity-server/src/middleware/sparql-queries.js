@@ -32,7 +32,7 @@ const describeEntity = (entityUrl) => (`
     }
 `);
 
-const sparqlProjectList = () => (`
+const sparqlProjectList = () => `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX inov:<http://purl.org/innovonto/types/#>
@@ -43,22 +43,19 @@ const sparqlProjectList = () => (`
         ?project a gi2mo:IdeaContest ;
                 inov:numberIdeas ?ideaCount;
                 inov:numberUsers ?userCount;
-                dcterms:title ?titel;
+                dcterms:title ?title;
                 dcterms:description ?description;
-                rdfs:seeAlso ?seeAlso;
-                dcterms:created	?created;
+                dcterms:created ?created;
                 gi2mo:endDate ?endDate;
                 gi2mo:startDate ?startDate;
-    }			
+    }
     WHERE { 
     {
         SELECT * WHERE {
             ?project a gi2mo:IdeaContest;
-                dcterms:title ?titel;
-                rdfs:comment ?comment;
+                dcterms:title ?title;
                 dcterms:description ?description;
-                rdfs:seeAlso ?seeAlso;
-                dcterms:created	?created;
+                dcterms:created ?created;
                 gi2mo:endDate ?endDate;
                 gi2mo:startDate ?startDate;
         }
@@ -71,7 +68,6 @@ const sparqlProjectList = () => (`
     OPTIONAL {
         ?idea a gi2mo:Idea;
             gi2mo:hasIdeaContest ?project.
-        
         }
     } UNION {
     ?project a gi2mo:IdeaContest;
@@ -83,4 +79,4 @@ const sparqlProjectList = () => (`
     }
     GROUP BY ?project
     }
-}`);
+}`;

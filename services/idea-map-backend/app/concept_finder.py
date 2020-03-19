@@ -4,25 +4,24 @@ from sparql_handler import Sparql_handler
 
 class Concept_finder():
     sh = Sparql_handler()
-    test_query = """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX gi2mo: <http://purl.org/gi2mo/ns#>
-        PREFIX icv: <http://purl.org/innovonto/icv/types/>
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    test_query = """
+    PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
+    PREFIX inov:<http://purl.org/innovonto/types/#>
+    PREFIX oid:<http://purl.org/innovonto/legacy/types/>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-        SELECT ?linkedResource (COUNT(?linkedResource) as ?resourceCount)
+        SELECT ?linkedResource (COUNT(?linkedResource) as ?resourceCount) 
         WHERE {
         ?idea a gi2mo:Idea.
-        ?idea icv:hasAnnotation ?annotation.
+        ?idea inov:hasAnnotation ?annotation.
         ?idea gi2mo:content ?content.
-        ?annotation icv:annotationState "approved".
-        ?annotation icv:hasResourceCandidate ?resourceCandidate.
-        ?resourceCandidate icv:selected ?selected.
-        ?resourceCandidate icv:hasLinkedResource ?linkedResource.
+        ?annotation inov:annotationState "approved".
+        ?annotation inov:hasResourceCandidate ?resourceCandidate.
+        ?resourceCandidate inov:selected ?selected.
+        ?resourceCandidate inov:hasLinkedResource ?linkedResource.
         FILTER (?selected = "true"^^xsd:boolean)
         VALUES(?idea) {
-            (<http://purl.org/innovonto/ideas/f82e5941-af36-43ab-97b9-959625b25fb1>)
+            (<https://innovonto-core.imp.fu-berlin.de/entities/ideas/207ed8be-e222-441c-bb86-3c75fc918208>)
         }
         }
         GROUP BY ?linkedResource
@@ -30,19 +29,19 @@ class Concept_finder():
     concept_count_query_start = """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX gi2mo: <http://purl.org/gi2mo/ns#>
-        PREFIX icv: <http://purl.org/innovonto/icv/types/>
+        PREFIX inov:<http://purl.org/innovonto/types/#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-        SELECT ?linkedResource (COUNT(?linkedResource) as ?resourceCount)
+        SELECT ?linkedResource (COUNT(?linkedResource) as ?resourceCount) 
         WHERE {
         ?idea a gi2mo:Idea.
-        ?idea icv:hasAnnotation ?annotation.
+        ?idea inov:hasAnnotation ?annotation.
         ?idea gi2mo:content ?content.
-        ?annotation icv:annotationState "approved".
-        ?annotation icv:hasResourceCandidate ?resourceCandidate.
-        ?resourceCandidate icv:selected ?selected.
-        ?resourceCandidate icv:hasLinkedResource ?linkedResource.
+        ?annotation inov:annotationState "approved".
+        ?annotation inov:hasResourceCandidate ?resourceCandidate.
+        ?resourceCandidate inov:selected ?selected.
+        ?resourceCandidate inov:hasLinkedResource ?linkedResource.
         FILTER (?selected = "true"^^xsd:boolean)
         VALUES(?idea) {
         """
@@ -54,7 +53,7 @@ class Concept_finder():
         LIMIT 20
         """
 
-    test_uri = """(<http://purl.org/innovonto/ideas/f82e5941-af36-43ab-97b9-959625b25fb1>)"""
+    test_uri = """(<https://innovonto-core.imp.fu-berlin.de/entities/ideas/dbb4089a-66c0-45a2-a269-50a3db55ed1e>)"""
 
     def get_cluster_list(self, ideas_list, labels):
         cluster_list = []

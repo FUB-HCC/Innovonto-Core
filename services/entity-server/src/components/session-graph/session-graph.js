@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import style from "./session-graph.module.css";
-import { Popover, PopoverInteractionKind } from "@blueprintjs/core";
 import { AltTextComponent, makeDimensionsChecker } from "../utils";
 import { requestSessionData } from "../../middleware/requests";
+import EntityMarker from "../common/entity-marker";
 
 const marginsSides = width => 0.1 * width;
 
@@ -20,8 +20,6 @@ const areDimensionsReasonable = makeDimensionsChecker(
 
 const lineHeight = 1;
 const timerLength = 1200;
-const imgHeight = 150;
-const imgMaxWidth = 300; //overflow is cut
 const timelineOffsetY = height => (height * 2) / 3;
 
 const minBucketSizePx = 17;
@@ -64,16 +62,6 @@ const mapEventTypeToShape = eventType => {
   }
 };
 
-const mapComponentToContent = content => {
-  if (!content || typeof content.content !== "string") {
-    return <div className={style.noContent}> No Content Provided!</div>;
-  } else if (content.content.includes("</div>")) {
-    return <ImageContent img={content.content} />;
-  } else {
-    return <div className={style.stringContent}>{content.content}</div>;
-  }
-};
-
 const sortEventsIntoBuckets = (timeLineWidth, eventList) => {
   const bucketWidthSecs = timerLength / getBucketCount(timeLineWidth);
   let buckets = {};
@@ -102,6 +90,7 @@ const SessionGraph = props => {
   }
   const timeLineWidth = width - 2 * marginsSides(width);
   const eventBuckets = sortEventsIntoBuckets(timeLineWidth, eventList);
+  console.log(eventList);
   return (
     <div
       className={style.sessionGraphWrapper}
@@ -158,12 +147,12 @@ const SessionGraph = props => {
           }}
         >
           {bucket.events.map((sEvent, i) => (
-            <EventMarker
+            <EntityMarker
               key={sEvent.id}
               cx={0}
               cy={timelineOffsetY(height) - i * eventMarkerOffset}
               marker={mapEventTypeToShape(sEvent.eventType)}
-              content={sEvent.content}
+              content={sEvent.content ? sEvent.content.content : null}
             />
           ))}
         </div>
@@ -209,61 +198,5 @@ const Labels = props => (
     ))}
   </div>
 );
-
-const EventMarker = props => {
-  const [isHovered, setHovered] = useState(false);
-  const [isClicked, setClicked] = useState(false);
-  const [isOpen, setOpen] = useState(false);
-
-  const onMouseEvent = isEnter => {
-    setHovered(isEnter);
-    setOpen(isEnter || isClicked);
-  };
-  const onClick = () => {
-    setClicked(!isClicked);
-  };
-  const onInteraction = wouldOpen => {
-    if (!isHovered && isOpen && !wouldOpen) {
-      setClicked(false);
-      setOpen(false);
-    }
-  };
-  const { cx, cy, marker, content } = props;
-  return (
-    <div
-      className={style.eventMarker}
-      style={{ left: cx, top: cy }}
-      onMouseEnter={() => onMouseEvent(true)}
-      onMouseLeave={() => onMouseEvent(false)}
-      onMouseDown={onClick}
-    >
-      <Popover
-        isOpen={isOpen}
-        onInteraction={onInteraction}
-        interactionKind={PopoverInteractionKind.CLICK}
-        content={mapComponentToContent(content)}
-        target={marker}
-      />
-    </div>
-  );
-};
-
-const ImageContent = props => {
-  //const imgSrc = props.img.split('"').find(str => str.includes(".jpg"));
-  return (
-    <div className={style.imageContent} style={{ maxWidth: imgMaxWidth }}>
-      <div className={style.imageFrame}>
-        <img
-          height={imgHeight}
-          src={
-            "https://upload.wikimedia.org/wikipedia/commons/1/16/HDRI_Sample_Scene_Balls_%28JPEG-HDR%29.jpg"
-          }
-          alt={"did not load!"}
-        />
-      </div>
-    </div>
-  );
-};
-//TODO: replace sample image with actual images from backend
 
 export default SessionGraph;

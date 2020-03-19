@@ -3,6 +3,7 @@
     z-index: -5;
     height: 800px;
     overflow: hidden;
+    width: 100vw;
 }
 
 .homeViewWrapper{
@@ -73,6 +74,7 @@
 }
 
 .homeViewText p{
+    word-break: break-word;
     font-size: 15px;
     line-height: 150%;
     margin-bottom: 35px;
