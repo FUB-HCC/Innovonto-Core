@@ -13,3 +13,13 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+.largeTitle{
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.ideaDescription{
+    max-width: 500px;
+    margin-bottom: 20px;
+}
