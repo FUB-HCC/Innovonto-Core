@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./session-view.module.css";
-import SessionGraph from "../../components/session-graph/session-graph";
-import { useWindowSize } from "../../components/utils";
+import SessionGraph from "../../../components/session-graph/session-graph";
+import { useWindowSize } from "../../../components/utils";
 
 const sessionHeight = height => 0.8 * height;
 const sessionWidth = width => 0.6 * width;

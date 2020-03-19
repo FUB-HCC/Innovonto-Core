@@ -1,14 +1,36 @@
-export const sparqlProjectListParams = () =>
-  coreServerRequest(sparqlProjectList());
+
+export const sparqlProjectListRequest = () => coreServerRequest(sparqlProjectList());
+export const describeEntityRequest = (entityUrl) => coreServerRequest(describeEntity(entityUrl));
+
+
+export const prefix = {
+    rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    gi2mo: "http://purl.org/gi2mo/ns#",
+    dcterms: "http://purl.org/dc/terms/",
+    inov: "http://purl.org/innovonto/"
+};
+
 
 const coreServerRequest = sparqlQuery => {
-  return {
-    params: {
-      query: sparqlQuery,
-      format: "json"
-    }
-  };
+    return ( {
+        params: {
+            query: sparqlQuery,
+            format: "json"
+        }
+    })
 };
+
+const describeEntity = (entityUrl) => (`
+    PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX inov:<http://purl.org/innovonto/types/#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    
+    SELECT DISTINCT ?predicate ?object WHERE { <` +
+    entityUrl + `> ?predicate ?object.
+    }
+`);
 
 const sparqlProjectList = () => `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>

@@ -83,6 +83,19 @@ export const extractProjectList = data =>
     title: ideaContest.title
   }));
 
+export const sortResources = data => {
+  var dic = new Map();
+  for (var { predicate, object } of data) {
+    if (dic.has(predicate.value)) {
+      dic.get(predicate.value).objects.push(object);
+    } else {
+      dic.set(predicate.value, { predicate, objects: [object] });
+    }
+  }
+  return Array.from(dic.values()).sort((a, b) =>
+    a.predicate.value.localeCompare(b.predicate.value)
+  );
+};
 export const extractSolutionData = data => ({
   bindings: data.results.bindings.map(binding => ({
     idea: binding.idea.value,

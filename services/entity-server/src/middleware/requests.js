@@ -4,10 +4,11 @@ import {
   extractEvents,
   extractProjectList,
   extractSearchResults,
-  extractSolutionData
+  extractSolutionData,
+  sortResources
 } from "./data-transforms";
-import { sparqlProjectListParams } from "./sparql-queries";
-import { frameData } from "./data-framing";
+import { sparqlProjectListRequest, describeEntityRequest } from "./sparql-queries"
+import { frameData } from "./data-framing"
 
 const backendServiceBaseUrl =
   "https://innovonto-core.imp.fu-berlin.de/management/core/query";
@@ -46,11 +47,12 @@ export const requestSessionData = dispatch => {
 
 export const requestProjectListData = dispatch => {
   axios
-    .get(backendServiceBaseUrl, sparqlProjectListParams())
+    .get(backendServiceBaseUrl, sparqlProjectListRequest())
     .then(result => {
-      frameData(result.data, "gi2mo:IdeaContest").then(data => {
-        dispatch(extractProjectList(data));
-      });
+      frameData(result.data, "gi2mo:IdeaContest")
+        .then(data => {
+          dispatch(extractProjectList(data))
+        });
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
@@ -73,4 +75,12 @@ export const requestSolutionData = (id, dispatch) => {
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
     });
+};
+
+export const requestGenericEntity = (entityUrl, dispatch) => {
+  axios
+    .get(backendServiceBaseUrl, describeEntityRequest(entityUrl))
+    .then(result => {
+      dispatch(sortResources(result.data.results.bindings))
+    })
 };

@@ -6,7 +6,7 @@ import {
   Redirect
 } from "react-router-dom";
 import ErrorBoundary from "./components/common/error-boundary";
-import SessionView from "./views/session/session-view";
+import SessionView from "./views/entities/session/session-view";
 import SearchView from "./views/search/search-view";
 import { Header } from "./components/common/header";
 import { Footer } from "./components/common/footer";
@@ -21,6 +21,7 @@ import { SoftwareView } from "./views/software-view/software-view";
 import { ResearchView } from "./views/research/research-view";
 import { AboutView } from "./views/about/about-view";
 import { SolutionView } from "./views/solution/solution-view";
+import { EntityFallbackView } from "./views/entities/fallback/entity-fallback-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -42,15 +43,25 @@ const Root = () => (
       )}
     >
       <Switch>
-        <Route exact path="/" component={HomeView} />
-        <Route path="/research/:paragraph" component={ResearchView} />
-        <Route path="/data" component={DataView} />
+        {/*Documentation Routes */}
+        <Route exact path="/" component={HomeView}/>
+        <Route path="/research/:paragraph" component={ResearchView}/>
         <Route path="/model" component={ModelView} />
-        <Route path="/software" component={SoftwareView} />
-        <Route path="/about/:paragraph" component={AboutView} />
-        <Route path="/search" component={SearchView} />
-        <Route path="/session" component={SessionView} />
+        <Route path="/data" component={DataView}/>
+        <Route path="/software" component={SoftwareView}/>
+        <Route path="/about/:paragraph" component={AboutView}/>
+
+        {/*Data Routes */}
+        {/* TODO whats the correct format for idea maps? */}
         <Route path="/solution/:id" component={SolutionView} />
+        <Route path="/search" component={SearchView}/>
+        <Route path="/entities/ideas/:id" component={EntityFallbackView}/>,
+        <Route path="/entities/users/:id" component={EntityFallbackView}/>
+        <Route path="/entities/sessions/:id" component={SessionView} />
+        <Route path="/entities/ideaContests/:id" component={EntityFallbackView} />
+        <Route path="/entities/challenges/:id" component={EntityFallbackView}/>
+        <Route path="/entities/:id" component={EntityFallbackView}/>
+
         <Route
           path={"/error"}
           render={props => (
