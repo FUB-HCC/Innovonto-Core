@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import style from "./entity-fallback-view.module.css";
 
-import {requestGenericEntity, requestProjectListData} from "../../../middleware/requests";
+import { requestGenericEntity } from "../../../middleware/requests";
 import PageTitle from "../../../components/common/page-title";
-import {prefix} from "../../../middleware/sparql-queries";
+import { prefix } from "../../../middleware/sparql-queries";
 
 function prefixReplacer(predicate) {
   for (let k in prefix) {
@@ -44,7 +44,7 @@ const urlToEntity = (url) => {
 export const EntityFallbackView = () => {
   const [data, setData] = useState([]);
   const entityId = urlToEntity(window.location.href);
-  useEffect(() => requestGenericEntity(entityId, setData), []);
+  useEffect(() => requestGenericEntity(entityId, setData), [entityId]);
   return (
     <div>
       <PageTitle title="Entity Details"/>

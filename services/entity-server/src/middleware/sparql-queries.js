@@ -1,23 +1,22 @@
-
 export const sparqlProjectListRequest = () => coreServerRequest(sparqlProjectList());
 export const describeEntityRequest = (entityUrl) => coreServerRequest(describeEntity(entityUrl));
 
 
 export const prefix = {
-    rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    gi2mo: "http://purl.org/gi2mo/ns#",
-    dcterms: "http://purl.org/dc/terms/",
-    inov: "http://purl.org/innovonto/"
+  rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  gi2mo: "http://purl.org/gi2mo/ns#",
+  dcterms: "http://purl.org/dc/terms/",
+  inov: "http://purl.org/innovonto/"
 };
 
 
 const coreServerRequest = sparqlQuery => {
-    return ( {
-        params: {
-            query: sparqlQuery,
-            format: "json"
-        }
-    })
+  return ({
+    params: {
+      query: sparqlQuery,
+      format: "json"
+    }
+  })
 };
 
 const describeEntity = (entityUrl) => (`
@@ -28,7 +27,7 @@ const describeEntity = (entityUrl) => (`
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     
     SELECT DISTINCT ?predicate ?object WHERE { <` +
-    entityUrl + `> ?predicate ?object.
+  entityUrl + `> ?predicate ?object.
     }
 `);
 
