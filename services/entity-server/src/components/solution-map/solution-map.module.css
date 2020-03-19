@@ -8,12 +8,6 @@
     overflow: hidden;
 }
 
-.sidebar{
-    background-color: lightgrey;
-    padding-left: 25px;
-    padding-right: 15px;
-}
-
 .toolBar{
     position: absolute;
     padding: 15px;
@@ -22,6 +16,7 @@
 .basicCircle{
     fill: orangered;
     cursor: pointer;
+    stroke: whitesmoke;
 }
 
 .infoHoverPopover{
@@ -38,14 +33,3 @@
     z-index: 1;
 }
 
-.largeTitle{
-    font-size: 30px;
-    margin-bottom: 0;
-}
-
-.idText{
-    margin-top: -5px;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}

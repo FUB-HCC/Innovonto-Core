@@ -1,10 +1,10 @@
 import style from "./data-view.module.css";
-import React, {useEffect, useState} from "react";
-import {InputGroup} from "@blueprintjs/core";
+import React, { useEffect, useState } from "react";
+import { InputGroup } from "@blueprintjs/core";
 import PageTitle from "../../components/common/page-title";
-import {requestProjectListData} from "../../middleware/requests";
+import { requestProjectListData } from "../../middleware/requests";
 import LargeEntitiyPreview from "../../components/common/large-entity-preview";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -22,7 +22,7 @@ export const DataView = () => {
   }
   return (
     <div className={style.dataViewWrapper}>
-      <PageTitle title={"Data"}/>
+      <PageTitle title={"Data"} />
       <div className={style.dataViewContent}>
         <h1 className={style.largeTitle}>Search</h1>
         <InputGroup
@@ -39,7 +39,7 @@ export const DataView = () => {
             key={project.id}
             description={project.description}
             title={project.title}
-            rightContent={<ProjectOptions/>}
+            rightContent={<ProjectOptions />}
           />
         ))}
       </div>
@@ -51,11 +51,11 @@ const ProjectOptions = () => {
   return (
     <div className={style.projectOptionsWrapper}>
       <p className={style.projectOption}>More About the project</p>
-      <br/>
+      <br />
       <Link to={"/solution/mockdata"}>
         <p className={style.projectOption}>View All Ideas</p>
       </Link>
-      <br/>
+      <br />
       <p className={style.projectOption}>View result/selected ideas</p>
     </div>
   );

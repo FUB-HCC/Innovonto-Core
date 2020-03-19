@@ -15,12 +15,14 @@ export const SolutionView = () => {
   useEffect(() => requestSolutionData(id, setSolutionData), [id]);
   const [windowWidth, windowHeight] = useWindowSize();
   const solutionDots = solutionData.bindings ? solutionData.bindings : [];
+  const clusterData = solutionData.clusters ? solutionData.clusters : [];
   return (
     <div className={style.solutionViewWrapper}>
       <div className={style.solutionViewContent}>
         <SolutionMap
           solutionId={id}
           ideas={solutionDots}
+          clusterData={clusterData}
           height={solutionHeight(windowHeight)}
           width={solutionWidth(windowWidth)}
         />
