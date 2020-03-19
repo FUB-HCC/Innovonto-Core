@@ -2,6 +2,7 @@ import style from "./solution-map-sidebar.module.css";
 import React from "react";
 import { Button, Intent } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
+import { getNameFromUri } from "../utils";
 
 const SidebarIdeaDetails = props => {
   const { selectedIdea } = props;
@@ -33,11 +34,6 @@ const SidebarIdeaDetails = props => {
       )}
     </div>
   );
-};
-
-const getNameFromUri = uri => {
-  const splitUri = uri.split("/");
-  return splitUri[splitUri.length - 1];
 };
 
 const TopConceptsTable = props => {

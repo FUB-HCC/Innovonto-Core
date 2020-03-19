@@ -86,3 +86,8 @@ export const AltTextComponent = props => (
     </div>
   </div>
 );
+
+export const getNameFromUri = uri => {
+  const splitUri = uri.split("/");
+  return splitUri[splitUri.length - 1];
+};
