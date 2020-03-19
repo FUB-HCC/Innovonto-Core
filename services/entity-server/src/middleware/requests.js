@@ -3,12 +3,12 @@ import { SearchActionTypes } from "../components/search/search-component";
 import {
   extractEvents,
   extractProjectList,
-  extractSearchResults, sortResources
   extractSearchResults,
-  extractSolutionData
+  extractSolutionData,
+  sortResources
 } from "./data-transforms";
-import {sparqlProjectListRequest, describeEntityRequest} from "./sparql-queries"
-import {frameData} from "./data-framing"
+import { sparqlProjectListRequest, describeEntityRequest } from "./sparql-queries"
+import { frameData } from "./data-framing"
 
 const backendServiceBaseUrl =
   "https://innovonto-core.imp.fu-berlin.de/management/core/query";
