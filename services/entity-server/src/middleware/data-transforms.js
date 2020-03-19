@@ -119,9 +119,9 @@ function convertPropertyToArray(value) {
 }
 
 function convertPropertiesToArray(data, properties) {
-  properties.forEach((property) => {
+  properties.forEach(property => {
     if (data.hasOwnProperty(property)) {
-      data[property] = convertPropertyToArray(data[property])
+      data[property] = convertPropertyToArray(data[property]);
     }
   });
   return data;
@@ -133,5 +133,9 @@ function convertPropertiesToArray(data, properties) {
  b) For a given property selects fallback properties if the property is not present (for example: if the title is not present -> show local id)
  **/
 export const extractIdeaDetails = data => {
-  return  convertPropertiesToArray(data, ["hasReview", "hasAnnotation", "hasTextualRefinement"]);
+  return convertPropertiesToArray(data, [
+    "hasReview",
+    "hasAnnotation",
+    "hasTextualRefinement"
+  ]);
 };

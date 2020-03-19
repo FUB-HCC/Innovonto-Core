@@ -1,7 +1,7 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    background-color: #DDDDDD;
+    background-color: white;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -24,7 +24,6 @@
 }
 
 .sideBarSpacer{
-    flex-basis: 30px;
     flex-grow: 1;
 }
 
