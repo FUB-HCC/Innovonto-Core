@@ -1,6 +1,6 @@
 export const sparqlProjectListRequest = () => coreServerRequest(sparqlProjectList());
 export const describeEntityRequest = (entityUrl) => coreServerRequest(describeEntity(entityUrl));
-
+export const describeIdeaRequest = (entityUrl) => coreServerRequest(describeIdea(entityUrl));
 
 export const prefix = {
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -18,6 +18,10 @@ const coreServerRequest = sparqlQuery => {
     }
   })
 };
+
+const describeIdea = (entityUrl) => (`
+DESCRIBE <` + entityUrl + `>
+`);
 
 const describeEntity = (entityUrl) => (`
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>

@@ -5,9 +5,10 @@ import {
   extractProjectList,
   extractSearchResults,
   extractSolutionData,
+  extractIdeaDetails,
   sortResources
 } from "./data-transforms";
-import { sparqlProjectListRequest, describeEntityRequest } from "./sparql-queries"
+import { sparqlProjectListRequest, describeEntityRequest, describeIdeaRequest } from "./sparql-queries"
 import { frameData } from "./data-framing"
 
 const backendServiceBaseUrl =
@@ -77,6 +78,15 @@ export const requestSolutionData = (id, dispatch) => {
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
     });
+};
+
+export const requestIdeaDetailData = (ideaUrl, dispatch) => {
+  axios
+    .get(backendServiceBaseUrl, describeIdeaRequest(ideaUrl))
+    .then(result => {
+      frameData(result.data, "gi2mo:Idea")
+        .then(data =>dispatch(extractIdeaDetails(data)));
+    })
 };
 
 export const requestGenericEntity = (entityUrl, dispatch) => {

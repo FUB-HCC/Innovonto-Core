@@ -96,6 +96,7 @@ export const sortResources = data => {
     a.predicate.value.localeCompare(b.predicate.value)
   );
 };
+
 export const extractSolutionData = data => ({
   bindings: data.results.bindings.map(binding => ({
     idea: binding.idea.value,
@@ -112,3 +113,25 @@ export const extractSolutionData = data => ({
     topConcepts: cluster.top_concepts
   }))
 });
+
+function convertPropertyToArray(value) {
+  return value instanceof Array ? value : [value];
+}
+
+function convertPropertiesToArray(data, properties) {
+  properties.forEach((property) => {
+    if (data.hasOwnProperty(property)) {
+      data[property] = convertPropertyToArray(data[property])
+    }
+  });
+  return data;
+}
+
+//TODO this is manual and complicated. I need a better solution for this:
+/**I need something that:
+ a) For a given property name coerces the datatype to array
+ b) For a given property selects fallback properties if the property is not present (for example: if the title is not present -> show local id)
+ **/
+export const extractIdeaDetails = data => {
+  return  convertPropertiesToArray(data, ["hasReview", "hasAnnotation", "hasTextualRefinement"]);
+};
