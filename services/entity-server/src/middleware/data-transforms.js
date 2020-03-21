@@ -133,9 +133,30 @@ function convertPropertiesToArray(data, properties) {
  b) For a given property selects fallback properties if the property is not present (for example: if the title is not present -> show local id)
  **/
 export const extractIdeaDetails = data => {
-  return convertPropertiesToArray(data, [
+  const propertiesToArray = convertPropertiesToArray(data, [
     "hasReview",
     "hasAnnotation",
     "hasTextualRefinement"
   ]);
+  return {
+    ...propertiesToArray,
+    id: data["@id"],
+    hasReview: propertiesToArray.hasReview
+      ? propertiesToArray.hasReview.map(review => ({
+          ...review
+        }))
+      : null,
+    refinements: propertiesToArray.hasTextualRefinement
+      ? propertiesToArray.hasTextualRefinement.map(refinement => ({
+          id: refinement["@id"],
+          question: refinement.description,
+          answer: refinement.contentGerman
+            ? refinement.contentGerman["@value"]
+            : refinement.content
+        }))
+      : null,
+    creator: propertiesToArray.creator
+      ? propertiesToArray.creator
+      : propertiesToArray.hasCreator
+  };
 };

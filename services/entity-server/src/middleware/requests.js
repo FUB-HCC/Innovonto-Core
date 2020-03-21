@@ -18,6 +18,8 @@ import { frameData } from "./data-framing";
 const backendServiceBaseUrl =
   "https://innovonto-core.imp.fu-berlin.de/management/core/query";
 
+const baseUrl = "https://innovonto-core.imp.fu-berlin.de";
+
 export const requestSearchData = (requestValue, dispatch) => {
   dispatch({
     type: SearchActionTypes.SEARCH_REQUEST_SUBMIT,
@@ -85,7 +87,7 @@ export const requestSolutionData = (id, dispatch) => {
 
 export const requestIdeaDetailData = (ideaUrl, dispatch) => {
   axios
-    .get(backendServiceBaseUrl, describeIdeaRequest(ideaUrl))
+    .get(backendServiceBaseUrl, describeIdeaRequest(baseUrl + ideaUrl))
     .then(result => {
       frameData(result.data, "gi2mo:Idea").then(data =>
         dispatch(extractIdeaDetails(data))

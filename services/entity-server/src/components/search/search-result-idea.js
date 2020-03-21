@@ -1,8 +1,8 @@
 import React from "react";
 import LargeEntitiyPreview from "../common/large-entity-preview";
 import style from "./search-component.module.css";
-import { Icon } from "@blueprintjs/core";
-
+import StarRating from "../common/star-rating";
+import TextualRefinements from "../common/textual-refinements";
 const SearchResultIdea = props => {
   if (props.results.length <= 0) {
     return <div className={style.resultIdeaWrapper} />;
@@ -34,28 +34,10 @@ const SearchResultIdea = props => {
             </div>
           )
         }
-        rightContent={refinements.map(refinement => (
-          <div key={refinement.id}>
-            <h4>{refinement.question}</h4>
-            <p>{refinement.answer}</p>
-          </div>
-        ))}
+        rightContent={<TextualRefinements refinementList={refinements} />}
       />
     </div>
   );
 };
-
-const StarRating = props => (
-  <div className={style.RatingWrapper}>
-    <div>
-      <Icon icon={props.rating >= 0.5 ? "star" : "star-empty"} />
-      <Icon icon={props.rating >= 1.5 ? "star" : "star-empty"} />
-      <Icon icon={props.rating >= 2.5 ? "star" : "star-empty"} />
-      <Icon icon={props.rating >= 3.5 ? "star" : "star-empty"} />
-      <Icon icon={props.rating >= 4.5 ? "star" : "star-empty"} />
-    </div>
-    <span>{Math.round(props.rating)} von 5 Sterne</span>
-  </div>
-);
 
 export default SearchResultIdea;

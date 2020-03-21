@@ -22,6 +22,7 @@ import { ResearchView } from "./views/research/research-view";
 import { AboutView } from "./views/about/about-view";
 import { SolutionView } from "./views/solution/solution-view";
 import { EntityFallbackView } from "./views/entities/fallback/entity-fallback-view";
+import { IdeaView } from "./views/idea/idea-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -54,7 +55,7 @@ const Root = () => (
         {/* TODO whats the correct format for idea maps? */}
         <Route path="/solution/:id" component={SolutionView} />
         <Route path="/search" component={SearchView} />
-        <Route path="/entities/ideas/:id" component={EntityFallbackView} />,
+        <Route path="/entities/ideas/:id" component={IdeaView} />,
         <Route path="/entities/users/:id" component={EntityFallbackView} />
         <Route path="/entities/sessions/:id" component={SessionView} />
         <Route

@@ -23,3 +23,37 @@
     max-width: 500px;
     margin-bottom: 20px;
 }
+
+.backButton svg{
+    padding-bottom: 2px;
+}
+
+.backButton{
+    margin-bottom: 10px;
+}
+
+.networkPanelWrapper{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.networkSectionWrapper{
+    flex-basis: 250px;
+    flex-grow: 1;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+.neighbourhoodPreview{
+    width: 100%;
+    max-width: 330px;
+    height: 160px;
+    background-color: dimgrey;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
