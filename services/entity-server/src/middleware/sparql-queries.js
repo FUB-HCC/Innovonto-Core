@@ -1,6 +1,9 @@
-export const sparqlProjectListRequest = () => coreServerRequest(sparqlProjectList());
-export const describeEntityRequest = (entityUrl) => coreServerRequest(describeEntity(entityUrl));
-
+export const sparqlProjectListRequest = () =>
+  coreServerRequest(sparqlProjectList());
+export const describeEntityRequest = entityUrl =>
+  coreServerRequest(describeEntity(entityUrl));
+export const describeSessionRequest = entityUrl =>
+  coreServerRequest(describeSession(entityUrl));
 
 export const prefix = {
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -9,17 +12,17 @@ export const prefix = {
   inov: "http://purl.org/innovonto/"
 };
 
-
 const coreServerRequest = sparqlQuery => {
-  return ({
+  return {
     params: {
       query: sparqlQuery,
       format: "json"
     }
-  })
+  };
 };
 
-const describeEntity = (entityUrl) => (`
+const describeEntity = entityUrl =>
+  `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX inov:<http://purl.org/innovonto/types/#>
@@ -27,9 +30,26 @@ const describeEntity = (entityUrl) => (`
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     
     SELECT DISTINCT ?predicate ?object WHERE { <` +
-  entityUrl + `> ?predicate ?object.
+  entityUrl +
+  `> ?predicate ?object.
     }
-`);
+`;
+
+const describeSession = entityUrl =>
+  `
+    PREFIX inov:<http://purl.org/innovonto/types/#>
+    DESCRIBE ?event ?idea ?insp ?inspidea <` +
+  entityUrl +
+  `>
+    WHERE {
+      <` +
+  entityUrl +
+  `> inov:hasTrackingEvent ?event.
+       OPTIONAL {?event inov:submittedIdea ?idea}
+       OPTIONAL {?event inov:hasInspiration ?insp}
+       OPTIONAL {?insp inov:hasIdea ?inspidea}
+    }
+`;
 
 const sparqlProjectList = () => `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>

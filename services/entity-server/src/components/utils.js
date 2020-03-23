@@ -91,3 +91,15 @@ export const getNameFromUri = uri => {
   const splitUri = uri.split("/");
   return splitUri[splitUri.length - 1];
 };
+
+//TODO debug feature, either remove or generify
+export const urlToEntity = url => {
+  if (url.startsWith("http://localhost:3000/entities/")) {
+    return (
+      "https://innovonto-core.imp.fu-berlin.de/entities/" +
+      url.substring("http://localhost:3000/entities/".length, url.length)
+    );
+  } else {
+    return url;
+  }
+};

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import style from "./session-graph.module.css";
-import { AltTextComponent, makeDimensionsChecker } from "../utils";
+import { AltTextComponent, makeDimensionsChecker, urlToEntity } from "../utils";
 import { requestSessionData } from "../../middleware/requests";
 import EntityMarker from "../common/entity-marker";
 
@@ -81,16 +81,19 @@ const sortEventsIntoBuckets = (timeLineWidth, eventList) => {
 
 const SessionGraph = props => {
   const { width, height } = props;
-  const [eventList, setEventsList] = useState([]);
-  useEffect(() => requestSessionData(setEventsList), []);
+  const [sessionData, setSessionData] = useState([]);
+  const entityId = urlToEntity(window.location.href);
+  useEffect(() => requestSessionData(entityId, setSessionData), [entityId]);
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent name={"Session Graph"} width={width} height={height} />
     );
   }
   const timeLineWidth = width - 2 * marginsSides(width);
-  const eventBuckets = sortEventsIntoBuckets(timeLineWidth, eventList);
-  console.log(eventList);
+  const eventBuckets = sessionData.hasOwnProperty("hasTrackingEvent")
+    ? sortEventsIntoBuckets(timeLineWidth, sessionData.hasTrackingEvent)
+    : sortEventsIntoBuckets(timeLineWidth, []);
+  console.log(sessionData.hasTrackingEvent);
   return (
     <div
       className={style.sessionGraphWrapper}
