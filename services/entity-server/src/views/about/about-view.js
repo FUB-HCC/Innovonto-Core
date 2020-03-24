@@ -1,6 +1,7 @@
 import style from "./about-view.module.css";
 import React, { useRef } from "react";
 import { useScrollToParagraph } from "../../components/utils";
+import { Link } from "react-router-dom";
 
 export const AboutView = () => {
   const imprintRef = useRef();
@@ -12,10 +13,9 @@ export const AboutView = () => {
   return (
     <div className={style.aboutViewWrapper}>
       <div className={style.aboutViewContent}>
+        <h1 className={style.largeTitle}>About</h1>
+        <AboutText />
         <h1 className={style.largeTitle}>Acknowledgements</h1>
-        <AcknowledgementsText />
-        <AcknowledgementsText />
-        <AcknowledgementsText />
         <AcknowledgementsText />
         <h1 ref={imprintRef} className={style.largeTitle}>
           Imprint
@@ -30,27 +30,91 @@ export const AboutView = () => {
   );
 };
 
+const AboutText = () => (
+  <div>
+    <p>
+      <strong>Innovonto</strong> is a research project conducted by the{" "}
+      <a
+        href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Human-Centered Computing Workgroup
+      </a>{" "}
+      at the{" "}
+      <a
+        href="https://www.fu-berlin.de/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Freie Universität Berlin
+      </a>
+      . The current principle investigator is{" "}
+      <a
+        href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/professor/mueller-birn.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Prof. Dr. Claudia Müller-Birn
+      </a>
+      . The project is currently actively developed by{" "}
+      <a
+        href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/mackeprang.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Maximilian Mackeprang
+      </a>{" "}
+      and{" "}
+      <a
+        href="https://www.mi.fu-berlin.de/en/inf/groups/hcc/members/researchers/tebbe.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Michael Tebbe
+      </a>
+      .
+    </p>
+    <h2>Contact</h2>
+    <p>
+      If you want to collaborate, have question about the project or the
+      published dataset or are a student looking for a thesis, please feel free
+      to <a href="mailto:i2m@zedat.fu-berlin.de">send us an e-mail!</a>
+    </p>
+  </div>
+);
+
 const AcknowledgementsText = () => (
-  <p>
-    Lorem ipsum dolor sit amet, consetetur sadsipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros
-    et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-    delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit
-    amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-    ut laoreet dolore magna aliquam erat volutpat.
-  </p>
+  <div>
+    <p>This project was supported by the German Federal Ministry of Education and Research, grant 03IO1617 (“Ideas to Market”).</p>
+
+    <p>
+      Over the course of this research project, a multitude of people
+      contributed to the different aspects of it. Here, we would like to thank
+      all contributors and collaborators in this endeavour!
+    </p>
+    <ul>
+      <li>
+        We would like to thank{" "}
+        <a
+          href="https://github.com/luka1220"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Luka Staerk
+        </a>{" "}
+        for his work on the concept and implementation of{" "}
+        <Link to={"/software/orchard"}>Orchard</Link>, the configuration of the
+        triplestore that provides the idea knowledge graph for this website, and
+        the implementation work for parts of{" "}
+        <Link to={"/software/innovonto-core"}>Innovonto Core</Link>.
+      </li>
+    </ul>
+    <p>
+      If you want to be mentioned as well, just{" "}
+      <a href="mailto:i2m@zedat.fu-berlin.de">send us an e-mail.</a>
+    </p>
+  </div>
 );
 
 const ImprintText = () => (
