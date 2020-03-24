@@ -315,8 +315,10 @@ const IdeaSpaceVisualizationText = () => (
 
 const IdeaVisualizationText = () => (
   <p>
-    Related to the problem of IdeaSpace visualization is the challenge of how to
-    visualize a single idea.
+    Related to the problem of idea space visualization is the challenge of how
+    to visualize a single idea. Here, we explore ways of making the existing
+    data of an idea understandable in an intuitive way. See the current spark
+    visualization project for more details.
   </p>
 );
 
@@ -341,56 +343,65 @@ const SessionVisualizationText = () => (
 
 const AugmentingIdeationText = () => (
   <p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
+    While analyzing ideation processes is an important step, we don't want to
+    stop there. Our research project investigates ways of{" "}
+    <em>heuristically improving ideation processes</em> for an individual user.
+    Furthermore, we are working towards a model of inspiration recommendation,
+    that takes into account different perspectives on ideation to provide the
+    best suited inspiration for a given user, user state, available inspiration
+    items and context.
   </p>
 );
 
 const AdaptiveIdeationSystemsText = () => (
   <p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
+    When switching from an individual to a collective perspective, we see that
+    when conducting large scale ideation, the goal is often to contain{" "}
+    <em>heterogeneous ideas</em> covering a breadth of topics and approaches for
+    a given challenge. Our vision is to provide a system, that computationally
+    clusters existing efforts of a crowd and takes them into account in
+    inspiration recommendation, in order to maximize heterogeneity of an idea
+    space.
   </p>
 );
 
 const InteractiveConceptValidationText = () => (
-  <p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
-  </p>
+  <div>
+    <p>
+      A key feature in augmenting large scale ideation is in understanding the
+      ideas. General Knowledge Graphs describe the meaning of domain-independent
+      terms in an computationally understandable way and therefore represent a
+      promising solution in obtaining such meaning. We believe knowledge graphs
+      offer a promising solution to (1) extract structured information about the
+      content of ideas and (2) aid ideation experts during the further
+      processing of result ideas by providing multi-faceted visualization of the
+      ideation outcome.
+    </p>
+    <p>
+      An idea describing modification of a door and another describing wall
+      painting, for example, could be connected by the concept of
+      {" "}<em>architecture</em>. Thus, as opposed to statistical methods that are
+      based on explicit relationships, knowledge graphs allow for identifying
+      implicit, more subtle relationships. This potential of annotating ideas
+      motivated the development of our {" "}
+      <strong>Interactive Concept Validation (ICV)</strong>{" "}
+      technique, which can be integrated into traditional ideation processes.
+      After submitting an idea, a person is asked to annotate the idea manually
+      based on concepts obtained from a knowledge graph. This tool consists of
+      an interactive component, since we ask a person for its annotations and an
+      intelligent component, because the provision of the annotations uses AI
+      technologies.
+    </p>
+    <p>
+      By linking terms in ideas to knowledge graph concepts, the approach
+      enables this meaning to be used as an analysis approach. As a first
+      exploration of a potential application in sense-making of ideation
+      outcomes, we developed an interactive visualisation prototype. In this
+      artifact, users can import ideas and visualize them in a grid. The users
+      then can interactively select markers for concepts used in the ideas to
+      visualize patterns within the ideation outcome.
+    </p>
+  </div>
 );
 
 const SparkVisualizationText = () => (
@@ -412,19 +423,24 @@ const SparkVisualizationText = () => (
 );
 
 const InspirationRecommenderText = () => (
-  <p>
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet.
-  </p>
+  <div>
+    <p>
+      In large scale ideation, the strategic provision of inspiration provides
+      an established benefit for ideation challenges. However, there is no
+      common framework to relate and categorize inspiration deployment. One
+      framing for the problem of inspiration provision could be{" "}
+      <em>recommender systems</em>. Formulated as a recommender problem, the
+      question of inspiration systems in large scale ideation becomes:
+    </p>
+    <i>
+      We recommend inspiration item tos the user, in order to maximize a set of
+      metrics.
+    </i>
+    <p>
+      We are currently researching how to link the current state of mind of a
+      participant (state) with more durable characteristics such as personality
+      traits (traits) and how to transfer this information into an integrated
+      model for inspiration suggestions.
+    </p>
+  </div>
 );
