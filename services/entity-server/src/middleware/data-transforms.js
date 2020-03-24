@@ -116,3 +116,15 @@ export const extractIdeaDetails = data => {
       : propertiesToArray.hasCreator
   };
 };
+
+export const extractUserDetails = data => {
+  const propertiesToArray = convertPropertiesToArray(data, [
+    "hasBrainstormingSession",
+    "isCreatorOf",
+    "hasSubmittedIdeasForIdeaContest"
+  ]);
+  return {
+    ...propertiesToArray,
+    id: propertiesToArray["@id"]
+  };
+};

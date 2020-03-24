@@ -6,7 +6,8 @@ import {
   extractSearchResults,
   extractSolutionData,
   extractIdeaDetails,
-  sortResources
+  sortResources,
+  extractUserDetails
 } from "./data-transforms";
 import {
   sparqlProjectListRequest,
@@ -92,6 +93,26 @@ export const requestIdeaDetailData = (ideaUrl, dispatch) => {
       frameData(result.data, "gi2mo:Idea").then(data =>
         dispatch(extractIdeaDetails(data))
       );
+    });
+};
+
+export const requestUserDetailData = (id, dispatch) => {
+  let requestUrl;
+  if (id === "mockdata") {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user.json";
+  } else if (id === "mockdata-2") {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-2.json";
+  } else {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-3.json";
+    //TODO: build URL string from id here
+  }
+  axios
+    .get(requestUrl)
+    .then(result => {
+      dispatch(extractUserDetails(result.data));
+    })
+    .catch(error => {
+      //TODO: make all components redirect to error page in a unified fashion <- input required
     });
 };
 

@@ -23,6 +23,7 @@ import { AboutView } from "./views/about/about-view";
 import { SolutionView } from "./views/solution/solution-view";
 import { EntityFallbackView } from "./views/entities/fallback/entity-fallback-view";
 import { IdeaView } from "./views/entities/idea/idea-view";
+import UserView from "./views/entities/user/user-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -56,7 +57,7 @@ const Root = () => (
         <Route path="/idea-map/:id" component={SolutionView} />
         <Route path="/search" component={SearchView} />
         <Route path="/entities/ideas/:id" component={IdeaView} />,
-        <Route path="/entities/users/:id" component={EntityFallbackView} />
+        <Route path="/entities/users/:id" component={UserView} />
         <Route path="/entities/sessions/:id" component={SessionView} />
         <Route
           path="/entities/ideaContests/:id"

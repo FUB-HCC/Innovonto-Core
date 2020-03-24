@@ -84,15 +84,17 @@ const SelectedVizRadio = props => {
     <div className={style.sessionDetails}>
       <ButtonGroup fill={true}>
         <Button
+          className={style.radioButton}
           intent={Intent.SUCCESS}
           active={selectedViz === SessionRadio.TIMELINE}
           minimal={true}
           onClick={() => setSelectedViz(SessionRadio.TIMELINE)}
           icon={"layout-linear"}
         >
-          TIMELINE VIEW
+          TIMELINE
         </Button>
         <Button
+          className={style.radioButton}
           intent={Intent.SUCCESS}
           active={selectedViz === SessionRadio.TREE}
           minimal={true}
@@ -100,7 +102,7 @@ const SelectedVizRadio = props => {
           onClick={() => setSelectedViz(SessionRadio.TREE)}
           icon={"diagram-tree"}
         >
-          TREE VIEW
+          TREE
         </Button>
       </ButtonGroup>
     </div>

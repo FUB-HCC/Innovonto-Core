@@ -4,30 +4,3 @@
     background: white;
 }
 
-.ideaViewContent{
-    min-height: 94vh;
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.largeTitle{
-    font-size: 25px;
-    margin-top: 25px;
-}
-
-.ideaDescription{
-    max-width: 500px;
-    margin-bottom: 20px;
-}
-
-.backButton svg{
-    padding-bottom: 2px;
-}
-
-.backButton{
-    margin-bottom: 10px;
-}

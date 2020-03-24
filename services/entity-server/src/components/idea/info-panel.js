@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { getNameFromUri } from "../utils";
 import moment from "moment";
 import StarRating from "../common/star-rating";
-import { Button, Intent } from "@blueprintjs/core";
+import CategoryList from "../common/category-list";
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -48,7 +48,11 @@ const InfoPanel = props => {
           )}
           {hasCategory && (
             <div className={style.horizontalDivider}>
-              <CategoryList categoryList={hasCategory} />
+              <CategoryList
+                categoryList={hasCategory.map(cat =>
+                  decodeURIComponent(getNameFromUri(cat))
+                )}
+              />
             </div>
           )}
           {refinements && (
@@ -124,24 +128,6 @@ const ReviewList = props => (
       </div>
     ))}
   </>
-);
-
-const CategoryList = props => (
-  <div>
-    <h3>Categories:</h3>
-    {props.categoryList.map(category => (
-      <Button
-        className={style.categoryLabels}
-        minimal={true}
-        intent={Intent.SUCCESS}
-        disabled={true}
-        active={true}
-        key={category}
-      >
-        {decodeURIComponent(getNameFromUri(category))}
-      </Button>
-    ))}
-  </div>
 );
 
 InfoPanel.propTypes = {
