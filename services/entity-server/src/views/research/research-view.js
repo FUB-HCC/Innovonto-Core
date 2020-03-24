@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import propTypes from "prop-types";
 import style from "./research-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
 import PageTitle from "../../components/common/page-title";
@@ -15,6 +14,7 @@ import augmentingIdeationImg from "../../assets/img/augmenting-ideation.png";
 import adaptiveIdeationSystemsImg from "../../assets/img/adaptive-ideation-systems.png";
 import interactiveConceptValImg from "../../assets/img/interactive-concept-validation.png";
 import inspirationRecommenderImg from "../../assets/img/idea-recommender.png";
+import { bibliography } from "./publications";
 
 export const ResearchView = () => {
   const analyzingIdeationRef = useRef();
@@ -143,59 +143,72 @@ export const ResearchView = () => {
           title={"Inspiration Recommender"}
         />
         <h1 className={style.largeTitle}>Publications</h1>
-        <PublicationList
-          publications={[
-            {
-              authors:
-                "Mackeprang, M., Müller-Birn, C., & Stauss, M. T. (2019).",
-              title:
-                "Discovering the Sweet Spot of Human-Computer Configurations: A Case Study in Information Extraction.",
-              link: "arXiv preprint arXiv:1909.07065."
-            },
-            {
-              authors:
-                "Mackeprang, M., Khiat, A., Müller-Birn, C., & Computing, H. C. (2019).",
-              title:
-                "Leveraging General Knowledge Graphs in Crowd-powered Innovation."
-            }
-          ]}
-        />
+        <PublicationList publications={bibliography} />
       </div>
     </div>
   );
+};
+
+//TODO this is bad. Use something like: https://citationstyles.org/
+const buildVenueFrom = entryTags => {
+  var result = "";
+  if (entryTags.booktitle) {
+    result += entryTags.booktitle;
+  }
+  if (entryTags.journal) {
+    result += entryTags.journal;
+  }
+  if (entryTags.number) {
+    result += "Technical Report " + entryTags.number;
+  }
+  return result + "." + entryTags.year;
 };
 
 const PublicationList = props => (
   <div className={style.publicationListWrapper}>
     {props.publications.map(publication => (
       <Publication
-        title={publication.title}
-        authors={publication.authors}
-        place={publication.link}
-        key={publication.title}
+        key={publication.citationKey}
+        title={publication.entryTags.title}
+        authors={publication.entryTags.author}
+        venue={buildVenueFrom(publication.entryTags)}
+        link={publication.entryTags.url}
       />
     ))}
   </div>
 );
+/*
 PublicationList.propTypes = {
   publications: propTypes.arrayOf(
     propTypes.shape({
-      authors: propTypes.string.isRequired,
+      entryTags
+      author: propTypes.string.isRequired,
       title: propTypes.string.isRequired,
       place: propTypes.string
     })
   ).isRequired
 };
+*/
 
 const Publication = props => {
-  const { title, authors, place } = props;
+  const { title, authors, venue, link } = props;
+  var titleTag;
+  if (link) {
+    titleTag = (
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        {title}
+      </a>
+    );
+  } else {
+    titleTag = <strong>{title}</strong>;
+  }
   return (
     <div className={style.publicationWrapper}>
-      <b>{authors}</b> <i>{title}</i>
-      {place && (
+      <em>{authors}</em> {titleTag}
+      {venue && (
         <>
           <br />
-          <p>{place}</p>
+          <p>{venue}</p>
         </>
       )}
     </div>
