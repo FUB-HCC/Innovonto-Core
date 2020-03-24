@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { getNameFromUri } from "../../components/utils";
 import { useHistory } from "react-router-dom";
 import InfoPanel from "../../components/idea/info-panel";
+import NetworkPanel from "../../components/idea/network-panel";
 
 export const IdeaView = () => {
   const [ideaData, setIdeaData] = useState(null);
@@ -16,9 +17,8 @@ export const IdeaView = () => {
     setIdeaData
   ]);
   const history = useHistory();
-  console.log(ideaData);
   if (!ideaData) {
-    return <div></div>;
+    return <div></div>; //TODO: unified loading screen
   }
   const { title, content } = ideaData;
   return (
@@ -34,7 +34,7 @@ export const IdeaView = () => {
             active={true}
             onClick={() => history.goBack()}
           >
-            Back to Solution Map
+            Back to Idea Map
           </Button>{" "}
           <br />
           {title ? title : "no title"}{" "}
@@ -45,7 +45,7 @@ export const IdeaView = () => {
         <div className={style.ideaDescription}>
           <p>{content}</p>
         </div>
-        <Tabs id={"ideaDetailsTabs"} defaultSelectedTabId={"network"}>
+        <Tabs id={"ideaDetailsTabs"} defaultSelectedTabId={"info"}>
           <Tab
             id={"info"}
             title={"Info"}
@@ -63,35 +63,3 @@ export const IdeaView = () => {
     </div>
   );
 };
-
-const NetworkPanel = props => {
-  const { inspiredBy } = props.idea;
-  return (
-    <div className={style.networkPanelWrapper}>
-      <NeighbourhoodPreview />
-      <SessionViewPreview />
-      <InspiredBy />
-    </div>
-  );
-};
-
-const NeighbourhoodPreview = props => (
-  <div className={style.networkSectionWrapper}>
-    <h3>Neighbourhood</h3>
-    <div className={style.neighbourhoodPreview}>NOT AVAILABLE</div>
-  </div>
-);
-
-const SessionViewPreview = props => (
-  <div className={style.networkSectionWrapper}>
-    <h3>Session</h3>
-    <div className={style.neighbourhoodPreview}>NOT AVAILABLE</div>
-  </div>
-);
-
-const InspiredBy = props => (
-  <div className={style.networkSectionWrapper}>
-    <h3>Inspired By</h3>
-    <div className={style.neighbourhoodPreview}>NOT AVAILABLE</div>
-  </div>
-);
