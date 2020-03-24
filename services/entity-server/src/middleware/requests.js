@@ -1,7 +1,7 @@
 import axios from "axios";
 import { SearchActionTypes } from "../components/search/search-component";
 import {
-  extractEvents,
+  extractSessionData,
   extractProjectList,
   extractSearchResults,
   extractSolutionData,
@@ -45,7 +45,7 @@ export const requestSessionData = dispatch => {
   axios
     .get(process.env.PUBLIC_URL + "/data/mockdata-session.json")
     .then(result => {
-      dispatch(extractEvents(result.data));
+      dispatch(extractSessionData(result.data));
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required

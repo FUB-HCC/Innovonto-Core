@@ -1,7 +1,9 @@
 .sessionGraphWrapper{
+    background-color: whitesmoke;
+}
+
+.sessionGraph{
     position: absolute;
-    background-color: lightgrey;
-    align-self: center;
 }
 
 .timeLine{

@@ -22,7 +22,7 @@ import { ResearchView } from "./views/research/research-view";
 import { AboutView } from "./views/about/about-view";
 import { SolutionView } from "./views/solution/solution-view";
 import { EntityFallbackView } from "./views/entities/fallback/entity-fallback-view";
-import { IdeaView } from "./views/idea/idea-view";
+import { IdeaView } from "./views/entities/idea/idea-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;

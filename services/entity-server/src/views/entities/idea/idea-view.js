@@ -1,13 +1,13 @@
 import style from "./idea-view.module.css";
-import PageTitle from "../../components/common/page-title";
+import PageTitle from "../../../components/common/page-title";
 import React, { useEffect, useState } from "react";
 import { Button, Tab, Tabs, Intent } from "@blueprintjs/core";
-import { requestIdeaDetailData } from "../../middleware/requests";
+import { requestIdeaDetailData } from "../../../middleware/requests";
 import { useParams } from "react-router-dom";
-import { getNameFromUri } from "../../components/utils";
+import { getNameFromUri } from "../../../components/utils";
 import { useHistory } from "react-router-dom";
-import InfoPanel from "../../components/idea/info-panel";
-import NetworkPanel from "../../components/idea/network-panel";
+import InfoPanel from "../../../components/idea/info-panel";
+import NetworkPanel from "../../../components/idea/network-panel";
 
 export const IdeaView = () => {
   const [ideaData, setIdeaData] = useState(null);

@@ -61,7 +61,7 @@ const InfoPanel = props => {
           )}
           {hasSubmissionMethod && (
             <div className={style.horizontalDivider}>
-              <SubmissionMethod submissionMetod={hasSubmissionMethod} />
+              <SubmissionMethod submissionMethod={hasSubmissionMethod} />
             </div>
           )}
 
@@ -76,7 +76,7 @@ const InfoPanel = props => {
   );
 };
 
-const CreatedBy = props => (
+export const CreatedBy = props => (
   <p>
     Created By User{" "}
     <Link to={"/entities/users/" + getNameFromUri(props.user)}>
@@ -85,11 +85,11 @@ const CreatedBy = props => (
   </p>
 );
 
-const CreatedAt = props => (
+export const CreatedAt = props => (
   <p> {moment(props.date).format("MMMM Do YYYY, h:mm a")}</p>
 );
 
-const CreatedFor = props => (
+export const CreatedFor = props => (
   <p>
     for the project{" "}
     <Link to={"/entities/challenges/" + getNameFromUri(props.project)}>
@@ -98,15 +98,15 @@ const CreatedFor = props => (
   </p>
 );
 
-const SubmissionMethod = props => (
+export const SubmissionMethod = props => (
   <>
     <h3>Submission Method: </h3>{" "}
     <Link
       to={
-        "/entities/submissionMethods/" + getNameFromUri(props.submissionMetod)
+        "/entities/submissionMethods/" + getNameFromUri(props.submissionMethod)
       }
     >
-      <p>{getNameFromUri(props.submissionMetod)}</p>
+      <p>{getNameFromUri(props.submissionMethod)}</p>
     </Link>
   </>
 );

@@ -1,0 +1,25 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.largeTitle{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+
+.idText{
+    margin-top: -5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.sideBarSpacer{
+    flex-grow: 1;
+}

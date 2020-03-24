@@ -9,9 +9,8 @@
 }
 
 .noContent{
-    fill: orangered;
-    width: 12px;
-    height: 12px;
+    color: orangered;
+    padding: 5px;
 }
 
 .stringContent{
