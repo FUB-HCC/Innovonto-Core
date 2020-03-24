@@ -3,6 +3,7 @@ import style from "./research-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
 import PageTitle from "../../components/common/page-title";
 import { useScrollToParagraph } from "../../components/utils";
+import { Link } from "react-router-dom";
 import ImgWithCaption from "../../components/common/img-with-caption";
 import ideaModelingImg from "../../assets/img/idea-vision-visualization.png";
 import ideaLifecycleImg from "../../assets/img/idea-lifecycle.png";
@@ -225,7 +226,7 @@ const AnalyzingIdeationText = () => (
     multi-facetted, interconnected entity, and the idea lifecycle, that captures
     the dynamic nature of ideas and their embedding in an ideation process. The
     current state of our model can be viewed on the{" "}
-    <a href={"/model"}>model page</a>.
+    <Link to={"/model"}>model page</Link>.
   </p>
 );
 
@@ -249,13 +250,9 @@ const IdeaModelingText = () => (
       of ideas and lastly, on our own research in large-scale ideation, where
       ideas are commonly described as short English natural language text
       snippets (
-      <a
-        href={"/entities/ideas/cf65b021-620f-43fe-9473-1712be788cde"}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link to={"/entities/ideas/cf65b021-620f-43fe-9473-1712be788cde"}>
         Show me an example
-      </a>
+      </Link>
       ). Furthermore, by defining ideas as RDF-Entities, we take into account
       the dynamic nature of them. RDF as a data model allows for the dynamic
       nature of ideas: Properties and links can be added and removed

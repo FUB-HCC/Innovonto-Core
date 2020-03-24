@@ -1,0 +1,13 @@
+{
+  "@id": "https://innovonto-core.imp.fu-berlin.de/entities/users/015b6209-e9d6-4039-99b3-73825c50284a",
+  "@type": "inov:Ideator",
+  "age": "25",
+  "gender": "Male",
+  "hasBrainstormingSession": "https://innovonto-core.imp.fu-berlin.de/entities/sessions/d0197b4a-6edc-4d65-940a-9320c6ba70f9",
+  "hasSubmittedIdeasForChallenge": "https://innovonto-core.imp.fu-berlin.de/entities/challenges/i2m-bionic-radar-test-metaphorical",
+  "hasSubmittedIdeasForIdeaContest": "https://innovonto-core.imp.fu-berlin.de/entities/ideaContests/i2m-bionic-radar",
+  "highestDegree": "Bachelor",
+  "isCreatorOf": ["https://innovonto-core.imp.fu-berlin.de/entities/ideas/302743e0-aa6e-4483-be7a-3735369c7679", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5d9acac4-3ff0-4e41-90ed-cacbbfec4f13", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/a4e43b6f-49a8-4967-9d3d-b397690213d4", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1fa29d07-b82d-4cb9-b50d-5e8723a1112e", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/76958807-2c09-428c-95fe-c75bb6d7e931", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/ea233a4b-8d10-42d2-827a-42b1026abec9", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/288e3f26-cc82-461d-adbf-dcdb5a7e31a0", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/4302c05e-323c-4e02-b7d1-95765cf3f3ea", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/6a1b8dc2-38cc-4a4a-aaa9-b435fb1279ff", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/8e9ae32e-1d44-4a8e-bdc1-aabd8a011c85", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/c7a4e622-7f6c-4748-9307-9341b5197372", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bd97a74d-0d03-4b4a-9db0-84b0ed79ae47", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/ff7847a4-7355-4fd5-85b4-3a9232e6e360", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/5d35439f-4808-4dd2-94f6-0820c086cfdb", "https://innovonto-core.imp.fu-berlin.de/entities/ideas/cb00cde4-5c3e-412f-a55a-7f7a8b05b264"],
+  "nationality": "American",
+  "occupation": "Unemployed/Full time MTurk"
+}

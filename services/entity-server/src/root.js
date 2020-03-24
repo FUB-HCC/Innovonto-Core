@@ -22,6 +22,8 @@ import { ResearchView } from "./views/research/research-view";
 import { AboutView } from "./views/about/about-view";
 import { SolutionView } from "./views/solution/solution-view";
 import { EntityFallbackView } from "./views/entities/fallback/entity-fallback-view";
+import { IdeaView } from "./views/entities/idea/idea-view";
+import UserView from "./views/entities/user/user-view";
 
 export const footerHeight = 50;
 export const headerHeight = 50;
@@ -44,24 +46,25 @@ const Root = () => (
     >
       <Switch>
         {/*Documentation Routes */}
-        <Route exact path="/" component={HomeView}/>
-        <Route path="/research/:paragraph" component={ResearchView}/>
+        <Route exact path="/" component={HomeView} />
+        <Route path="/research/:paragraph" component={ResearchView} />
         <Route path="/model" component={ModelView} />
-        <Route path="/data" component={DataView}/>
-        <Route path="/software" component={SoftwareView}/>
-        <Route path="/about/:paragraph" component={AboutView}/>
-
+        <Route path="/data" component={DataView} />
+        <Route path="/software" component={SoftwareView} />
+        <Route path="/about/:paragraph" component={AboutView} />
         {/*Data Routes */}
         {/* TODO whats the correct format for idea maps? */}
-        <Route path="/solution/:id" component={SolutionView} />
-        <Route path="/search" component={SearchView}/>
-        <Route path="/entities/ideas/:id" component={EntityFallbackView}/>,
-        <Route path="/entities/users/:id" component={EntityFallbackView}/>
+        <Route path="/idea-map/:id" component={SolutionView} />
+        <Route path="/search" component={SearchView} />
+        <Route path="/entities/ideas/:id" component={IdeaView} />,
+        <Route path="/entities/users/:id" component={UserView} />
         <Route path="/entities/sessions/:id" component={SessionView} />
-        <Route path="/entities/ideaContests/:id" component={EntityFallbackView} />
-        <Route path="/entities/challenges/:id" component={EntityFallbackView}/>
-        <Route path="/entities/:id" component={EntityFallbackView}/>
-
+        <Route
+          path="/entities/ideaContests/:id"
+          component={EntityFallbackView}
+        />
+        <Route path="/entities/challenges/:id" component={EntityFallbackView} />
+        <Route path="/entities/:id" component={EntityFallbackView} />
         <Route
           path={"/error"}
           render={props => (

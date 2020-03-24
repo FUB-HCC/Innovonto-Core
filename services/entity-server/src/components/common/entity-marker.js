@@ -9,7 +9,7 @@ const imgMaxWidth = 300; //overflow is cut
 const mapComponentToContent = content => {
   if (!content || typeof content !== "string") {
     return <div className={style.noContent}> No Content Provided!</div>;
-  } else if (content.includes("</div>")) {
+  } else if (content.includes(".jpg") || content.includes(".png")) {
     return <ImageContent img={content} />;
   } else {
     return <div className={style.stringContent}>{content}</div>;
@@ -17,22 +17,15 @@ const mapComponentToContent = content => {
 };
 
 const ImageContent = props => {
-  //const imgSrc = props.img.split('"').find(str => str.includes(".jpg"));
+  const { img } = props;
   return (
     <div className={style.imageContent} style={{ maxWidth: imgMaxWidth }}>
       <div className={style.imageFrame}>
-        <img
-          height={imgHeight}
-          src={
-            "https://upload.wikimedia.org/wikipedia/commons/1/16/HDRI_Sample_Scene_Balls_%28JPEG-HDR%29.jpg"
-          }
-          alt={"did not load!"}
-        />
+        <img height={imgHeight} src={img} alt={"did not load!"} />
       </div>
     </div>
   );
 };
-//TODO: replace sample image with actual images from backend
 
 export const EntityMarker = props => {
   const [isHovered, setHovered] = useState(false);

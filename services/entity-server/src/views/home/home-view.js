@@ -110,16 +110,16 @@ const HomeViewText = () => (
       topics. These tools and the collected data are published openly and to be
       used by everybody. To get an example of the data we provide, have a look
       at{" "}
-      <a href={"/entities/sessions/bcbd1835-70bd-4a24-bbc3-a9368ddb4a53"}>
+      <Link to={"/entities/sessions/bcbd1835-70bd-4a24-bbc3-a9368ddb4a53"}>
         this ideation session
-      </a>
+      </Link>
       . The prototypes we developed so far can be found{" "}
-      <a href={"/software"}>here</a>.
+      <Link to={"/software"}>here</Link>.
     </p>
     <p>
       To ensure the interoperability between developed tools, we also publish a
       common data scheme in the form of an{" "}
-      <a href={"/research/idea-knowledge-graph"}>idea knowledge graph</a>.
+      <Link to={"/research/idea-knowledge-graph"}>idea knowledge graph</Link>.
     </p>
     <h3>What is Ideation?</h3>
     <p>
@@ -215,9 +215,9 @@ const HomeViewText = () => (
       <li>
         Analysis of large scale ideation showed that ideas submitted tend to be
         trivial, repetitive and of low quality.{" "}
-        <a href={"/research/analyzing-ideation"}>
+        <Link to={"/research/analyzing-ideation"}>
           How can we improve the outcome of each individual participant?
-        </a>
+        </Link>
       </li>
       <li>
         When many people generate ideas, people will come up with the same idea
@@ -225,39 +225,39 @@ const HomeViewText = () => (
         and can react accordingly. However, the scale of large-scale ideation
         makes it impossible for each participant to read every idea of the
         others.{" "}
-        <a href={"/research/analyzing-ideation"}>
+        <Link to={"/research/analyzing-ideation"}>
           How can we select ideas for participants to read?
-        </a>
+        </Link>
       </li>
       <li>
         Another challenge introduced by the scale is the efficient analysis and
         synthesis of the ideas generated. When people contribute thousands of
         ideas for a topic, simply going through them one by one may not be an
         option.{" "}
-        <a href={"/research/analyzing-ideation"}>
+        <Link to={"/research/analyzing-ideation"}>
           How can we build systems that help organizers understand the outcome
           ideas of large-scale ideation?
-        </a>
+        </Link>
       </li>
     </ul>
     <h3>What can I do on this website?</h3>
     <ul>
       <li>
         Read about our{" "}
-        <a href={"/research/-"}>research vision and active projects</a>. If you
-        are interested, contact us!
+        <Link to={"/research/-"}>research vision and active projects</Link>. If
+        you are interested, contact us!
       </li>
       <li>
-        Explore the <a href={"/model"}>data model</a> that we developed so far,
-        to understand how to use our SPARQL-Endpoint.
+        Explore the <Link to={"/model"}>data model</Link> that we developed so
+        far, to understand how to use our SPARQL-Endpoint.
       </li>
       <li>
-        Interactively explore <a href={"/data"}>the ideas</a> we obtained over
-        the last three year.
+        Interactively explore <Link to={"/data"}>the ideas</Link> we obtained
+        over the last three year.
       </li>
       <li>
-        Learn about <a href={"/software"}>software</a> we developed, and how you
-        can use it.
+        Learn about <Link to={"/software"}>software</Link> we developed, and how
+        you can use it.
       </li>
     </ul>
   </>

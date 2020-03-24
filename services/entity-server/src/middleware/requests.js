@@ -1,17 +1,25 @@
 import axios from "axios";
 import { SearchActionTypes } from "../components/search/search-component";
 import {
-  extractEvents,
+  extractSessionData,
   extractProjectList,
   extractSearchResults,
   extractSolutionData,
-  sortResources
+  extractIdeaDetails,
+  sortResources,
+  extractUserDetails
 } from "./data-transforms";
-import { sparqlProjectListRequest, describeEntityRequest } from "./sparql-queries"
-import { frameData } from "./data-framing"
+import {
+  sparqlProjectListRequest,
+  describeEntityRequest,
+  describeIdeaRequest
+} from "./sparql-queries";
+import { frameData } from "./data-framing";
 
 const backendServiceBaseUrl =
   "https://innovonto-core.imp.fu-berlin.de/management/core/query";
+
+const baseUrl = "https://innovonto-core.imp.fu-berlin.de";
 
 export const requestSearchData = (requestValue, dispatch) => {
   dispatch({
@@ -38,7 +46,7 @@ export const requestSessionData = dispatch => {
   axios
     .get(process.env.PUBLIC_URL + "/data/mockdata-session.json")
     .then(result => {
-      dispatch(extractEvents(result.data));
+      dispatch(extractSessionData(result.data));
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
@@ -49,10 +57,9 @@ export const requestProjectListData = dispatch => {
   axios
     .get(backendServiceBaseUrl, sparqlProjectListRequest())
     .then(result => {
-      frameData(result.data, "gi2mo:IdeaContest")
-        .then(data => {
-          dispatch(extractProjectList(data))
-        });
+      frameData(result.data, "gi2mo:IdeaContest").then(data => {
+        dispatch(extractProjectList(data));
+      });
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
@@ -79,10 +86,40 @@ export const requestSolutionData = (id, dispatch) => {
     });
 };
 
+export const requestIdeaDetailData = (ideaUrl, dispatch) => {
+  axios
+    .get(backendServiceBaseUrl, describeIdeaRequest(baseUrl + ideaUrl))
+    .then(result => {
+      frameData(result.data, "gi2mo:Idea").then(data =>
+        dispatch(extractIdeaDetails(data))
+      );
+    });
+};
+
+export const requestUserDetailData = (id, dispatch) => {
+  let requestUrl;
+  if (id === "mockdata") {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user.json";
+  } else if (id === "mockdata-2") {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-2.json";
+  } else {
+    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-3.json";
+    //TODO: build URL string from id here
+  }
+  axios
+    .get(requestUrl)
+    .then(result => {
+      dispatch(extractUserDetails(result.data));
+    })
+    .catch(error => {
+      //TODO: make all components redirect to error page in a unified fashion <- input required
+    });
+};
+
 export const requestGenericEntity = (entityUrl, dispatch) => {
   axios
     .get(backendServiceBaseUrl, describeEntityRequest(entityUrl))
     .then(result => {
-      dispatch(sortResources(result.data.results.bindings))
-    })
+      dispatch(sortResources(result.data.results.bindings));
+    });
 };

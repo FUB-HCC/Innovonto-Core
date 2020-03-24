@@ -8,6 +8,7 @@ import orchard2Img from "../../assets/img/orchard-2.png";
 import kaleidoscopeImg from "../../assets/img/kaleidocsope.png";
 import icvImg from "../../assets/img/annotator-example.png";
 import innovontoCoreImg from "../../assets/img/innovonto-core.png";
+import { Link } from "react-router-dom";
 
 export const SoftwareView = () => {
   return (
@@ -90,7 +91,7 @@ const OrchardText = () => (
         Idea Hound
       </a>{" "}
       software. Users can use import ideas into orchard using RDF and the{" "}
-      <a href={"/model"}>data model</a> provided. In our use case, Ideas
+      <Link to={"/model"}>data model</Link> provided. In our use case, Ideas
       exported in Greenhouse can be imported into Orchard. Users can then place
       the ideas on a digital whiteboard, create clusters based on similar ideas,
       name these clusters and get an overview over existing clusters.
@@ -162,14 +163,14 @@ const KaleidoscopeText = () => (
 const ICVText = () => (
   <>
     <p>
-      One way of <a href={"/research/analyzing-ideation"}>analyzing ideation</a>{" "}
-      is to link words within an idea texts to concepts within a general
-      knowledge graph. We build a software called ICV-Annotator, to enable the
-      interactive disambiugation, annotation and linking of concepts within
-      texts. This software consists of a frontend, that enables the annotation,
-      and multiple backends, that find annotation candidates for terms within a
-      text. At the moment, a dbpedia/wikipedia backend, and a wordnet backend
-      exist.
+      One way of{" "}
+      <Link to={"/research/analyzing-ideation"}>analyzing ideation</Link> is to
+      link words within an idea texts to concepts within a general knowledge
+      graph. We build a software called ICV-Annotator, to enable the interactive
+      disambiugation, annotation and linking of concepts within texts. This
+      software consists of a frontend, that enables the annotation, and multiple
+      backends, that find annotation candidates for terms within a text. At the
+      moment, a dbpedia/wikipedia backend, and a wordnet backend exist.
     </p>
     <p>
       Visit the{" "}
@@ -189,7 +190,7 @@ const InnovontoCoreText = () => (
   <>
     <p>
       The main focus of the Innovonto research project was the creation of an{" "}
-      <a href={"/research/analyzing-ideation"}>Idea Knowledge Graph</a>. The
+      <Link to={"/research/analyzing-ideation"}>Idea Knowledge Graph</Link>. The
       Innovonto-Core Website combines a triplestore and a react-based frontend,
       to provide the Idea Knowledge Graph both as a SPARQL endpoint and a
       website that enables interactive exploration of the data. The source code

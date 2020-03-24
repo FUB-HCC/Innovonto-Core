@@ -52,7 +52,7 @@ const ProjectOptions = () => {
     <div className={style.projectOptionsWrapper}>
       <p className={style.projectOption}>More About the project</p>
       <br />
-      <Link to={"/solution/mockdata"}>
+      <Link to={"/idea-map/mockdata"}>
         <p className={style.projectOption}>View All Ideas</p>
       </Link>
       <br />

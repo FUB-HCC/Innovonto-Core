@@ -1,54 +1,10 @@
-export const extractIdeas = data =>
-  data["@graph"]
-    .filter(e => e["@type"].includes("Idea"))
-    .map(idea => ({
-      id: idea["@id"],
-      content: idea.content
-    }));
-
-export const extractInspirations = data =>
-  data["@graph"]
-    .filter(e => e["@type"].includes("StaticInspiration"))
-    .map(inspiration => ({
-      id: inspiration["@id"],
-      content: inspiration.content
-    }));
-
-export const extractExemplars = data =>
-  data["@graph"]
-    .filter(e => e["@type"].includes("Exemplar"))
-    .map(exemplar => ({
-      id: exemplar["@id"],
-      idea: extractIdeas(data).find(idea => exemplar.hasIdea === idea.id)
-    }));
-
-export const extractEvents = data => {
-  const [sEvents] = data["@graph"]
-    .filter(e => e["@type"].includes("BrainstormingSession"))
-    .map(session =>
-      session.hasEvent
-        .filter(
-          sEvent =>
-            sEvent.eventType === "idea-submit" ||
-            sEvent.eventType === "inspiration-response"
-        )
-        .map(sEvent => ({
-          id: sEvent["@id"],
-          eventType: sEvent.eventType,
-          content:
-            sEvent.eventType === "idea-submit"
-              ? extractIdeas(data).find(
-                  idea => idea.id === sEvent.submittedIdea
-                )
-              : extractInspirations(data).find(
-                  insp => insp.id === sEvent.hasInspiration
-                ),
-          timerValue: sEvent.timerValue
-        }))
-        .sort((a, b) => b.timerValue - a.timerValue)
-    );
-  return sEvents;
-};
+export const extractSessionData = data => ({
+  ...data,
+  id: data["@id"],
+  hasTrackingEvent: data.hasTrackingEvent.sort(
+    (a, b) => b.timerValue - a.timerValue
+  )
+});
 
 export const extractSearchResults = data =>
   data.results.map((result, i) => ({
@@ -96,6 +52,7 @@ export const sortResources = data => {
     a.predicate.value.localeCompare(b.predicate.value)
   );
 };
+
 export const extractSolutionData = data => ({
   bindings: data.results.bindings.map(binding => ({
     idea: binding.idea.value,
@@ -112,3 +69,62 @@ export const extractSolutionData = data => ({
     topConcepts: cluster.top_concepts
   }))
 });
+
+function convertPropertyToArray(value) {
+  return value instanceof Array ? value : [value];
+}
+
+function convertPropertiesToArray(data, properties) {
+  properties.forEach(property => {
+    if (data.hasOwnProperty(property)) {
+      data[property] = convertPropertyToArray(data[property]);
+    }
+  });
+  return data;
+}
+
+//TODO this is manual and complicated. I need a better solution for this:
+/**I need something that:
+ a) For a given property name coerces the datatype to array
+ b) For a given property selects fallback properties if the property is not present (for example: if the title is not present -> show local id)
+ **/
+export const extractIdeaDetails = data => {
+  const propertiesToArray = convertPropertiesToArray(data, [
+    "hasReview",
+    "hasAnnotation",
+    "hasTextualRefinement"
+  ]);
+  return {
+    ...propertiesToArray,
+    id: data["@id"],
+    hasReview: propertiesToArray.hasReview
+      ? propertiesToArray.hasReview.map(review => ({
+          ...review
+        }))
+      : null,
+    refinements: propertiesToArray.hasTextualRefinement
+      ? propertiesToArray.hasTextualRefinement.map(refinement => ({
+          id: refinement["@id"],
+          question: refinement.description,
+          answer: refinement.contentGerman
+            ? refinement.contentGerman["@value"]
+            : refinement.content
+        }))
+      : null,
+    creator: propertiesToArray.creator
+      ? propertiesToArray.creator
+      : propertiesToArray.hasCreator
+  };
+};
+
+export const extractUserDetails = data => {
+  const propertiesToArray = convertPropertiesToArray(data, [
+    "hasBrainstormingSession",
+    "isCreatorOf",
+    "hasSubmittedIdeasForIdeaContest"
+  ]);
+  return {
+    ...propertiesToArray,
+    id: propertiesToArray["@id"]
+  };
+};

@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Intent } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
 import { getNameFromUri } from "../utils";
+import Sidebar from "../common/sidebar";
 
 const SidebarIdeaDetails = props => {
   const { selectedIdea } = props;
@@ -25,7 +26,7 @@ const SidebarIdeaDetails = props => {
           <p>
             <b>CUSTER LABEL:</b> <br /> {selectedIdea.clusterLabel}
           </p>
-          <Link to={"/idea/" + getNameFromUri(selectedIdea.idea)}>
+          <Link to={"/entities/ideas/" + getNameFromUri(selectedIdea.idea)}>
             <Button minimal={true} active={true} intent={Intent.SUCCESS}>
               More Details
             </Button>
@@ -88,24 +89,30 @@ const SidebarClusterConcepts = props => {
   );
 };
 
-export const Sidebar = props => {
+const SolutionMapSideBar = props => {
   const { width, height, solutionId, selectedIdea, selectedCluster } = props;
 
   return (
-    <div className={style.sidebar} style={{ width: width, height: height }}>
-      <h1 className={style.largeTitle}>Solution Map</h1>
-      <p className={style.idText}>ID: {solutionId.toUpperCase()}</p>
-      <h3 className={style.smallTitle}>Idea Details</h3>
-      <SidebarIdeaDetails selectedIdea={selectedIdea} />
-      <div className={style.sideBarSpacer} />
-      <h3 className={style.smallTitle}>Cluster Concepts</h3>
-      <SidebarClusterConcepts
-        selectedIdea={selectedIdea}
-        selectedCluster={selectedCluster}
-      />
-      <div className={style.sideBarSpacer} />
-    </div>
+    <Sidebar
+      width={width}
+      height={height}
+      title={"Idea Map"}
+      subtitle={"ID: " + solutionId.toUpperCase()}
+      sideBarModules={[
+        <>
+          <h3 className={style.smallTitle}>Idea Details</h3>
+          <SidebarIdeaDetails selectedIdea={selectedIdea} />
+        </>,
+        <>
+          <h3 className={style.smallTitle}>Cluster Concepts</h3>
+          <SidebarClusterConcepts
+            selectedIdea={selectedIdea}
+            selectedCluster={selectedCluster}
+          />
+        </>
+      ]}
+    />
   );
 };
 
-export default Sidebar;
+export default SolutionMapSideBar;

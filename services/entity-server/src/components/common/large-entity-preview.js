@@ -3,12 +3,22 @@ import PropTypes from "prop-types";
 import React from "react";
 
 export const LargeEntitiyPreview = props => {
-  const { imgSrc, leftContent, description, rightContent, title } = props;
+  const {
+    imgSrc,
+    leftContent,
+    description,
+    rightContent,
+    title,
+    hideTitle,
+    hideDescription
+  } = props;
   return (
     <>
-      <div className={style.previewHeader}>
-        <div className={style.previewTitle}>{title ? title : "Untitled"}</div>
-      </div>
+      {!hideTitle && (
+        <div className={style.previewHeader}>
+          <div className={style.previewTitle}>{title ? title : "Untitled"}</div>
+        </div>
+      )}
       <div className={style.previewBody}>
         <div className={style.previewLeft}>
           <div className={style.previewImgFrame}>
@@ -23,8 +33,13 @@ export const LargeEntitiyPreview = props => {
         </div>
         <div className={style.previewRight}>
           <div className={style.previewContent}>
-            <h3> DESCRIPTION </h3>
-            <p>{description}</p>
+            {!hideDescription && (
+              <>
+                <h3> DESCRIPTION </h3>
+                <p>{description}</p>
+              </>
+            )}
+
             {rightContent}
           </div>
         </div>
@@ -38,7 +53,9 @@ LargeEntitiyPreview.propTypes = {
   leftContent: PropTypes.element,
   description: PropTypes.string.isRequired,
   rightContent: PropTypes.any,
-  title: PropTypes.string
+  title: PropTypes.string,
+  hideTitle: PropTypes.bool,
+  hideDescription: PropTypes.bool
 };
 
 export default LargeEntitiyPreview;

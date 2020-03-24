@@ -14,4 +14,15 @@ body {
   transform: scale(1) !important;
 }
 
+.bp3-tab-list {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: lightgrey solid 3px;
+}
+
+.bp3-tab-panel{
+  margin-top: 0;
+}
+
 

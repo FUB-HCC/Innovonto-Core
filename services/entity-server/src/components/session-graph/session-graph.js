@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import style from "./session-graph.module.css";
 import { AltTextComponent, makeDimensionsChecker } from "../utils";
-import { requestSessionData } from "../../middleware/requests";
 import EntityMarker from "../common/entity-marker";
 
 const marginsSides = width => 0.1 * width;
@@ -80,9 +79,7 @@ const sortEventsIntoBuckets = (timeLineWidth, eventList) => {
 };
 
 const SessionGraph = props => {
-  const { width, height } = props;
-  const [eventList, setEventsList] = useState([]);
-  useEffect(() => requestSessionData(setEventsList), []);
+  const { width, height, eventList } = props;
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent name={"Session Graph"} width={width} height={height} />
@@ -90,73 +87,74 @@ const SessionGraph = props => {
   }
   const timeLineWidth = width - 2 * marginsSides(width);
   const eventBuckets = sortEventsIntoBuckets(timeLineWidth, eventList);
-  console.log(eventList);
   return (
     <div
       className={style.sessionGraphWrapper}
       style={{ width: width, height: height }}
     >
-      <div
-        className={style.timeLine}
-        style={{
-          height: lineHeight,
-          width: timeLineWidth,
-          left: marginsSides(width),
-          top: timelineOffsetY(height)
-        }}
-      />
-      <TickMarks
-        timeLineWidth={timeLineWidth}
-        spacing={getActualBucketWidth(timeLineWidth)}
-        yOffset={timelineOffsetY(height)}
-        xOffset={marginsSides(width)}
-        style={style.bucketTickMark}
-      />
-      <TickMarks
-        timeLineWidth={timeLineWidth}
-        spacing={getActualMinTickOffset(timeLineWidth)}
-        yOffset={timelineOffsetY(height)}
-        xOffset={marginsSides(width)}
-        style={style.minTickMark}
-      />
-      <TickMarks
-        timeLineWidth={timeLineWidth}
-        spacing={timeLineWidth}
-        yOffset={timelineOffsetY(height)}
-        xOffset={marginsSides(width)}
-        style={style.startEndTick}
-      />
-      <Labels
-        labels={generateMinLabels(
-          getMinuteTickCount(timeLineWidth, minuteTickOffsetUnit),
-          getActualMinTickSec(timeLineWidth)
-        )}
-        spacing={getActualMinTickOffset(timeLineWidth)}
-        yOffset={timelineOffsetY(height)}
-        xOffset={marginsSides(width)}
-        style={style.minLabels}
-      />
-      {Object.values(eventBuckets).map(bucket => (
+      <div className={style.sessionGraph}>
         <div
-          key={"bucket" + bucket.n}
-          className={style.eventBucket}
+          className={style.timeLine}
           style={{
-            left:
-              (bucket.n + 0.5) * getActualBucketWidth(timeLineWidth) +
-              marginsSides(width)
+            height: lineHeight,
+            width: timeLineWidth,
+            left: marginsSides(width),
+            top: timelineOffsetY(height)
           }}
-        >
-          {bucket.events.map((sEvent, i) => (
-            <EntityMarker
-              key={sEvent.id}
-              cx={0}
-              cy={timelineOffsetY(height) - i * eventMarkerOffset}
-              marker={mapEventTypeToShape(sEvent.eventType)}
-              content={sEvent.content ? sEvent.content.content : null}
-            />
-          ))}
-        </div>
-      ))}
+        />
+        <TickMarks
+          timeLineWidth={timeLineWidth}
+          spacing={getActualBucketWidth(timeLineWidth)}
+          yOffset={timelineOffsetY(height)}
+          xOffset={marginsSides(width)}
+          style={style.bucketTickMark}
+        />
+        <TickMarks
+          timeLineWidth={timeLineWidth}
+          spacing={getActualMinTickOffset(timeLineWidth)}
+          yOffset={timelineOffsetY(height)}
+          xOffset={marginsSides(width)}
+          style={style.minTickMark}
+        />
+        <TickMarks
+          timeLineWidth={timeLineWidth}
+          spacing={timeLineWidth}
+          yOffset={timelineOffsetY(height)}
+          xOffset={marginsSides(width)}
+          style={style.startEndTick}
+        />
+        <Labels
+          labels={generateMinLabels(
+            getMinuteTickCount(timeLineWidth, minuteTickOffsetUnit),
+            getActualMinTickSec(timeLineWidth)
+          )}
+          spacing={getActualMinTickOffset(timeLineWidth)}
+          yOffset={timelineOffsetY(height)}
+          xOffset={marginsSides(width)}
+          style={style.minLabels}
+        />
+        {Object.values(eventBuckets).map(bucket => (
+          <div
+            key={"bucket" + bucket.n}
+            className={style.eventBucket}
+            style={{
+              left:
+                (bucket.n + 0.5) * getActualBucketWidth(timeLineWidth) +
+                marginsSides(width)
+            }}
+          >
+            {bucket.events.map((sEvent, i) => (
+              <EntityMarker
+                key={sEvent.id}
+                cx={0}
+                cy={timelineOffsetY(height) - i * eventMarkerOffset}
+                marker={mapEventTypeToShape(sEvent.eventType)}
+                content={sEvent.content ? sEvent.content.content : null}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
