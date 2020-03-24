@@ -93,7 +93,7 @@ export const Sidebar = props => {
 
   return (
     <div className={style.sidebar} style={{ width: width, height: height }}>
-      <h1 className={style.largeTitle}>Solution Map</h1>
+      <h1 className={style.largeTitle}>Idea Map</h1>
       <p className={style.idText}>ID: {solutionId.toUpperCase()}</p>
       <h3 className={style.smallTitle}>Idea Details</h3>
       <SidebarIdeaDetails selectedIdea={selectedIdea} />

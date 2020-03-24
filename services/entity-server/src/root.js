@@ -53,7 +53,7 @@ const Root = () => (
         <Route path="/about/:paragraph" component={AboutView} />
         {/*Data Routes */}
         {/* TODO whats the correct format for idea maps? */}
-        <Route path="/solution/:id" component={SolutionView} />
+        <Route path="/idea-map/:id" component={SolutionView} />
         <Route path="/search" component={SearchView} />
         <Route path="/entities/ideas/:id" component={IdeaView} />,
         <Route path="/entities/users/:id" component={EntityFallbackView} />
