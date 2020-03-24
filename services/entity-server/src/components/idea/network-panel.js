@@ -1,4 +1,4 @@
-import style from "../../views/idea/idea-view.module.css";
+import style from "./network-panel.module.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import neighbourhoodImg from "../../assets/img/neighbourhood.png";

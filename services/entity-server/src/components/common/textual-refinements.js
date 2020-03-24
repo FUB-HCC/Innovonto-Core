@@ -9,7 +9,7 @@ const TextualRefinements = props => {
       {showTitle && <h3>Textual Refinements</h3>}
       {refinementList.map(refinement => (
         <div key={refinement.question}>
-          <h4>{refinement.question}</h4>
+          <div className={style.refinement}>{refinement.question}</div>
           <p>{refinement.answer}</p>
         </div>
       ))}
