@@ -5,9 +5,22 @@ services:
     container_name: entity-server
     image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core/entity-server:latest
     build: ./services/entity-server
+    logging:
+      options:
+        max-size: "1G"
+        max-file: "2"
     ports:
       - 8080:80
     restart: always
+  idea-similarity-server:
+    container_name: idea-similarity-server
+    image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core/idea-similarity-server:latest
+    build: ./services/idea-similarity-server
+    logging:
+      options:
+        max-size: "1G"
+        max-file: "2"
+    restart: on-failure
   core-server:
     container_name: core-fuseki
     image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core:latest
