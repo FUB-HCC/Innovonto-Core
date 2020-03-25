@@ -3,7 +3,7 @@ import style from "./session-view.module.css";
 import SessionGraph from "../../../components/session-graph/session-graph";
 import {
   AltTextComponent,
-  getNameFromUri,
+  getNameFromUri, urlToEntity,
   useWindowSize
 } from "../../../components/utils";
 import { requestSessionData } from "../../../middleware/requests";
@@ -31,7 +31,8 @@ const SessionView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
   const [sessionData, setSessionData] = useState(null);
   const [selectedViz, setSelectedViz] = useState(SessionRadio.TIMELINE);
-  useEffect(() => requestSessionData(setSessionData), []);
+  const entityId = urlToEntity(window.location.href);
+  useEffect(() => requestSessionData(entityId, setSessionData), [entityId]);
   if (!sessionData) {
     return (
       <AltTextComponent

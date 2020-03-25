@@ -52,6 +52,7 @@ export const processSession = data => {
     }))
     .sort((a, b) => b.timerValue - a.timerValue);
 
+  result.id = data["@id"];
   result.hasTrackingEvent = filteredEvents;
   return result;
 };
