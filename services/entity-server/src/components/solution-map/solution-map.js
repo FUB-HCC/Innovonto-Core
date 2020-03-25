@@ -52,7 +52,7 @@ export const SolutionMap = props => {
   const { ideas, width, height, solutionId, clusterData } = props;
   if (!areDimensionsReasonable(width, height) || !ideas) {
     return (
-      <AltTextComponent name={"Solution Map"} width={width} height={height} />
+      <AltTextComponent name={"Idea Map"} width={width} height={height} />
     );
   }
   const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
