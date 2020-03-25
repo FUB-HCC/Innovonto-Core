@@ -6,6 +6,8 @@ export const describeIdeaRequest = entityUrl =>
   coreServerRequest(describeIdea(entityUrl));
 export const describeSessionRequest = entityUrl =>
   coreServerRequest(describeSession(entityUrl));
+export const describeUserRequest = entityUrl =>
+  coreServerRequest(describeUser(entityUrl));
 
 export const prefix = {
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -24,6 +26,18 @@ const coreServerRequest = sparqlQuery => {
 };
 
 const describeIdea = entityUrl =>
+  `
+    PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX inov:<http://purl.org/innovonto/types/#>
+    PREFIX dcterms: <http://purl.org/dc/terms/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    DESCRIBE <` +
+  entityUrl +
+  `>
+`;
+
+const describeUser = entityUrl =>
   `
     PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

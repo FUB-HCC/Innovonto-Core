@@ -13,7 +13,7 @@ import {
   sparqlProjectListRequest,
   describeEntityRequest,
   describeSessionRequest,
-  describeIdeaRequest
+  describeIdeaRequest, describeUserRequest
 } from "./sparql-queries";
 import { frameData } from "./data-framing";
 
@@ -103,17 +103,10 @@ export const requestIdeaDetailData = (ideaUrl, dispatch) => {
 };
 
 export const requestUserDetailData = (id, dispatch) => {
-  let requestUrl;
-  if (id === "mockdata") {
-    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user.json";
-  } else if (id === "mockdata-2") {
-    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-2.json";
-  } else {
-    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-user-3.json";
-    //TODO: build URL string from id here
-  }
+  let entityUrl = baseUrl + "/entities/users/" + id;
+  console.log(entityUrl);
   axios
-    .get(requestUrl)
+    .get(backendServiceBaseUrl,describeUserRequest(entityUrl))
     .then(result => {
       dispatch(extractUserDetails(result.data));
     })
