@@ -4,6 +4,8 @@ export const describeEntityRequest = entityUrl =>
   coreServerRequest(describeEntity(entityUrl));
 export const describeIdeaRequest = entityUrl =>
   coreServerRequest(describeIdea(entityUrl));
+export const describeSessionRequest = entityUrl =>
+  coreServerRequest(describeSession(entityUrl));
 
 export const prefix = {
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -44,6 +46,22 @@ const describeEntity = entityUrl =>
     SELECT DISTINCT ?predicate ?object WHERE { <` +
   entityUrl +
   `> ?predicate ?object.
+    }
+`;
+
+const describeSession = entityUrl =>
+  `
+    PREFIX inov:<http://purl.org/innovonto/types/#>
+    DESCRIBE ?event ?idea ?insp ?inspidea <` +
+  entityUrl +
+  `>
+    WHERE {
+      <` +
+  entityUrl +
+  `> inov:hasTrackingEvent ?event.
+       OPTIONAL {?event inov:submittedIdea ?idea}
+       OPTIONAL {?event inov:hasInspiration ?insp}
+       OPTIONAL {?insp inov:hasIdea ?inspidea}
     }
 `;
 

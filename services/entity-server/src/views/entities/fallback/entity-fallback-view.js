@@ -4,6 +4,7 @@ import style from "./entity-fallback-view.module.css";
 import { requestGenericEntity } from "../../../middleware/requests";
 import PageTitle from "../../../components/common/page-title";
 import { prefix } from "../../../middleware/sparql-queries";
+import { urlToEntity } from "../../../components/utils";
 
 function prefixReplacer(predicate) {
   for (let k in prefix) {
@@ -32,17 +33,6 @@ const Pair = ({ predicate, objects }) => {
       </td>
     </tr>
   );
-};
-
-const urlToEntity = url => {
-  if (url.startsWith("http://localhost:3000/entities/")) {
-    return (
-      "https://innovonto-core.imp.fu-berlin.de/entities/" +
-      url.substring("http://localhost:3000/entities/".length, url.length)
-    );
-  } else {
-    return url;
-  }
 };
 
 export const EntityFallbackView = () => {

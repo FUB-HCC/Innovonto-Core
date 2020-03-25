@@ -5,6 +5,7 @@ import PageTitle from "../../components/common/page-title";
 import { requestProjectListData } from "../../middleware/requests";
 import LargeEntitiyPreview from "../../components/common/large-entity-preview";
 import { Link } from "react-router-dom";
+import { getNameFromUri } from "../../components/utils";
 
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -39,7 +40,7 @@ export const DataView = () => {
             key={project.id}
             description={project.description}
             title={project.title}
-            rightContent={<ProjectOptions />}
+            rightContent={<ProjectOptions id={project.id} />}
           />
         ))}
       </div>
@@ -47,12 +48,13 @@ export const DataView = () => {
   );
 };
 
-const ProjectOptions = () => {
+const ProjectOptions = props => {
+  const { id } = props;
   return (
     <div className={style.projectOptionsWrapper}>
       <p className={style.projectOption}>More About the project</p>
       <br />
-      <Link to={"/idea-map/mockdata"}>
+      <Link to={"/idea-map/" + getNameFromUri(id)}>
         <p className={style.projectOption}>View All Ideas</p>
       </Link>
       <br />

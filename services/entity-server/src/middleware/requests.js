@@ -1,7 +1,7 @@
 import axios from "axios";
 import { SearchActionTypes } from "../components/search/search-component";
 import {
-  extractSessionData,
+  processSession,
   extractProjectList,
   extractSearchResults,
   extractSolutionData,
@@ -12,6 +12,7 @@ import {
 import {
   sparqlProjectListRequest,
   describeEntityRequest,
+  describeSessionRequest,
   describeIdeaRequest
 } from "./sparql-queries";
 import { frameData } from "./data-framing";
@@ -42,11 +43,16 @@ export const requestSearchData = (requestValue, dispatch) => {
     });
 };
 
-export const requestSessionData = dispatch => {
+export const requestSessionData = (entityId, dispatch) => {
   axios
-    .get(process.env.PUBLIC_URL + "/data/mockdata-session.json")
+    .get(backendServiceBaseUrl, describeSessionRequest(entityId))
     .then(result => {
-      dispatch(extractSessionData(result.data));
+      frameData(result.data, "inov:BrainstormingSession").then(data => {
+        //console.log(data);
+        const processedResult = processSession(data);
+        console.log(processedResult);
+        dispatch(processedResult);
+      });
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
@@ -68,9 +74,9 @@ export const requestProjectListData = dispatch => {
 
 export const requestSolutionData = (id, dispatch) => {
   var requestUrl;
-  if (id === "mockdata") {
+  if (id === "i2m-TCO") {
     requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map.json";
-  } else if (id === "bionic-radar") {
+  } else if (id === "i2m-bionic-radar") {
     requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map-2.json";
   } else {
     requestUrl = "";

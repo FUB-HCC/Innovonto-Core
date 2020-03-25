@@ -1,10 +1,61 @@
-export const extractSessionData = data => ({
-  ...data,
-  id: data["@id"],
-  hasTrackingEvent: data.hasTrackingEvent.sort(
-    (a, b) => b.timerValue - a.timerValue
-  )
-});
+export const extractIdeas = data => {
+  return {
+    id: data.submittedIdea["@id"],
+    content: data.submittedIdea.content
+  };
+};
+
+export const extractInspirations = data => {
+  var result = {
+    id: data.hasInspiration["@id"],
+    content: data.hasInspiration.content
+  };
+  if (data.hasInspiration.hasOwnProperty("fallbackContent")) {
+    result.fallbackContent = data.hasInspiration.fallbackContent;
+  }
+  return result;
+};
+
+//TODO implement extract exemplar
+export const extractExemplars = data =>
+  data["@graph"]
+    .filter(e => e["@type"].includes("Exemplar"))
+    .map(exemplar => ({
+      id: exemplar["@id"],
+      idea: extractIdeas(data).find(idea => exemplar.hasIdea === idea.id)
+    }));
+
+const extractContentFor = event => {
+  switch (event.eventType) {
+    case "idea-submit":
+      return extractIdeas(event);
+    case "inspiration-response":
+      return extractInspirations(event);
+    default:
+      return event;
+  }
+};
+
+export const processSession = data => {
+  const result = data;
+  const filteredEvents = data.hasTrackingEvent
+    .filter(
+      currentEvent =>
+        currentEvent.eventType === "idea-submit" ||
+        currentEvent.eventType === "inspiration-response"
+    )
+    .map(inputEvent => ({
+      id: inputEvent["@id"],
+      eventType: inputEvent.eventType,
+      content: extractContentFor(inputEvent),
+      timerValue: inputEvent["inov:timerValue"]
+    }))
+    .sort((a, b) => b.timerValue - a.timerValue);
+
+  result.id = data["@id"];
+  result.hasTrackingEvent = filteredEvents;
+  return result;
+};
 
 export const extractSearchResults = data =>
   data.results.map((result, i) => ({
