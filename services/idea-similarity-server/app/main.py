@@ -11,9 +11,12 @@ author: Michael Tebbe (michael.tebbe@fu-berlin.de)
 from idea_contest_handler import Idea_Contest_Handler
 from sparql_handler import Sparql_handler
 from idea_mapper import Idea_mapper
+from session_tree_creator import SessionTreeCreator
 from fastapi import FastAPI
+from starlette.responses import Response
 from starlette.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
+from anytree.exporter import JsonExporter
 import logging
 
 # TODO logging does not work inside docker container
@@ -38,6 +41,7 @@ app.add_middleware(
 sh = Sparql_handler()
 im = Idea_mapper()
 ich = Idea_Contest_Handler()
+stc = SessionTreeCreator()
 
 @app.get("/")
 def read_root():
@@ -77,3 +81,10 @@ def get_map(query: str, similarity_algorithm: str = 'USE', dim_reduction_algorit
                                   dim_reduction_algorithm=dim_reduction_algorithm, cluster_method=cluster_method)
     logger.info(type(mapping_result))
     return jsonable_encoder(mapping_result)
+
+
+@app.get('/session/api/v0.2/get_session_tree')
+def get_session_tree(session: str):
+    logger.info('Generating Session Tree for session {}'.format(session))
+    exporter = JsonExporter(sort_keys=True)
+    return Response(content=exporter.export(stc.create_tree_for_session(session)),media_type="application/json")
