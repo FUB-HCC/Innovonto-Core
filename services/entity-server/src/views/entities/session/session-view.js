@@ -3,7 +3,8 @@ import style from "./session-view.module.css";
 import SessionGraph from "../../../components/session-graph/session-graph";
 import {
   AltTextComponent,
-  getNameFromUri, urlToEntity,
+  getNameFromUri,
+  urlToEntity,
   useWindowSize
 } from "../../../components/utils";
 import { requestSessionData } from "../../../middleware/requests";
