@@ -50,9 +50,9 @@ export const EntityFallbackView = () => {
   const entityId = urlToEntity(window.location.href);
   useEffect(() => requestGenericEntity(entityId, setData), [entityId]);
   return (
-    <div>
+    <div className={style.entityFallbackViewWrappern}>
       <PageTitle title="Entity Details" />
-      <div className={style.entityDetailsPageWrapper}>
+      <div className={style.entityFallbackContent}>
         <h2>{entityId}</h2>
         <table className="bp3-html-table">
           <thead>

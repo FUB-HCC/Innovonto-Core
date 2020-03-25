@@ -376,18 +376,17 @@ const InteractiveConceptValidationText = () => (
     </p>
     <p>
       An idea describing modification of a door and another describing wall
-      painting, for example, could be connected by the concept of
-      {" "}<em>architecture</em>. Thus, as opposed to statistical methods that are
+      painting, for example, could be connected by the concept of{" "}
+      <em>architecture</em>. Thus, as opposed to statistical methods that are
       based on explicit relationships, knowledge graphs allow for identifying
       implicit, more subtle relationships. This potential of annotating ideas
-      motivated the development of our {" "}
-      <strong>Interactive Concept Validation (ICV)</strong>{" "}
-      technique, which can be integrated into traditional ideation processes.
-      After submitting an idea, a person is asked to annotate the idea manually
-      based on concepts obtained from a knowledge graph. This tool consists of
-      an interactive component, since we ask a person for its annotations and an
-      intelligent component, because the provision of the annotations uses AI
-      technologies.
+      motivated the development of our{" "}
+      <strong>Interactive Concept Validation (ICV)</strong> technique, which can
+      be integrated into traditional ideation processes. After submitting an
+      idea, a person is asked to annotate the idea manually based on concepts
+      obtained from a knowledge graph. This tool consists of an interactive
+      component, since we ask a person for its annotations and an intelligent
+      component, because the provision of the annotations uses AI technologies.
     </p>
     <p>
       By linking terms in ideas to knowledge graph concepts, the approach

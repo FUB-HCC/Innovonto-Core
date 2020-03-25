@@ -86,7 +86,10 @@ const AboutText = () => (
 
 const AcknowledgementsText = () => (
   <div>
-    <p>This project was supported by the German Federal Ministry of Education and Research, grant 03IO1617 (“Ideas to Market”).</p>
+    <p>
+      This project was supported by the German Federal Ministry of Education and
+      Research, grant 03IO1617 (“Ideas to Market”).
+    </p>
 
     <p>
       Over the course of this research project, a multitude of people
