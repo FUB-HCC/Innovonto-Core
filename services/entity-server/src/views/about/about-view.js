@@ -112,6 +112,20 @@ const AcknowledgementsText = () => (
         the implementation work for parts of{" "}
         <Link to={"/software/innovonto-core"}>Innovonto Core</Link>.
       </li>
+      <li>
+        We would like to thank{" "}
+        <a
+          href="https://github.com/mx-e"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Maximilian Eißler{" "}
+        </a>
+        for his work on the implementation of the{" "}
+        <Link to={"/software/innovonto-core"}>Innovonto Core</Link> front-end
+        you are currently using, including all visualizations and interactive
+        components.
+      </li>
     </ul>
     <p>
       If you want to be mentioned as well, just{" "}
