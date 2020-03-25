@@ -16,11 +16,16 @@ services:
     container_name: idea-similarity-server
     image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core/idea-similarity-server:latest
     build: ./services/idea-similarity-server
+    ports:
+      - 8000:8000
+    environment:
+      PORT: 8000
+      LOG_LEVEL: debug
     logging:
       options:
         max-size: "1G"
         max-file: "2"
-    restart: on-failure
+    restart: always
   core-server:
     container_name: core-fuseki
     image: git.imp.fu-berlin.de:5000/ideas-to-market/innovonto-core:latest

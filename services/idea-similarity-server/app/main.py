@@ -16,6 +16,7 @@ from starlette.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 import logging
 
+# TODO logging does not work inside docker container
 logger = logging.getLogger("fastapi")
 
 app = FastAPI()

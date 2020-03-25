@@ -1,4 +1,4 @@
-# Innovonto Core Idea Map Service
+# Innovonto Core Idea Similarity Service
 
 ## Development
 This is a python 3.6 project.
@@ -16,8 +16,8 @@ To setup the project run:
 ## Production Build
 The production build uses: https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker
 
-    docker build -t idea-map-backend .
-    docker run -d --name idea-map-backend-container -p 8000:80 idea-map-backend
+    docker build -t idea-similarity-server .
+    docker run -d --name idea-similarity-server-container -p 8000:8000 -e PORT="8000" idea-similarity-server
     
     http://localhost:8000/
     
