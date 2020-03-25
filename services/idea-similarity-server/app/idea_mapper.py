@@ -32,7 +32,7 @@ class Idea_mapper():
                   cluster_method='kmeans'):
         # create JSON Object from query response
         ideas = query_response  # pd.read_json(query_response)
-        # print(ideas['results']['bindings'][0])
+        print(ideas['results']['bindings'][0])
 
         # generate embedding matrix with specified algorithm
         Path(self.cache_base_path).mkdir(parents=True, exist_ok=True)
@@ -86,7 +86,9 @@ class Idea_mapper():
             pass
         elif similarity_algorithm == 'USE':
             # create similarity matrix from USE embeddings
-            similarity_matrix_np = self.idea_embedder.USE(idea_list)
+            # TODO make module path configurable.
+            similarity_matrix_np = self.idea_embedder.USE(idea_list,
+                                                          module_path='./cache/models/universal-sentence-encoder-large/5')
         columns_names = ['dim_' + str(i) for i in range(similarity_matrix_np.shape[1])]
         similarity_matrix = pd.DataFrame(similarity_matrix_np, columns=columns_names)
 

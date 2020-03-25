@@ -6,11 +6,12 @@ logger = logging.getLogger("fastapi")
 
 query_template = """
 PREFIX gi2mo:<http://purl.org/gi2mo/ns#>
-
-SELECT ?idea ?content WHERE {
+PREFIX inov:<http://purl.org/innovonto/types/#>
+SELECT ?idea ?content ?ideaType WHERE {
   ?idea a gi2mo:Idea;
         gi2mo:content ?content;
         gi2mo:hasIdeaContest <%%IDEA_CONTEST%%>.
+  OPTIONAL {?idea inov:ideaType ?ideaType}
 }
 ORDER BY ?idea
 """

@@ -31,7 +31,7 @@ class Concept_finder():
         PREFIX gi2mo: <http://purl.org/gi2mo/ns#>
         PREFIX inov:<http://purl.org/innovonto/types/#>
         PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX iu: <https://innovonto-core.imp.fu-berlin.de/entities/ideas/>
 
         SELECT ?linkedResource (COUNT(?linkedResource) as ?resourceCount) 
         WHERE {
@@ -67,10 +67,14 @@ class Concept_finder():
 
         return cluster_list
 
+    def to_local_id(self,idea_uri):
+        return idea_uri.split("/")[len(idea_uri.split("/")) - 1]
+
+    #TODO this breaks for a large amount of ideas.
     def get_topwords_for_one_cluster(self, ideas_in_cluster):
         query = self.concept_count_query_start
         for idea_uri in ideas_in_cluster:
-            query += """(<""" + idea_uri + """>)"""
+            query += """(iu:""" + self.to_local_id(idea_uri) + """)"""
 
         # query += self.test_uri
         query += self.concept_count_query_end

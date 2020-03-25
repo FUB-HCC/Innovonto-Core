@@ -12,14 +12,17 @@ import numpy as np
 
 
 class Idea_embedder():
-    def USE(self, ideas, distance_metric='none'):
+    def USE(self, ideas, distance_metric='none',
+            module_path='https://tfhub.dev/google/universal-sentence-encoder-large/5'):
         """
         Source: https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/semantic_similarity_with_tf_hub_universal_encoder.ipynb#scrollTo=h1FFCTKm7ba4
         """
         print('Embedding with USE')
         idea_list = ideas
 
-        embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder-large/5")
+        # After downloading, extract the contents into a folder and then in the hub.Module code simply replace your URL with the path to the directory
+        # https://stackoverflow.com/questions/50322001/how-to-save-load-a-tensorflow-hub-module-to-from-a-custom-path
+        embed = hub.load(module_path)
 
         message_embeddings = embed(idea_list)
 
