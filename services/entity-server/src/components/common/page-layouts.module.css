@@ -19,3 +19,21 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.fullScreenLayoutWrapper{
+    background: white;
+}
+
+.fullScreenLayoutContent{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.loadingMainWindow{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
