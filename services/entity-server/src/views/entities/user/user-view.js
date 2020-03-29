@@ -12,13 +12,20 @@ import { CenteredLayout } from "../../../components/common/page-layouts";
 
 export const UserView = () => {
   const [userData, setUserData] = useState(null);
+  const [error, setError] = useState(null);
   const userId = useParams().id;
-  useEffect(() => requestUserDetailData(userId, setUserData), [
+  useEffect(() => requestUserDetailData(userId, setUserData, setError), [
     userId,
     setUserData
   ]);
-  if (!userData) {
-    return <CenteredLayout pageTitle={"UserDetails"} isLoading={true} />;
+  if (!userData || error) {
+    return (
+      <CenteredLayout
+        pageTitle={"UserDetails"}
+        isLoading={true}
+        error={error}
+      />
+    );
   }
   const {
     id,

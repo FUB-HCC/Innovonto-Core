@@ -44,23 +44,20 @@ export const requestSearchData = (requestValue, dispatch) => {
     });
 };
 
-export const requestSessionData = (entityId, dispatch) => {
+export const requestSessionData = (entityId, dispatch, errorDispatch) => {
   axios
     .get(backendServiceBaseUrl, describeSessionRequest(entityId))
     .then(result => {
       frameData(result.data, "inov:BrainstormingSession").then(data => {
-        //console.log(data);
-        const processedResult = processSession(data);
-        console.log(processedResult);
-        dispatch(processedResult);
+        dispatch(processSession(data));
       });
     })
     .catch(error => {
-      //TODO: make all components redirect to error page in a unified fashion <- input required
+      errorDispatch(error);
     });
 };
 
-export const requestProjectListData = dispatch => {
+export const requestProjectListData = (dispatch, errorDispatch) => {
   axios
     .get(backendServiceBaseUrl, sparqlProjectListRequest())
     .then(result => {
@@ -69,11 +66,11 @@ export const requestProjectListData = dispatch => {
       });
     })
     .catch(error => {
-      //TODO: make all components redirect to error page in a unified fashion <- input required
+      errorDispatch(error);
     });
 };
 
-export const requestSolutionData = (id, dispatch) => {
+export const requestSolutionData = (id, dispatch, errorDispatch) => {
   var requestUrl;
   if (id === "i2m-TCO") {
     requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map.json";
@@ -89,21 +86,24 @@ export const requestSolutionData = (id, dispatch) => {
       dispatch(extractSolutionData(result.data.results));
     })
     .catch(error => {
-      //TODO: make all components redirect to error page in a unified fashion <- input required
+      errorDispatch(error);
     });
 };
 
-export const requestIdeaDetailData = (ideaUrl, dispatch) => {
+export const requestIdeaDetailData = (ideaUrl, dispatch, errorDispatch) => {
   axios
     .get(backendServiceBaseUrl, describeIdeaRequest(baseUrl + ideaUrl))
     .then(result => {
       frameData(result.data, "gi2mo:Idea").then(data =>
         dispatch(extractIdeaDetails(data))
       );
+    })
+    .catch(error => {
+      errorDispatch(error);
     });
 };
 
-export const requestUserDetailData = (id, dispatch) => {
+export const requestUserDetailData = (id, dispatch, errorDispatch) => {
   let entityUrl = baseUrl + "/entities/users/" + id;
   console.log(entityUrl);
   axios
@@ -112,14 +112,17 @@ export const requestUserDetailData = (id, dispatch) => {
       dispatch(extractUserDetails(result.data));
     })
     .catch(error => {
-      //TODO: make all components redirect to error page in a unified fashion <- input required
+      errorDispatch(error);
     });
 };
 
-export const requestGenericEntity = (entityUrl, dispatch) => {
+export const requestGenericEntity = (entityUrl, dispatch, errorDispatch) => {
   axios
     .get(backendServiceBaseUrl, describeEntityRequest(entityUrl))
     .then(result => {
       dispatch(sortResources(result.data.results.bindings));
+    })
+    .catch(error => {
+      errorDispatch(error);
     });
 };
