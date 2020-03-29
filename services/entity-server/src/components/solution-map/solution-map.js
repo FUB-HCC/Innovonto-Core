@@ -11,6 +11,7 @@ import {
 } from "../utils";
 import Sidebar from "./solution-map-sidebar";
 import StaticPopover from "./solution-map-static-popover";
+import { interpolateWarm as d3GetColor } from "d3-scale-chromatic";
 
 export const sideBarWidth = 330;
 const mainWindowWidth = totalWidth => totalWidth - sideBarWidth;
@@ -52,7 +53,7 @@ const getSelectedCluster = (clusterData, selectedIdea) => {
   );
 };
 
-function IdeaMapSvg(props) {
+const IdeaMapSvg = props => {
   const { ideas, width, height, onIdeaClick, onIdeaHover, zoomScale } = props;
   const coordinateList = ideas.map(idea => idea.coordinates);
   let xRange = 1,
@@ -90,6 +91,7 @@ function IdeaMapSvg(props) {
             onMouseEnter={() => onIdeaHover(idea)}
             onMouseLeave={() => onIdeaHover(null)}
             className={style.basicCircle}
+            fill={idea.color ? idea.color : "orangered"}
             r={circleRadiusPx(xRange, yRange) / zoomScale}
             strokeWidth={strokeWidth(xRange, yRange) / zoomScale}
             key={idea.idea}
@@ -101,7 +103,7 @@ function IdeaMapSvg(props) {
       })}
     </svg>
   );
-}
+};
 
 IdeaMapSvg.propTypes = {
   width: PropTypes.number.isRequired,
@@ -111,6 +113,24 @@ IdeaMapSvg.propTypes = {
   onIdeaHover: PropTypes.func,
   zoomScale: PropTypes.number.isRequired
 };
+
+const getClusterHighlightingColor = (idea, clusterData) =>
+  d3GetColor(parseFloat(idea.clusterLabel) / (clusterData.length - 1));
+
+const applyHighlighting = (ideas, highlightingOption, clusterData) => {
+  switch (highlightingOption) {
+    case ColorSelection.CLUSTER:
+      return ideas.map(idea => ({
+        ...idea,
+        color: getClusterHighlightingColor(idea, clusterData)
+      }));
+    case ColorSelection.IDEA_TYPE:
+    //TODO: add this
+    default:
+      return ideas;
+  }
+};
+
 export const SolutionMap = props => {
   const [hoveredIdea, setHoveredIdea] = useState(null);
   const [clickedIdea, setClickedIdea] = useState(null);
@@ -123,11 +143,12 @@ export const SolutionMap = props => {
     return <AltTextComponent name={"Idea Map"} width={width} height={height} />;
   }
   const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
-
-  const handleColorHighlighting = highlightingOption => {
-    console.log(highlightingOption);
-    setHighlighting(highlightingOption);
-  };
+  const coloredIdeas = applyHighlighting(
+    ideas,
+    highlightingOption,
+    clusterData
+  );
+  console.log(clusterData, ideas);
 
   return (
     <div className={style.solutionMapWrapper}>
@@ -160,10 +181,10 @@ export const SolutionMap = props => {
                           onClick={handleClick}
                         />
                       )}
-                      onItemSelect={item => handleColorHighlighting(item)}
+                      onItemSelect={item => setHighlighting(item)}
                       filterable={false}
                     >
-                      <Button icon={"highlight"} />
+                      <Button icon={"highlight"} text={highlightingOption} />
                     </Select>
                   </ButtonGroup>
                 </div>
@@ -178,7 +199,7 @@ export const SolutionMap = props => {
                   <IdeaMapSvg
                     width={width}
                     height={height}
-                    ideas={ideas}
+                    ideas={coloredIdeas}
                     onIdeaClick={setClickedIdea}
                     onIdeaHover={setHoveredIdea}
                     zoomScale={scale}
