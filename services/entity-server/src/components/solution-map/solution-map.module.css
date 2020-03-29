@@ -11,6 +11,8 @@
 .toolBar{
     position: absolute;
     padding: 15px;
+    display: flex;
+    flex-direction: row;
 }
 
 .basicCircle{
