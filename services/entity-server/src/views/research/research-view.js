@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import style from "./research-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
-import PageTitle from "../../components/common/page-title";
 import { useScrollToParagraph } from "../../components/utils";
 import { Link } from "react-router-dom";
 import ImgWithCaption from "../../components/common/img-with-caption";
@@ -17,6 +16,7 @@ import interactiveConceptValImg from "../../assets/img/interactive-concept-valid
 import inspirationRecommenderImg from "../../assets/img/idea-recommender.png";
 import { bibliography } from "./publications";
 import PropTypes from "prop-types";
+import { CenteredLayout } from "../../components/common/page-layouts";
 
 export const ResearchView = () => {
   const analyzingIdeationRef = useRef();
@@ -29,126 +29,120 @@ export const ResearchView = () => {
   ]);
 
   return (
-    <div className={style.researchViewWrapper}>
-      <PageTitle title={"Research"} />
-      <div className={style.researchViewContent}>
-        <div ref={analyzingIdeationRef} />
-        <TwoColumnContent
-          titleSize={30}
-          right={<div />}
-          left={<AnalyzingIdeationText />}
-          title={"Analyzing Ideation"}
-        />
-        <TwoColumnContent
-          right={
-            <ImgWithCaption
-              src={ideaModelingImg}
-              altText={"idea-visualization-img"}
-              caption={"Vision of a multi-facetted Idea model."}
-              figureNo={1}
-            />
-          }
-          left={<IdeaModelingText />}
-          title={"Idea Modeling"}
-        />
-        <TwoColumnContent
-          left={
-            <ImgWithCaption
-              src={ideaLifecycleImg}
-              altText={"idea-lifecycle-img"}
-              caption={"Vision of an interconnected idea lifecycle"}
-              figureNo={2}
-            />
-          }
-          right={<IdeaLifecycleText />}
-          title={"Idea Lifecycle"}
-        />
-        <h1 ref={understandingIdeationRef} className={style.largeTitle}>
-          Understanding Ideation
-        </h1>
-        <TwoColumnContent
-          left={<IdeaSpaceVisualizationText />}
-          right={
-            <ImgWithCaption
-              src={ideaSpaceVisualizationImg}
-              altText={"idea-space-visualization-img"}
-              caption={"Vision of an interactive idea space"}
-              figureNo={3}
-            />
-          }
-          title={"Idea Space Visualization"}
-        />
-        <TwoColumnContent
-          left={
-            <ImgWithCaption
-              src={ideaVisualizationImg}
-              altText="idea-visualization-img"
-            />
-          }
-          right={<IdeaVisualizationText />}
-          title={"IdeaVisualization"}
-        />
-        <TwoColumnContent
-          left={<SessionVisualizationText />}
-          right={
-            <>
-              <img src={sessionVizImg1} alt={"session-view-img"} />
-              <img src={sessionVizImg2} alt={"session-tree-img"} />
-            </>
-          }
-          title={"SessionVisualization"}
-        />
-        <div ref={augmentingIdeationRef} />
-        <TwoColumnContent
-          titleSize={30}
-          left={
-            <img src={augmentingIdeationImg} alt={"augmenting-ideation-img"} />
-          }
-          right={<AugmentingIdeationText />}
-          title={"Augmenting Ideation"}
-        />
-        <TwoColumnContent
-          right={
-            <img
-              src={adaptiveIdeationSystemsImg}
-              alt={"adaptive-ideation-systems-img"}
-            />
-          }
-          left={<AdaptiveIdeationSystemsText />}
-          title={"Adaptive Ideation Systems"}
-        />
-        <h1 className={style.largeTitle}>Current Projects</h1>
-        <TwoColumnContent
-          left={
-            <img
-              src={interactiveConceptValImg}
-              alt={"interactive-concept-validation-img"}
-            />
-          }
-          right={<InteractiveConceptValidationText />}
-          title={"Interactive Concept Validation"}
-        />
-        <TwoColumnContent
-          right={
-            <img src={ideaVisualizationImg} alt={"idea-visualization-img"} />
-          }
-          left={<SparkVisualizationText />}
-          title={"Spark Visualization"}
-        />
-        <TwoColumnContent
-          left={
-            <img
-              src={inspirationRecommenderImg}
-              alt={"idea-visualization-img"}
-            />
-          }
-          right={<InspirationRecommenderText />}
-          title={"Inspiration Recommender"}
-        />
-        <h1 className={style.largeTitle}>Publications</h1>
-        <PublicationList publications={bibliography} />
-      </div>
-    </div>
+    <CenteredLayout pageTitle={"Research"}>
+      <div ref={analyzingIdeationRef} />
+      <TwoColumnContent
+        titleSize={30}
+        right={<div />}
+        left={<AnalyzingIdeationText />}
+        title={"Analyzing Ideation"}
+      />
+      <TwoColumnContent
+        right={
+          <ImgWithCaption
+            src={ideaModelingImg}
+            altText={"idea-visualization-img"}
+            caption={"Vision of a multi-facetted Idea model."}
+            figureNo={1}
+          />
+        }
+        left={<IdeaModelingText />}
+        title={"Idea Modeling"}
+      />
+      <TwoColumnContent
+        left={
+          <ImgWithCaption
+            src={ideaLifecycleImg}
+            altText={"idea-lifecycle-img"}
+            caption={"Vision of an interconnected idea lifecycle"}
+            figureNo={2}
+          />
+        }
+        right={<IdeaLifecycleText />}
+        title={"Idea Lifecycle"}
+      />
+      <h1 ref={understandingIdeationRef} className={style.largeTitle}>
+        Understanding Ideation
+      </h1>
+      <TwoColumnContent
+        left={<IdeaSpaceVisualizationText />}
+        right={
+          <ImgWithCaption
+            src={ideaSpaceVisualizationImg}
+            altText={"idea-space-visualization-img"}
+            caption={"Vision of an interactive idea space"}
+            figureNo={3}
+          />
+        }
+        title={"Idea Space Visualization"}
+      />
+      <TwoColumnContent
+        left={
+          <ImgWithCaption
+            src={ideaVisualizationImg}
+            altText="idea-visualization-img"
+          />
+        }
+        right={<IdeaVisualizationText />}
+        title={"IdeaVisualization"}
+      />
+      <TwoColumnContent
+        left={<SessionVisualizationText />}
+        right={
+          <>
+            <img src={sessionVizImg1} alt={"session-view-img"} />
+            <img src={sessionVizImg2} alt={"session-tree-img"} />
+          </>
+        }
+        title={"SessionVisualization"}
+      />
+      <div ref={augmentingIdeationRef} />
+      <TwoColumnContent
+        titleSize={30}
+        left={
+          <img src={augmentingIdeationImg} alt={"augmenting-ideation-img"} />
+        }
+        right={<AugmentingIdeationText />}
+        title={"Augmenting Ideation"}
+      />
+      <TwoColumnContent
+        right={
+          <img
+            src={adaptiveIdeationSystemsImg}
+            alt={"adaptive-ideation-systems-img"}
+          />
+        }
+        left={<AdaptiveIdeationSystemsText />}
+        title={"Adaptive Ideation Systems"}
+      />
+      <h1 className={style.largeTitle}>Current Projects</h1>
+      <TwoColumnContent
+        left={
+          <img
+            src={interactiveConceptValImg}
+            alt={"interactive-concept-validation-img"}
+          />
+        }
+        right={<InteractiveConceptValidationText />}
+        title={"Interactive Concept Validation"}
+      />
+      <TwoColumnContent
+        right={
+          <img src={ideaVisualizationImg} alt={"idea-visualization-img"} />
+        }
+        left={<SparkVisualizationText />}
+        title={"Spark Visualization"}
+      />
+      <TwoColumnContent
+        left={
+          <img src={inspirationRecommenderImg} alt={"idea-visualization-img"} />
+        }
+        right={<InspirationRecommenderText />}
+        title={"Inspiration Recommender"}
+      />
+      <h1 className={style.largeTitle}>Publications</h1>
+      <PublicationList publications={bibliography} />
+    </CenteredLayout>
   );
 };
 

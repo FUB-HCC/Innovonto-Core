@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import style from "./entity-fallback-view.module.css";
-
 import { requestGenericEntity } from "../../../middleware/requests";
-import PageTitle from "../../../components/common/page-title";
 import { prefix } from "../../../middleware/sparql-queries";
 import { urlToEntity } from "../../../components/utils";
+import { CenteredLayout } from "../../../components/common/page-layouts";
 
 function prefixReplacer(predicate) {
   for (let k in prefix) {
@@ -36,28 +34,26 @@ const Pair = ({ predicate, objects }) => {
 };
 
 export const EntityFallbackView = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const entityId = urlToEntity(window.location.href);
   useEffect(() => requestGenericEntity(entityId, setData), [entityId]);
   return (
-    <div className={style.entityFallbackViewWrappern}>
-      <PageTitle title="Entity Details" />
-      <div className={style.entityFallbackContent}>
-        <h2>{entityId}</h2>
-        <table className="bp3-html-table">
-          <thead>
-            <tr>
-              <td>Predicate</td>
-              <td>Object</td>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(({ predicate, objects }, i) => (
+    <CenteredLayout pageTitle={"Entity Details"} isLoading={!data}>
+      <h2>{entityId}</h2>
+      <table className="bp3-html-table">
+        <thead>
+          <tr>
+            <td>Predicate</td>
+            <td>Object</td>
+          </tr>
+        </thead>
+        <tbody>
+          {data &&
+            data.map(({ predicate, objects }, i) => (
               <Pair key={i} predicate={predicate} objects={objects} />
             ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+        </tbody>
+      </table>
+    </CenteredLayout>
   );
 };
