@@ -46,6 +46,12 @@ const ColorSelection = Object.freeze({
   CLUSTER: "Cluster"
 });
 
+const IdeaTypes = Object.freeze({
+  Spark: { value: "Spark", color: "royalblue" },
+  Idea: { value: "Idea", color: "mediumseagreen" },
+  Option: { value: "Option", color: "orangered" }
+});
+
 const getSelectedCluster = (clusterData, selectedIdea) => {
   if (!selectedIdea || !selectedIdea.clusterLabel) return null;
   return clusterData.find(
@@ -125,7 +131,12 @@ const applyHighlighting = (ideas, highlightingOption, clusterData) => {
         color: getClusterHighlightingColor(idea, clusterData)
       }));
     case ColorSelection.IDEA_TYPE:
-    //TODO: add this
+      return ideas.map(idea => ({
+        ...idea,
+        color: IdeaTypes[idea.ideaType]
+          ? IdeaTypes[idea.ideaType].color
+          : "black"
+      }));
     default:
       return ideas;
   }
@@ -148,7 +159,6 @@ export const SolutionMap = props => {
     highlightingOption,
     clusterData
   );
-  console.log(clusterData, ideas);
 
   return (
     <div className={style.solutionMapWrapper}>

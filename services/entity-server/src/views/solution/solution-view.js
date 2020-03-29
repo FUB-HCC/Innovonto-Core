@@ -11,7 +11,7 @@ const solutionWidth = width => 1 * width;
 
 export const SolutionView = () => {
   let { id } = useParams();
-  const [solutionData, setSolutionData] = useState([]);
+  const [solutionData, setSolutionData] = useState({});
   useEffect(() => requestSolutionData(id, setSolutionData), [id]);
   const [windowWidth, windowHeight] = useWindowSize();
   const solutionDots = solutionData.bindings ? solutionData.bindings : [];
