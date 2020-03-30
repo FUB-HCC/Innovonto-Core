@@ -12,7 +12,7 @@ const StarRating = props => (
       <Icon icon={props.rating >= 3.5 ? "star" : "star-empty"} />
       <Icon icon={props.rating >= 4.5 ? "star" : "star-empty"} />
     </div>
-    <span>{Math.round(props.rating)} von 5 Sterne</span>
+    <span>{Math.round(props.rating)} of 5 stars</span>
   </div>
 );
 
