@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import style from "./solution-map.module.css";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { ButtonGroup, Button } from "@blueprintjs/core";
+import { ButtonGroup, Button, MenuItem } from "@blueprintjs/core";
+import { Select } from "@blueprintjs/select";
 import {
   AltTextComponent,
   makeDimensionsChecker,
@@ -10,6 +11,7 @@ import {
 } from "../utils";
 import Sidebar from "./solution-map-sidebar";
 import StaticPopover from "./solution-map-static-popover";
+import { interpolateWarm as d3GetColor } from "d3-scale-chromatic";
 
 export const sideBarWidth = 330;
 const mainWindowWidth = totalWidth => totalWidth - sideBarWidth;
@@ -38,6 +40,12 @@ const getCoordinateRanges = coordList => {
   ];
 };
 
+const ColorSelection = Object.freeze({
+  DEFAULT: "None",
+  IDEA_TYPE: "Idea Type",
+  CLUSTER: "Cluster"
+});
+
 const getSelectedCluster = (clusterData, selectedIdea) => {
   if (!selectedIdea || !selectedIdea.clusterLabel) return null;
   return clusterData.find(
@@ -45,15 +53,8 @@ const getSelectedCluster = (clusterData, selectedIdea) => {
   );
 };
 
-export const SolutionMap = props => {
-  const [hoveredIdea, setHoveredIdea] = useState(null);
-  const [clickedIdea, setClickedIdea] = useState(null);
-  const [mouseX, mouseY] = useMousePosition();
-  const { ideas, width, height, solutionId, clusterData } = props;
-  if (!areDimensionsReasonable(width, height) || !ideas) {
-    return <AltTextComponent name={"Idea Map"} width={width} height={height} />;
-  }
-  const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
+const IdeaMapSvg = props => {
+  const { ideas, width, height, onIdeaClick, onIdeaHover, zoomScale } = props;
   const coordinateList = ideas.map(idea => idea.coordinates);
   let xRange = 1,
     yRange = 1;
@@ -68,6 +69,86 @@ export const SolutionMap = props => {
   }
   const marginX = xRange * marginsRatio;
   const marginY = yRange * marginsRatio;
+  return (
+    <svg
+      width={mainWindowWidth(width)}
+      height={height}
+      viewBox={
+        minX +
+        " " +
+        minY +
+        " " +
+        (xRange + 2 * marginX) +
+        " " +
+        (yRange + 2 * marginY)
+      }
+      className={style.zoomBox}
+    >
+      {ideas.map(idea => {
+        const [x, y] = idea.coordinates;
+        return (
+          <circle
+            onMouseEnter={() => onIdeaHover(idea)}
+            onMouseLeave={() => onIdeaHover(null)}
+            className={style.basicCircle}
+            fill={idea.color ? idea.color : "orangered"}
+            r={circleRadiusPx(xRange, yRange) / zoomScale}
+            strokeWidth={strokeWidth(xRange, yRange) / zoomScale}
+            key={idea.idea}
+            cx={x + marginX}
+            cy={y + marginY}
+            onClick={() => onIdeaClick(idea)}
+          />
+        );
+      })}
+    </svg>
+  );
+};
+
+IdeaMapSvg.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  ideas: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onIdeaClick: PropTypes.func,
+  onIdeaHover: PropTypes.func,
+  zoomScale: PropTypes.number.isRequired
+};
+
+const getClusterHighlightingColor = (idea, clusterData) =>
+  d3GetColor(parseFloat(idea.clusterLabel) / (clusterData.length - 1));
+
+const applyHighlighting = (ideas, highlightingOption, clusterData) => {
+  switch (highlightingOption) {
+    case ColorSelection.CLUSTER:
+      return ideas.map(idea => ({
+        ...idea,
+        color: getClusterHighlightingColor(idea, clusterData)
+      }));
+    case ColorSelection.IDEA_TYPE:
+    //TODO: add this
+    default:
+      return ideas;
+  }
+};
+
+export const SolutionMap = props => {
+  const [hoveredIdea, setHoveredIdea] = useState(null);
+  const [clickedIdea, setClickedIdea] = useState(null);
+  const [highlightingOption, setHighlighting] = useState(
+    ColorSelection.DEFAULT
+  );
+  const [mouseX, mouseY] = useMousePosition();
+  const { ideas, width, height, solutionId, clusterData } = props;
+  if (!areDimensionsReasonable(width, height) || !ideas) {
+    return <AltTextComponent name={"Idea Map"} width={width} height={height} />;
+  }
+  const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
+  const coloredIdeas = applyHighlighting(
+    ideas,
+    highlightingOption,
+    clusterData
+  );
+  console.log(clusterData, ideas);
 
   return (
     <div className={style.solutionMapWrapper}>
@@ -84,11 +165,29 @@ export const SolutionMap = props => {
                 height={height}
               />
               <div>
-                <ButtonGroup minimal={true} className={style.toolBar}>
-                  <Button icon={"zoom-in"} onClick={zoomIn} />
-                  <Button icon={"zoom-out"} onClick={zoomOut} />
-                  <Button icon={"zoom-to-fit"} onClick={resetTransform} />
-                </ButtonGroup>
+                <div className={style.toolBar}>
+                  <ButtonGroup minimal={true} className={""}>
+                    <Button icon={"zoom-in"} onClick={zoomIn} />
+                    <Button icon={"zoom-out"} onClick={zoomOut} />
+                    <Button icon={"zoom-to-fit"} onClick={resetTransform} />
+                    <Select
+                      activeItem={highlightingOption}
+                      items={Object.values(ColorSelection)}
+                      itemRenderer={(item, { handleClick, modifiers }) => (
+                        <MenuItem
+                          active={modifiers.active}
+                          key={item}
+                          text={item}
+                          onClick={handleClick}
+                        />
+                      )}
+                      onItemSelect={item => setHighlighting(item)}
+                      filterable={false}
+                    >
+                      <Button icon={"highlight"} text={highlightingOption} />
+                    </Select>
+                  </ButtonGroup>
+                </div>
                 {hoveredIdea && (
                   <StaticPopover
                     x={mouseX}
@@ -97,37 +196,14 @@ export const SolutionMap = props => {
                   />
                 )}
                 <TransformComponent>
-                  <svg
-                    width={mainWindowWidth(width)}
+                  <IdeaMapSvg
+                    width={width}
                     height={height}
-                    viewBox={
-                      minX +
-                      " " +
-                      minY +
-                      " " +
-                      (xRange + 2 * marginX) +
-                      " " +
-                      (yRange + 2 * marginY)
-                    }
-                    className={style.zoomBox}
-                  >
-                    {ideas.map(idea => {
-                      const [x, y] = idea.coordinates;
-                      return (
-                        <circle
-                          onMouseEnter={() => setHoveredIdea(idea)}
-                          onMouseLeave={() => setHoveredIdea(null)}
-                          className={style.basicCircle}
-                          r={circleRadiusPx(xRange, yRange) / scale}
-                          strokeWidth={strokeWidth(xRange, yRange) / scale}
-                          key={idea.idea}
-                          cx={x + marginX}
-                          cy={y + marginY}
-                          onClick={() => setClickedIdea(idea)}
-                        />
-                      );
-                    })}
-                  </svg>
+                    ideas={coloredIdeas}
+                    onIdeaClick={setClickedIdea}
+                    onIdeaHover={setHoveredIdea}
+                    zoomScale={scale}
+                  />
                 </TransformComponent>
               </div>
             </div>

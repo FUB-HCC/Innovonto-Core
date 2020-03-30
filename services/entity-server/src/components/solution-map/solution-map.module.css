@@ -11,10 +11,11 @@
 .toolBar{
     position: absolute;
     padding: 15px;
+    display: flex;
+    flex-direction: row;
 }
 
 .basicCircle{
-    fill: orangered;
     cursor: pointer;
     stroke: whitesmoke;
 }
