@@ -1,12 +1,24 @@
 import style from "./sidebar.module.css";
 import React from "react";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
+import { Button, Intent } from "@blueprintjs/core";
 
 export const Sidebar = props => {
   const { width, height, subtitle, title, sideBarModules } = props;
-
+  const history = useHistory();
   return (
     <div className={style.sidebar} style={{ width: width, height: height }}>
+      <Button
+        className={style.backButton}
+        minimal={true}
+        icon={"chevron-left"}
+        intent={Intent.SUCCESS}
+        active={true}
+        onClick={() => history.goBack()}
+      >
+        Return
+      </Button>{" "}
       <h1 className={style.largeTitle}>{title}</h1>
       <p className={style.idText}>{subtitle}</p>
       {sideBarModules.map((module, i) => (

@@ -51,9 +51,7 @@ export const SolutionMap = props => {
   const [mouseX, mouseY] = useMousePosition();
   const { ideas, width, height, solutionId, clusterData } = props;
   if (!areDimensionsReasonable(width, height) || !ideas) {
-    return (
-      <AltTextComponent name={"Idea Map"} width={width} height={height} />
-    );
+    return <AltTextComponent name={"Idea Map"} width={width} height={height} />;
   }
   const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
   const coordinateList = ideas.map(idea => idea.coordinates);

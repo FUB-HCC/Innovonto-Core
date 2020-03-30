@@ -9,6 +9,7 @@
 .largeTitle{
     font-size: 30px;
     margin-bottom: 0;
+    margin-top: 5px;
 }
 
 
@@ -23,3 +24,14 @@
 .sideBarSpacer{
     flex-grow: 1;
 }
+
+.backButton{
+    width: 90px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.backButton svg{
+    margin-bottom: 3px;
+}
+
