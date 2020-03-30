@@ -13,7 +13,8 @@ import {
   sparqlProjectListRequest,
   describeEntityRequest,
   describeSessionRequest,
-  describeIdeaRequest, describeUserRequest
+  describeIdeaRequest,
+  describeUserRequest
 } from "./sparql-queries";
 import { frameData } from "./data-framing";
 
@@ -85,7 +86,7 @@ export const requestSolutionData = (id, dispatch) => {
   axios
     .get(requestUrl)
     .then(result => {
-      dispatch(extractSolutionData(result.data));
+      dispatch(extractSolutionData(result.data.results));
     })
     .catch(error => {
       //TODO: make all components redirect to error page in a unified fashion <- input required
@@ -106,7 +107,7 @@ export const requestUserDetailData = (id, dispatch) => {
   let entityUrl = baseUrl + "/entities/users/" + id;
   console.log(entityUrl);
   axios
-    .get(backendServiceBaseUrl,describeUserRequest(entityUrl))
+    .get(backendServiceBaseUrl, describeUserRequest(entityUrl))
     .then(result => {
       dispatch(extractUserDetails(result.data));
     })

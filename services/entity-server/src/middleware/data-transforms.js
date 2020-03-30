@@ -104,22 +104,25 @@ export const sortResources = data => {
   );
 };
 
-export const extractSolutionData = data => ({
-  bindings: data.results.bindings.map(binding => ({
-    idea: binding.idea.value,
-    content: binding.content.value,
-    coordinates: [
-      parseFloat(binding.coordinates.x),
-      parseFloat(binding.coordinates.y)
-    ],
-    clusterLabel: binding.cluster_label,
-    distanceFromCentroid: parseFloat(binding.distance_from_centroid)
-  })),
-  clusters: data.results.clusters.map(cluster => ({
-    clusterLabel: cluster.cluster_label,
-    topConcepts: cluster.top_concepts
-  }))
-});
+export const extractSolutionData = results => {
+  return {
+    bindings: results.bindings.map(binding => ({
+      idea: binding.idea.value,
+      content: binding.content.value,
+      coordinates: [
+        parseFloat(binding.coordinates.x),
+        parseFloat(binding.coordinates.y)
+      ],
+      clusterLabel: binding.cluster_label,
+      distanceFromCentroid: parseFloat(binding.distance_from_centroid),
+      ideaType: binding.ideaType ? binding.ideaType.value : "None"
+    })),
+    clusters: results.clusters.map(cluster => ({
+      clusterLabel: cluster.cluster_label,
+      topConcepts: cluster.top_concepts
+    }))
+  };
+};
 
 function convertPropertyToArray(value) {
   return value instanceof Array ? value : [value];
