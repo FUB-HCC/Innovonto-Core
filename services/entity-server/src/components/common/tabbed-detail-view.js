@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import style from "./tabbed-detail-view.module.css";
 import { Button, Intent, Tabs } from "@blueprintjs/core";
 import PropTypes from "prop-types";
@@ -7,6 +7,7 @@ import React from "react";
 const TabbedDetailView = props => {
   const { title, subtitle, content, tabs, defaultTab } = props;
   const history = useHistory();
+  const { id } = useParams();
   return (
     <div className={style.detailViewContent}>
       <div className={style.largeTitle}>
@@ -25,7 +26,12 @@ const TabbedDetailView = props => {
         <span className={style.idSpan}>{subtitle}</span>
       </div>
       <div className={style.detailViewDescription}>{content}</div>
-      <Tabs id={"detailViewTabs"} defaultSelectedTabId={defaultTab}>
+      <Tabs
+        key={id}
+        id={"detailViewTabs"}
+        defaultSelectedTabId={defaultTab}
+        renderActiveTabPanelOnly={true}
+      >
         {tabs}
       </Tabs>
     </div>
