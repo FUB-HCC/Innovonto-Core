@@ -16,6 +16,7 @@ import adaptiveIdeationSystemsImg from "../../assets/img/adaptive-ideation-syste
 import interactiveConceptValImg from "../../assets/img/interactive-concept-validation.png";
 import inspirationRecommenderImg from "../../assets/img/idea-recommender.png";
 import { bibliography } from "./publications";
+import PropTypes from "prop-types";
 
 export const ResearchView = () => {
   const analyzingIdeationRef = useRef();
@@ -26,6 +27,7 @@ export const ResearchView = () => {
     ["understanding-ideation", understandingIdeationRef],
     ["augmenting-ideation", augmentingIdeationRef]
   ]);
+
   return (
     <div className={style.researchViewWrapper}>
       <PageTitle title={"Research"} />
@@ -150,9 +152,8 @@ export const ResearchView = () => {
   );
 };
 
-//TODO this is bad. Use something like: https://citationstyles.org/
 const buildVenueFrom = entryTags => {
-  var result = "";
+  var result = ", ";
   if (entryTags.booktitle) {
     result += entryTags.booktitle;
   }
@@ -162,7 +163,7 @@ const buildVenueFrom = entryTags => {
   if (entryTags.number) {
     result += "Technical Report " + entryTags.number;
   }
-  return result + "." + entryTags.year;
+  return result + ", " + entryTags.year;
 };
 
 const PublicationList = props => (
@@ -178,18 +179,24 @@ const PublicationList = props => (
     ))}
   </div>
 );
-/*
+
 PublicationList.propTypes = {
-  publications: propTypes.arrayOf(
-    propTypes.shape({
-      entryTags
-      author: propTypes.string.isRequired,
-      title: propTypes.string.isRequired,
-      place: propTypes.string
-    })
-  ).isRequired
+  publications: PropTypes.arrayOf(PropTypes.object).isRequired
 };
-*/
+
+const parseAuthors = authors =>
+  authors
+    .split("and")
+    .map(author => {
+      const regex = / /gi;
+      const [lastName, firstName] = author.replace(regex, "").split(",");
+      return firstName.slice(0, 1) + ". " + lastName;
+    })
+    .reduce((output, author, i, arr) => {
+      if (i === arr.length - 1 && i !== 0) return output + " and " + author;
+      else if (i === 0) return output + author;
+      else return output + ", " + author;
+    }, "");
 
 const Publication = props => {
   const { title, authors, venue, link } = props;
@@ -205,15 +212,22 @@ const Publication = props => {
   }
   return (
     <div className={style.publicationWrapper}>
-      <em>{authors}</em> {titleTag}
+      <em>{parseAuthors(authors)}</em> <br />
+      {titleTag}
       {venue && (
         <>
-          <br />
-          <p>{venue}</p>
+          <span>{venue}</span>
         </>
       )}
     </div>
   );
+};
+
+Publication.propTypes = {
+  title: PropTypes.string.isRequired,
+  authors: PropTypes.string.isRequired,
+  venue: PropTypes.string,
+  link: PropTypes.string
 };
 
 const AnalyzingIdeationText = () => (
