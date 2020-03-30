@@ -187,7 +187,7 @@ export const SearchComponent = props => {
         />
       </ButtonGroup>
       <Divider />
-      <Button minimal={true} text={"export"} />
+      <Button disabled minimal={true} text={"export"} />
     </div>
   );
 
