@@ -49,7 +49,7 @@ const GridItem = props => (
         height: props.height - gridItemHeaderHeight - 2 * gridItemPadding
       }}
     >
-      <p className={style.gridText}>{props.result.description}</p>
+      <p className={style.gridText}>{props.result.content}</p>
     </div>
   </div>
 );

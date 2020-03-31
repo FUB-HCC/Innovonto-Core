@@ -11,10 +11,15 @@ const SearchResultIdea = props => {
     resultNo,
     title,
     icon,
-    rating,
-    refinements,
-    description
+    avgRatingValue,
+    content
   } = props.results[0];
+  var refinements;
+  if(props.results[0].refinements) {
+    refinements = props.results[0].refinements;
+  } else {
+    refinements = [];
+  }
   return (
     <div className={style.resultIdeaWrapper}>
       <div className={style.resultIdeaCounter}>
@@ -23,14 +28,14 @@ const SearchResultIdea = props => {
         </div>
       </div>
       <LargeEntitiyPreview
-        description={description}
+        description={content}
         title={title}
         imgSrc={icon}
         leftContent={
-          rating && (
+          avgRatingValue && (
             <div className={style.resultIdeaRating}>
               <h3>RATING</h3>
-              <StarRating rating={rating} />
+              <StarRating rating={avgRatingValue} />
             </div>
           )
         }

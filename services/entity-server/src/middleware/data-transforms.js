@@ -67,31 +67,35 @@ export const processSession = data => {
   return result;
 };
 
-export const extractSearchResults = data =>
-  data.results.map((result, i) => ({
-    id: result["@id"],
-    resultNo: i + 1,
-    title: result.title,
-    description: result.content,
-    icon: result.icon,
-    refinements: !result.textualRefinement
-      ? []
-      : result.textualRefinement.map(refinement => ({
-          id: refinement["@id"],
-          question: refinement.description,
-          answer: refinement.content
-        })),
-    rating:
-      result.MinMaxRating && result.MinMaxRating.length
-        ? result.MinMaxRating.find(
-            rating => rating.title === "Group Phase Rating"
-          )
-          ? result.MinMaxRating.find(
-              rating => rating.title === "Group Phase Rating"
-            ).ratingValue
-          : null
-        : null
-  }));
+function reduceRatings(idea) {
+  if(!idea.hasOwnProperty("hasReview")) {
+    return 0.0;
+  }
+  let allReviews = convertPropertyToArray(idea.hasReview)
+    .filter((currentReview) => currentReview.hasOwnProperty("@type") && currentReview["@type"] === 'gi2mo:MinMaxRating');
+  let sum = allReviews.reduce((accumulator, currentReview) => {
+    if(currentReview.hasOwnProperty("ratingValue")) {
+      return accumulator + parseFloat(currentReview.ratingValue);
+    } else {
+      throw new Error("Unexpected review");
+    }
+  }, 0.0);
+  let result = parseFloat(sum) / parseFloat(allReviews.length);
+  return result;
+}
+
+export const extractSearchResults = data => {
+  if (data.hasOwnProperty("@graph")) {
+    return data["@graph"].map((currentInputIdea, i) => (
+      {
+        ...extractIdeaDetails(currentInputIdea),
+        resultNo: i + 1,
+        avgRatingValue: reduceRatings(currentInputIdea)
+      }));
+  } else {
+    return [];
+  }
+};
 
 export const extractProjectList = data =>
   data["@graph"].map(ideaContest => ({
@@ -102,11 +106,11 @@ export const extractProjectList = data =>
 
 export const sortResources = data => {
   var dic = new Map();
-  for (var { predicate, object } of data) {
+  for (var {predicate, object} of data) {
     if (dic.has(predicate.value)) {
       dic.get(predicate.value).objects.push(object);
     } else {
-      dic.set(predicate.value, { predicate, objects: [object] });
+      dic.set(predicate.value, {predicate, objects: [object]});
     }
   }
   return Array.from(dic.values()).sort((a, b) =>
@@ -163,17 +167,17 @@ export const extractIdeaDetails = data => {
     id: data["@id"],
     hasReview: propertiesToArray.hasReview
       ? propertiesToArray.hasReview.map(review => ({
-          ...review
-        }))
+        ...review
+      }))
       : null,
     refinements: propertiesToArray.hasTextualRefinement
       ? propertiesToArray.hasTextualRefinement.map(refinement => ({
-          id: refinement["@id"],
-          question: refinement.description,
-          answer: refinement.contentGerman
-            ? refinement.contentGerman["@value"]
-            : refinement.content
-        }))
+        id: refinement["@id"],
+        question: refinement.description,
+        answer: refinement.contentGerman
+          ? refinement.contentGerman["@value"]
+          : refinement.content
+      }))
       : null,
     creator: propertiesToArray.creator
       ? propertiesToArray.creator

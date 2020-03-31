@@ -14,7 +14,8 @@ import {
   describeEntityRequest,
   describeSessionRequest,
   describeIdeaRequest,
-  describeUserRequest
+  describeUserRequest,
+  fulltextSearchRequest
 } from "./sparql-queries";
 import { frameData } from "./data-framing";
 
@@ -23,19 +24,28 @@ const backendServiceBaseUrl =
 
 const baseUrl = "https://innovonto-core.imp.fu-berlin.de";
 
+//TODO frame.
 export const requestSearchData = (requestValue, dispatch) => {
   dispatch({
     type: SearchActionTypes.SEARCH_REQUEST_SUBMIT,
     value: requestValue
   });
   axios
-    //TODO include search
-    .get(process.env.PUBLIC_URL + "/data/mockdata-search.json")
+    .get(backendServiceBaseUrl, fulltextSearchRequest(requestValue))
     .then(result => {
-      dispatch({
-        type: SearchActionTypes.RESULTS_RECEIVED,
-        value: extractSearchResults(result.data)
-      });
+      frameData(result.data, "gi2mo:Idea")
+        .then(data => {
+          dispatch({
+            type: SearchActionTypes.RESULTS_RECEIVED,
+            value: extractSearchResults(data)
+          });
+        })
+        .catch(error => {
+          dispatch({
+            type: SearchActionTypes.REQUEST_ERROR,
+            value: error
+          });
+        });
     })
     .catch(error => {
       dispatch({
@@ -111,7 +121,6 @@ export const requestIdeaDetailData = (ideaUrl, dispatch, errorDispatch) => {
 
 export const requestUserDetailData = (id, dispatch, errorDispatch) => {
   let entityUrl = baseUrl + "/entities/users/" + id;
-  console.log(entityUrl);
   axios
     .get(backendServiceBaseUrl, describeUserRequest(entityUrl))
     .then(result => {

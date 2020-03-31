@@ -8,6 +8,8 @@ export const describeSessionRequest = entityUrl =>
   coreServerRequest(describeSession(entityUrl));
 export const describeUserRequest = entityUrl =>
   coreServerRequest(describeUser(entityUrl));
+export const fulltextSearchRequest = (searchText) =>
+  coreServerRequest(fallbackSearchQuery(searchText));
 
 export const prefix = {
   rdf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -127,3 +129,35 @@ const sparqlProjectList = () => `
     GROUP BY ?project
     }
 }`;
+
+const fallbackSearchQuery = (searchText) =>
+  `
+  PREFIX idea: <https://innovonto-core.imp.fu-berlin.de/entities/ideas/>  
+  PREFIX gi2mo: <http://purl.org/gi2mo/ns#>  
+  
+  DESCRIBE ?idea
+  WHERE { 
+      ?idea a gi2mo:Idea;
+         gi2mo:content ?content
+      FILTER regex(?content, "` + searchText + `", "i")
+  }`;
+
+//TODO this does not work at the moment, presumably due to misconfiguration of the triplestore.
+const fulltextSearchQuery = (searchText, limit = 10) =>
+  `
+  PREFIX idea: <https://innovonto-core.imp.fu-berlin.de/entities/ideas/>
+  PREFIX text: <http://jena.apache.org/text#>
+  PREFIX id: <http://identifiers.org/>
+  PREFIX gi2mo: <http://purl.org/gi2mo/ns#>
+  DESCRIBE ?idea
+  WHERE {
+  {
+      ?idea text:query (gi2mo:content '` + searchText + `').
+      ?idea a gi2mo:Idea.
+    } UNION {
+      ?i text:query (gi2mo:content '` + searchText + `').
+      ?idea ?p ?i.
+      ?idea a gi2mo:Idea.
+    }
+  }
+LIMIT ` + limit;

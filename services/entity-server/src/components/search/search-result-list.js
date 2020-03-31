@@ -12,7 +12,7 @@ const SearchResultList = props => (
     {props.results.map(result => (
       <div className={style.listItem} key={result.id}>
         <span className={style.listText}>
-          {clipText(result.description, props.width, nLinesShown)}
+          {clipText(result.content, props.width, nLinesShown)}
         </span>
       </div>
     ))}
