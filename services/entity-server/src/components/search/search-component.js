@@ -128,7 +128,7 @@ export const SearchComponent = props => {
 
   if (!areDimensionsReasonable(width, height)) {
     return (
-      <AltTextComponent name={"Session Graph"} width={width} height={height} />
+      <AltTextComponent name={"Search Component"} width={width} height={height} />
     );
   }
   const innerHeight = height - headerHeight - footerHeight;

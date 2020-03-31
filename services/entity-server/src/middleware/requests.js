@@ -29,6 +29,7 @@ export const requestSearchData = (requestValue, dispatch) => {
     value: requestValue
   });
   axios
+    //TODO include search
     .get(process.env.PUBLIC_URL + "/data/mockdata-search.json")
     .then(result => {
       dispatch({
@@ -77,9 +78,9 @@ export const requestProjectListData = (dispatch, errorDispatch) => {
 export const requestSolutionData = (id, dispatch, errorDispatch) => {
   var requestUrl;
   if (id === "i2m-TCO") {
-    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map.json";
+    requestUrl = process.env.PUBLIC_URL + "/data/cached/idea-map-tco.json";
   } else if (id === "i2m-bionic-radar") {
-    requestUrl = process.env.PUBLIC_URL + "/data/mockdata-solution-map-2.json";
+    requestUrl = process.env.PUBLIC_URL + "/data/cached/idea-map-bionic-radar.json";
   } else {
     requestUrl = "";
     //TODO: build URL string from id here
