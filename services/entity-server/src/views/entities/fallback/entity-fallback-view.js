@@ -35,10 +35,17 @@ const Pair = ({ predicate, objects }) => {
 
 export const EntityFallbackView = () => {
   const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
   const entityId = urlToEntity(window.location.href);
-  useEffect(() => requestGenericEntity(entityId, setData), [entityId]);
+  useEffect(() => requestGenericEntity(entityId, setData, setError), [
+    entityId
+  ]);
   return (
-    <CenteredLayout pageTitle={"Entity Details"} isLoading={!data}>
+    <CenteredLayout
+      pageTitle={"Entity Details"}
+      isLoading={!data}
+      error={error}
+    >
       <h2>{entityId}</h2>
       <table className="bp3-html-table">
         <thead>

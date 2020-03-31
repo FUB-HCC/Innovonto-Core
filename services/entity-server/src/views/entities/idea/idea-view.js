@@ -10,13 +10,20 @@ import { CenteredLayout } from "../../../components/common/page-layouts";
 
 export const IdeaView = () => {
   const [ideaData, setIdeaData] = useState(null);
+  const [error, setError] = useState(null);
   const ideaUrl = "/entities/ideas/" + useParams().id;
-  useEffect(() => requestIdeaDetailData(ideaUrl, setIdeaData), [
+  useEffect(() => requestIdeaDetailData(ideaUrl, setIdeaData, setError), [
     ideaUrl,
     setIdeaData
   ]);
-  if (!ideaData) {
-    return <CenteredLayout isLoading={true} pageTitle={"IdeaDetails"} />;
+  if (!ideaData || error) {
+    return (
+      <CenteredLayout
+        isLoading={true}
+        pageTitle={"Idea Details"}
+        error={error}
+      />
+    );
   }
   const { title, content } = ideaData;
   return (

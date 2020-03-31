@@ -10,7 +10,8 @@ import { CenteredLayout } from "../../components/common/page-layouts";
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
-  useEffect(() => requestProjectListData(setProjectList), []);
+  const [error, setError] = useState(null);
+  useEffect(() => requestProjectListData(setProjectList, setError), []);
   var filteredProjects = projectList;
   if (searchValue) {
     filteredProjects = projectList
@@ -22,7 +23,11 @@ export const DataView = () => {
       );
   }
   return (
-    <CenteredLayout pageTitle={"Data"} isLoading={projectList.length < 1}>
+    <CenteredLayout
+      pageTitle={"Data"}
+      isLoading={projectList.length < 1}
+      error={error}
+    >
       <h1 className={style.largeTitle}>Search</h1>
       <InputGroup
         className={style.projectSearchInput}

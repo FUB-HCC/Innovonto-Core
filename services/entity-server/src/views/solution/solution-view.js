@@ -1,4 +1,3 @@
-import style from "./solution-view.module.css";
 import React, { useEffect, useState } from "react";
 import { requestSolutionData } from "../../middleware/requests";
 import SolutionMap from "../../components/solution-map/solution-map";
@@ -14,7 +13,9 @@ const sideBarWidth = 330;
 export const SolutionView = () => {
   let { id } = useParams();
   const [solutionData, setSolutionData] = useState({});
-  useEffect(() => requestSolutionData(id, setSolutionData), [id]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => requestSolutionData(id, setSolutionData, setError), [id]);
   const [windowWidth, windowHeight] = useWindowSize();
   const solutionDots = solutionData.bindings ? solutionData.bindings : [];
   const clusterData = solutionData.clusters ? solutionData.clusters : [];
@@ -23,6 +24,7 @@ export const SolutionView = () => {
       sideBarWidth={sideBarWidth}
       isLoading={solutionDots.length < 1}
       pageTitle={"Idea Map"}
+      error={error}
     >
       <SolutionMap
         sideBarWidth={sideBarWidth}
