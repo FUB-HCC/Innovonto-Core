@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import style from "./session-view.module.css";
 import SessionGraph from "../../../components/session-graph/session-graph";
 import {
-  AltTextComponent,
-  getNameFromUri, urlToEntity,
+  getNameFromUri,
+  urlToEntity,
   useWindowSize
 } from "../../../components/utils";
 import { requestSessionData } from "../../../middleware/requests";
@@ -16,6 +16,7 @@ import {
   SubmissionMethod
 } from "../../../components/idea/info-panel";
 import { Button, ButtonGroup, Intent } from "@blueprintjs/core";
+import { FullScreenSideBarLayout } from "../../../components/common/page-layouts";
 
 const sideBarWidth = 330;
 const sideBarHeight = height => height - headerHeight - footerHeight;
@@ -30,22 +31,27 @@ const SessionRadio = {
 const SessionView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
   const [sessionData, setSessionData] = useState(null);
+  const [error, setError] = useState(null);
   const [selectedViz, setSelectedViz] = useState(SessionRadio.TIMELINE);
   const entityId = urlToEntity(window.location.href);
-  useEffect(() => requestSessionData(entityId, setSessionData), [entityId]);
-  if (!sessionData) {
+  useEffect(() => requestSessionData(entityId, setSessionData, setError), [
+    entityId
+  ]);
+  if (!sessionData || error) {
     return (
-      <AltTextComponent
-        name={"Solution Map"}
-        width={windowWidth}
-        height={windowHeight}
+      <FullScreenSideBarLayout
+        sideBarWidth={sideBarWidth}
+        pageTitle={"Session View"}
+        isLoading={true}
+        error={error}
       />
     );
   }
-  //TODO: built unified loading behaviour
-
   return (
-    <div className={style.sessionPageWrapper}>
+    <FullScreenSideBarLayout
+      sideBarWidth={sideBarWidth}
+      pageTitle={"Session View"}
+    >
       <Sidebar
         width={sideBarWidth}
         height={sideBarHeight(windowHeight)}
@@ -75,7 +81,7 @@ const SessionView = () => {
         />
       )}
       {selectedViz === SessionRadio.TREE && <SessionTree />}
-    </div>
+    </FullScreenSideBarLayout>
   );
 };
 

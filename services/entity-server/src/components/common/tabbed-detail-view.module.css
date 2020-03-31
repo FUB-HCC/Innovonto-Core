@@ -1,13 +1,3 @@
-.detailViewContent{
-    min-height: 94vh;
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
 .largeTitle{
     font-size: 25px;
     margin-top: 25px;

@@ -2,7 +2,8 @@
   "head": {
     "vars": [
       "idea",
-      "content"
+      "content",
+      "ideaType"
     ]
   },
   "results": {
@@ -16,12 +17,16 @@
           "type": "literal",
           "value": "as a Whiteboard-Screen on a Meeting room wall, so that within open working places glass walls can be used and collaboration on touch-screens-glass-walls"
         },
-        "coordinates": {
-          "x": "-0.74713844",
-          "y": "-9.446201"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09102752651819103"
+        "coordinates": {
+          "x": "-2.010919",
+          "y": "6.6125236"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.09170356"
       },
       {
         "idea": {
@@ -32,12 +37,16 @@
           "type": "literal",
           "value": "It might be interesting for intelligent Packaging to Control the Transportation, the storage and the condition of the packed products"
         },
-        "coordinates": {
-          "x": "-2.6548061",
-          "y": "-7.529914"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09771120369387767"
+        "coordinates": {
+          "x": "0.12941833",
+          "y": "8.228755"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.10173576"
       },
       {
         "idea": {
@@ -48,12 +57,16 @@
           "type": "literal",
           "value": "Could receive or send data via any surface of your car if you need a stronger signal.\r\n            you could use the car-window to receive GPS for example."
         },
-        "coordinates": {
-          "x": "3.0311115",
-          "y": "-6.336158"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08101280687597295"
+        "coordinates": {
+          "x": "-0.33838183",
+          "y": "4.129126"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.078805305"
       },
       {
         "idea": {
@@ -64,12 +77,16 @@
           "type": "literal",
           "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
         },
-        "coordinates": {
-          "x": "4.1012654",
-          "y": "-14.989479"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "7",
-        "distance_from_centroid": "0.13750347639056434"
+        "coordinates": {
+          "x": "-4.6127543",
+          "y": "-2.9379354"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.13108544"
       },
       {
         "idea": {
@@ -80,12 +97,16 @@
           "type": "literal",
           "value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table"
         },
-        "coordinates": {
-          "x": "0.82747537",
-          "y": "-4.52069"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09873426416534853"
+        "coordinates": {
+          "x": "2.0216806",
+          "y": "4.508302"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.09883851"
       },
       {
         "idea": {
@@ -96,12 +117,16 @@
           "type": "literal",
           "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
         },
-        "coordinates": {
-          "x": "3.0098462",
-          "y": "-2.7591524"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "14",
-        "distance_from_centroid": "0.11286798291027914"
+        "coordinates": {
+          "x": "1.6332623",
+          "y": "-0.09404574"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.103330225"
       },
       {
         "idea": {
@@ -112,12 +137,16 @@
           "type": "literal",
           "value": "coating the back of cell phone with TCO - and whereever you are and what card you need it appears on the back of the cell phone. Like membership cards, transportation ticket, without looking for the right one."
         },
-        "coordinates": {
-          "x": "1.7457714",
-          "y": "-7.3429575"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.07951314709230588"
+        "coordinates": {
+          "x": "0.36537206",
+          "y": "4.355903"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.07709199"
       },
       {
         "idea": {
@@ -128,12 +157,16 @@
           "type": "literal",
           "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
         },
-        "coordinates": {
-          "x": "6.210579",
-          "y": "-11.805558"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.12863081468786736"
+        "coordinates": {
+          "x": "-6.1781735",
+          "y": "1.2520658"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.12397209"
       },
       {
         "idea": {
@@ -144,12 +177,16 @@
           "type": "literal",
           "value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by connecting TCO treated windows to the alarm system."
         },
-        "coordinates": {
-          "x": "-1.555179",
-          "y": "-11.038899"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10807842357160588"
+        "coordinates": {
+          "x": "3.9368691",
+          "y": "3.7306492"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.10756149"
       },
       {
         "idea": {
@@ -160,12 +197,16 @@
           "type": "literal",
           "value": "\"Best before\" is history. The TCO-material can indicate whether a food is still good or should not be eaten anymore. The material changes its color or indicated a fouled food by a caution sign."
         },
-        "coordinates": {
-          "x": "-3.6748168",
-          "y": "-8.118739"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.12759962196042798"
+        "coordinates": {
+          "x": "-1.224564",
+          "y": "9.428535"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.13564086"
       },
       {
         "idea": {
@@ -176,28 +217,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "2.0081186",
-          "y": "1.0803876"
+          "x": "5.1527963",
+          "y": "-1.7002903"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.1469695356050814"
-      },
-      {
-        "idea": {
-          "type": "uri",
-          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/1ea205f9-85e0-4cfb-8efb-beee47acc7f7"
-        },
-        "content": {
-          "type": "literal",
-          "value": "wdfafd"
-        },
-        "coordinates": {
-          "x": "-5.4024687",
-          "y": "-7.4358053"
-        },
-        "cluster_label": "12",
-        "distance_from_centroid": "0.2383347956095889"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -208,12 +237,16 @@
           "type": "literal",
           "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
         },
-        "coordinates": {
-          "x": "3.0098493",
-          "y": "-2.7591472"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "14",
-        "distance_from_centroid": "0.11286798291027914"
+        "coordinates": {
+          "x": "1.6331784",
+          "y": "-0.09475271"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.103330225"
       },
       {
         "idea": {
@@ -224,12 +257,16 @@
           "type": "literal",
           "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant.\n\n                    Plantform – Plattform für alles Stakeholder (Agrarimdustrie, Community, Stadtversorgung)"
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "6.520588",
-          "y": "-4.517997"
+          "x": "5.230203",
+          "y": "6.2897053"
         },
         "cluster_label": "0",
-        "distance_from_centroid": "0.1108675490387673"
+        "distance_from_centroid": "0.1060758"
       },
       {
         "idea": {
@@ -240,12 +277,16 @@
           "type": "literal",
           "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
         },
-        "coordinates": {
-          "x": "6.0361958",
-          "y": "-1.7997007"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "8",
-        "distance_from_centroid": "0.12366091595494498"
+        "coordinates": {
+          "x": "0.975449",
+          "y": "-3.058008"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.11949434"
       },
       {
         "idea": {
@@ -256,12 +297,16 @@
           "type": "literal",
           "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
         },
-        "coordinates": {
-          "x": "6.148058",
-          "y": "-11.583648"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.12863081468786736"
+        "coordinates": {
+          "x": "-6.438612",
+          "y": "1.4035169"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.12397209"
       },
       {
         "idea": {
@@ -272,12 +317,16 @@
           "type": "literal",
           "value": "using it for the generation of solar energy, i.e. by covering house walls and roofs"
         },
-        "coordinates": {
-          "x": "-0.08664331",
-          "y": "-10.218363"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.11412924200844153"
+        "coordinates": {
+          "x": "-3.5952425",
+          "y": "6.1894484"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.11865256"
       },
       {
         "idea": {
@@ -288,12 +337,16 @@
           "type": "literal",
           "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
         },
-        "coordinates": {
-          "x": "9.45816",
-          "y": "-10.685871"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "9",
-        "distance_from_centroid": "0.13235076085100403"
+        "coordinates": {
+          "x": "7.348901",
+          "y": "2.527989"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.1329652"
       },
       {
         "idea": {
@@ -304,12 +357,16 @@
           "type": "literal",
           "value": "TCO in combination with a Electro-wetting display (EWD)"
         },
-        "coordinates": {
-          "x": "-4.452443",
-          "y": "-5.8479877"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "12",
-        "distance_from_centroid": "0.15225824564195614"
+        "coordinates": {
+          "x": "0.9961742",
+          "y": "10.160361"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.16191797"
       },
       {
         "idea": {
@@ -320,12 +377,16 @@
           "type": "literal",
           "value": "A solar panel connected to a device (Laptop, iPad etc) is covered with a touch sensitive TCO foil. While generating energy the transparent foil gives the product the keyboard functionality."
         },
-        "coordinates": {
-          "x": "2.8769016",
-          "y": "-9.745242"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.08809007490770211"
+        "coordinates": {
+          "x": "-3.342582",
+          "y": "3.4964128"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.08482751"
       },
       {
         "idea": {
@@ -336,12 +397,16 @@
           "type": "literal",
           "value": "Tables at a restaurant can be TCO-applied to make a smart ordering board out of it."
         },
-        "coordinates": {
-          "x": "0.39755073",
-          "y": "-5.375993"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.0977664192311112"
+        "coordinates": {
+          "x": "1.5213792",
+          "y": "5.329586"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.10153285"
       },
       {
         "idea": {
@@ -352,12 +417,16 @@
           "type": "literal",
           "value": "With the help of TCO, simple measurements can be carried out in urban areas that would otherwise require more complex installations. The frequency of use can be measured by contact on roads, park benches, bicycle stations, bus stops, so that one knows more about the requirements and necessities in urban space."
         },
-        "coordinates": {
-          "x": "3.437917",
-          "y": "-7.3849607"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.0908503432711956"
+        "coordinates": {
+          "x": "-1.7767323",
+          "y": "4.126823"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.088318124"
       },
       {
         "idea": {
@@ -368,12 +437,16 @@
           "type": "literal",
           "value": "TCO is covering the fridge door, giving information about expiry dates, contents, use of energy, temperature and other useful things."
         },
-        "coordinates": {
-          "x": "-1.076579",
-          "y": "-5.6369762"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.10404544831272608"
+        "coordinates": {
+          "x": "-4.081706",
+          "y": "2.0797744"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.10333561"
       },
       {
         "idea": {
@@ -384,12 +457,16 @@
           "type": "literal",
           "value": "TCO can take advertising to the next level. Surfaces can be covered with TCO and any time be used as a screen/display to show content in the right moment for the right people (e.g. if connected to persona data). without having to build big inflexible displays or billboards existing buildings / older constructions can be \"renewed\" with TCO and used."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
+        },
         "coordinates": {
-          "x": "3.0223916",
-          "y": "-8.157592"
+          "x": "-1.111523",
+          "y": "2.2829998"
         },
         "cluster_label": "3",
-        "distance_from_centroid": "0.09420570334706095"
+        "distance_from_centroid": "0.087831214"
       },
       {
         "idea": {
@@ -400,12 +477,16 @@
           "type": "literal",
           "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
         },
-        "coordinates": {
-          "x": "7.3978705",
-          "y": "-7.33639"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "4",
-        "distance_from_centroid": "0.12087496161358738"
+        "coordinates": {
+          "x": "-1.6038662",
+          "y": "-0.7866342"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.11514734"
       },
       {
         "idea": {
@@ -416,28 +497,16 @@
           "type": "literal",
           "value": "Tables at restaurants could be upgraded with a TCO interface foil. Menu cards and other prints could easily be placed and swapped under the foil layer."
         },
-        "coordinates": {
-          "x": "1.648183",
-          "y": "-5.74688"
-        },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08853740102511722"
-      },
-      {
-        "idea": {
-          "type": "uri",
-          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/452b7d50-a3bd-4df3-ac09-6521d7c316cf"
-        },
-        "content": {
+        "ideaType": {
           "type": "literal",
-          "value": "Window with a heat-sensitive material, that lights-up if a person is in the room during a fire"
+          "value": "Idea"
         },
         "coordinates": {
-          "x": "-1.7993847",
-          "y": "-9.587416"
+          "x": "1.2017233",
+          "y": "3.3379025"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10611199116839774"
+        "cluster_label": "2",
+        "distance_from_centroid": "0.08470942"
       },
       {
         "idea": {
@@ -448,12 +517,16 @@
           "type": "literal",
           "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
         },
-        "coordinates": {
-          "x": "6.121027",
-          "y": "-11.810886"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.12863081468786736"
+        "coordinates": {
+          "x": "-6.30725",
+          "y": "1.477081"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.12397209"
       },
       {
         "idea": {
@@ -464,12 +537,16 @@
           "type": "literal",
           "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
         },
-        "coordinates": {
-          "x": "9.457716",
-          "y": "-10.68549"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "9",
-        "distance_from_centroid": "0.13235076085100403"
+        "coordinates": {
+          "x": "7.3489003",
+          "y": "2.527989"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.1329652"
       },
       {
         "idea": {
@@ -480,12 +557,16 @@
           "type": "literal",
           "value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
         },
-        "coordinates": {
-          "x": "3.4564185",
-          "y": "-11.4867735"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.09983394230334881"
+        "coordinates": {
+          "x": "2.9845273",
+          "y": "1.7031026"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.09755159"
       },
       {
         "idea": {
@@ -496,12 +577,16 @@
           "type": "literal",
           "value": "make fashion individual: you could change the color of your clothes by touch."
         },
-        "coordinates": {
-          "x": "-0.116095856",
-          "y": "-8.162474"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09319741833791076"
+        "coordinates": {
+          "x": "-1.0186864",
+          "y": "6.2244883"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.09422585"
       },
       {
         "idea": {
@@ -512,12 +597,16 @@
           "type": "literal",
           "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
         },
-        "coordinates": {
-          "x": "7.3978705",
-          "y": "-7.33639"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "4",
-        "distance_from_centroid": "0.12087496161358738"
+        "coordinates": {
+          "x": "-1.6018431",
+          "y": "-0.78584826"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.11514734"
       },
       {
         "idea": {
@@ -528,12 +617,16 @@
           "type": "literal",
           "value": "Use it for the car traffic. Put it on traffic lights to avoid problems when the electricity breaks down, as the lights can be controlled remotely. also put it on the asphalt esp at crossings etc to steer the traffic if necessary with visual signs e.g. this lane goes left, this goes right et.c.."
         },
-        "coordinates": {
-          "x": "4.1844487",
-          "y": "-6.5964203"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08487157353810779"
+        "coordinates": {
+          "x": "-1.0985296",
+          "y": "3.6516678"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.077924564"
       },
       {
         "idea": {
@@ -544,12 +637,16 @@
           "type": "literal",
           "value": "Many burglars break into retail stores, offices, or houses by crashing a window. This could be prevented by putting electricity on the glass wall, as soon as the owner is no longer at home, or the shop is closed, or best when the alarm is set up. This way, if a burgler tries to break the glass-window, he/she gets shocked by electricity."
         },
-        "coordinates": {
-          "x": "-1.5553856",
-          "y": "-11.007135"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10734851143180543"
+        "coordinates": {
+          "x": "3.938136",
+          "y": "3.7350304"
+        },
+        "cluster_label": "14",
+        "distance_from_centroid": "0.106904194"
       },
       {
         "idea": {
@@ -560,12 +657,16 @@
           "type": "literal",
           "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
         },
-        "coordinates": {
-          "x": "6.310419",
-          "y": "-1.7338442"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "8",
-        "distance_from_centroid": "0.12366091595494498"
+        "coordinates": {
+          "x": "0.6267983",
+          "y": "-3.0641365"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.11949434"
       },
       {
         "idea": {
@@ -576,12 +677,16 @@
           "type": "literal",
           "value": "glass-walls on stores could have advertisment on them. this would have the benefit that it would Need to be printed and put on the glass or no TV would be required, which usually does not look that nice on a storefront."
         },
-        "coordinates": {
-          "x": "3.4359822",
-          "y": "-5.0036097"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08296035527314592"
+        "coordinates": {
+          "x": "0.48870397",
+          "y": "1.7433947"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.07888536"
       },
       {
         "idea": {
@@ -592,12 +697,16 @@
           "type": "literal",
           "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n                    could be attached to existing facilities…"
         },
-        "coordinates": {
-          "x": "-1.511417",
-          "y": "-2.6813016"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "13",
-        "distance_from_centroid": "0.1178283010091279"
+        "coordinates": {
+          "x": "3.989644",
+          "y": "9.13952"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.116049044"
       },
       {
         "idea": {
@@ -608,12 +717,16 @@
           "type": "literal",
           "value": "Well-known board games such as chess, Monopoly or Settlers are covered with a TCO surface and thus offer new playing possibilities. Game scores can be saved and additional functions such as a digital avatar can be loaded i.e. onto the smartphone."
         },
-        "coordinates": {
-          "x": "1.6000502",
-          "y": "-6.240698"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08447339003372234"
+        "coordinates": {
+          "x": "0.8068648",
+          "y": "3.9745588"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.08227173"
       },
       {
         "idea": {
@@ -624,12 +737,16 @@
           "type": "literal",
           "value": "A TCO foil covering a traffic light can be activated and show simple information in the off state off the traffic light."
         },
-        "coordinates": {
-          "x": "4.073247",
-          "y": "-8.37657"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08770076696366592"
+        "coordinates": {
+          "x": "-2.17581",
+          "y": "2.620509"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.0827335"
       },
       {
         "idea": {
@@ -640,12 +757,16 @@
           "type": "literal",
           "value": "TCO covered chair and desk in the office. It could remind you via vibration or sound to stand up and go for a walk, get something to drink, correct your seating position etc."
         },
-        "coordinates": {
-          "x": "0.72576296",
-          "y": "-6.7952237"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08398760545792312"
+        "coordinates": {
+          "x": "0.094540045",
+          "y": "5.3081527"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.07900883"
       },
       {
         "idea": {
@@ -656,12 +777,16 @@
           "type": "literal",
           "value": "TCO-tattoos are THE perfect solution for indecisive people, that cannot commit to have a tattoo all days for every day. TCO-tattoos can be \"switched off\" and the tattoo will not be seen for as long as the carrier wants to. Same applies to \"switched on\""
         },
-        "coordinates": {
-          "x": "-2.2811253",
-          "y": "-8.675203"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10496703523984667"
+        "coordinates": {
+          "x": "-1.2115002",
+          "y": "7.9562373"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.10943347"
       },
       {
         "idea": {
@@ -672,12 +797,16 @@
           "type": "literal",
           "value": "helps you to mark, rate and finde important documents in you analog folder.\r\n            this technology combines documents and certificates made of paper with digital advantages."
         },
-        "coordinates": {
-          "x": "-3.067862",
-          "y": "-6.109373"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.12634304570134983"
+        "coordinates": {
+          "x": "-0.011970241",
+          "y": "9.896295"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.13621397"
       },
       {
         "idea": {
@@ -688,12 +817,16 @@
           "type": "literal",
           "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\r\n            \r\n            could be attached to existing facilities…"
         },
-        "coordinates": {
-          "x": "-1.5192682",
-          "y": "-2.6824427"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "13",
-        "distance_from_centroid": "0.11803192928565934"
+        "coordinates": {
+          "x": "3.9855273",
+          "y": "9.14305"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.116515025"
       },
       {
         "idea": {
@@ -704,12 +837,16 @@
           "type": "literal",
           "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
         },
-        "coordinates": {
-          "x": "3.5242693",
-          "y": "-15.054652"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "7",
-        "distance_from_centroid": "0.13750347639056434"
+        "coordinates": {
+          "x": "-4.84254",
+          "y": "-3.1743827"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.13108544"
       },
       {
         "idea": {
@@ -718,14 +855,18 @@
         },
         "content": {
           "type": "literal",
-          "value": "Responsive Surface - Temperature responsive surface in construction / building / real estate\r\n            Oberflächen Anpassung in Abhängigkeit zum Klima (Sonne / Verdunklung oder Reflektiv; Temperaturabhängige Farbgestaltung), sonstigen Witterungs- oder Tageszeitabhängigkeit Ambiente-Gestaltungsoptionen"
+          "value": "Responsive Surface - Temperature responsive surface in construction / building / real estate\r\n            Surface adaptation depending on the climate (sun / blackout or reflective; temperature-dependent colour scheme), other weather or time of day dependent ambient design options"
+        },
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
         "coordinates": {
-          "x": "-1.3764342",
-          "y": "-7.006755"
+          "x": "-2.9659903",
+          "y": "5.640071"
         },
-        "cluster_label": "6",
-        "distance_from_centroid": "0.10065751181449706"
+        "cluster_label": "8",
+        "distance_from_centroid": "0.09644966"
       },
       {
         "idea": {
@@ -736,12 +877,16 @@
           "type": "literal",
           "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "6.9078107",
-          "y": "-4.4619617"
+          "x": "5.6262736",
+          "y": "6.37539"
         },
         "cluster_label": "0",
-        "distance_from_centroid": "0.1198755826128215"
+        "distance_from_centroid": "0.113076426"
       },
       {
         "idea": {
@@ -752,12 +897,16 @@
           "type": "literal",
           "value": "put it on the wall inside the house/Building, so that I can Change the Color of the wall whenever I want. Like this week I want to have my bedroom in yellow, and next week in blue."
         },
-        "coordinates": {
-          "x": "-1.034405",
-          "y": "-8.395895"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09914740086149806"
+        "coordinates": {
+          "x": "-1.0680084",
+          "y": "6.986475"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.10127793"
       },
       {
         "idea": {
@@ -768,12 +917,16 @@
           "type": "literal",
           "value": "Bikes and other vehicles can light up in the dark for better sefety and visibility."
         },
-        "coordinates": {
-          "x": "-3.1622257",
-          "y": "-9.503498"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10923564218234626"
+        "coordinates": {
+          "x": "-2.3054867",
+          "y": "8.349677"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.11360412"
       },
       {
         "idea": {
@@ -784,12 +937,16 @@
           "type": "literal",
           "value": "A small thin super transparent RFID tag (Radio-frequency identification) build with TCO technology."
         },
-        "coordinates": {
-          "x": "1.8178997",
-          "y": "-8.516749"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.09296404253556534"
+        "coordinates": {
+          "x": "1.7165759",
+          "y": "6.888063"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.095056936"
       },
       {
         "idea": {
@@ -800,12 +957,16 @@
           "type": "literal",
           "value": "instead of wearing watches or using other devices TCO can be used as a second skin. I.e. all functions of the apple watch could be used directly on the skin, by that individuals can decide where to locate the TCO. Biodata may also be recorded and analyzed. If combined with other technologies one could put TCO foil on a certain part of the body to get information about one's health in that area"
         },
-        "coordinates": {
-          "x": "2.398287",
-          "y": "-6.949"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.085438680695828"
+        "coordinates": {
+          "x": "-0.12867016",
+          "y": "3.0556676"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.07712497"
       },
       {
         "idea": {
@@ -816,12 +977,16 @@
           "type": "literal",
           "value": "Every piece of cloth that has the TCO technology in it is changing its color when it needs to be washed. Therefore the person knows by one look which clothes need to be washed and which can be used again."
         },
-        "coordinates": {
-          "x": "0.6560572",
-          "y": "-8.185027"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08376852512382632"
+        "coordinates": {
+          "x": "-1.3136578",
+          "y": "5.4152446"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.08112105"
       },
       {
         "idea": {
@@ -832,12 +997,16 @@
           "type": "literal",
           "value": "TCO is covering a transparent fridge door, giving an indication (LEDs) about expired food, contents, use of energy, temperature, and other useful information. In the same time, it has touch sensitive capabilities."
         },
-        "coordinates": {
-          "x": "4.214126",
-          "y": "-9.514937"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.09613379097305022"
+        "coordinates": {
+          "x": "-3.918109",
+          "y": "2.0242462"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.08980827"
       },
       {
         "idea": {
@@ -849,11 +1018,11 @@
           "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
         },
         "coordinates": {
-          "x": "6.0046325",
-          "y": "-1.6563559"
+          "x": "0.7781913",
+          "y": "-3.2367413"
         },
-        "cluster_label": "8",
-        "distance_from_centroid": "0.12366091595494498"
+        "cluster_label": "9",
+        "distance_from_centroid": "0.11949434"
       },
       {
         "idea": {
@@ -864,12 +1033,16 @@
           "type": "literal",
           "value": "Make stools and office-chairs better for your health and apply TCO!\r\n            Transparent patches measure the pressure you apply to the surface of your chair and corrects your sitting posture."
         },
-        "coordinates": {
-          "x": "-0.3357038",
-          "y": "-6.9954486"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.08793332922179616"
+        "coordinates": {
+          "x": "-0.17692652",
+          "y": "6.047545"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.08908249"
       },
       {
         "idea": {
@@ -880,12 +1053,16 @@
           "type": "literal",
           "value": "Automatically counting traffic in cities to help plan routes during rush hour and be able to prevent traffic jams. The data sent from the street can be sent to cars to alert the driver to maybe take a different route."
         },
-        "coordinates": {
-          "x": "3.7405555",
-          "y": "-6.513382"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.084764513522404"
+        "coordinates": {
+          "x": "-0.909995",
+          "y": "3.954241"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.07992992"
       },
       {
         "idea": {
@@ -896,28 +1073,16 @@
           "type": "literal",
           "value": "Foil that is wrapped around a pipe, to measure the flow velocity of the fluid inside. Foil is acting as sender as well as receiver for signals sent through pipe wall and fluid. The flow value is displayed by the foil as well."
         },
-        "coordinates": {
-          "x": "-2.4058197",
-          "y": "-6.773554"
-        },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.10454738855384159"
-      },
-      {
-        "idea": {
-          "type": "uri",
-          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/9d1544c7-2051-4c50-8a14-de2af538b885"
-        },
-        "content": {
+        "ideaType": {
           "type": "literal",
-          "value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
+          "value": "Spark"
         },
         "coordinates": {
-          "x": "1.9693404",
-          "y": "-13.311736"
+          "x": "-0.4337531",
+          "y": "9.207874"
         },
-        "cluster_label": "6",
-        "distance_from_centroid": "0.10681841406286074"
+        "cluster_label": "8",
+        "distance_from_centroid": "0.111390196"
       },
       {
         "idea": {
@@ -928,12 +1093,16 @@
           "type": "literal",
           "value": "The Technology could be intersting for pill boxes if you want to know if the Person already took the drugs"
         },
-        "coordinates": {
-          "x": "-2.6833587",
-          "y": "-7.713906"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.10763770191432254"
+        "coordinates": {
+          "x": "0.1719686",
+          "y": "8.178178"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.11345731"
       },
       {
         "idea": {
@@ -944,12 +1113,16 @@
           "type": "literal",
           "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
+        },
         "coordinates": {
-          "x": "6.9078107",
-          "y": "-4.4619613"
+          "x": "5.625881",
+          "y": "6.211006"
         },
         "cluster_label": "0",
-        "distance_from_centroid": "0.1198755826128215"
+        "distance_from_centroid": "0.113076426"
       },
       {
         "idea": {
@@ -960,12 +1133,16 @@
           "type": "literal",
           "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
         },
-        "coordinates": {
-          "x": "3.644839",
-          "y": "-15.342445"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "7",
-        "distance_from_centroid": "0.13750347639056434"
+        "coordinates": {
+          "x": "-4.7866178",
+          "y": "-2.6219182"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.13108544"
       },
       {
         "idea": {
@@ -976,12 +1153,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "2.2938445",
-          "y": "0.43096948"
+          "x": "4.864215",
+          "y": "-2.0025184"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.1469695356050814"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -992,12 +1173,16 @@
           "type": "literal",
           "value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
         },
-        "coordinates": {
-          "x": "1.9783763",
-          "y": "-10.7697525"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.11972956492989063"
+        "coordinates": {
+          "x": "-4.6496873",
+          "y": "4.3843412"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.11817529"
       },
       {
         "idea": {
@@ -1008,12 +1193,16 @@
           "type": "literal",
           "value": "TCO could be combined with printed Paper and become touch sensitive. billboards and newspaper flyers etc. could interact and read data."
         },
-        "coordinates": {
-          "x": "2.7963252",
-          "y": "-7.398268"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08294688907994058"
+        "coordinates": {
+          "x": "-0.38828844",
+          "y": "2.466327"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.0760462"
       },
       {
         "idea": {
@@ -1024,12 +1213,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "1.9568386",
-          "y": "0.65978026"
+          "x": "5.3835154",
+          "y": "-2.503641"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.1469695356050814"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -1040,12 +1233,16 @@
           "type": "literal",
           "value": "Info Screen on a nice wall like out of Wood. I would see pop-ups of things like weather, notification of new e-mails/Messages/calls."
         },
-        "coordinates": {
-          "x": "3.060602",
-          "y": "-4.454813"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "14",
-        "distance_from_centroid": "0.08510146336394579"
+        "coordinates": {
+          "x": "0.97685635",
+          "y": "1.6588373"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.08064616"
       },
       {
         "idea": {
@@ -1056,12 +1253,16 @@
           "type": "literal",
           "value": "My idea already exists for sun-glasses but you could transfere it to contact lenses so that the surfaces darkens automatically when exposed to sunlight."
         },
-        "coordinates": {
-          "x": "7.3978715",
-          "y": "-7.336391"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "4",
-        "distance_from_centroid": "0.12087496161358738"
+        "coordinates": {
+          "x": "-1.6018418",
+          "y": "-0.785848"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.11514734"
       },
       {
         "idea": {
@@ -1072,12 +1273,16 @@
           "type": "literal",
           "value": "Stickers that can monitor a persons heartbeat, body temperature and other health factors."
         },
-        "coordinates": {
-          "x": "9.184165",
-          "y": "-10.103383"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "9",
-        "distance_from_centroid": "0.10450241822865394"
+        "coordinates": {
+          "x": "6.7363777",
+          "y": "2.4038672"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.102346204"
       },
       {
         "idea": {
@@ -1088,12 +1293,16 @@
           "type": "literal",
           "value": "The office lamp in the office could respond to the lighting environment at that exact moment, so there's always the same lighting situation throughout the day."
         },
-        "coordinates": {
-          "x": "-2.754579",
-          "y": "-9.420937"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "1",
-        "distance_from_centroid": "0.11861623534365122"
+        "coordinates": {
+          "x": "-2.0824344",
+          "y": "8.165425"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.12385043"
       },
       {
         "idea": {
@@ -1104,12 +1313,16 @@
           "type": "literal",
           "value": "TCO Stickers monitor heartbeat, body temperature and other health factors directly on your skin."
         },
-        "coordinates": {
-          "x": "9.45816",
-          "y": "-10.685872"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "9",
-        "distance_from_centroid": "0.13235076085100403"
+        "coordinates": {
+          "x": "7.3478637",
+          "y": "2.5281422"
+        },
+        "cluster_label": "4",
+        "distance_from_centroid": "0.1329652"
       },
       {
         "idea": {
@@ -1120,12 +1333,16 @@
           "type": "literal",
           "value": "Using TCO technology for solar panel finishing in future: With TCO technology solar panel applications can be supplied with a flexible electrified surface finish, covering a wide field of use cases."
         },
-        "coordinates": {
-          "x": "1.9791206",
-          "y": "-10.768572"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.11972956492989063"
+        "coordinates": {
+          "x": "-4.6496873",
+          "y": "4.3843412"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.11817529"
       },
       {
         "idea": {
@@ -1136,12 +1353,16 @@
           "type": "literal",
           "value": "Spray cans with TCO make it possible to coat surfaces with a conductive layer for domestic use."
         },
-        "coordinates": {
-          "x": "3.4589965",
-          "y": "-11.487655"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.09983394230334881"
+        "coordinates": {
+          "x": "2.985844",
+          "y": "1.7010278"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.09755159"
       },
       {
         "idea": {
@@ -1152,28 +1373,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "2.4007852",
-          "y": "1.258659"
+          "x": "4.9769135",
+          "y": "-2.4083595"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.1469695356050814"
-      },
-      {
-        "idea": {
-          "type": "uri",
-          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/bfdc4620-d860-4ab8-86ac-be1c35c88d68"
-        },
-        "content": {
-          "type": "literal",
-          "value": "test"
-        },
-        "coordinates": {
-          "x": "-5.2039266",
-          "y": "-7.4308414"
-        },
-        "cluster_label": "12",
-        "distance_from_centroid": "0.19124904636784207"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -1184,12 +1393,16 @@
           "type": "literal",
           "value": "To monitor the vital functions and photosynthesis of trees in cities or special plants you could place a transparent tag with TCO-circuits directly on an leave of a certain plant."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "6.911307",
-          "y": "-4.4627285"
+          "x": "5.625881",
+          "y": "6.211006"
         },
         "cluster_label": "0",
-        "distance_from_centroid": "0.1198755826128215"
+        "distance_from_centroid": "0.113076426"
       },
       {
         "idea": {
@@ -1200,12 +1413,16 @@
           "type": "literal",
           "value": "Change window-color depending on the UV, so that if the sun is shining the color changes to something darker (like the windows within some cars) and if there is no sun or less sun, let the window remain as it is. Similar technology is already in use for glasses."
         },
-        "coordinates": {
-          "x": "6.288477",
-          "y": "-7.369626"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "4",
-        "distance_from_centroid": "0.0954080341687956"
+        "coordinates": {
+          "x": "-1.4917415",
+          "y": "0.2862708"
+        },
+        "cluster_label": "7",
+        "distance_from_centroid": "0.090728424"
       },
       {
         "idea": {
@@ -1216,12 +1433,16 @@
           "type": "literal",
           "value": "Playground equipment may have interactive buttons that allow you to play together."
         },
-        "coordinates": {
-          "x": "-3.9632986",
-          "y": "-6.6880383"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.12911546436612867"
+        "coordinates": {
+          "x": "1.3213998",
+          "y": "8.753211"
+        },
+        "cluster_label": "8",
+        "distance_from_centroid": "0.14052355"
       },
       {
         "idea": {
@@ -1232,12 +1453,16 @@
           "type": "literal",
           "value": "TCO on the dining table, so that you could play simple games (children at the restaurant) or you could place your meal on the table and the table would show the ingredients of your meal (e.g. through Special tags like RFID on the plate)."
         },
-        "coordinates": {
-          "x": "2.2433596",
-          "y": "-5.2402616"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.09270653974160958"
+        "coordinates": {
+          "x": "1.1627742",
+          "y": "2.8482053"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.08405651"
       },
       {
         "idea": {
@@ -1248,28 +1473,16 @@
           "type": "literal",
           "value": "not sure if that is possible but maybe it can be used for contact lenses (or glasses - already existing) so that the surfaces darken automatically when exposed to sunlight."
         },
-        "coordinates": {
-          "x": "6.906547",
-          "y": "-7.6728854"
-        },
-        "cluster_label": "4",
-        "distance_from_centroid": "0.10698665403639214"
-      },
-      {
-        "idea": {
-          "type": "uri",
-          "value": "https://innovonto-core.imp.fu-berlin.de/entities/ideas/d5f0c657-384c-4b58-aa03-e1055e12a243"
-        },
-        "content": {
+        "ideaType": {
           "type": "literal",
-          "value": "Transparent conductive oxides are materials that can be used as thin coatings to make materials and surfaces intelligent. They are transparent, conductive and can be flexible under certain conditions."
+          "value": "Spark"
         },
         "coordinates": {
-          "x": "1.967017",
-          "y": "-13.314398"
+          "x": "-1.9254373",
+          "y": "-0.30934536"
         },
-        "cluster_label": "6",
-        "distance_from_centroid": "0.10681841406286074"
+        "cluster_label": "7",
+        "distance_from_centroid": "0.10239732"
       },
       {
         "idea": {
@@ -1280,12 +1493,16 @@
           "type": "literal",
           "value": "This tag could be attached to doorhandles, water faucets, toilet seats and other objects in public toilettes to control and remind the cleaning personal to disinfect in a appropriate interval.\n\n                    could be attached to existing facilities…"
         },
-        "coordinates": {
-          "x": "-1.5114172",
-          "y": "-2.6813016"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "13",
-        "distance_from_centroid": "0.1178283010091279"
+        "coordinates": {
+          "x": "3.9892871",
+          "y": "9.139583"
+        },
+        "cluster_label": "12",
+        "distance_from_centroid": "0.116049044"
       },
       {
         "idea": {
@@ -1296,12 +1513,16 @@
           "type": "literal",
           "value": "a TCO wallpaper could add more functions to a normal wall and could be used more like a big interface. Control your smart home, change temperature, turn on/off lights … use gestures like swiping along the wall to dimm the light , etc."
         },
-        "coordinates": {
-          "x": "3.010011",
-          "y": "-2.7591634"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "14",
-        "distance_from_centroid": "0.11286798291027914"
+        "coordinates": {
+          "x": "1.6331782",
+          "y": "-0.0947529"
+        },
+        "cluster_label": "11",
+        "distance_from_centroid": "0.103330225"
       },
       {
         "idea": {
@@ -1312,12 +1533,16 @@
           "type": "literal",
           "value": "Use TCO als a small flexible transparent display you could attach like a post-it onto a flip-cart to show video content etc."
         },
-        "coordinates": {
-          "x": "6.2694397",
-          "y": "-1.5775462"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "8",
-        "distance_from_centroid": "0.12366091595494498"
+        "coordinates": {
+          "x": "0.82456267",
+          "y": "-2.900399"
+        },
+        "cluster_label": "9",
+        "distance_from_centroid": "0.11949434"
       },
       {
         "idea": {
@@ -1328,12 +1553,16 @@
           "type": "literal",
           "value": "A tag could be attached to any bike and function as a light source, switch or as an energy harvesting device. Because it is almost invisible you don´t need to take it with you, when bike is locked in public space. Bike notices if contacted without authorization and reports the theft"
         },
-        "coordinates": {
-          "x": "4.8414454",
-          "y": "-5.6722784"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "0",
-        "distance_from_centroid": "0.09255697268518855"
+        "coordinates": {
+          "x": "3.2059255",
+          "y": "6.055517"
+        },
+        "cluster_label": "1",
+        "distance_from_centroid": "0.087674454"
       },
       {
         "idea": {
@@ -1344,12 +1573,16 @@
           "type": "literal",
           "value": "helps you to label and find a certain book in your library or shelf. the transparent tag doesn’t change the aberrance of the book.it could be combined with RFID-Tag and a little LED could light up to locate a certain genre etc."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
+        },
         "coordinates": {
-          "x": "4.8703847",
-          "y": "-5.2057676"
+          "x": "3.349872",
+          "y": "6.046031"
         },
         "cluster_label": "0",
-        "distance_from_centroid": "0.08502386768116453"
+        "distance_from_centroid": "0.08256504"
       },
       {
         "idea": {
@@ -1360,12 +1593,16 @@
           "type": "literal",
           "value": "covering table tennis tables to integrate new challenges for players - i.e. one has to hit moving circles on the table or you can show the score on the table. you could upgrade your existing table tennis set by applying it on the markings for example to show if your ball was in or out.\r\n            Modification: interactive play areas,  interactive Minigolf"
         },
-        "coordinates": {
-          "x": "0.92997915",
-          "y": "-4.4766726"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.09930398031989507"
+        "coordinates": {
+          "x": "2.0369902",
+          "y": "4.417044"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.098206416"
       },
       {
         "idea": {
@@ -1376,12 +1613,16 @@
           "type": "literal",
           "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
         },
-        "coordinates": {
-          "x": "3.8219426",
-          "y": "-14.824657"
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
         },
-        "cluster_label": "7",
-        "distance_from_centroid": "0.13750347639056434"
+        "coordinates": {
+          "x": "-5.1210136",
+          "y": "-2.6656578"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.13108544"
       },
       {
         "idea": {
@@ -1392,12 +1633,16 @@
           "type": "literal",
           "value": "intelligent walls in offices to put notes on or visualise project processes and tasks, instead of flip charts, magnetic or pinboards"
         },
-        "coordinates": {
-          "x": "0.27381143",
-          "y": "-6.6044726"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "11",
-        "distance_from_centroid": "0.08757061106023341"
+        "coordinates": {
+          "x": "0.4314396",
+          "y": "5.826928"
+        },
+        "cluster_label": "2",
+        "distance_from_centroid": "0.087973714"
       },
       {
         "idea": {
@@ -1408,12 +1653,16 @@
           "type": "literal",
           "value": "Use TCO coating as temperature sensitive label (i.e. bottle lable for wine to indicate right temperature for consumption - just to highlight one use case) - many more cases in mind dependant on cost and sensitivity"
         },
-        "coordinates": {
-          "x": "6.087691",
-          "y": "-11.583074"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "2",
-        "distance_from_centroid": "0.12863081468786736"
+        "coordinates": {
+          "x": "-6.3042364",
+          "y": "1.1802742"
+        },
+        "cluster_label": "6",
+        "distance_from_centroid": "0.12397209"
       },
       {
         "idea": {
@@ -1424,12 +1673,16 @@
           "type": "literal",
           "value": "The TCO film concept can be used in situations in which a rudimentary glowing indication is needed at night, but at daytime should be transparent and not noticeable."
         },
-        "coordinates": {
-          "x": "4.316508",
-          "y": "-8.099695"
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
         },
-        "cluster_label": "3",
-        "distance_from_centroid": "0.08909804317916167"
+        "coordinates": {
+          "x": "-2.0358894",
+          "y": "2.5448291"
+        },
+        "cluster_label": "13",
+        "distance_from_centroid": "0.08428087"
       },
       {
         "idea": {
@@ -1440,12 +1693,16 @@
           "type": "literal",
           "value": "Transparent coating applied by spraying or as adhesive mat. The layer reacts on different impacts (mechanical micro-disruption, temperature, vibration, chemicals, ...) and indicates the affected area by changing from transparant to a highly visible color. Could be used for sensitive parts like wings of planes or important elements of a bridge."
         },
-        "coordinates": {
-          "x": "4.0201783",
-          "y": "-15.325042"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "7",
-        "distance_from_centroid": "0.13750350635276956"
+        "coordinates": {
+          "x": "-5.1709533",
+          "y": "-3.008041"
+        },
+        "cluster_label": "10",
+        "distance_from_centroid": "0.13108544"
       },
       {
         "idea": {
@@ -1456,12 +1713,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n            example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Idea"
+        },
         "coordinates": {
-          "x": "2.6880164",
-          "y": "0.59717643"
+          "x": "5.5572557",
+          "y": "-1.7866518"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.14696955696279312"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -1472,12 +1733,16 @@
           "type": "literal",
           "value": "an invisible sticker could be attached to any surface in your home and connects via wifi to a „smart-home-hub“ it would make preexisting „non-smart“ objects like doorhandles and light switches „smart“ when combined with a certain behavior. \r\n                    example:if a window is opened at a certain temperature the air-condition reacts and stops heating  - cause not every part of a system has to be able to react."
         },
+        "ideaType": {
+          "type": "literal",
+          "value": "Option"
+        },
         "coordinates": {
-          "x": "2.745244",
-          "y": "1.0047338"
+          "x": "5.6769896",
+          "y": "-2.1935127"
         },
         "cluster_label": "5",
-        "distance_from_centroid": "0.14696955696279312"
+        "distance_from_centroid": "0.13858844"
       },
       {
         "idea": {
@@ -1488,12 +1753,16 @@
           "type": "literal",
           "value": "Using TCO technology for solar industry: With TCO technology the surface of solar panels could be reduced in general (semi-spheres or other shapes) as TCO is flexible."
         },
-        "coordinates": {
-          "x": "1.6517183",
-          "y": "-10.519798"
+        "ideaType": {
+          "type": "literal",
+          "value": "Spark"
         },
-        "cluster_label": "10",
-        "distance_from_centroid": "0.11091843411232569"
+        "coordinates": {
+          "x": "-4.3611274",
+          "y": "4.643144"
+        },
+        "cluster_label": "3",
+        "distance_from_centroid": "0.10983108"
       }
     ],
     "clusters": [
@@ -1507,10 +1776,6 @@
           {
             "concept_uri": "http://dbpedia.org/resource/Plant",
             "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Bicycle",
-            "count": "1"
           },
           {
             "concept_uri": "http://dbpedia.org/resource/Book",
@@ -1554,189 +1819,7 @@
         "cluster_label": "1",
         "top_concepts": [
           {
-            "concept_uri": "http://dbpedia.org/resource/Window",
-            "count": "5"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Burglary",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Day",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Office",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Retail",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Alarm_device",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/House",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/You",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Academic_certificate",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Balanced-arm_lamp",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Bar_stool",
-            "count": "1"
-          },
-          {
             "concept_uri": "http://dbpedia.org/resource/Bicycle",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Chair",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Color",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Contraceptive_patch",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Document",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Electric_shock",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/File_folder",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Find",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Fire",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "2",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Temperature",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Bottle",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Door",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Grammatical_case",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Information",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Label",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Refrigerator",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Wine",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Calendar_date",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Coating",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Consumer_(food_chain)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Energy",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Food",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Light-emitting_diode",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Mind",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Pricing",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Sensitivity_(control_systems)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Shelf_life",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/User_story",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "3",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Traffic",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Advertising",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Aluminium_foil",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Billboard",
             "count": "2"
           },
           {
@@ -1744,19 +1827,19 @@
             "count": "2"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Information",
+            "concept_uri": "http://dbpedia.org/resource/Color",
             "count": "2"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Light",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Meal",
+            "concept_uri": "http://dbpedia.org/resource/Individual",
             "count": "2"
           },
           {
             "concept_uri": "http://dbpedia.org/resource/Technology",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Traffic",
             "count": "2"
           },
           {
@@ -1780,15 +1863,157 @@
             "count": "1"
           },
           {
+            "concept_uri": "http://dbpedia.org/resource/Billboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bus",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/City",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Clothing",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Connected_car",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Data",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electricity",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Fashion",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Function_(engineering)",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "2",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Table_(furniture)",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Chair",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Meal",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Office",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Restaurant",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Advertising",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Aluminium_foil",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ball",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bar_stool",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bulletin_board",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Chess",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Chessboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Child",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Circle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Contraceptive_patch",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Desk",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Eating",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "3",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Aerosol_paint",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Distribution_board",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Technology",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Advertising",
+            "count": "1"
+          },
+          {
             "concept_uri": "http://dbpedia.org/resource/Bending_moment",
             "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Bicycle",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Body_identification",
+            "concept_uri": "http://dbpedia.org/resource/Billboard",
             "count": "1"
           },
           {
@@ -1796,13 +2021,176 @@
             "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Bus",
+            "concept_uri": "http://dbpedia.org/resource/Construction",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Display_advertising",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Flexible_electronics",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Future",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Industry",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/On-screen_display",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/People",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Persona",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Shape",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_area",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_finishing",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Time",
             "count": "1"
           }
         ]
       },
       {
         "cluster_label": "4",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Health",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sticker",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Factors_of_production",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Person",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Skin",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "5",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Air_conditioning",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Behavior",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/HVAC",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sticker",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Switch",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/System",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Window",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "6",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bottle",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Grammatical_case",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Label",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wine",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Consumer_(food_chain)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Mind",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Pricing",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Sensitivity_(control_systems)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/User_story",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "7",
         "top_concepts": [
           {
             "concept_uri": "http://dbpedia.org/resource/Sunlight",
@@ -1859,67 +2247,50 @@
         ]
       },
       {
-        "cluster_label": "5",
+        "cluster_label": "8",
         "top_concepts": [
           {
-            "concept_uri": "http://dbpedia.org/resource/Air_conditioning",
-            "count": "1"
+            "concept_uri": "http://dbpedia.org/resource/Day",
+            "count": "3"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Behavior",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/HVAC",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Sticker",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Switch",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/System",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Temperature",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Window",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "6",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Coating",
+            "concept_uri": "http://dbpedia.org/resource/Color",
             "count": "2"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Electrical_conductor",
+            "concept_uri": "http://dbpedia.org/resource/You",
             "count": "2"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Material",
-            "count": "2"
+            "concept_uri": "http://dbpedia.org/resource/Academic_certificate",
+            "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
-            "count": "2"
+            "concept_uri": "http://dbpedia.org/resource/Balanced-arm_lamp",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bedroom",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Bicycle",
+            "count": "1"
           },
           {
             "concept_uri": "http://dbpedia.org/resource/Construction",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Document",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Drug",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electrowetting",
             "count": "1"
           },
           {
@@ -1927,21 +2298,58 @@
             "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Surface_wave",
+            "concept_uri": "http://dbpedia.org/resource/File_folder",
             "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "concept_uri": "http://dbpedia.org/resource/Find",
             "count": "1"
           },
           {
-            "concept_uri": "http://dbpedia.org/resource/They",
+            "concept_uri": "http://dbpedia.org/resource/Fluid",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Food",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Food_storage",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/House_construction_phases",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/I",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Knowledge",
             "count": "1"
           }
         ]
       },
       {
-        "cluster_label": "7",
+        "cluster_label": "9",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Et_cetera",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Flip_chart",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/You",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "10",
         "top_concepts": [
           {
             "concept_uri": "http://dbpedia.org/resource/Airplane",
@@ -1986,265 +2394,7 @@
         ]
       },
       {
-        "cluster_label": "8",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Et_cetera",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Flip_chart",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/You",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "9",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Health",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Sticker",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Temperature",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Factors_of_production",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Person",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Skin",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "10",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Aerosol_paint",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Distribution_board",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Energy",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Technology",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Computer_keyboard",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Flexible_electronics",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Future",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/House",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/IPad",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Industry",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Laptop",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Roof",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Shape",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Solar_panel",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Surface_(topology)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Surface_area",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Surface_finishing",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Transparency_(projection)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Wall",
-            "count": "1"
-          }
-        ]
-      },
-      {
         "cluster_label": "11",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Wall",
-            "count": "3"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Color",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Table_(furniture)",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/You",
-            "count": "2"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Ball",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Bedroom",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Bulletin_board",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Circle",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Collaboration",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Drug",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Fashion",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Food_storage",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Glass",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/House_construction_phases",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/I",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Individual",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Interactive_whiteboard",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Knowledge",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Location_(geography)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Miniature_golf",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "12",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Electrowetting",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Software_testing",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "13",
-        "top_concepts": [
-          {
-            "concept_uri": "http://dbpedia.org/resource/Carpet_cleaning",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Door_handle",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Ear_tag",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Seat",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Tap_(valve)",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Toilet",
-            "count": "1"
-          },
-          {
-            "concept_uri": "http://dbpedia.org/resource/Water",
-            "count": "1"
-          }
-        ]
-      },
-      {
-        "cluster_label": "14",
         "top_concepts": [
           {
             "concept_uri": "http://dbpedia.org/resource/Light",
@@ -2288,6 +2438,205 @@
           },
           {
             "concept_uri": "http://dbpedia.org/resource/Wood",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "12",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Carpet_cleaning",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Door_handle",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ear_tag",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Seat",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Tap_(valve)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Toilet",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Water",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "13",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Information",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Door",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Energy",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Refrigerator",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Aluminium_foil",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Body_identification",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Calendar_date",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Computer_keyboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Food",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/IPad",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Laptop",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Light",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Light-emitting_diode",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Radio_frequency",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Shelf_life",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Solar_panel",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/State_of_matter",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Temperature",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Traffic",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Transparency_(projection)",
+            "count": "1"
+          }
+        ]
+      },
+      {
+        "cluster_label": "14",
+        "top_concepts": [
+          {
+            "concept_uri": "http://dbpedia.org/resource/Wall",
+            "count": "4"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Window",
+            "count": "4"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Burglary",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/House",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Retail",
+            "count": "3"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Alarm_device",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Glass",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Office",
+            "count": "2"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Collaboration",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Electric_shock",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Energy",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Gender-specific_and_gender-neutral_pronouns",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Interactive_whiteboard",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Location_(geography)",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Multi-touch",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Ownership",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Roof",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/Room",
+            "count": "1"
+          },
+          {
+            "concept_uri": "http://dbpedia.org/resource/System",
             "count": "1"
           }
         ]

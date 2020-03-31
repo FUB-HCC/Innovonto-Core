@@ -1,7 +1,5 @@
 import React from "react";
-import style from "./software-view.module.css";
 import TwoColumnContent from "../../components/common/two-column-content";
-import PageTitle from "../../components/common/page-title";
 import greenhouseImg from "../../assets/img/greenhouse.png";
 import orchardImg from "../../assets/img/orchard.png";
 import orchard2Img from "../../assets/img/orchard-2.png";
@@ -9,44 +7,42 @@ import kaleidoscopeImg from "../../assets/img/kaleidocsope.png";
 import icvImg from "../../assets/img/annotator-example.png";
 import innovontoCoreImg from "../../assets/img/innovonto-core.png";
 import { Link } from "react-router-dom";
+import { CenteredLayout } from "../../components/common/page-layouts";
 
 export const SoftwareView = () => {
   return (
-    <div className={style.softwareViewWrapper}>
-      <PageTitle title={"Software"} />
-      <div className={style.softwareViewContent}>
-        <TwoColumnContent
-          left={<img src={greenhouseImg} alt={"greenhouse-img"} />}
-          right={<GreenhouseText />}
-          title={"Greenhouse"}
-        />
-        <TwoColumnContent
-          right={
-            <>
-              <img src={orchardImg} alt={"orchard-img"} />
-              <img src={orchard2Img} alt={"orchard2-img"} />
-            </>
-          }
-          left={<OrchardText />}
-          title={"Orchard"}
-        />
-        <TwoColumnContent
-          left={<img src={kaleidoscopeImg} alt={"kaleidoscope-img"} />}
-          right={<KaleidoscopeText />}
-          title={"Kaleidoscope"}
-        />
-        <TwoColumnContent
-          right={<img src={icvImg} alt={"icv-img"} />}
-          left={<ICVText />}
-          title={"ICV-Annotator"}
-        />
-        <TwoColumnContent
-          right={<InnovontoCoreText />}
-          left={<img src={innovontoCoreImg} alt={"Innovonto-Core"} />}
-          title={"Innovonto-Core"}
-        />
-      </div>
-    </div>
+    <CenteredLayout pageTitle={"Software"}>
+      <TwoColumnContent
+        left={<img src={greenhouseImg} alt={"greenhouse-img"} />}
+        right={<GreenhouseText />}
+        title={"Greenhouse"}
+      />
+      <TwoColumnContent
+        right={
+          <>
+            <img src={orchardImg} alt={"orchard-img"} />
+            <img src={orchard2Img} alt={"orchard2-img"} />
+          </>
+        }
+        left={<OrchardText />}
+        title={"Orchard"}
+      />
+      <TwoColumnContent
+        left={<img src={kaleidoscopeImg} alt={"kaleidoscope-img"} />}
+        right={<KaleidoscopeText />}
+        title={"Kaleidoscope"}
+      />
+      <TwoColumnContent
+        right={<img src={icvImg} alt={"icv-img"} />}
+        left={<ICVText />}
+        title={"ICV-Annotator"}
+      />
+      <TwoColumnContent
+        right={<InnovontoCoreText />}
+        left={<img src={innovontoCoreImg} alt={"Innovonto-Core"} />}
+        title={"Innovonto-Core"}
+      />
+    </CenteredLayout>
   );
 };
 

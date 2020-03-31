@@ -58,9 +58,9 @@ export const Header = props => {
             About
           </Button>
         </Link>
-        <Link to="/login">
-          <Button minimal={true} active={location.pathname.includes("login")}>
-            Login
+        <Link to="/search">
+          <Button minimal={true} active={location.pathname.includes("search")}>
+            Search
           </Button>
         </Link>
       </NavbarGroup>

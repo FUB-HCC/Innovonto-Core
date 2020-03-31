@@ -87,7 +87,6 @@ const SessionGraph = props => {
   }
   const timeLineWidth = width - 2 * marginsSides(width);
   const eventBuckets = sortEventsIntoBuckets(timeLineWidth, eventList);
-  console.log(eventList);
   return (
     <div
       className={style.sessionGraphWrapper}

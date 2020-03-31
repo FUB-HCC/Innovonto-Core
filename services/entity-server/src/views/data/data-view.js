@@ -1,16 +1,17 @@
 import style from "./data-view.module.css";
 import React, { useEffect, useState } from "react";
 import { InputGroup } from "@blueprintjs/core";
-import PageTitle from "../../components/common/page-title";
 import { requestProjectListData } from "../../middleware/requests";
 import LargeEntitiyPreview from "../../components/common/large-entity-preview";
 import { Link } from "react-router-dom";
 import { getNameFromUri } from "../../components/utils";
+import { CenteredLayout } from "../../components/common/page-layouts";
 
 export const DataView = () => {
   const [searchValue, setSearchValue] = useState("");
   const [projectList, setProjectList] = useState([]);
-  useEffect(() => requestProjectListData(setProjectList), []);
+  const [error, setError] = useState(null);
+  useEffect(() => requestProjectListData(setProjectList, setError), []);
   var filteredProjects = projectList;
   if (searchValue) {
     filteredProjects = projectList
@@ -22,29 +23,30 @@ export const DataView = () => {
       );
   }
   return (
-    <div className={style.dataViewWrapper}>
-      <PageTitle title={"Data"} />
-      <div className={style.dataViewContent}>
-        <h1 className={style.largeTitle}>Search</h1>
-        <InputGroup
-          className={style.projectSearchInput}
-          leftIcon={"search"}
-          placeholder={"filter projects..."}
-          onChange={event => {
-            setSearchValue(event.target.value);
-          }}
+    <CenteredLayout
+      pageTitle={"Data"}
+      isLoading={projectList.length < 1}
+      error={error}
+    >
+      <h1 className={style.largeTitle}>Search</h1>
+      <InputGroup
+        className={style.projectSearchInput}
+        leftIcon={"search"}
+        placeholder={"filter projects..."}
+        onChange={event => {
+          setSearchValue(event.target.value);
+        }}
+      />
+      <h1 className={style.largeTitle}>Project List</h1>
+      {filteredProjects.map(project => (
+        <LargeEntitiyPreview
+          key={project.id}
+          description={project.description}
+          title={project.title}
+          rightContent={<ProjectOptions id={project.id} />}
         />
-        <h1 className={style.largeTitle}>Project List</h1>
-        {filteredProjects.map(project => (
-          <LargeEntitiyPreview
-            key={project.id}
-            description={project.description}
-            title={project.title}
-            rightContent={<ProjectOptions id={project.id} />}
-          />
-        ))}
-      </div>
-    </div>
+      ))}
+    </CenteredLayout>
   );
 };
 

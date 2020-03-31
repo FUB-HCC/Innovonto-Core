@@ -110,7 +110,7 @@ const HomeViewText = () => (
       topics. These tools and the collected data are published openly and to be
       used by everybody. To get an example of the data we provide, have a look
       at{" "}
-      <Link to={"/entities/sessions/bcbd1835-70bd-4a24-bbc3-a9368ddb4a53"}>
+      <Link to={"/entities/sessions/8e18e90e-a88b-4beb-b8c5-8dcb2a74fd65"}>
         this ideation session
       </Link>
       . The prototypes we developed so far can be found{" "}

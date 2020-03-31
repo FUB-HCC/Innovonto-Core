@@ -2,6 +2,7 @@ import style from "./about-view.module.css";
 import React, { useRef } from "react";
 import { useScrollToParagraph } from "../../components/utils";
 import { Link } from "react-router-dom";
+import { CenteredLayout } from "../../components/common/page-layouts";
 
 export const AboutView = () => {
   const imprintRef = useRef();
@@ -11,22 +12,20 @@ export const AboutView = () => {
     ["privacy-policy", privacyPolicyRef]
   ]);
   return (
-    <div className={style.aboutViewWrapper}>
-      <div className={style.aboutViewContent}>
-        <h1 className={style.largeTitle}>About</h1>
-        <AboutText />
-        <h1 className={style.largeTitle}>Acknowledgements</h1>
-        <AcknowledgementsText />
-        <h1 ref={imprintRef} className={style.largeTitle}>
-          Imprint
-        </h1>
-        <ImprintText />
-        <h1 ref={privacyPolicyRef} className={style.largeTitle}>
-          Privacy Policy
-        </h1>
-        <PrivacyPolicyText />
-      </div>
-    </div>
+    <CenteredLayout>
+      <h1 className={style.largeTitle}>About</h1>
+      <AboutText />
+      <h1 className={style.largeTitle}>Acknowledgements</h1>
+      <AcknowledgementsText />
+      <h1 ref={imprintRef} className={style.largeTitle}>
+        Imprint
+      </h1>
+      <ImprintText />
+      <h1 ref={privacyPolicyRef} className={style.largeTitle}>
+        Privacy Policy
+      </h1>
+      <PrivacyPolicyText />
+    </CenteredLayout>
   );
 };
 
@@ -111,6 +110,20 @@ const AcknowledgementsText = () => (
         triplestore that provides the idea knowledge graph for this website, and
         the implementation work for parts of{" "}
         <Link to={"/software/innovonto-core"}>Innovonto Core</Link>.
+      </li>
+      <li>
+        We would like to thank{" "}
+        <a
+          href="https://github.com/mx-e"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Maximilian Eißler{" "}
+        </a>
+        for his work on the implementation of the{" "}
+        <Link to={"/software/innovonto-core"}>Innovonto Core</Link> front-end
+        you are currently using, including all visualizations and interactive
+        components.
       </li>
     </ul>
     <p>

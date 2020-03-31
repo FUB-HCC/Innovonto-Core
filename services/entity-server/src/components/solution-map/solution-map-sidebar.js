@@ -26,6 +26,9 @@ const SidebarIdeaDetails = props => {
           <p>
             <b>CUSTER LABEL:</b> <br /> {selectedIdea.clusterLabel}
           </p>
+          <p>
+            <b>IDEA TYPE:</b> <br /> {selectedIdea.ideaType}
+          </p>
           <Link to={"/entities/ideas/" + getNameFromUri(selectedIdea.idea)}>
             <Button minimal={true} active={true} intent={Intent.SUCCESS}>
               More Details
