@@ -48,9 +48,13 @@ export const requestSessionData = (entityId, dispatch, errorDispatch) => {
   axios
     .get(backendServiceBaseUrl, describeSessionRequest(entityId))
     .then(result => {
-      frameData(result.data, "inov:BrainstormingSession").then(data => {
-        dispatch(processSession(data));
-      });
+      frameData(result.data, "inov:BrainstormingSession")
+        .then(data => {
+          dispatch(processSession(data));
+        })
+        .catch(error => {
+          errorDispatch(error);
+        });
     })
     .catch(error => {
       errorDispatch(error);

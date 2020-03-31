@@ -38,6 +38,14 @@ const extractContentFor = event => {
 
 export const processSession = data => {
   const result = data;
+  if (!data.hasOwnProperty("data.hasTrackingEvent")) {
+    throw {
+      response: {
+        status: 404,
+        statusText: "Could not find any tracking events for the Session."
+      }
+    };
+  }
   const filteredEvents = data.hasTrackingEvent
     .filter(
       currentEvent =>
