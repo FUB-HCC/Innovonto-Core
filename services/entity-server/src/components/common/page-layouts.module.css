@@ -1,0 +1,39 @@
+.centeredLayoutWrapper{
+    width: 100%;
+    background: white;
+}
+
+.centeredLayoutContent{
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.centeredLayoutLoading{
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fullScreenLayoutWrapper{
+    background: white;
+}
+
+.fullScreenLayoutContent{
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.loadingMainWindow{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+}

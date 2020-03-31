@@ -1,5 +1,3 @@
-import style from "./idea-view.module.css";
-import PageTitle from "../../../components/common/page-title";
 import React, { useEffect, useState } from "react";
 import { Tab } from "@blueprintjs/core";
 import { requestIdeaDetailData } from "../../../middleware/requests";
@@ -8,6 +6,7 @@ import { getNameFromUri } from "../../../components/utils";
 import InfoPanel from "../../../components/idea/info-panel";
 import NetworkPanel from "../../../components/idea/network-panel";
 import TabbedDetailView from "../../../components/common/tabbed-detail-view";
+import { CenteredLayout } from "../../../components/common/page-layouts";
 
 export const IdeaView = () => {
   const [ideaData, setIdeaData] = useState(null);
@@ -17,12 +16,11 @@ export const IdeaView = () => {
     setIdeaData
   ]);
   if (!ideaData) {
-    return <div></div>; //TODO: unified loading screen
+    return <CenteredLayout isLoading={true} pageTitle={"IdeaDetails"} />;
   }
   const { title, content } = ideaData;
   return (
-    <div className={style.ideaViewWrapper}>
-      <PageTitle title={"Idea Details"} />
+    <CenteredLayout pageTitle={"Idea Details"}>
       <TabbedDetailView
         title={title}
         content={<p>{content}</p>}
@@ -56,6 +54,6 @@ export const IdeaView = () => {
           />
         ]}
       />
-    </div>
+    </CenteredLayout>
   );
 };

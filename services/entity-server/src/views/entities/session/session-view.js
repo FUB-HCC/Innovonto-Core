@@ -17,6 +17,10 @@ import {
   SubmissionMethod
 } from "../../../components/idea/info-panel";
 import { Button, ButtonGroup, Intent } from "@blueprintjs/core";
+import {
+  CenteredLayout,
+  FullScreenSideBarLayout
+} from "../../../components/common/page-layouts";
 
 const sideBarWidth = 330;
 const sideBarHeight = height => height - headerHeight - footerHeight;
@@ -36,17 +40,18 @@ const SessionView = () => {
   useEffect(() => requestSessionData(entityId, setSessionData), [entityId]);
   if (!sessionData) {
     return (
-      <AltTextComponent
-        name={"Solution Map"}
-        width={windowWidth}
-        height={windowHeight}
+      <FullScreenSideBarLayout
+        sideBarWidth={sideBarWidth}
+        pageTitle={"Session View"}
+        isLoading={true}
       />
     );
   }
-  //TODO: built unified loading behaviour
-
   return (
-    <div className={style.sessionPageWrapper}>
+    <FullScreenSideBarLayout
+      sideBarWidth={sideBarWidth}
+      pageTitle={"Session View"}
+    >
       <Sidebar
         width={sideBarWidth}
         height={sideBarHeight(windowHeight)}
@@ -76,7 +81,7 @@ const SessionView = () => {
         />
       )}
       {selectedViz === SessionRadio.TREE && <SessionTree />}
-    </div>
+    </FullScreenSideBarLayout>
   );
 };
 

@@ -9,7 +9,7 @@ const TabbedDetailView = props => {
   const history = useHistory();
   const { id } = useParams();
   return (
-    <div className={style.detailViewContent}>
+    <>
       <div className={style.largeTitle}>
         <Button
           className={style.backButton}
@@ -34,7 +34,7 @@ const TabbedDetailView = props => {
       >
         {tabs}
       </Tabs>
-    </div>
+    </>
   );
 };
 

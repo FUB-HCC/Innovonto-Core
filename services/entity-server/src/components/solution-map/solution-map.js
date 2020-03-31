@@ -13,8 +13,6 @@ import Sidebar from "./solution-map-sidebar";
 import StaticPopover from "./solution-map-static-popover";
 import { interpolateWarm as d3GetColor } from "d3-scale-chromatic";
 
-export const sideBarWidth = 330;
-const mainWindowWidth = totalWidth => totalWidth - sideBarWidth;
 const circleRadiusPx = (xRange, yRange) => 0.01 * Math.max(xRange, yRange);
 const strokeWidth = (xRange, yRange) => 0.002 * Math.max(xRange, yRange);
 const marginsRatio = 0.2;
@@ -77,7 +75,7 @@ const IdeaMapSvg = props => {
   const marginY = yRange * marginsRatio;
   return (
     <svg
-      width={mainWindowWidth(width)}
+      width={width}
       height={height}
       viewBox={
         minX +
@@ -149,10 +147,11 @@ export const SolutionMap = props => {
     ColorSelection.DEFAULT
   );
   const [mouseX, mouseY] = useMousePosition();
-  const { ideas, width, height, solutionId, clusterData } = props;
+  const { ideas, width, height, solutionId, clusterData, sideBarWidth } = props;
   if (!areDimensionsReasonable(width, height) || !ideas) {
     return <AltTextComponent name={"Idea Map"} width={width} height={height} />;
   }
+  const mainWindowWidth = width - sideBarWidth;
   const selectedCluster = getSelectedCluster(clusterData, clickedIdea);
   const coloredIdeas = applyHighlighting(
     ideas,
@@ -207,7 +206,7 @@ export const SolutionMap = props => {
                 )}
                 <TransformComponent>
                   <IdeaMapSvg
-                    width={width}
+                    width={mainWindowWidth}
                     height={height}
                     ideas={coloredIdeas}
                     onIdeaClick={setClickedIdea}

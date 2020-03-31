@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { requestUserDetailData } from "../../../middleware/requests";
 import style from "./user-view.module.css";
-import PageTitle from "../../../components/common/page-title";
 import TabbedDetailView from "../../../components/common/tabbed-detail-view";
 import { getNameFromUri } from "../../../components/utils";
 import { Tab } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import CategoryList from "../../../components/common/category-list";
+import { CenteredLayout } from "../../../components/common/page-layouts";
 
 export const UserView = () => {
   const [userData, setUserData] = useState(null);
@@ -18,7 +18,7 @@ export const UserView = () => {
     setUserData
   ]);
   if (!userData) {
-    return <div></div>; //TODO: unified loading screen
+    return <CenteredLayout pageTitle={"UserDetails"} isLoading={true} />;
   }
   const {
     id,
@@ -33,8 +33,7 @@ export const UserView = () => {
   } = userData;
 
   return (
-    <div className={style.userViewWrapper}>
-      <PageTitle title={"Idea Details"} />
+    <CenteredLayout pageTitle={"User Details"}>
       <TabbedDetailView
         title={"ID: " + getNameFromUri(id).toUpperCase()}
         content={
@@ -82,7 +81,7 @@ export const UserView = () => {
           />
         ]}
       />
-    </div>
+    </CenteredLayout>
   );
 };
 
