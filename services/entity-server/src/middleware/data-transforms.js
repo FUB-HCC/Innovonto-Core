@@ -38,7 +38,7 @@ const extractContentFor = event => {
 
 export const processSession = data => {
   const result = data;
-  if (!data.hasOwnProperty("data.hasTrackingEvent")) {
+  if (!data.hasOwnProperty("hasTrackingEvent")) {
     throw {
       response: {
         status: 404,
