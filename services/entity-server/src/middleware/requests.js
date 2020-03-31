@@ -84,6 +84,7 @@ export const requestSolutionData = (id, dispatch, errorDispatch) => {
   } else {
     requestUrl = "";
     //TODO: build URL string from id here
+    //TODO /ideamap/api/v0.2/get_default_map
   }
   axios
     .get(requestUrl)
