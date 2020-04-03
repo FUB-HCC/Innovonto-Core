@@ -125,6 +125,18 @@ const AcknowledgementsText = () => (
         you are currently using, including all visualizations and interactive
         components.
       </li>
+      <li>
+        We would like to thank{" "}
+        <a
+          href="https://github.com/thadler"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Thomas Hadler{" "}
+        </a>
+        for his input and work on the natural language processing components
+        as well as the machine learning models used within the project.
+      </li>
     </ul>
     <p>
       If you want to be mentioned as well, just{" "}
