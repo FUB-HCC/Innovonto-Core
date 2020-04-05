@@ -60,7 +60,11 @@ const ProjectOptions = props => {
         <p className={style.projectOption}>View All Ideas</p>
       </Link>
       <br />
-      <p className={style.projectOption}>View result/selected ideas</p>
+      <Link
+        to={{ pathname: "/search/", search: "?project=" + getNameFromUri(id) }}
+      >
+        <p className={style.projectOption}>View result/selected ideas</p>
+      </Link>
     </div>
   );
 };

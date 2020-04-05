@@ -26,12 +26,12 @@ const SearchResultIdea = props => {
         title={title}
         imgSrc={icon}
         leftContent={
-          avgRatingValue && (
+          avgRatingValue ? (
             <div className={style.resultIdeaRating}>
               <h3>RATING</h3>
               <StarRating rating={avgRatingValue} />
             </div>
-          )
+          ) : null
         }
         rightContent={<TextualRefinements refinementList={refinements} />}
       />
