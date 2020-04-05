@@ -90,7 +90,8 @@ export const requestSolutionData = (id, dispatch, errorDispatch) => {
   if (id === "i2m-TCO") {
     requestUrl = process.env.PUBLIC_URL + "/data/cached/idea-map-tco.json";
   } else if (id === "i2m-bionic-radar") {
-    requestUrl = process.env.PUBLIC_URL + "/data/cached/idea-map-bionic-radar.json";
+    requestUrl =
+      process.env.PUBLIC_URL + "/data/cached/idea-map-bionic-radar.json";
   } else {
     requestUrl = "";
     //TODO: build URL string from id here

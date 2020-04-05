@@ -45,11 +45,11 @@ export const EntityMarker = props => {
       setOpen(false);
     }
   };
-  const { cx, cy, marker, content } = props;
+  const { cx, cy, marker, content, isStatic } = props;
   return (
     <div
       className={style.eventMarker}
-      style={{ left: cx, top: cy }}
+      style={isStatic && { left: cx, top: cy, position: "absolute" }}
       onMouseEnter={() => onMouseEvent(true)}
       onMouseLeave={() => onMouseEvent(false)}
       onMouseDown={onClick}
@@ -70,7 +70,8 @@ EntityMarker.propTypes = {
   cx: PropTypes.number,
   cy: PropTypes.number,
   marker: PropTypes.element.isRequired,
-  content: PropTypes.any
+  content: PropTypes.any,
+  isStatic: PropTypes.bool
 };
 
 export default EntityMarker;

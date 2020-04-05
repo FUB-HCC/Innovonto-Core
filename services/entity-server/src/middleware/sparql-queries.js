@@ -8,7 +8,7 @@ export const describeSessionRequest = entityUrl =>
   coreServerRequest(describeSession(entityUrl));
 export const describeUserRequest = entityUrl =>
   coreServerRequest(describeUser(entityUrl));
-export const fulltextSearchRequest = (searchText) =>
+export const fulltextSearchRequest = searchText =>
   coreServerRequest(fallbackSearchQuery(searchText));
 
 export const prefix = {
@@ -130,7 +130,7 @@ const sparqlProjectList = () => `
     }
 }`;
 
-const fallbackSearchQuery = (searchText) =>
+const fallbackSearchQuery = searchText =>
   `
   PREFIX idea: <https://innovonto-core.imp.fu-berlin.de/entities/ideas/>  
   PREFIX gi2mo: <http://purl.org/gi2mo/ns#>  
@@ -139,7 +139,9 @@ const fallbackSearchQuery = (searchText) =>
   WHERE { 
       ?idea a gi2mo:Idea;
          gi2mo:content ?content
-      FILTER regex(?content, "` + searchText + `", "i")
+      FILTER regex(?content, "` +
+  searchText +
+  `", "i")
   }`;
 
 //TODO this does not work at the moment, presumably due to misconfiguration of the triplestore.
@@ -152,12 +154,17 @@ const fulltextSearchQuery = (searchText, limit = 10) =>
   DESCRIBE ?idea
   WHERE {
   {
-      ?idea text:query (gi2mo:content '` + searchText + `').
+      ?idea text:query (gi2mo:content '` +
+  searchText +
+  `').
       ?idea a gi2mo:Idea.
     } UNION {
-      ?i text:query (gi2mo:content '` + searchText + `').
+      ?i text:query (gi2mo:content '` +
+  searchText +
+  `').
       ?idea ?p ?i.
       ?idea a gi2mo:Idea.
     }
   }
-LIMIT ` + limit;
+LIMIT ` +
+  limit;

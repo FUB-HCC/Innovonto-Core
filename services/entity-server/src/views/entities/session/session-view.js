@@ -17,6 +17,7 @@ import {
 } from "../../../components/idea/info-panel";
 import { Button, ButtonGroup, Intent } from "@blueprintjs/core";
 import { FullScreenSideBarLayout } from "../../../components/common/page-layouts";
+import SessionTree from "../../../components/session-tree/session-tree";
 
 const sideBarWidth = 330;
 const sideBarHeight = height => height - headerHeight - footerHeight;
@@ -32,7 +33,7 @@ const SessionView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
   const [sessionData, setSessionData] = useState(null);
   const [error, setError] = useState(null);
-  const [selectedViz, setSelectedViz] = useState(SessionRadio.TIMELINE);
+  const [selectedViz, setSelectedViz] = useState(SessionRadio.TREE);
   const entityId = urlToEntity(window.location.href);
   useEffect(() => requestSessionData(entityId, setSessionData, setError), [
     entityId
@@ -44,6 +45,7 @@ const SessionView = () => {
         pageTitle={"Session View"}
         isLoading={true}
         error={error}
+        key={"session-non-ideal"}
       />
     );
   }
@@ -51,6 +53,7 @@ const SessionView = () => {
     <FullScreenSideBarLayout
       sideBarWidth={sideBarWidth}
       pageTitle={"Session View"}
+      key={"session"}
     >
       <Sidebar
         width={sideBarWidth}
@@ -80,7 +83,13 @@ const SessionView = () => {
           eventList={sessionData.hasTrackingEvent}
         />
       )}
-      {selectedViz === SessionRadio.TREE && <SessionTree />}
+      {selectedViz === SessionRadio.TREE && (
+        <SessionTree
+          width={sessionWidth(windowWidth)}
+          height={sessionHeight(windowHeight)}
+          tree={sessionData.treeData}
+        />
+      )}
     </FullScreenSideBarLayout>
   );
 };
@@ -105,7 +114,6 @@ const SelectedVizRadio = props => {
           intent={Intent.SUCCESS}
           active={selectedViz === SessionRadio.TREE}
           minimal={true}
-          disabled={true}
           onClick={() => setSelectedViz(SessionRadio.TREE)}
           icon={"diagram-tree"}
         >
@@ -139,7 +147,5 @@ const SessionDetails = props => {
     </div>
   );
 };
-
-const SessionTree = props => <div>THIS IS A PLACEHOLDER</div>;
 
 export default SessionView;
