@@ -175,8 +175,6 @@ export const SearchComponent = props => {
       value: radio
     });
   };
-  console.log(searchResults);
-
   const searchHeader = (
     <div className={style.searchHeaderWrapper} style={{ height: headerHeight }}>
       <input
