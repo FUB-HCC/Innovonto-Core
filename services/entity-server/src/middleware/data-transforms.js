@@ -82,12 +82,13 @@ function reduceRatings(idea) {
   let sum = allReviews.reduce((accumulator, currentReview) => {
     if (currentReview.hasOwnProperty("ratingValue")) {
       return accumulator + parseFloat(currentReview.ratingValue);
+    } else if (currentReview.hasOwnProperty("gi2mo:ratingValue")) {
+      return accumulator + parseFloat(currentReview["gi2mo:ratingValue"]);
     } else {
-      throw new Error("Unexpected review");
+      throw new Error("Unexpected review: " + currentReview);
     }
   }, 0.0);
-  let result = parseFloat(sum) / parseFloat(allReviews.length);
-  return result;
+  return parseFloat(sum) / parseFloat(allReviews.length);
 }
 
 export const extractSearchResults = data => {

@@ -163,6 +163,7 @@ CONSTRUCT {
 
 //TODO use with caution.
 const findAllIdeasQuery = () => `
+  PREFIX idea: <https://innovonto-core.imp.fu-berlin.de/entities/ideas/>  
   PREFIX gi2mo: <http://purl.org/gi2mo/ns#>  
   PREFIX dcterms: <http://purl.org/dc/terms/>
   PREFIX inov:<http://purl.org/innovonto/types/#>
