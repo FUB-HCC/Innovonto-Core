@@ -33,7 +33,7 @@ const SessionView = () => {
   const [windowWidth, windowHeight] = useWindowSize();
   const [sessionData, setSessionData] = useState(null);
   const [error, setError] = useState(null);
-  const [selectedViz, setSelectedViz] = useState(SessionRadio.TREE);
+  const [selectedViz, setSelectedViz] = useState(SessionRadio.TIMELINE);
   const entityId = urlToEntity(window.location.href);
   useEffect(() => requestSessionData(entityId, setSessionData, setError), [
     entityId

@@ -140,7 +140,9 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX inov:<http://purl.org/innovonto/types/#>
 
 CONSTRUCT {
-    <` + ideaContestUrl + `> a gi2mo:IdeaContest;
+    <` +
+  ideaContestUrl +
+  `> a gi2mo:IdeaContest;
     dcterms:title ?title;
     dcterms:description ?description;
     gi2mo:startDate ?startDate;
@@ -149,13 +151,23 @@ CONSTRUCT {
       ?researchDescription dcterms:title ?rdTitle;
       dcterms:description ?rdDescription.
 } WHERE {
-  <` + ideaContestUrl + `> a gi2mo:IdeaContest;
+  <` +
+  ideaContestUrl +
+  `> a gi2mo:IdeaContest;
            dcterms:description ?description.
-  OPTIONAL {<` + ideaContestUrl + `> dcterms:title ?title}.
-  OPTIONAL {<` + ideaContestUrl + `> gi2mo:startDate ?startDate}.
-  OPTIONAL {<` + ideaContestUrl + `> gi2mo:endDate ?endDate}.
+  OPTIONAL {<` +
+  ideaContestUrl +
+  `> dcterms:title ?title}.
+  OPTIONAL {<` +
+  ideaContestUrl +
+  `> gi2mo:startDate ?startDate}.
+  OPTIONAL {<` +
+  ideaContestUrl +
+  `> gi2mo:endDate ?endDate}.
   OPTIONAL {?researchDescription a inov:ResearchDescription;
-                                 gi2mo:hasIdeaContest <` + ideaContestUrl + `>;
+                                 gi2mo:hasIdeaContest <` +
+  ideaContestUrl +
+  `>;
                                  dcterms:title ?rdTitle;
                                  dcterms:description ?rdDescription}
 }

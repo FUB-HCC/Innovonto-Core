@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import style from "./search-component.module.css";
 import {
   Button,
@@ -18,7 +18,7 @@ import {
 import SearchResultList from "./search-result-list";
 import SearchResultGrid from "./search-result-grid";
 import SearchResultIdea from "./search-result-idea";
-import { requestSearchData } from "../../middleware/requests";
+import { requestAllIdeas, requestSearchData } from "../../middleware/requests";
 
 const headerHeight = 50;
 const footerHeight = 50;
@@ -141,6 +141,23 @@ export const SearchComponent = props => {
     searchResults
   } = searchState;
 
+  //initial load of ALL ideas
+  useEffect(() => {
+    dispatchSearchAction({ type: SearchActionTypes.SEARCH_REQUEST_SUBMIT });
+    requestAllIdeas(
+      ideas =>
+        dispatchSearchAction({
+          type: SearchActionTypes.RESULTS_RECEIVED,
+          value: ideas
+        }),
+      error =>
+        dispatchSearchAction({
+          type: SearchActionTypes.REQUEST_ERROR,
+          value: error
+        })
+    );
+  }, []);
+
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent
@@ -150,6 +167,7 @@ export const SearchComponent = props => {
       />
     );
   }
+
   const innerHeight = height - headerHeight - footerHeight;
   const resultsCurrentPage = filterResultsOfPage(
     searchResults,
