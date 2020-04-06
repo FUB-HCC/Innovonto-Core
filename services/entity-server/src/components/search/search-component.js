@@ -119,9 +119,9 @@ const searchReducer = (state, action) => {
 
 const projectFilter = (data, projectName) =>
   projectName
-    ? data.filter(
-        d => d.hasIdeaContest && d.hasIdeaContest.includes(projectName)
-      )
+    ? data
+        .filter(d => d.hasIdeaContest && d.hasIdeaContest.includes(projectName))
+        .map((d, i) => ({ ...d, resultNo: i + 1 }))
     : data;
 
 export const SearchComponent = props => {
