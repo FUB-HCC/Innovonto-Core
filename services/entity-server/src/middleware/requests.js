@@ -15,6 +15,8 @@ import {
   describeSessionRequest,
   describeIdeaRequest,
   describeUserRequest,
+  describeIdeaContestRequest,
+  describeAllIdeas,
   fulltextSearchRequest
 } from "./sparql-queries";
 import { frameData } from "./data-framing";
@@ -114,6 +116,34 @@ export const requestIdeaDetailData = (ideaUrl, dispatch, errorDispatch) => {
       frameData(result.data, "gi2mo:Idea").then(data =>
         dispatch(extractIdeaDetails(data))
       );
+    })
+    .catch(error => {
+      errorDispatch(error);
+    });
+};
+
+export const requestAllIdeas = (dispatch, errorDispatch) => {
+  axios
+    .get(backendServiceBaseUrl, describeAllIdeas())
+    .then(result => {
+      frameData(result.data, "gi2mo:Idea").then(data =>
+        dispatch(extractSearchResults(data))
+      );
+    })
+    .catch(error => {
+      errorDispatch(error);
+    });
+};
+
+export const requestIdeaContestDetailData = (
+  entityUrl,
+  dispatch,
+  errorDispatch
+) => {
+  axios
+    .get(backendServiceBaseUrl, describeIdeaContestRequest(entityUrl))
+    .then(result => {
+      frameData(result.data, "gi2mo:IdeaContest").then(data => dispatch(data));
     })
     .catch(error => {
       errorDispatch(error);

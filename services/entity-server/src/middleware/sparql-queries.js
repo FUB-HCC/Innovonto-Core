@@ -8,6 +8,10 @@ export const describeSessionRequest = entityUrl =>
   coreServerRequest(describeSession(entityUrl));
 export const describeUserRequest = entityUrl =>
   coreServerRequest(describeUser(entityUrl));
+export const describeIdeaContestRequest = entityUrl =>
+  coreServerRequest(ideaContestDetails(entityUrl));
+export const describeAllIdeas = () =>
+  coreServerRequest(findAllIdeasQuery());
 export const fulltextSearchRequest = searchText =>
   coreServerRequest(fallbackSearchQuery(searchText));
 
@@ -129,6 +133,47 @@ const sparqlProjectList = () => `
     GROUP BY ?project
     }
 }`;
+
+const ideaContestDetails = ideaContestUrl =>
+  `
+PREFIX gi2mo: <http://purl.org/gi2mo/ns#>  
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX inov:<http://purl.org/innovonto/types/#>
+
+CONSTRUCT {
+  <` +
+  ideaContestUrl +
+  `> a gi2mo:IdeaContest;
+    dcterms:title ?title;
+    dcterms:description ?description;
+    gi2mo:startDate ?startDate;
+    gi2mo:endDate ?endDate;
+  \tinov:hasResearchDescription ?researchDescription.
+      ?researchDescription dcterms:title ?rdTitle;
+      dcterms:description ?rdDescription.
+} WHERE {
+  ?contest a gi2mo:IdeaContest;
+           dcterms:description ?description.
+  OPTIONAL {?contest dcterms:title ?title}.
+  OPTIONAL {?contest gi2mo:startDate ?startDate}.
+  OPTIONAL {?contest gi2mo:endDate ?endDate}.
+  OPTIONAL {?researchDescription a inov:ResearchDescription;
+                                 gi2mo:hasIdeaContest ?contest;
+                                 dcterms:title ?rdTitle;
+                                 dcterms:description ?rdDescription}
+}
+`;
+
+//TODO use with caution.
+const findAllIdeasQuery = () => `
+  PREFIX gi2mo: <http://purl.org/gi2mo/ns#>  
+  PREFIX dcterms: <http://purl.org/dc/terms/>
+  PREFIX inov:<http://purl.org/innovonto/types/#>
+  
+  DESCRIBE ?idea WHERE {
+    ?idea a gi2mo:Idea.
+  }
+`;
 
 const fallbackSearchQuery = searchText =>
   `
