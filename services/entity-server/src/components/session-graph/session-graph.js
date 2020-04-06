@@ -145,7 +145,8 @@ const SessionGraph = props => {
           >
             {bucket.events.map((sEvent, i) => (
               <EntityMarker
-                key={sEvent.id}
+                key={sEvent.id + i}
+                isStatic={true}
                 cx={0}
                 cy={timelineOffsetY(height) - i * eventMarkerOffset}
                 marker={mapEventTypeToShape(sEvent.eventType)}

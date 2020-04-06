@@ -7,15 +7,9 @@ const SearchResultIdea = props => {
   if (props.results.length <= 0) {
     return <div className={style.resultIdeaWrapper} />;
   }
-  const {
-    resultNo,
-    title,
-    icon,
-    avgRatingValue,
-    content
-  } = props.results[0];
+  const { resultNo, title, icon, avgRatingValue, content } = props.results[0];
   var refinements;
-  if(props.results[0].refinements) {
+  if (props.results[0].refinements) {
     refinements = props.results[0].refinements;
   } else {
     refinements = [];
