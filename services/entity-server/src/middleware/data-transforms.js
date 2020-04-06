@@ -201,3 +201,28 @@ export const extractUserDetails = data => {
     id: propertiesToArray["@id"]
   };
 };
+
+export const extractIdeaContestDetails = data => {
+  let processedResearchDescriptions = [];
+  if (data.hasOwnProperty("hasResearchDescription")) {
+    processedResearchDescriptions = convertPropertyToArray(
+      data.hasResearchDescription
+    ).map(rd => {
+      if (
+        rd.hasOwnProperty("title") &&
+        !(typeof rd.title === "string" || rd.title instanceof String)
+      ) {
+        //TODO this is bad. Build error handling.
+        rd.title = rd.title.filter(title => title["@language"] === "en")[0][
+          "@value"
+        ];
+      }
+      return rd;
+    });
+  }
+  return {
+    ...data,
+    id: data["@id"],
+    hasResearchDescription: processedResearchDescriptions
+  };
+};

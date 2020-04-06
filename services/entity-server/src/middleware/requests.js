@@ -7,7 +7,7 @@ import {
   extractSolutionData,
   extractIdeaDetails,
   sortResources,
-  extractUserDetails
+  extractUserDetails, extractIdeaContestDetails
 } from "./data-transforms";
 import {
   sparqlProjectListRequest,
@@ -143,7 +143,8 @@ export const requestIdeaContestDetailData = (
   axios
     .get(backendServiceBaseUrl, describeIdeaContestRequest(entityUrl))
     .then(result => {
-      frameData(result.data, "gi2mo:IdeaContest").then(data => dispatch(data));
+      frameData(result.data, "gi2mo:IdeaContest").then(
+        data => dispatch(extractIdeaContestDetails(data)));
     })
     .catch(error => {
       errorDispatch(error);

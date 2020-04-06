@@ -10,8 +10,7 @@ export const describeUserRequest = entityUrl =>
   coreServerRequest(describeUser(entityUrl));
 export const describeIdeaContestRequest = entityUrl =>
   coreServerRequest(ideaContestDetails(entityUrl));
-export const describeAllIdeas = () =>
-  coreServerRequest(findAllIdeasQuery());
+export const describeAllIdeas = () => coreServerRequest(findAllIdeasQuery());
 export const fulltextSearchRequest = searchText =>
   coreServerRequest(fallbackSearchQuery(searchText));
 
@@ -141,24 +140,22 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX inov:<http://purl.org/innovonto/types/#>
 
 CONSTRUCT {
-  <` +
-  ideaContestUrl +
-  `> a gi2mo:IdeaContest;
+    <` + ideaContestUrl + `> a gi2mo:IdeaContest;
     dcterms:title ?title;
     dcterms:description ?description;
     gi2mo:startDate ?startDate;
     gi2mo:endDate ?endDate;
-  \tinov:hasResearchDescription ?researchDescription.
+    inov:hasResearchDescription ?researchDescription.
       ?researchDescription dcterms:title ?rdTitle;
       dcterms:description ?rdDescription.
 } WHERE {
-  ?contest a gi2mo:IdeaContest;
+  <` + ideaContestUrl + `> a gi2mo:IdeaContest;
            dcterms:description ?description.
-  OPTIONAL {?contest dcterms:title ?title}.
-  OPTIONAL {?contest gi2mo:startDate ?startDate}.
-  OPTIONAL {?contest gi2mo:endDate ?endDate}.
+  OPTIONAL {<` + ideaContestUrl + `> dcterms:title ?title}.
+  OPTIONAL {<` + ideaContestUrl + `> gi2mo:startDate ?startDate}.
+  OPTIONAL {<` + ideaContestUrl + `> gi2mo:endDate ?endDate}.
   OPTIONAL {?researchDescription a inov:ResearchDescription;
-                                 gi2mo:hasIdeaContest ?contest;
+                                 gi2mo:hasIdeaContest <` + ideaContestUrl + `>;
                                  dcterms:title ?rdTitle;
                                  dcterms:description ?rdDescription}
 }
