@@ -1,0 +1,9 @@
+.disabledMenuItem{
+    color: grey;
+    cursor: not-allowed;
+}
+
+.disabledMenuItem:hover{
+    background-color: white;
+    cursor: not-allowed;
+}
