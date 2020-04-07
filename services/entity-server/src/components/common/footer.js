@@ -5,8 +5,12 @@ import {
   NavbarGroup,
   Alignment,
   NavbarDivider,
-  Button
+  Button,
+  Popover,
+  Menu,
+  MenuDivider
 } from "@blueprintjs/core";
+import { useWindowSize } from "../utils";
 
 function Copyright() {
   return (
@@ -26,37 +30,67 @@ function Copyright() {
 }
 
 export const Footer = props => {
+  const [windowWidth] = useWindowSize();
+  const isOnMobile = windowWidth <= 425;
   const location = useLocation();
   const { height } = props;
   return (
     <Navbar style={{ height: height }}>
       <NavbarGroup align={Alignment.LEFT}>
         <div>Innovonto Core Entity Server</div>
-        <NavbarDivider />
-        <div>A project by the Human-Centered Computing Workgroup</div>
+        {!isOnMobile && (
+          <>
+            <NavbarDivider />
+            <div>A project by the Human-Centered Computing Workgroup</div>
+          </>
+        )}
         <NavbarDivider />
         <Copyright />
-      </NavbarGroup>
-      <NavbarGroup align={Alignment.RIGHT}>
-        <Link to="/about/-">
-          <Button minimal={true} active={location.pathname.includes("about")}>
-            About
-          </Button>
-        </Link>
-        <Link to="/about/imprint">
-          <Button minimal={true} active={location.pathname.includes("imprint")}>
-            Imprint
-          </Button>
-        </Link>
-        <Link to="/about/privacy-policy">
-          <Button
+        {isOnMobile && (
+          <Popover
+            target={<Button icon={"menu"} text={"About"} />}
             minimal={true}
-            active={location.pathname.includes("privacy-policy")}
-          >
-            Privacy Policy
-          </Button>
-        </Link>
+            content={
+              <Menu>
+                <Link to={"/about/-"}>
+                  <li className={"bp3-menu-item"}>{"About"}</li>
+                </Link>
+                <Link to={"/about/imprint"}>
+                  <li className={"bp3-menu-item"}>{"Imprint"}</li>
+                </Link>
+                <Link to={"/about/privacy-policy"}>
+                  <li className={"bp3-menu-item"}>{"Privacy Policy"}</li>
+                </Link>
+              </Menu>
+            }
+          />
+        )}
       </NavbarGroup>
+      {!isOnMobile && (
+        <NavbarGroup align={Alignment.RIGHT}>
+          <Link to="/about/-">
+            <Button minimal={true} active={location.pathname.includes("about")}>
+              About
+            </Button>
+          </Link>
+          <Link to="/about/imprint">
+            <Button
+              minimal={true}
+              active={location.pathname.includes("imprint")}
+            >
+              Imprint
+            </Button>
+          </Link>
+          <Link to="/about/privacy-policy">
+            <Button
+              minimal={true}
+              active={location.pathname.includes("privacy-policy")}
+            >
+              Privacy Policy
+            </Button>
+          </Link>
+        </NavbarGroup>
+      )}
     </Navbar>
   );
 };

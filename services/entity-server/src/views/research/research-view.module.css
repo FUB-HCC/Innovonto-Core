@@ -13,6 +13,6 @@
 }
 
 .publicationWrapper{
-    width: 500px;
     margin-bottom: 10px;
+    max-width: 500px;
 }

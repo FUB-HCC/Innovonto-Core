@@ -4,6 +4,8 @@
 }
 
 .centeredLayoutContent{
+    padding-left: 5px;
+    padding-right: 5px;
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
