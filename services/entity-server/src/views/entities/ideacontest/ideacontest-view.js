@@ -7,9 +7,10 @@ import {
 } from "../../../components/utils";
 import { CenteredLayout } from "../../../components/common/page-layouts";
 import TabbedDetailView from "../../../components/common/tabbed-detail-view";
-import { Tab } from "@blueprintjs/core";
+import { Button, Intent, Tab } from "@blueprintjs/core";
 import style from "./ideacontest-view.module.css";
 import { CreatedAt } from "../../../components/idea/info-panel";
+import { Link } from "react-router-dom";
 
 export const IdeaContestView = () => {
   const [ideaContestData, setIdeaContestData] = useState(null);
@@ -46,7 +47,9 @@ export const IdeaContestView = () => {
             id={"info"}
             title={"Info"}
             key={"info"}
-            panel={<ContestInfo started={startDate} finished={endDate} />}
+            panel={
+              <ContestInfo started={startDate} finished={endDate} id={id} />
+            }
           />,
           <Tab
             id={"details"}
@@ -61,7 +64,7 @@ export const IdeaContestView = () => {
 };
 
 const ContestInfo = props => {
-  const { started, finished } = props;
+  const { started, finished, id } = props;
   if (!started && !finished) {
     return <EmptyList />;
   }
@@ -77,6 +80,16 @@ const ContestInfo = props => {
           <h3>Ended:</h3> <CreatedAt date={finished} />
         </>
       )}
+      <br />
+      <Link to={"/idea-map/" + getNameFromUri(id)}>
+        <Button
+          icon={"layout-group-by"}
+          minimal={true}
+          intent={Intent.SUCCESS}
+          text={"Idea Map"}
+          active={true}
+        />
+      </Link>
     </div>
   );
 };
