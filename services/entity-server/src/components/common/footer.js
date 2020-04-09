@@ -7,8 +7,7 @@ import {
   NavbarDivider,
   Button,
   Popover,
-  Menu,
-  MenuDivider
+  Menu
 } from "@blueprintjs/core";
 import { useWindowSize } from "../utils";
 

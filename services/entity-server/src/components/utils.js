@@ -79,6 +79,8 @@ export const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 };
 
+export const EmptyList = () => <div className={style.emptyList}>NO ITEMS</div>;
+
 export const AltTextComponent = props => (
   <div
     className={style.altTextComponent}

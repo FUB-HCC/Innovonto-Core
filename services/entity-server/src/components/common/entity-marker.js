@@ -55,6 +55,7 @@ export const EntityMarker = props => {
       onMouseDown={onClick}
     >
       <Popover
+        lazy={false}
         popoverClassName={style.popover}
         isOpen={isOpen}
         onInteraction={onInteraction}

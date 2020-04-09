@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { requestUserDetailData } from "../../../middleware/requests";
 import style from "./user-view.module.css";
 import TabbedDetailView from "../../../components/common/tabbed-detail-view";
-import { getNameFromUri } from "../../../components/utils";
+import { getNameFromUri, EmptyList } from "../../../components/utils";
 import { Tab } from "@blueprintjs/core";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -47,7 +47,7 @@ export const UserView = () => {
           <CategoryList
             hideTitle={true}
             categoryList={[
-              age + " y/o",
+              age ? age + " y/o" : null,
               gender,
               nationality,
               occupationalGroup,
@@ -91,8 +91,6 @@ export const UserView = () => {
     </CenteredLayout>
   );
 };
-
-const EmptyList = () => <div className={style.emptyList}>NO ITEMS</div>;
 
 const DiamondList = props => {
   const { list, urlPath } = props;
