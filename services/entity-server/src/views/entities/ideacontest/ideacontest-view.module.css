@@ -1,0 +1,7 @@
+.contestInfo{
+    padding: 30px;
+    background-color: whitesmoke;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+}

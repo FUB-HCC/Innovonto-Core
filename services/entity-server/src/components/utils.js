@@ -2,7 +2,7 @@ import { Position, Toaster } from "@blueprintjs/core";
 import { useEffect, useLayoutEffect, useState } from "react";
 import React from "react";
 import style from "./utils.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 export const pageAction = Object.freeze({
   LEFT: "LEFT",
@@ -74,6 +74,12 @@ export const useMousePosition = () => {
   }, []);
   return position;
 };
+
+export const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
+
+export const EmptyList = () => <div className={style.emptyList}>NO ITEMS</div>;
 
 export const AltTextComponent = props => (
   <div

@@ -134,8 +134,8 @@ const AcknowledgementsText = () => (
         >
           Thomas Hadler{" "}
         </a>
-        for his input and work on the natural language processing components
-        as well as the machine learning models used within the project.
+        for his input and work on the natural language processing components as
+        well as the machine learning models used within the project.
       </li>
     </ul>
     <p>

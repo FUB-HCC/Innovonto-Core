@@ -54,13 +54,19 @@ const ProjectOptions = props => {
   const { id } = props;
   return (
     <div className={style.projectOptionsWrapper}>
-      <p className={style.projectOption}>More About the project</p>
+      <Link to={"/entities/ideaContests/" + getNameFromUri(id)}>
+        <p className={style.projectOption}>More About the project</p>
+      </Link>
       <br />
       <Link to={"/idea-map/" + getNameFromUri(id)}>
         <p className={style.projectOption}>View All Ideas</p>
       </Link>
       <br />
-      <p className={style.projectOption}>View result/selected ideas</p>
+      <Link
+        to={{ pathname: "/search/", search: "?project=" + getNameFromUri(id) }}
+      >
+        <p className={style.projectOption}>View result/selected ideas</p>
+      </Link>
     </div>
   );
 };

@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     background-color: whitesmoke;
+    overflow: scroll;
 }
 
 .tree ul {
@@ -19,6 +20,7 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
+    display: flex;
 }
 
 .tree li {

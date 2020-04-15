@@ -11,3 +11,15 @@
 .altText{
     width: 100%;
 }
+
+.emptyList{
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    font-size: 18px;
+    color: grey;
+}

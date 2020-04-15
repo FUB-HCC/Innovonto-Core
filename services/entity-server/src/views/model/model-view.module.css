@@ -4,21 +4,9 @@
     background: white;
 }
 
-.modelViewContent{
-    min-height: 90vh;
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
 .modelIFrame{
     width: 100%;
     margin-top: -30px;
     border: none;
-    height: 92.5vh;
-    margin-bottom: -30px;
 }
 

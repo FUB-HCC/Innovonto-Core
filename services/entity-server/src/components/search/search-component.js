@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import style from "./search-component.module.css";
 import {
   Button,
@@ -12,12 +12,13 @@ import {
   RequestState,
   AppToaster,
   makeDimensionsChecker,
-  AltTextComponent
+  AltTextComponent,
+  useQuery
 } from "../utils";
 import SearchResultList from "./search-result-list";
 import SearchResultGrid from "./search-result-grid";
 import SearchResultIdea from "./search-result-idea";
-import { requestSearchData } from "../../middleware/requests";
+import { requestAllIdeas, requestSearchData } from "../../middleware/requests";
 
 const headerHeight = 50;
 const footerHeight = 50;
@@ -60,15 +61,16 @@ export const SearchActionTypes = Object.freeze({
   RADIO_BUTTON_PRESSED: "RADIO_BUTTON_PRESSED"
 });
 
-const initialStateSearch = {
+const initialStateSearch = projectQuery => ({
   searchResults: [],
   requestState: RequestState.IDLE,
   requestError: null,
   radioSelection: Radio.LIST,
   requestInputValue: "",
   page: 0,
-  maxPage: 0
-};
+  maxPage: 0,
+  projectQuery: projectQuery
+});
 
 const searchReducer = (state, action) => {
   const { maxPage, page, radioSelection } = state;
@@ -89,15 +91,20 @@ const searchReducer = (state, action) => {
         requestError: null
       };
     case SearchActionTypes.RESULTS_RECEIVED:
+      const ideas = projectFilter(action.value, state.projectQuery);
       return {
         ...state,
         requestState: RequestState.COMPLETED,
-        searchResults: action.value,
+        searchResults: ideas,
         page: 0,
-        maxPage: computeMaxPage(action.value.length, radioSelection)
+        maxPage: computeMaxPage(ideas.length, radioSelection)
       };
     case SearchActionTypes.REQUEST_ERROR:
-      return { ...state, requestState: RequestState.FAILED };
+      return {
+        ...state,
+        requestState: RequestState.FAILED,
+        requestError: action.value
+      };
     case SearchActionTypes.RADIO_BUTTON_PRESSED:
       return {
         ...state,
@@ -110,12 +117,20 @@ const searchReducer = (state, action) => {
   }
 };
 
+const projectFilter = (data, projectName) =>
+  projectName
+    ? data
+        .filter(d => d.hasIdeaContest && d.hasIdeaContest.includes(projectName))
+        .map((d, i) => ({ ...d, resultNo: i + 1 }))
+    : data;
+
 export const SearchComponent = props => {
   const { width, height } = props;
+  const queryParams = useQuery();
   const [inputValue, setInputValue] = useState("");
   const [searchState, dispatchSearchAction] = useReducer(
     searchReducer,
-    initialStateSearch
+    initialStateSearch(queryParams.get("project"))
   );
   const {
     requestState,
@@ -126,6 +141,23 @@ export const SearchComponent = props => {
     searchResults
   } = searchState;
 
+  //initial load of ALL ideas
+  useEffect(() => {
+    dispatchSearchAction({ type: SearchActionTypes.SEARCH_REQUEST_SUBMIT });
+    requestAllIdeas(
+      ideas =>
+        dispatchSearchAction({
+          type: SearchActionTypes.RESULTS_RECEIVED,
+          value: ideas
+        }),
+      error =>
+        dispatchSearchAction({
+          type: SearchActionTypes.REQUEST_ERROR,
+          value: error
+        })
+    );
+  }, []);
+
   if (!areDimensionsReasonable(width, height)) {
     return (
       <AltTextComponent
@@ -135,6 +167,7 @@ export const SearchComponent = props => {
       />
     );
   }
+
   const innerHeight = height - headerHeight - footerHeight;
   const resultsCurrentPage = filterResultsOfPage(
     searchResults,
@@ -160,7 +193,6 @@ export const SearchComponent = props => {
       value: radio
     });
   };
-
   const searchHeader = (
     <div className={style.searchHeaderWrapper} style={{ height: headerHeight }}>
       <input
