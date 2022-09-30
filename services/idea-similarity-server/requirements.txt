@@ -17,7 +17,7 @@ h5py==2.10.0
 httptools==0.1.1
 idna==2.8
 isodate==0.6.0
-joblib==0.14.1
+joblib==1.2.0
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 Markdown==3.2.1
